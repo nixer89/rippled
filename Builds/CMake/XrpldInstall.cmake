@@ -33,7 +33,7 @@ install (EXPORT RippleExports
   DESTINATION lib/cmake/xrpl)
 include (CMakePackageConfigHelpers)
 write_basic_package_version_file (
-  RippleConfigVersion.cmake
+  XrplConfigVersion.cmake
   VERSION ${xrpld_version}
   COMPATIBILITY SameMajorVersion)
 
@@ -42,8 +42,8 @@ if (is_root_project)
   set_target_properties(xrpld PROPERTIES INSTALL_RPATH_USE_LINK_PATH ON)
   install (
     FILES
-      ${CMAKE_CURRENT_SOURCE_DIR}/Builds/CMake/RippleConfig.cmake
-      ${CMAKE_CURRENT_BINARY_DIR}/RippleConfigVersion.cmake
+      ${CMAKE_CURRENT_SOURCE_DIR}/Builds/CMake/XrplConfig.cmake
+      ${CMAKE_CURRENT_BINARY_DIR}/XrplConfigVersion.cmake
     DESTINATION lib/cmake/xrpl)
   # sample configs should not overwrite existing files
   # install if-not-exists workaround as suggested by
