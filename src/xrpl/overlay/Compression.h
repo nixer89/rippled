@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLED_COMPRESSION_H_INCLUDED
-#define RIPPLED_COMPRESSION_H_INCLUDED
+#ifndef XRPLD_COMPRESSION_H_INCLUDED
+#define XRPLD_COMPRESSION_H_INCLUDED
 
 #include <xrpl/basics/CompressionAlgorithms.h>
 #include <xrpl/basics/Log.h>
@@ -111,4 +111,4 @@ compress(
 
 }  // namespace ripple
 
-#endif  // RIPPLED_COMPRESSION_H_INCLUDED
+#endif  // XRPLD_COMPRESSION_H_INCLUDED

@@ -271,7 +271,7 @@ LedgerMaster::getValidatedLedgerAge()
 {
     using namespace std::chrono_literals;
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     if (app_.config().reporting())
         return static_cast<RelationalDBInterfacePostgres*>(
                    &app_.getRelationalDBInterface())
@@ -297,7 +297,7 @@ LedgerMaster::isCaughtUp(std::string& reason)
 {
     using namespace std::chrono_literals;
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     if (app_.config().reporting())
         return static_cast<RelationalDBInterfacePostgres*>(
                    &app_.getRelationalDBInterface())
@@ -1611,7 +1611,7 @@ LedgerMaster::getCurrentLedger()
 std::shared_ptr<Ledger const>
 LedgerMaster::getValidatedLedger()
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     if (app_.config().reporting())
     {
         auto seq = app_.getRelationalDBInterface().getMaxLedgerSeq();
@@ -1648,7 +1648,7 @@ LedgerMaster::getPublishedLedger()
 std::string
 LedgerMaster::getCompleteLedgers()
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     if (app_.config().reporting())
         return static_cast<RelationalDBInterfacePostgres*>(
                    &app_.getRelationalDBInterface())

@@ -12,20 +12,20 @@ TOPDIR=$(pwd)
 
 cd $TOPDIR
 cd build/dpkg/packages
-CURLARGS="-sk -X${action} -urippled:${ARTIFACTORY_DEPLOY_KEY_RIPPLED}"
-RIPPLED_PKG=$(ls rippled_*.deb)
-RIPPLED_DEV_PKG=$(ls xrpld-dev_*.deb)
-RIPPLED_DBG_PKG=$(ls xrpld-dbgsym_*.deb)
+CURLARGS="-sk -X${action} -urippled:${ARTIFACTORY_DEPLOY_KEY_XRPLD}"
+XRPLD_PKG=$(ls xrpld_*.deb)
+XRPLD_DEV_PKG=$(ls xrpld-dev_*.deb)
+XRPLD_DBG_PKG=$(ls xrpld-dbgsym_*.deb)
 # TODO - where to upload src tgz?
-RIPPLED_SRC=$(ls rippled_*.orig.tar.gz)
+XRPLD_SRC=$(ls xrpld_*.orig.tar.gz)
 DEB_MATRIX=";deb.component=${COMPONENT};deb.architecture=amd64"
 for dist in stretch buster xenial bionic disco focal ; do
     DEB_MATRIX="${DEB_MATRIX};deb.distribution=${dist}"
 done
 echo "{ \"debs\": {" > "${TOPDIR}/files.info"
-for deb in ${RIPPLED_PKG} ${RIPPLED_DEV_PKG} ${RIPPLED_DBG_PKG} ; do
+for deb in ${XRPLD_PKG} ${XRPLD_DEV_PKG} ${XRPLD_DBG_PKG} ; do
     # first item doesn't get a comma separator
-    if [ $deb != $RIPPLED_PKG ] ; then
+    if [ $deb != $XRPLD_PKG ] ; then
         echo "," >> "${TOPDIR}/files.info"
     fi
     echo "\"${deb}\"": | tee -a "${TOPDIR}/files.info"
@@ -45,15 +45,15 @@ echo "}," >> "${TOPDIR}/files.info"
 
 cd $TOPDIR
 cd build/rpm/packages
-RIPPLED_PKG=$(ls xrpld-[0-9]*.x86_64.rpm)
-RIPPLED_DEV_PKG=$(ls xrpld-devel*.rpm)
-RIPPLED_DBG_PKG=$(ls xrpld-debuginfo*.rpm)
+XRPLD_PKG=$(ls xrpld-[0-9]*.x86_64.rpm)
+XRPLD_DEV_PKG=$(ls xrpld-devel*.rpm)
+XRPLD_DBG_PKG=$(ls xrpld-debuginfo*.rpm)
 # TODO - where to upload src rpm ?
-RIPPLED_SRC=$(ls xrpld-[0-9]*.src.rpm)
+XRPLD_SRC=$(ls xrpld-[0-9]*.src.rpm)
 echo "\"rpms\": {" >> "${TOPDIR}/files.info"
-for rpm in ${RIPPLED_PKG} ${RIPPLED_DEV_PKG} ${RIPPLED_DBG_PKG} ; do
+for rpm in ${XRPLD_PKG} ${XRPLD_DEV_PKG} ${XRPLD_DBG_PKG} ; do
     # first item doesn't get a comma separator
-    if [ $rpm != $RIPPLED_PKG ] ; then
+    if [ $rpm != $XRPLD_PKG ] ; then
         echo "," >> "${TOPDIR}/files.info"
     fi
     echo "\"${rpm}\"": | tee -a "${TOPDIR}/files.info"

@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
 set -ex
 docker login -u xrpld \
-    -p ${ARTIFACTORY_DEPLOY_KEY_RIPPLED} "${ARTIFACTORY_HUB}"
-# this gives us rippled_version :
+    -p ${ARTIFACTORY_DEPLOY_KEY_XRPLD} "${ARTIFACTORY_HUB}"
+# this gives us xrpld_version :
 source build/rpm/packages/build_vars
 docker pull "${ARTIFACTORY_HUB}/${RPM_CONTAINER_FULLNAME}"
 docker pull "${ARTIFACTORY_HUB}/${DPKG_CONTAINER_FULLNAME}"
 # tag/push two labels...one using the current xrpld version and one just using "latest"
-for label in ${rippled_version} latest ; do
+for label in ${xrpld_version} latest ; do
     docker tag \
         "${ARTIFACTORY_HUB}/${RPM_CONTAINER_FULLNAME}" \
         "${ARTIFACTORY_HUB}/${RPM_CONTAINER_NAME}:${label}_${CI_COMMIT_REF_SLUG}"

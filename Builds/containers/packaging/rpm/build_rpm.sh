@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -ex
 
-cd /opt/rippled_bld/pkg
+cd /opt/xrpld_bld/pkg
 cp -fpu xrpld/Builds/containers/packaging/rpm/xrpld.spec .
 cp -fpu xrpld/Builds/containers/shared/update_sources.sh .
 source update_sources.sh
 
 # Build the rpm
 
-IFS='-' read -r RIPPLED_RPM_VERSION RELEASE <<< "$RIPPLED_VERSION"
-export RIPPLED_RPM_VERSION
+IFS='-' read -r XRPLD_RPM_VERSION RELEASE <<< "$XRPLD_VERSION"
+export XRPLD_RPM_VERSION
 
 RPM_RELEASE=${RPM_RELEASE-1}
 
@@ -28,7 +28,7 @@ if [[ $RPM_PATCH ]]; then
     export RPM_PATCH
 fi
 
-cd /opt/rippled_bld/pkg/xrpld
+cd /opt/xrpld_bld/pkg/xrpld
 if [[ -n $(git status --porcelain) ]]; then
     git status
     error "Unstaged changes in this repo - please commit first"
@@ -69,8 +69,8 @@ echo "rpm_sha256=$RPM_SHA256" >> ${PKG_OUTDIR}/build_vars
 echo "dbg_sha256=$DBG_SHA256" >> ${PKG_OUTDIR}/build_vars
 echo "dev_sha256=$DEV_SHA256" >> ${PKG_OUTDIR}/build_vars
 echo "src_sha256=$SRC_SHA256" >> ${PKG_OUTDIR}/build_vars
-echo "rippled_version=$RIPPLED_VERSION" >> ${PKG_OUTDIR}/build_vars
-echo "rpm_version=$RIPPLED_RPM_VERSION" >> ${PKG_OUTDIR}/build_vars
+echo "xrpld_version=$XRPLD_VERSION" >> ${PKG_OUTDIR}/build_vars
+echo "rpm_version=$XRPLD_RPM_VERSION" >> ${PKG_OUTDIR}/build_vars
 echo "rpm_file_name=$tar_file" >> ${PKG_OUTDIR}/build_vars
 echo "rpm_version_release=$RPM_VERSION_RELEASE" >> ${PKG_OUTDIR}/build_vars
 

@@ -58,4 +58,4 @@ static constexpr std::size_t MAX_TX_QUEUE_SIZE = 10000;
 
 }  // namespace ripple
 
-#endif  // RIPPLED_REDUCERELAYCOMMON_H_INCLUDED
+#endif  // XRPLD_REDUCERELAYCOMMON_H_INCLUDED

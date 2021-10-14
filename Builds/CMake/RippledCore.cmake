@@ -976,11 +976,11 @@ exclude_if_included (xrpld)
 # define a macro for tests that might need to
 # be exluded or run differently in CI environment
 if (is_ci)
-  target_compile_definitions(xrpld PRIVATE RIPPLED_RUNNING_IN_CI)
+  target_compile_definitions(xrpld PRIVATE XRPLD_RUNNING_IN_CI)
 endif ()
 
 if (reporting)
-    target_compile_definitions(xrpld PRIVATE RIPPLED_REPORTING)
+    target_compile_definitions(xrpld PRIVATE XRPLD_REPORTING)
 endif ()
 
 if (CMAKE_VERSION VERSION_GREATER_EQUAL 3.16)

@@ -50,13 +50,13 @@ public:
         : app_(app)
         , j_(app_.journal("PgPool"))
         , pgPool_(
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
               make_PgPool(config.section("ledger_tx_tables"), j_)
 #endif
           )
     {
         assert(config.reporting());
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
         if (config.reporting() && !config.reportingReadOnly())  // use pg
         {
             initSchema(pgPool_);
@@ -67,7 +67,7 @@ public:
     void
     stop() override
     {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
         pgPool_->stop();
 #endif
     }
@@ -143,7 +143,7 @@ private:
 void
 RelationalDBInterfacePostgresImp::sweep()
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     pgPool_->idleSweeper();
 #endif
 }
@@ -278,7 +278,7 @@ getRelationalDBInterfacePostgres(
 bool
 RelationalDBInterfacePostgresImp::isCaughtUp(std::string& reason)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     using namespace std::chrono_literals;
     auto age = PgQuery(pgPool_)("SELECT age()");
     if (!age || age.isNull())

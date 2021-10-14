@@ -4,7 +4,7 @@ install_from=$1
 use_private=${2:-0} # this option not currently needed by any CI scripts,
                     # reserved for possible future use
 if [ "$use_private" -gt 0 ] ; then
-    REPO_ROOT="https://xrpld:${ARTIFACTORY_DEPLOY_KEY_RIPPLED}@${ARTIFACTORY_HOST}/artifactory"
+    REPO_ROOT="https://xrpld:${ARTIFACTORY_DEPLOY_KEY_XRPLD}@${ARTIFACTORY_HOST}/artifactory"
 else
     REPO_ROOT="${PUBLIC_REPO_ROOT}"
 fi
@@ -88,8 +88,8 @@ fi
 
 # verify installed version
 INSTALLED=$(/opt/xrpl/bin/xrpld --version | awk '{print $NF}')
-if [ "${rippled_version}" != "${INSTALLED}" ] ; then
-    echo "INSTALLED version ${INSTALLED} does not match ${rippled_version}"
+if [ "${xrpld_version}" != "${INSTALLED}" ] ; then
+    echo "INSTALLED version ${INSTALLED} does not match ${xrpld_version}"
     exit 1
 fi
 # run unit tests

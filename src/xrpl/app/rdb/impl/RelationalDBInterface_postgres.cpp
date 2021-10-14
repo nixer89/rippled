@@ -34,7 +34,7 @@ using LedgerShortcut = RelationalDBInterface::LedgerShortcut;
 std::optional<LedgerIndex>
 getMinLedgerSeq(std::shared_ptr<PgPool> const& pgPool, beast::Journal j)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto seq = PgQuery(pgPool)("SELECT min_ledger()");
     if (!seq)
     {
@@ -49,7 +49,7 @@ getMinLedgerSeq(std::shared_ptr<PgPool> const& pgPool, beast::Journal j)
 std::optional<LedgerIndex>
 getMaxLedgerSeq(std::shared_ptr<PgPool> const& pgPool)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto seq = PgQuery(pgPool)("SELECT max_ledger()");
     if (seq && !seq.isNull())
         return seq.asBigInt();
@@ -60,7 +60,7 @@ getMaxLedgerSeq(std::shared_ptr<PgPool> const& pgPool)
 std::string
 getCompleteLedgers(std::shared_ptr<PgPool> const& pgPool)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto range = PgQuery(pgPool)("SELECT complete_ledgers()");
     if (range)
         return range.c_str();
@@ -72,7 +72,7 @@ std::chrono::seconds
 getValidatedLedgerAge(std::shared_ptr<PgPool> const& pgPool, beast::Journal j)
 {
     using namespace std::chrono_literals;
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto age = PgQuery(pgPool)("SELECT age()");
     if (!age || age.isNull())
         JLOG(j.debug()) << "No ledgers in database";
@@ -103,7 +103,7 @@ loadLedgerInfos(
     Application& app)
 {
     std::vector<LedgerInfo> infos;
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto log = app.journal("Ledger");
     assert(app.config().reporting());
     std::stringstream sql;
@@ -334,7 +334,7 @@ getTxHashes(
 {
     std::vector<uint256> nodestoreHashes;
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto log = app.journal("Ledger");
 
     std::string query =
@@ -399,7 +399,7 @@ getTxHashes(
     return nodestoreHashes;
 }
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
 enum class DataFormat { binary, expanded };
 static std::variant<TxnsData, TxnsDataBinary>
 flatFetchTransactions(
@@ -545,7 +545,7 @@ getAccountTx(
     Application& app,
     beast::Journal j)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     pg_params dbParams;
 
     char const*& command = dbParams.first;
@@ -659,7 +659,7 @@ locateTransaction(
     uint256 const& id,
     Application& app)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     auto baseCmd = boost::format(R"(SELECT tx('%s');)");
 
     std::string txHash = "\\x" + strHex(id);
@@ -733,7 +733,7 @@ locateTransaction(
     return {};
 }
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
 static bool
 writeToLedgersDB(LedgerInfo const& info, PgQuery& pgQuery, beast::Journal& j)
 {
@@ -765,7 +765,7 @@ writeLedgerAndTransactions(
     std::vector<AccountTransactionsData> const& accountTxData,
     beast::Journal& j)
 {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     JLOG(j.debug()) << __func__ << " : "
                     << "Beginning write to Postgres";
 
@@ -853,7 +853,7 @@ getTxHistory(
 {
     std::vector<std::shared_ptr<Transaction>> ret;
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     if (!app.config().reporting())
     {
         assert(false);

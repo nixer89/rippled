@@ -184,7 +184,7 @@ To begin, simply:
    **Project Setings** drop-down. This should invoke the built-in CMake project
    generator. If not, you can right-click on the `CMakeLists.txt` file and
    choose **Cache | Generate Cache**.
-5. Select either the `xrpld.exe` (unity) or `rippled_classic.exe` (non-unity)
+5. Select either the `xrpld.exe` (unity) or `xrpld_classic.exe` (non-unity)
    option in the **Select Startup Item** drop-down. This will be the target
    built when you press F7. Alternatively, you can choose a target to build from
    the top-level **CMake | Build** menu. Note that at this time, there are other

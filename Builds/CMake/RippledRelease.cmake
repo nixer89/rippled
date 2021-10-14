@@ -59,10 +59,10 @@ if (is_root_project)
     exclude_from_default (rpm_container)
     add_custom_target (rpm
       docker run
-        -e NIH_CACHE_ROOT=/opt/rippled_bld/pkg/.nih_c
-        -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/rippled_bld/pkg/.nih_c
-        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/xrpld
-        -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/rippled_bld/pkg/out
+        -e NIH_CACHE_ROOT=/opt/xrpld_bld/pkg/.nih_c
+        -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/xrpld_bld/pkg/.nih_c
+        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/xrpld_bld/pkg/xrpld
+        -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/xrpld_bld/pkg/out
         "$<$<BOOL:${map_user}>:--volume=/etc/passwd:/etc/passwd;--volume=/etc/group:/etc/group;--user=${DOCKER_USER_ID}:${DOCKER_GROUP_ID}>"
         -t xrpld-rpm-builder:${container_label}
         /bin/bash -c "cp -fpu xrpld/Builds/containers/packaging/rpm/build_rpm.sh . && ./build_rpm.sh"
@@ -122,10 +122,10 @@ if (is_root_project)
     exclude_from_default (dpkg_container)
     add_custom_target (dpkg
       docker run
-        -e NIH_CACHE_ROOT=/opt/rippled_bld/pkg/.nih_c
-        -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/rippled_bld/pkg/.nih_c
-        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/xrpld
-        -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/rippled_bld/pkg/out
+        -e NIH_CACHE_ROOT=/opt/xrpld_bld/pkg/.nih_c
+        -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/xrpld_bld/pkg/.nih_c
+        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/xrpld_bld/pkg/xrpld
+        -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/xrpld_bld/pkg/out
         "$<$<BOOL:${map_user}>:--volume=/etc/passwd:/etc/passwd;--volume=/etc/group:/etc/group;--user=${DOCKER_USER_ID}:${DOCKER_GROUP_ID}>"
         -t xrpld-dpkg-builder:${container_label}
         /bin/bash -c "cp -fpu xrpld/Builds/containers/packaging/dpkg/build_dpkg.sh . && ./build_dpkg.sh"

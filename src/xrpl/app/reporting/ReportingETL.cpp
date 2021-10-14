@@ -137,7 +137,7 @@ ReportingETL::loadInitialLedger(uint32_t startingSequence)
     ledger->stateMap().clearSynching();
     ledger->txMap().clearSynching();
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
     std::vector<AccountTransactionsData> accountTxData =
         insertTransactions(ledger, *ledgerData);
 #endif
@@ -166,7 +166,7 @@ ReportingETL::loadInitialLedger(uint32_t startingSequence)
         flushLedger(ledger);
         if (app_.config().reporting())
         {
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
             dynamic_cast<RelationalDBInterfacePostgres*>(
                 &app_.getRelationalDBInterface())
                 ->writeLedgerAndTransactions(ledger->info(), accountTxData);
@@ -624,7 +624,7 @@ ReportingETL::runETLPipeline(uint32_t startSequence)
             // write to RDBMS
             // if there is a write conflict, some other process has already
             // written this ledger and has taken over as the ETL writer
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
                 if (!dynamic_cast<RelationalDBInterfacePostgres*>(
                          &app_.getRelationalDBInterface())
                          ->writeLedgerAndTransactions(
@@ -840,7 +840,7 @@ ReportingETL::ReportingETL(Application& app)
     // if present, get endpoint from config
     if (app_.config().exists("reporting"))
     {
-#ifndef RIPPLED_REPORTING
+#ifndef XRPLD_REPORTING
         Throw<std::runtime_error>(
             "Config file specifies reporting, but software was not built with "
             "-Dreporting=1. To use reporting, configure CMake with "

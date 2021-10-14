@@ -9,7 +9,7 @@ if (process.argv[2] == null) {
   [
    'Usage: ',
    '',
-   '  `node bin/stop-test.js i,j [rippled_path] [rippled_conf]`',
+   '  `node bin/stop-test.js i,j [xrpld_path] [xrpld_conf]`',
    '',
    '  Launch xrpld and stop it after n seconds for all n in [i, j}',
    '  For all even values of n launch xrpld with `--fg`',

@@ -1220,8 +1220,8 @@ While it may be possible to compile xrpld on (virtual) machines with 4GB of RAM,
 
 **Development-Related Updates**
 
--   Transitional support for gcc 5.2: to enable support define the environmental variable `RIPPLED_OLD_GCC_ABI`=1
--   Transitional support for C++ 14: to enable support define the environment variable `RIPPLED_USE_CPP_14`=1
+-   Transitional support for gcc 5.2: to enable support define the environmental variable `XRPLD_OLD_GCC_ABI`=1
+-   Transitional support for C++ 14: to enable support define the environment variable `XRPLD_USE_CPP_14`=1
 -   Visual Studio 2015 support
 -   Updates to integration tests
 -   Add uptime to crawl data ([RIPD-997](https://ripplelabs.atlassian.net/browse/RIPD-997))

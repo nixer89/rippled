@@ -1,10 +1,10 @@
-%define rippled_version %(echo $RIPPLED_RPM_VERSION)
+%define xrpld_version %(echo $XRPLD_RPM_VERSION)
 %define rpm_release %(echo $RPM_RELEASE)
 %define rpm_patch %(echo $RPM_PATCH)
 %define _prefix /opt/xrpl
 Name:           xrpld
 # Dashes in Version extensions must be converted to underscores
-Version:        %{rippled_version}
+Version:        %{xrpld_version}
 Release:        %{rpm_release}%{?dist}%{rpm_patch}
 Summary:        xrpld daemon
 

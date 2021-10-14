@@ -8,9 +8,9 @@ MANUAL_TESTS=${MANUAL_TESTS:-false}
 # The maximum number of concurrent tests.
 CONCURRENT_TESTS=${CONCURRENT_TESTS:-$(nproc)}
 # The path to xrpld.
-RIPPLED=${RIPPLED:-build/xrpld}
+XRPLD=${XRPLD:-build/xrpld}
 # Additional arguments to xrpld.
-RIPPLED_ARGS=${RIPPLED_ARGS:-}
+XRPLD_ARGS=${XRPLD_ARGS:-}
 
 function join_by { local IFS="$1"; shift; echo "$*"; }
 
@@ -32,10 +32,10 @@ declare -a manual_tests=(
 )
 
 if [[ ${MANUAL_TESTS} == 'true' ]]; then
-  RIPPLED_ARGS+=" --unittest=$(join_by , "${manual_tests[@]}")"
+  XRPLD_ARGS+=" --unittest=$(join_by , "${manual_tests[@]}")"
 else
-  RIPPLED_ARGS+=" --unittest --quiet --unittest-log"
+  XRPLD_ARGS+=" --unittest --quiet --unittest-log"
 fi
-RIPPLED_ARGS+=" --unittest-jobs ${CONCURRENT_TESTS}"
+XRPLD_ARGS+=" --unittest-jobs ${CONCURRENT_TESTS}"
 
-${RIPPLED} ${RIPPLED_ARGS}
+${XRPLD} ${XRPLD_ARGS}

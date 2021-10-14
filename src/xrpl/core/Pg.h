@@ -17,7 +17,7 @@
 */
 //==============================================================================
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
 #ifndef RIPPLE_CORE_PG_H_INCLUDED
 #define RIPPLE_CORE_PG_H_INCLUDED
 
@@ -517,4 +517,4 @@ initSchema(std::shared_ptr<PgPool> const& pool);
 }  // namespace ripple
 
 #endif  // RIPPLE_CORE_PG_H_INCLUDED
-#endif  // RIPPLED_REPORTING
+#endif  // XRPLD_REPORTING

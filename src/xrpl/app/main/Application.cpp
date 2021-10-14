@@ -1127,7 +1127,7 @@ public:
         m_acceptedLedgerCache.sweep();
         cachedSLEs_.expire();
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
         if (auto pg = dynamic_cast<RelationalDBInterfacePostgres*>(
                 &*mRelationalDBInterface))
             pg->sweep();

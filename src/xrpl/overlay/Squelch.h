@@ -126,4 +126,4 @@ Squelch<clock_type>::expireSquelch(PublicKey const& validator)
 
 }  // namespace ripple
 
-#endif  // RIPPLED_SQUELCH_H
+#endif  // XRPLD_SQUELCH_H

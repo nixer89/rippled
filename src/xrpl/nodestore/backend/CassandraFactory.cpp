@@ -17,7 +17,7 @@
 */
 //==============================================================================
 
-#ifdef RIPPLED_REPORTING
+#ifdef XRPLD_REPORTING
 
 #include <cassandra.h>
 #include <libpq-fe.h>

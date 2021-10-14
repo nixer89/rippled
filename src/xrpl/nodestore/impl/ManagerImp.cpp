@@ -55,7 +55,7 @@ ManagerImp::make_Backend(
     auto factory{find(type)};
     if (!factory)
     {
-#ifndef RIPPLED_REPORTING
+#ifndef XRPLD_REPORTING
         if (boost::iequals(type, "cassandra"))
             Throw<std::runtime_error>(
                 "To use Cassandra as a nodestore, build xrpld with "

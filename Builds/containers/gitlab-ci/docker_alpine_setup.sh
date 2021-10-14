@@ -4,7 +4,7 @@ set -ex
 # expects to be run in standard alpine/dind image
 echo $(nproc)
 docker login -u xrpld \
-    -p ${ARTIFACTORY_DEPLOY_KEY_RIPPLED} ${ARTIFACTORY_HUB}
+    -p ${ARTIFACTORY_DEPLOY_KEY_XRPLD} ${ARTIFACTORY_HUB}
 apk add --update py-pip
 apk add \
     bash util-linux coreutils binutils grep \

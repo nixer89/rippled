@@ -5,10 +5,10 @@ function error {
     exit 1
 }
 
-cd /opt/rippled_bld/pkg/xrpld
-export RIPPLED_VERSION=$(egrep -i -o "\b(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[0-9a-z\-]+(\.[0-9a-z\-]+)*)?(\+[0-9a-z\-]+(\.[0-9a-z\-]+)*)?\b" src/xrpl/protocol/impl/BuildInfo.cpp)
+cd /opt/xrpld_bld/pkg/xrpld
+export XRPLD_VERSION=$(egrep -i -o "\b(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[0-9a-z\-]+(\.[0-9a-z\-]+)*)?(\+[0-9a-z\-]+(\.[0-9a-z\-]+)*)?\b" src/xrpl/protocol/impl/BuildInfo.cpp)
 
-: ${PKG_OUTDIR:=/opt/rippled_bld/pkg/out}
+: ${PKG_OUTDIR:=/opt/xrpld_bld/pkg/out}
 export PKG_OUTDIR
 if [ ! -d ${PKG_OUTDIR} ]; then
     error "${PKG_OUTDIR} is not mounted"

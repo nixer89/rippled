@@ -7,13 +7,13 @@
 # before sharing with any third parties.
 
 
-rippled_exe=/opt/xrpl/bin/xrpld
+xrpld_exe=/opt/xrpl/bin/xrpld
 conf_file=/etc/opt/xrpl/xrpld.cfg
 
 while getopts ":e:c:" opt; do
     case $opt in
         e)
-            rippled_exe=${OPTARG}
+            xrpld_exe=${OPTARG}
             ;;
         c)
             conf_file=${OPTARG}
@@ -27,7 +27,7 @@ done
 tmp_loc=$(mktemp -d --tmpdir ripple_info.XXXXX)
 chmod 751 ${tmp_loc}
 awk_prog=${tmp_loc}/cfg.awk
-summary_out=${tmp_loc}/rippled_info.md
+summary_out=${tmp_loc}/xrpld_info.md
 printf "# xrpld report info\n\n> generated at %s\n" "$(date -R)" > ${summary_out}
 
 function log_section {
@@ -44,7 +44,7 @@ function join_by {
 
 if [[ -f ${conf_file} ]] ; then
     exclude=( ips ips_fixed node_seed validation_seed validator_token )
-    cleaned_conf=${tmp_loc}/cleaned_rippled_cfg.txt
+    cleaned_conf=${tmp_loc}/cleaned_xrpld_cfg.txt
     cat << 'EOP' >> ${awk_prog}
     BEGIN {FS="[[:space:]]*=[[:space:]]*"; skip=0; db_path=""; print > OUT_FILE; split(exl,exa,"|")}
     /^#/ {next}
@@ -86,9 +86,9 @@ exec 3>&1 1>>${log_file} 2>&1
 
 ## Send all stdout files to /tmp
 
-if [[ -x ${rippled_exe} ]] ; then
+if [[ -x ${xrpld_exe} ]] ; then
     pgrep xrpld && \
-    ${rippled_exe} --conf ${conf_file} \
+    ${xrpld_exe} --conf ${conf_file} \
     -- server_info                  | log_section "server info"
 fi
 
