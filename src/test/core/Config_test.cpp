@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2012-2015 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -66,7 +66,7 @@ protocol = wss
 [node_size]
 medium
 
-# This is primary persistent datastore for rippled.  This includes transaction
+# This is primary persistent datastore for xrpld.  This includes transaction
 # metadata, account states, and ledger headers.  Helpful information can be
 # found on https://xrpl.org/capacity-planning.html#node-db-type
 # delete old ledgers while maintaining at least 2000. Do not require an
@@ -122,7 +122,7 @@ backend=sqlite
 }
 
 /**
-   Write a rippled config file and remove when done.
+   Write a xrpld config file and remove when done.
  */
 class RippledCfgGuard : public ripple::test::detail::FileDirGuard
 {
@@ -652,7 +652,7 @@ trustthesevalidators.gov
         }
         {
             // load should throw if [validators], [validator_keys] and
-            // [validator_list_keys] are missing from rippled cfg and
+            // [validator_list_keys] are missing from xrpld cfg and
             // validators file
             Config c;
             boost::format cc("[validators_file]\n%1%\n");

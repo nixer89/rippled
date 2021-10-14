@@ -5,10 +5,10 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/opt/xrpl/bin/rippled --net --silent --conf /etc/opt/xrpl/rippled.cfg
+ExecStart=/opt/xrpl/bin/xrpld --net --silent --conf /etc/opt/xrpl/xrpld.cfg
 Restart=on-failure
-User=rippled
-Group=rippled
+User=xrpld
+Group=xrpld
 LimitNOFILE=65536
 
 [Install]

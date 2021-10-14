@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -65,7 +65,7 @@ fromNetwork(
     std::unordered_map<std::string, std::string> headers = {});
 }  // namespace RPCCall
 
-/** Given a rippled command line, return the corresponding JSON.
+/** Given a xrpld command line, return the corresponding JSON.
  */
 Json::Value
 cmdLineToJSONRPC(std::vector<std::string> const& args, beast::Journal j);

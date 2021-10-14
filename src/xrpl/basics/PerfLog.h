@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2018 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -56,7 +56,7 @@ public:
     using microseconds = std::chrono::microseconds;
 
     /**
-     * Configuration from [perf] section of rippled.cfg.
+     * Configuration from [perf] section of xrpld.cfg.
      */
     struct Setup
     {

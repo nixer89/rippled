@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2016 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any

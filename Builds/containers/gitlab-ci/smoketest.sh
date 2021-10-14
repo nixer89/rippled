@@ -4,7 +4,7 @@ install_from=$1
 use_private=${2:-0} # this option not currently needed by any CI scripts,
                     # reserved for possible future use
 if [ "$use_private" -gt 0 ] ; then
-    REPO_ROOT="https://rippled:${ARTIFACTORY_DEPLOY_KEY_RIPPLED}@${ARTIFACTORY_HOST}/artifactory"
+    REPO_ROOT="https://xrpld:${ARTIFACTORY_DEPLOY_KEY_RIPPLED}@${ARTIFACTORY_HOST}/artifactory"
 else
     REPO_ROOT="${PUBLIC_REPO_ROOT}"
 fi
@@ -46,13 +46,13 @@ if [ "${pkgtype}" = "dpkg" ] ; then
         echo "deb ${REPO_ROOT}/${DEB_REPO} ${DISTRO} ${COMPONENT}" >> /etc/apt/sources.list
         updateWithRetry
         # uncomment this next line if you want to see the available package versions
-        # apt-cache policy rippled
-        apt-get -y install rippled=${dpkg_full_version}
+        # apt-cache policy xrpld
+        apt-get -y install xrpld=${dpkg_full_version}
     elif [ "${install_from}" = "local" ] ; then
         # cached pkg install
         updateWithRetry
         apt-get -y install libprotobuf-dev libssl-dev
-        rm -f build/dpkg/packages/rippled-dbgsym*.*
+        rm -f build/dpkg/packages/xrpld-dbgsym*.*
         dpkg --no-debsig -i build/dpkg/packages/*.deb
     else
         echo "unrecognized pkg source!"
@@ -72,12 +72,12 @@ else
         echo "repo_gpgcheck=1" >> ${REPOFILE}
         yum -y update
         # uncomment this next line if you want to see the available package versions
-        # yum --showduplicates list rippled
+        # yum --showduplicates list xrpld
         yum -y install ${rpm_version_release}
     elif [ "${install_from}" = "local" ] ; then
         # cached pkg install
         yum install -y yum-utils openssl-static zlib-static
-        rm -f build/rpm/packages/rippled-debug*.rpm
+        rm -f build/rpm/packages/xrpld-debug*.rpm
         rm -f build/rpm/packages/*.src.rpm
         rpm -i build/rpm/packages/*.rpm
     else
@@ -87,13 +87,13 @@ else
 fi
 
 # verify installed version
-INSTALLED=$(/opt/xrpl/bin/rippled --version | awk '{print $NF}')
+INSTALLED=$(/opt/xrpl/bin/xrpld --version | awk '{print $NF}')
 if [ "${rippled_version}" != "${INSTALLED}" ] ; then
     echo "INSTALLED version ${INSTALLED} does not match ${rippled_version}"
     exit 1
 fi
 # run unit tests
-/opt/xrpl/bin/rippled --unittest --unittest-jobs $(nproc)
+/opt/xrpl/bin/xrpld --unittest --unittest-jobs $(nproc)
 /opt/xrpl/bin/validator-keys --unittest
 
 

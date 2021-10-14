@@ -3,8 +3,8 @@ set -ex
 apt -y update
 DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 apt -y install software-properties-common curl git gnupg
-curl -sk -o rippled-pubkeys.txt "${GIT_SIGN_PUBKEYS_URL}"
-gpg --import rippled-pubkeys.txt
+curl -sk -o xrpld-pubkeys.txt "${GIT_SIGN_PUBKEYS_URL}"
+gpg --import xrpld-pubkeys.txt
 if git verify-commit HEAD; then
     echo "git commit signature check passed"
 else

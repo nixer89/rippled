@@ -4,7 +4,7 @@
 
 option (assert "Enables asserts, even in release builds" OFF)
 
-option (reporting "Build rippled with reporting mode enabled" OFF)
+option (reporting "Build xrpld with reporting mode enabled" OFF)
 
 option (unity "Creates a build using UNITY support in cmake. This is the default" ON)
 if (unity)

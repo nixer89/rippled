@@ -1,6 +1,6 @@
 #########################################################################
 ##                                                                     ##
-##  gitlab CI defintition for rippled build containers and distro      ##
+##  gitlab CI defintition for xrpld build containers and distro      ##
 ##  packages (rpm and dpkg).                                           ##
 ##                                                                     ##
 #########################################################################
@@ -8,18 +8,18 @@
 # NOTE: these are sensible defaults for Ripple pipelines. These
 # can be overridden by project or group variables as needed.
 variables:
-  # these containers are built manually using the rippled
+  # these containers are built manually using the xrpld
   # cmake build (container targets) and tagged/pushed so they 
   # can be used here
   RPM_CONTAINER_TAG: "2020-02-10"
-  RPM_CONTAINER_NAME: "rippled-rpm-builder"
+  RPM_CONTAINER_NAME: "xrpld-rpm-builder"
   RPM_CONTAINER_FULLNAME: "${RPM_CONTAINER_NAME}:${RPM_CONTAINER_TAG}"
   DPKG_CONTAINER_TAG: "2020-02-10"
-  DPKG_CONTAINER_NAME: "rippled-dpkg-builder"
+  DPKG_CONTAINER_NAME: "xrpld-dpkg-builder"
   DPKG_CONTAINER_FULLNAME: "${DPKG_CONTAINER_NAME}:${DPKG_CONTAINER_TAG}"
   ARTIFACTORY_HOST: "artifactory.ops.ripple.com"
   ARTIFACTORY_HUB: "${ARTIFACTORY_HOST}:6555"
-  GIT_SIGN_PUBKEYS_URL: "https://gitlab.ops.ripple.com/xrpledger/rippled-packages/snippets/49/raw"
+  GIT_SIGN_PUBKEYS_URL: "https://gitlab.ops.ripple.com/xrpledger/xrpld-packages/snippets/49/raw"
   PUBLIC_REPO_ROOT: "https://repos.ripple.com/repos"
   # also need to define this variable ONLY for the primary
   # build/publish pipeline on the mainline repo:
@@ -274,7 +274,7 @@ verify_head_signed:
 ##                                                                     ##
 ##  stage: tag_images                                                  ##
 ##                                                                     ##
-##  apply rippled version tag to containers from previous stage.       ##
+##  apply xrpld version tag to containers from previous stage.       ##
 ##  ONLY RUNS FOR PRIMARY BRANCHES/REPO                                ##
 ##                                                                     ##
 #########################################################################
@@ -312,8 +312,8 @@ tag_bld_images:
 push_test:
   stage: push_to_test
   variables:
-    DEB_REPO: "rippled-deb-test-mirror"
-    RPM_REPO: "rippled-rpm-test-mirror"
+    DEB_REPO: "xrpld-deb-test-mirror"
+    RPM_REPO: "xrpld-rpm-test-mirror"
   image:
     name: artifactory.ops.ripple.com/alpine:latest
   artifacts:
@@ -338,7 +338,7 @@ push_test:
 centos_7_verify_repo_test:
   stage: verify_from_test
   variables:
-    RPM_REPO: "rippled-rpm-test-mirror"
+    RPM_REPO: "xrpld-rpm-test-mirror"
   image:
     name: artifactory.ops.ripple.com/centos:7
   dependencies:
@@ -349,7 +349,7 @@ centos_7_verify_repo_test:
 fedora_29_verify_repo_test:
   stage: verify_from_test
   variables:
-    RPM_REPO: "rippled-rpm-test-mirror"
+    RPM_REPO: "xrpld-rpm-test-mirror"
   image:
     name: artifactory.ops.ripple.com/fedora:29
   dependencies:
@@ -360,7 +360,7 @@ fedora_29_verify_repo_test:
 fedora_28_verify_repo_test:
   stage: verify_from_test
   variables:
-    RPM_REPO: "rippled-rpm-test-mirror"
+    RPM_REPO: "xrpld-rpm-test-mirror"
   image:
     name: artifactory.ops.ripple.com/fedora:28
   dependencies:
@@ -371,7 +371,7 @@ fedora_28_verify_repo_test:
 fedora_27_verify_repo_test:
   stage: verify_from_test
   variables:
-    RPM_REPO: "rippled-rpm-test-mirror"
+    RPM_REPO: "xrpld-rpm-test-mirror"
   image:
     name: artifactory.ops.ripple.com/fedora:27
   dependencies:
@@ -383,7 +383,7 @@ ubuntu_20_verify_repo_test:
   stage: verify_from_test
   variables:
     DISTRO: "focal"
-    DEB_REPO: "rippled-deb-test-mirror"
+    DEB_REPO: "xrpld-deb-test-mirror"
   image:
     name: artifactory.ops.ripple.com/ubuntu:20.04
   dependencies:
@@ -395,7 +395,7 @@ ubuntu_18_verify_repo_test:
   stage: verify_from_test
   variables:
     DISTRO: "bionic"
-    DEB_REPO: "rippled-deb-test-mirror"
+    DEB_REPO: "xrpld-deb-test-mirror"
   image:
     name: artifactory.ops.ripple.com/ubuntu:18.04
   dependencies:
@@ -407,7 +407,7 @@ ubuntu_16_verify_repo_test:
   stage: verify_from_test
   variables:
     DISTRO: "xenial"
-    DEB_REPO: "rippled-deb-test-mirror"
+    DEB_REPO: "xrpld-deb-test-mirror"
   image:
     name: artifactory.ops.ripple.com/ubuntu:16.04
   dependencies:
@@ -419,7 +419,7 @@ debian_9_verify_repo_test:
   stage: verify_from_test
   variables:
     DISTRO: "stretch"
-    DEB_REPO: "rippled-deb-test-mirror"
+    DEB_REPO: "xrpld-deb-test-mirror"
   image:
     name: artifactory.ops.ripple.com/debian:9
   dependencies:
@@ -457,8 +457,8 @@ wait_before_push_prod:
 
 push_prod:
   variables:
-    DEB_REPO: "rippled-deb"
-    RPM_REPO: "rippled-rpm"
+    DEB_REPO: "xrpld-deb"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/alpine:latest
   stage: push_to_prod
@@ -484,7 +484,7 @@ push_prod:
 centos_7_verify_repo_prod:
   stage: verify_from_prod
   variables:
-    RPM_REPO: "rippled-rpm"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/centos:7
   dependencies:
@@ -495,7 +495,7 @@ centos_7_verify_repo_prod:
 fedora_29_verify_repo_prod:
   stage: verify_from_prod
   variables:
-    RPM_REPO: "rippled-rpm"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/fedora:29
   dependencies:
@@ -506,7 +506,7 @@ fedora_29_verify_repo_prod:
 fedora_28_verify_repo_prod:
   stage: verify_from_prod
   variables:
-    RPM_REPO: "rippled-rpm"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/fedora:28
   dependencies:
@@ -517,7 +517,7 @@ fedora_28_verify_repo_prod:
 fedora_27_verify_repo_prod:
   stage: verify_from_prod
   variables:
-    RPM_REPO: "rippled-rpm"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/fedora:27
   dependencies:
@@ -529,7 +529,7 @@ ubuntu_20_verify_repo_prod:
   stage: verify_from_prod
   variables:
     DISTRO: "focal"
-    DEB_REPO: "rippled-deb"
+    DEB_REPO: "xrpld-deb"
   image:
     name: artifactory.ops.ripple.com/ubuntu:20.04
   dependencies:
@@ -541,7 +541,7 @@ ubuntu_18_verify_repo_prod:
   stage: verify_from_prod
   variables:
     DISTRO: "bionic"
-    DEB_REPO: "rippled-deb"
+    DEB_REPO: "xrpld-deb"
   image:
     name: artifactory.ops.ripple.com/ubuntu:18.04
   dependencies:
@@ -553,7 +553,7 @@ ubuntu_16_verify_repo_prod:
   stage: verify_from_prod
   variables:
     DISTRO: "xenial"
-    DEB_REPO: "rippled-deb"
+    DEB_REPO: "xrpld-deb"
   image:
     name: artifactory.ops.ripple.com/ubuntu:16.04
   dependencies:
@@ -565,7 +565,7 @@ debian_9_verify_repo_prod:
   stage: verify_from_prod
   variables:
     DISTRO: "stretch"
-    DEB_REPO: "rippled-deb"
+    DEB_REPO: "xrpld-deb"
   image:
     name: artifactory.ops.ripple.com/debian:9
   dependencies:
@@ -584,8 +584,8 @@ debian_9_verify_repo_prod:
 
 get_prod_hashes:
   variables:
-    DEB_REPO: "rippled-deb"
-    RPM_REPO: "rippled-rpm"
+    DEB_REPO: "xrpld-deb"
+    RPM_REPO: "xrpld-rpm"
   image:
     name: artifactory.ops.ripple.com/alpine:latest
   stage: get_final_hashes

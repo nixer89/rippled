@@ -180,7 +180,7 @@ single-signed transaction (eg. Payment, Account Set, Offer Create, etc)
 that requires a fee.
 
 In the future, there may be other transaction types that require
-more (or less) work for rippled to process. Those transactions may have
+more (or less) work for xrpld to process. Those transactions may have
 a higher (or lower) base fee, requiring a correspondingly higher (or
 lower) fee to get into the same position as a reference transaction.
 
@@ -264,7 +264,7 @@ values by 5 for a multi-signed transaction with 4 signatures.)
 
 The `fee` result is always instantanteous, and relates to the open
 ledger. It includes the sequence number of the current open ledger,
-but may not make sense if rippled is not synced to the network.
+but may not make sense if xrpld is not synced to the network.
 
 Result format:
 ```

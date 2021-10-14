@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -553,7 +553,7 @@ public:
         backend->close();
     }
 
-    // Simulate a rippled workload:
+    // Simulate a xrpld workload:
     // Each thread randomly:
     //      inserts a new key
     //      fetches an old key

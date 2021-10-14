@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2012-2014 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -636,7 +636,7 @@ std::optional<Seed>
 parseRippleLibSeed(Json::Value const& value)
 {
     // ripple-lib encodes seed used to generate an Ed25519 wallet in a
-    // non-standard way. While rippled never encode seeds that way, we
+    // non-standard way. While xrpld never encode seeds that way, we
     // try to detect such keys to avoid user confusion.
     if (!value.isString())
         return std::nullopt;

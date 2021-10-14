@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# This script generates information about your rippled installation
+# This script generates information about your xrpld installation
 # and system. It can be used to help debug issues that you may face
 # in your installation. While this script endeavors to not display any 
 # sensitive information, it is recommended that you read the output
 # before sharing with any third parties.
 
 
-rippled_exe=/opt/xrpl/bin/rippled
-conf_file=/etc/opt/xrpl/rippled.cfg
+rippled_exe=/opt/xrpl/bin/xrpld
+conf_file=/etc/opt/xrpl/xrpld.cfg
 
 while getopts ":e:c:" opt; do
     case $opt in
@@ -28,7 +28,7 @@ tmp_loc=$(mktemp -d --tmpdir ripple_info.XXXXX)
 chmod 751 ${tmp_loc}
 awk_prog=${tmp_loc}/cfg.awk
 summary_out=${tmp_loc}/rippled_info.md
-printf "# rippled report info\n\n> generated at %s\n" "$(date -R)" > ${summary_out}
+printf "# xrpld report info\n\n> generated at %s\n" "$(date -R)" > ${summary_out}
 
 function log_section {
     printf "\n## %s\n" "$*" >> ${summary_out}
@@ -87,7 +87,7 @@ exec 3>&1 1>>${log_file} 2>&1
 ## Send all stdout files to /tmp
 
 if [[ -x ${rippled_exe} ]] ; then
-    pgrep rippled && \
+    pgrep xrpld && \
     ${rippled_exe} --conf ${conf_file} \
     -- server_info                  | log_section "server info"
 fi
@@ -137,7 +137,7 @@ cat ${log_file} | log_section "script log"
 
 cat << MSG | tee /dev/fd/3
 ####################################################
-  rippled info has been gathered. Please copy the
+  xrpld info has been gathered. Please copy the
   contents of ${summary_out}
   to a github gist at https://gist.github.com/
 

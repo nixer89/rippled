@@ -1,4 +1,4 @@
-/var/log/rippled/*.log {
+/var/log/xrpld/*.log {
   daily
   minsize 200M
   rotate 7
@@ -10,6 +10,6 @@
   compressoptions -n19 ionice -c3 gzip
   compressext .gz
   postrotate
-    /opt/xrpl/bin/rippled --conf /opt/xrpl/etc/rippled.cfg logrotate
+    /opt/xrpl/bin/xrpld --conf /opt/xrpl/etc/xrpld.cfg logrotate
   endscript
 }

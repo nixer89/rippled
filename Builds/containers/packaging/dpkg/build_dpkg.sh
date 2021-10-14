@@ -3,9 +3,9 @@ set -ex
 
 # make sure pkg source files are up to date with repo
 cd /opt/rippled_bld/pkg
-cp -fpru rippled/Builds/containers/packaging/dpkg/debian/. debian/
-cp -fpu rippled/Builds/containers/shared/rippled.service debian/
-cp -fpu rippled/Builds/containers/shared/update_sources.sh .
+cp -fpru xrpld/Builds/containers/packaging/dpkg/debian/. debian/
+cp -fpu xrpld/Builds/containers/shared/xrpld.service debian/
+cp -fpu xrpld/Builds/containers/shared/update_sources.sh .
 source update_sources.sh
 
 # Build the dpkg
@@ -16,17 +16,17 @@ RIPPLED_DPKG_VERSION=$(echo "${RIPPLED_VERSION}" | sed 's!-!~!g')
 # version here (hardcoded to 1). Does it ever need to change?
 RIPPLED_DPKG_FULL_VERSION="${RIPPLED_DPKG_VERSION}-1"
 
-cd /opt/rippled_bld/pkg/rippled
+cd /opt/rippled_bld/pkg/xrpld
 if [[ -n $(git status --porcelain) ]]; then
     git status
     error "Unstaged changes in this repo - please commit first"
 fi
-git archive --format tar.gz --prefix rippled-${RIPPLED_DPKG_VERSION}/ -o ../rippled-${RIPPLED_DPKG_VERSION}.tar.gz HEAD
+git archive --format tar.gz --prefix xrpld-${RIPPLED_DPKG_VERSION}/ -o ../xrpld-${RIPPLED_DPKG_VERSION}.tar.gz HEAD
 cd ..
 # dpkg debmake would normally create this link, but we do it manually
-ln -s ./rippled-${RIPPLED_DPKG_VERSION}.tar.gz rippled_${RIPPLED_DPKG_VERSION}.orig.tar.gz
-tar xvf rippled-${RIPPLED_DPKG_VERSION}.tar.gz
-cd rippled-${RIPPLED_DPKG_VERSION}
+ln -s ./xrpld-${RIPPLED_DPKG_VERSION}.tar.gz rippled_${RIPPLED_DPKG_VERSION}.orig.tar.gz
+tar xvf xrpld-${RIPPLED_DPKG_VERSION}.tar.gz
+cd xrpld-${RIPPLED_DPKG_VERSION}
 cp -pr ../debian .
 
 # dpkg requires a changelog. We don't currently maintain
@@ -35,7 +35,7 @@ cp -pr ../debian .
 # release packages (?)
 NOWSTR=$(TZ=UTC date -R)
 cat << CHANGELOG > ./debian/changelog
-rippled (${RIPPLED_DPKG_FULL_VERSION}) unstable; urgency=low
+xrpld (${RIPPLED_DPKG_FULL_VERSION}) unstable; urgency=low
 
   * see RELEASENOTES
 
@@ -55,11 +55,11 @@ cd ..
 ls -latr
 
 # copy artifacts
-cp rippled-dev_${RIPPLED_DPKG_FULL_VERSION}_amd64.deb ${PKG_OUTDIR}
+cp xrpld-dev_${RIPPLED_DPKG_FULL_VERSION}_amd64.deb ${PKG_OUTDIR}
 cp rippled_${RIPPLED_DPKG_FULL_VERSION}_amd64.deb ${PKG_OUTDIR}
 cp rippled_${RIPPLED_DPKG_FULL_VERSION}.dsc ${PKG_OUTDIR}
 # dbgsym suffix is ddeb under newer debuild, but just deb under earlier
-cp rippled-dbgsym_${RIPPLED_DPKG_FULL_VERSION}_amd64.* ${PKG_OUTDIR}
+cp xrpld-dbgsym_${RIPPLED_DPKG_FULL_VERSION}_amd64.* ${PKG_OUTDIR}
 cp rippled_${RIPPLED_DPKG_FULL_VERSION}_amd64.changes ${PKG_OUTDIR}
 cp rippled_${RIPPLED_DPKG_FULL_VERSION}_amd64.build ${PKG_OUTDIR}
 cp rippled_${RIPPLED_DPKG_VERSION}.orig.tar.gz ${PKG_OUTDIR}
@@ -80,9 +80,9 @@ awk '/Checksums-Sha256:/{hit=1;next}/Files:/{hit=0}hit' \
 DEB_SHA256=$(cat shasums | \
     grep "rippled_${RIPPLED_DPKG_VERSION}-1_amd64.deb" | cut -d " " -f 1)
 DBG_SHA256=$(cat shasums | \
-    grep "rippled-dbgsym_${RIPPLED_DPKG_VERSION}-1_amd64.*" | cut -d " " -f 1)
+    grep "xrpld-dbgsym_${RIPPLED_DPKG_VERSION}-1_amd64.*" | cut -d " " -f 1)
 DEV_SHA256=$(cat shasums | \
-    grep "rippled-dev_${RIPPLED_DPKG_VERSION}-1_amd64.deb" | cut -d " " -f 1)
+    grep "xrpld-dev_${RIPPLED_DPKG_VERSION}-1_amd64.deb" | cut -d " " -f 1)
 SRC_SHA256=$(cat shasums | \
     grep "rippled_${RIPPLED_DPKG_VERSION}.orig.tar.gz" | cut -d " " -f 1)
 echo "deb_sha256=${DEB_SHA256}" >> ${PKG_OUTDIR}/build_vars

@@ -29,4 +29,4 @@ RUN wget -O /opt/plantuml/plantuml.jar http://sourceforge.net/projects/plantuml/
 ENV DOXYGEN_PLANTUML_JAR_PATH=/opt/plantuml/plantuml.jar
 
 ENV DOXYGEN_OUTPUT_DIRECTORY=html
-CMD cd /opt/rippled && doxygen docs/Doxyfile
+CMD cd /opt/xrpld && doxygen docs/Doxyfile

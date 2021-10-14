@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -1093,11 +1093,11 @@ LedgerMaster::checkAccept(std::shared_ptr<Ledger const> const& ledger)
 
     if (ledger->seq() % 256 == 0)
     {
-        // Check if the majority of validators run a higher version rippled
+        // Check if the majority of validators run a higher version xrpld
         // software. If so print a warning.
         //
         // Once the HardenedValidations amendment is enabled, validators include
-        // their rippled software version in the validation messages of every
+        // their xrpld software version in the validation messages of every
         // (flag - 1) ledger. We wait for one ledger time before checking the
         // version information to accumulate more validation messages.
 
@@ -1126,7 +1126,7 @@ LedgerMaster::checkAccept(std::shared_ptr<Ledger const> const& ledger)
             }
             // We report only if (1) we have accumulated validation messages
             // from 90% validators from the UNL, (2) 60% of validators
-            // running the rippled implementation have higher version numbers,
+            // running the xrpld implementation have higher version numbers,
             // and (3) the calculation won't cause divide-by-zero.
             if (higherVersionCount > 0 && rippledCount > 0)
             {

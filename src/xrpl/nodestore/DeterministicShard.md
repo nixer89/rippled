@@ -148,7 +148,7 @@ Final key of the shard is visited at the end.
 To perform test to deterministic shards implementation one can enter
 the following command:
 ```
-rippled --unittest ripple.NodeStore.DatabaseShard
+xrpld --unittest ripple.NodeStore.DatabaseShard
 ```
 
 The following is the right output of deterministic shards test:

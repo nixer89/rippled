@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""A script to test rippled in an infinite loop of start-sync-stop.
+"""A script to test xrpld in an infinite loop of start-sync-stop.
 
 - Requires Python 3.7+.
 - Can be stopped with SIGINT.
@@ -30,8 +30,8 @@ if (platform.system() == 'Windows' and sys.version_info.major == 3
         and sys.version_info.minor < 8):
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
-DEFAULT_EXE = 'rippled'
-DEFAULT_CONFIGURATION_FILE = 'rippled.cfg'
+DEFAULT_EXE = 'xrpld'
+DEFAULT_CONFIGURATION_FILE = 'xrpld.cfg'
 # Number of seconds to wait before forcefully terminating.
 PATIENCE = 120
 # Number of contiguous seconds in a sync state to be considered synced.
@@ -87,8 +87,8 @@ def find_http_port(config_file):
 
 
 @contextlib.asynccontextmanager
-async def rippled(exe=DEFAULT_EXE, config_file=DEFAULT_CONFIGURATION_FILE):
-    """A context manager for a rippled process."""
+async def xrpld(exe=DEFAULT_EXE, config_file=DEFAULT_CONFIGURATION_FILE):
+    """A context manager for a xrpld process."""
     # Start the server.
     process = await asyncio.create_subprocess_exec(
         str(exe),
@@ -97,12 +97,12 @@ async def rippled(exe=DEFAULT_EXE, config_file=DEFAULT_CONFIGURATION_FILE):
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
-    logging.info(f'rippled started with pid {process.pid}')
+    logging.info(f'xrpld started with pid {process.pid}')
     try:
         yield process
     finally:
         # Ask it to stop.
-        logging.info(f'asking rippled (pid: {process.pid}) to stop')
+        logging.info(f'asking xrpld (pid: {process.pid}) to stop')
         start = time.time()
         process.terminate()
 
@@ -111,7 +111,7 @@ async def rippled(exe=DEFAULT_EXE, config_file=DEFAULT_CONFIGURATION_FILE):
             await asyncio.wait_for(process.wait(), PATIENCE)
         except asyncio.TimeoutError:
             # Ask the operating system to kill it.
-            logging.warning(f'killing rippled ({process.pid})')
+            logging.warning(f'killing xrpld ({process.pid})')
             try:
                 process.kill()
             except ProcessLookupError:
@@ -120,7 +120,7 @@ async def rippled(exe=DEFAULT_EXE, config_file=DEFAULT_CONFIGURATION_FILE):
         code = await process.wait()
         end = time.time()
         logging.info(
-            f'rippled stopped after {end - start:.1f} seconds with code {code}'
+            f'xrpld stopped after {end - start:.1f} seconds with code {code}'
         )
 
 
@@ -130,7 +130,7 @@ async def sync(
         duration=DEFAULT_SYNC_DURATION,
         interval=DEFAULT_POLL_INTERVAL,
 ):
-    """Poll rippled on an interval until it has been synced for a duration."""
+    """Poll xrpld on an interval until it has been synced for a duration."""
     start = time.perf_counter()
     while (time.perf_counter() - start) < duration:
         await asyncio.sleep(interval)
@@ -167,7 +167,7 @@ async def loop(test,
                exe=DEFAULT_EXE,
                config_file=DEFAULT_CONFIGURATION_FILE):
     """
-    Start-test-stop rippled in an infinite loop.
+    Start-test-stop xrpld in an infinite loop.
 
     Moves log to a different file after each iteration.
     """
@@ -175,7 +175,7 @@ async def loop(test,
     id = 0
     while True:
         logging.info(f'iteration: {id}')
-        async with rippled(exe, config_file) as process:
+        async with xrpld(exe, config_file) as process:
             start = time.perf_counter()
             exited = asyncio.create_task(process.wait())
             tested = asyncio.create_task(test())
@@ -206,11 +206,11 @@ logging.basicConfig(
 parser = argparse.ArgumentParser(
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument(
-    'rippled',
+    'xrpld',
     type=Path,
     nargs='?',
     default=DEFAULT_EXE,
-    help='Path to rippled.',
+    help='Path to xrpld.',
 )
 parser.add_argument(
     '--conf',
@@ -240,7 +240,7 @@ def test():
 
 
 try:
-    asyncio.run(loop(test, exe=args.rippled, config_file=args.conf))
+    asyncio.run(loop(test, exe=args.xrpld, config_file=args.conf))
 except KeyboardInterrupt:
     # Squelch the message. This is a normal mode of exit.
     pass

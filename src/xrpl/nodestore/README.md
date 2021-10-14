@@ -50,7 +50,7 @@ contains. The fields are as follows:
 |9...end|data                 |body of the object data   |
 ---
 The `NodeStore` provides an interface that stores, in a persistent database, a
-collection of NodeObjects that rippled uses as its primary representation of
+collection of NodeObjects that xrpld uses as its primary representation of
 ledger entries. All ledger entries are stored as NodeObjects and as such, need
 to be persisted between launches. If a NodeObject is accessed and is not in
 memory, it will be retrieved from the database.
@@ -128,7 +128,7 @@ newer versions of RocksDB (TBD).
 ## Discussion
 
 RocksDBQuickFactory is intended to provide a testbed for comparing potential
-rocksdb performance with the existing recommended configuration in rippled.cfg.
+rocksdb performance with the existing recommended configuration in xrpld.cfg.
 Through various executions and profiling some conclusions are presented below.
 
 * If the write ahead log is enabled, insert speed soon clogs up under load. The
@@ -141,10 +141,10 @@ the rocksdb::Flush() call was manually triggered at opportune moments, possibly
 just after ledger close, then that would provide similar, but more predictable
 guarantees. It would also remove an unneeded thread and unnecessary memory
 usage. An alternative point of view is that because there will always be many
-other rippled instances running there is no need for such guarantees. The nodes
+other xrpld instances running there is no need for such guarantees. The nodes
 will always be available from another peer.
 
-* Lookup in a block was previously using binary search. With rippled's use case
+* Lookup in a block was previously using binary search. With xrpld's use case
 it is highly unlikely that two adjacent key/values will ever be requested one
 after the other. Therefore hash indexing of blocks makes much more sense.
 Rocksdb has a number of options for hash indexing both memtables and blocks and
@@ -285,12 +285,12 @@ type=NuDB
 # the current and previous
 # shards:
 # -------------------------
-path=/var/lib/rippled/db/shards/nudb
+path=/var/lib/xrpld/db/shards/nudb
 
 # Path where shards are stored
 # while being downloaded:
 # ----------------------------
-download_path=/var/lib/rippled/db/shards/
+download_path=/var/lib/xrpld/db/shards/
 
 # The number of historical shards to store.
 # The default value is 0, which means that

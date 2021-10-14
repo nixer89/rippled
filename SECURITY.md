@@ -1,6 +1,6 @@
 ### Operating an XRP Ledger server securely
 
-For more details on operating an XRP Ledger server securely, please visit https://xrpl.org/manage-the-rippled-server.html.
+For more details on operating an XRP Ledger server securely, please visit https://xrpl.org/manage-the-xrpld-server.html.
 
 
 # Security Policy
@@ -60,11 +60,11 @@ While we commit to responding with 24 hours of your initial report with our tria
 
 ## Bug Bounty Program
 
-[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`rippled`](https://github.com/xrplf/xrpld) (and other related projects, like [`ripple-lib`](https://github.com/ripple/ripple-lib)).
+[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`xrpld`](https://github.com/xrplf/xrpld) (and other related projects, like [`ripple-lib`](https://github.com/ripple/ripple-lib)).
 
 This program allows us to recognize and reward individuals or groups that identify and report bugs. In summary, order to qualify for a bounty, the bug must be:
 
-1. **In scope**. Only bugs in software under the scope of the program qualify. Currently, that means `rippled` and `ripple-lib`.
+1. **In scope**. Only bugs in software under the scope of the program qualify. Currently, that means `xrpld` and `ripple-lib`.
 2. **Relevant**. A security issue, posing a danger to user funds, privacy or the operation of the XRP Ledger.
 3. **Original and previously unknown**. Bugs that are already known and discussed in public do not qualify. Previously reported bugs, even if publicly unknown, are not eligible.
 4. **Specific**. We welcome general security advice or recommendations, but we cannot pay bounties for that.

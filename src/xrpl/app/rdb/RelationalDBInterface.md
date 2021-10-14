@@ -3,7 +3,7 @@
 Here are main principles of Relational DB interface:
 
 1) All SQL hard code is in the files described below in Files section.
-No hard-coded SQL should be added to any other file in rippled, except related
+No hard-coded SQL should be added to any other file in xrpld, except related
 to tests for specific SQL implementations.
 2) Pure interface class `RelationalDBInterface` can have several
 implementations for different relational database types.

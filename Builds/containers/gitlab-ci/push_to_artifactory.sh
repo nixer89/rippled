@@ -14,8 +14,8 @@ cd $TOPDIR
 cd build/dpkg/packages
 CURLARGS="-sk -X${action} -urippled:${ARTIFACTORY_DEPLOY_KEY_RIPPLED}"
 RIPPLED_PKG=$(ls rippled_*.deb)
-RIPPLED_DEV_PKG=$(ls rippled-dev_*.deb)
-RIPPLED_DBG_PKG=$(ls rippled-dbgsym_*.deb)
+RIPPLED_DEV_PKG=$(ls xrpld-dev_*.deb)
+RIPPLED_DBG_PKG=$(ls xrpld-dbgsym_*.deb)
 # TODO - where to upload src tgz?
 RIPPLED_SRC=$(ls rippled_*.orig.tar.gz)
 DEB_MATRIX=";deb.component=${COMPONENT};deb.architecture=amd64"
@@ -45,11 +45,11 @@ echo "}," >> "${TOPDIR}/files.info"
 
 cd $TOPDIR
 cd build/rpm/packages
-RIPPLED_PKG=$(ls rippled-[0-9]*.x86_64.rpm)
-RIPPLED_DEV_PKG=$(ls rippled-devel*.rpm)
-RIPPLED_DBG_PKG=$(ls rippled-debuginfo*.rpm)
+RIPPLED_PKG=$(ls xrpld-[0-9]*.x86_64.rpm)
+RIPPLED_DEV_PKG=$(ls xrpld-devel*.rpm)
+RIPPLED_DBG_PKG=$(ls xrpld-debuginfo*.rpm)
 # TODO - where to upload src rpm ?
-RIPPLED_SRC=$(ls rippled-[0-9]*.src.rpm)
+RIPPLED_SRC=$(ls xrpld-[0-9]*.src.rpm)
 echo "\"rpms\": {" >> "${TOPDIR}/files.info"
 for rpm in ${RIPPLED_PKG} ${RIPPLED_DEV_PKG} ${RIPPLED_DBG_PKG} ; do
     # first item doesn't get a comma separator

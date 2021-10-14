@@ -3,13 +3,13 @@
 set -o xtrace
 set -o errexit
 
-# Set to 'true' to run the known "manual" tests in rippled.
+# Set to 'true' to run the known "manual" tests in xrpld.
 MANUAL_TESTS=${MANUAL_TESTS:-false}
 # The maximum number of concurrent tests.
 CONCURRENT_TESTS=${CONCURRENT_TESTS:-$(nproc)}
-# The path to rippled.
-RIPPLED=${RIPPLED:-build/rippled}
-# Additional arguments to rippled.
+# The path to xrpld.
+RIPPLED=${RIPPLED:-build/xrpld}
+# Additional arguments to xrpld.
 RIPPLED_ARGS=${RIPPLED_ARGS:-}
 
 function join_by { local IFS="$1"; shift; echo "$*"; }

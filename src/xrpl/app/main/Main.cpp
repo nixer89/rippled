@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -343,7 +343,7 @@ run(int argc, char** argv)
     using namespace std;
 
     beast::setCurrentThreadName(
-        "rippled: main " + BuildInfo::getVersionString());
+        "xrpld: main " + BuildInfo::getVersionString());
 
     po::variables_map vm;
 
@@ -471,8 +471,8 @@ run(int argc, char** argv)
     }
     catch (std::exception const& ex)
     {
-        std::cerr << "rippled: " << ex.what() << std::endl;
-        std::cerr << "Try 'rippled --help' for a list of options." << std::endl;
+        std::cerr << "xrpld: " << ex.what() << std::endl;
+        std::cerr << "Try 'xrpld --help' for a list of options." << std::endl;
         return 1;
     }
 
@@ -484,7 +484,7 @@ run(int argc, char** argv)
 
     if (vm.count("version"))
     {
-        std::cout << "rippled version " << BuildInfo::getVersionString()
+        std::cout << "xrpld version " << BuildInfo::getVersionString()
                   << std::endl;
         return 0;
     }
@@ -521,7 +521,7 @@ run(int argc, char** argv)
         if (vm.count("unittest-jobs"))
         {
             // unittest jobs only makes sense with `unittest`
-            std::cerr << "rippled: '--unittest-jobs' specified without "
+            std::cerr << "xrpld: '--unittest-jobs' specified without "
                          "'--unittest'.\n";
             std::cerr << "To run the unit tests the '--unittest' option must "
                          "be present.\n";
@@ -739,7 +739,7 @@ run(int argc, char** argv)
     }
 
     // We have an RPC command to process:
-    beast::setCurrentThreadName("rippled: rpc");
+    beast::setCurrentThreadName("xrpld: rpc");
     return RPCCall::fromCommandLine(
         *config, vm["parameters"].as<std::vector<std::string>>(), *logs);
 }

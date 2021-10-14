@@ -1,6 +1,6 @@
-This folder contains the protocol buffer definitions used by the rippled gRPC API.
+This folder contains the protocol buffer definitions used by the xrpld gRPC API.
 The gRPC API attempts to mimic the JSON/Websocket API as much as possible.
-As of April 2020, the gRPC API supports a subset of the full rippled API:
+As of April 2020, the gRPC API supports a subset of the full xrpld API:
 tx, account_tx, account_info, fee and submit.
 
 ### Making Changes

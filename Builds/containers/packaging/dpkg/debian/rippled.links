@@ -1,3 +1,3 @@
-opt/xrpl/etc/rippled.cfg etc/opt/xrpl/rippled.cfg
+opt/xrpl/etc/xrpld.cfg etc/opt/xrpl/xrpld.cfg
 opt/xrpl/etc/validators.txt etc/opt/xrpl/validators.txt
-opt/xrpl/bin/rippled usr/local/bin/rippled
+opt/xrpl/bin/xrpld usr/local/bin/xrpld

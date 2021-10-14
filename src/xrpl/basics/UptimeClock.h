@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -46,7 +46,7 @@ public:
     explicit UptimeClock() = default;
 
     static time_point
-    now();  // seconds since rippled program start
+    now();  // seconds since xrpld program start
 
 private:
     static std::atomic<rep> now_;

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -125,9 +125,9 @@ public:
     bool nodeToShard = false;
     bool ELB_SUPPORT = false;
 
-    std::vector<std::string> IPS;           // Peer IPs from rippled.cfg.
-    std::vector<std::string> IPS_FIXED;     // Fixed Peer IPs from rippled.cfg.
-    std::vector<std::string> SNTP_SERVERS;  // SNTP servers from rippled.cfg.
+    std::vector<std::string> IPS;           // Peer IPs from xrpld.cfg.
+    std::vector<std::string> IPS_FIXED;     // Fixed Peer IPs from xrpld.cfg.
+    std::vector<std::string> SNTP_SERVERS;  // SNTP servers from xrpld.cfg.
 
     enum StartUpType { FRESH, NORMAL, LOAD, LOAD_FILE, REPLAY, NETWORK };
     StartUpType START_UP = NORMAL;

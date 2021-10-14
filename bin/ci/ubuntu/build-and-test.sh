@@ -37,7 +37,7 @@ else
     time=
 fi
 
-echo "Building rippled"
+echo "Building xrpld"
 : ${CMAKE_EXTRA_ARGS:=""}
 if [[ ${NINJA_BUILD:-} == true ]]; then
     CMAKE_EXTRA_ARGS+=" -G Ninja"
@@ -141,7 +141,7 @@ popd
 if [[ "${TARGET}" == "validator-keys" ]] ; then
     export APP_PATH="$PWD/build/${BUILD_DIR}/validator-keys/validator-keys"
 else
-    export APP_PATH="$PWD/build/${BUILD_DIR}/rippled"
+    export APP_PATH="$PWD/build/${BUILD_DIR}/xrpld"
 fi
 echo "using APP_PATH: ${APP_PATH}"
 
@@ -156,7 +156,7 @@ else
     function join_by { local IFS="$1"; shift; echo "$*"; }
 
     # This is a list of manual tests
-    # in rippled that we want to run
+    # in xrpld that we want to run
     # ORDER matters here...sorted in approximately
     # descending execution time (longest running tests at top)
     declare -a manual_tests=(

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -37,8 +37,8 @@ void
 ManagerImp::missing_backend()
 {
     Throw<std::runtime_error>(
-        "Your rippled.cfg is missing a [node_db] entry, "
-        "please see the rippled-example.cfg file!");
+        "Your xrpld.cfg is missing a [node_db] entry, "
+        "please see the xrpld-example.cfg file!");
 }
 
 std::unique_ptr<Backend>
@@ -58,7 +58,7 @@ ManagerImp::make_Backend(
 #ifndef RIPPLED_REPORTING
         if (boost::iequals(type, "cassandra"))
             Throw<std::runtime_error>(
-                "To use Cassandra as a nodestore, build rippled with "
+                "To use Cassandra as a nodestore, build xrpld with "
                 "-Dreporting=ON");
 #endif
         missing_backend();

@@ -41,11 +41,11 @@ build environment Docker image, which has all of them installed already.
 1. Install [Docker](https://docs.docker.com/engine/installation/)
 2. Pull the image:
   ```
-  sudo docker pull rippleci/rippled-ci-builder:2944b78d22db
+  sudo docker pull rippleci/xrpld-ci-builder:2944b78d22db
   ```
 3. Run the image from the project folder:
   ```
-  sudo docker run -v $PWD:/opt/rippled --rm rippleci/rippled-ci-builder:2944b78d22db
+  sudo docker run -v $PWD:/opt/xrpld --rm rippleci/xrpld-ci-builder:2944b78d22db
   ```
 
 

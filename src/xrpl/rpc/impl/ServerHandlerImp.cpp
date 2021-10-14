@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -968,8 +968,8 @@ ServerHandlerImp::statusResponse(http_request_type const& request) const
     {
         msg.result(boost::beast::http::status::ok);
         msg.body() = "<!DOCTYPE html><html><head><title>" + systemName() +
-            " Test page for rippled</title></head><body><h1>" + systemName() +
-            " Test</h1><p>This page shows rippled http(s) "
+            " Test page for xrpld</title></head><body><h1>" + systemName() +
+            " Test</h1><p>This page shows xrpld http(s) "
             "connectivity is working.</p></body></html>";
     }
     else

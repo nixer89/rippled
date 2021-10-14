@@ -2,8 +2,8 @@
 set -ex
 
 cd /opt/rippled_bld/pkg
-cp -fpu rippled/Builds/containers/packaging/rpm/rippled.spec .
-cp -fpu rippled/Builds/containers/shared/update_sources.sh .
+cp -fpu xrpld/Builds/containers/packaging/rpm/xrpld.spec .
+cp -fpu xrpld/Builds/containers/shared/update_sources.sh .
 source update_sources.sh
 
 # Build the rpm
@@ -28,37 +28,37 @@ if [[ $RPM_PATCH ]]; then
     export RPM_PATCH
 fi
 
-cd /opt/rippled_bld/pkg/rippled
+cd /opt/rippled_bld/pkg/xrpld
 if [[ -n $(git status --porcelain) ]]; then
     git status
     error "Unstaged changes in this repo - please commit first"
 fi
-git archive --format tar.gz --prefix rippled/ -o ../rpmbuild/SOURCES/rippled.tar.gz HEAD
+git archive --format tar.gz --prefix xrpld/ -o ../rpmbuild/SOURCES/xrpld.tar.gz HEAD
 # TODO include validator-keys sources
 cd ..
 
 source /opt/rh/devtoolset-8/enable
 
-rpmbuild --define "_topdir ${PWD}/rpmbuild" -ba rippled.spec
+rpmbuild --define "_topdir ${PWD}/rpmbuild" -ba xrpld.spec
 rc=$?; if [[ $rc != 0 ]]; then
     error "error building rpm"
 fi
 
 # Make a tar of the rpm and source rpm
-RPM_VERSION_RELEASE=$(rpm -qp --qf='%{NAME}-%{VERSION}-%{RELEASE}' ./rpmbuild/RPMS/x86_64/rippled-[0-9]*.rpm)
+RPM_VERSION_RELEASE=$(rpm -qp --qf='%{NAME}-%{VERSION}-%{RELEASE}' ./rpmbuild/RPMS/x86_64/xrpld-[0-9]*.rpm)
 tar_file=$RPM_VERSION_RELEASE.tar.gz
 
 cp ./rpmbuild/RPMS/x86_64/* ${PKG_OUTDIR}
 cp ./rpmbuild/SRPMS/* ${PKG_OUTDIR}
 
-RPM_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/rippled-[0-9]*.rpm 2>/dev/null)
-DBG_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/rippled-debuginfo*.rpm 2>/dev/null)
-DEV_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/rippled-devel*.rpm 2>/dev/null)
+RPM_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/xrpld-[0-9]*.rpm 2>/dev/null)
+DBG_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/xrpld-debuginfo*.rpm 2>/dev/null)
+DEV_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/RPMS/x86_64/xrpld-devel*.rpm 2>/dev/null)
 SRC_MD5SUM=$(rpm -q --queryformat '%{SIGMD5}\n' -p ./rpmbuild/SRPMS/*.rpm 2>/dev/null)
 
-RPM_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/rippled-[0-9]*.rpm | awk '{ print $1}')"
-DBG_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/rippled-debuginfo*.rpm | awk '{ print $1}')"
-DEV_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/rippled-devel*.rpm | awk '{ print $1}')"
+RPM_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/xrpld-[0-9]*.rpm | awk '{ print $1}')"
+DBG_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/xrpld-debuginfo*.rpm | awk '{ print $1}')"
+DEV_SHA256="$(sha256sum ./rpmbuild/RPMS/x86_64/xrpld-devel*.rpm | awk '{ print $1}')"
 SRC_SHA256="$(sha256sum ./rpmbuild/SRPMS/*.rpm | awk '{ print $1}')"
 
 echo "rpm_md5sum=$RPM_MD5SUM" >  ${PKG_OUTDIR}/build_vars

@@ -1,4 +1,4 @@
-Source: rippled
+Source: xrpld
 Section: misc
 Priority: extra
 Maintainer: XRP Ledger Foundation <support@ripple.com>
@@ -6,15 +6,15 @@ Build-Depends: cmake, debhelper (>=9), zlib1g-dev, dh-systemd, ninja-build
 Standards-Version: 3.9.7
 Homepage: http://ripple.com/
 
-Package: rippled
+Package: xrpld
 Architecture: any
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: rippled daemon
+Description: xrpld daemon
 
-Package: rippled-dev
+Package: xrpld-dev
 Section: devel
-Recommends: rippled (= ${binary:Version})
+Recommends: xrpld (= ${binary:Version})
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}, libprotobuf-dev, libssl-dev

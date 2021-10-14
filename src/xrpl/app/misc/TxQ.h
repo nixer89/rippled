@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2012-19 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -422,7 +422,7 @@ private:
 
             @param app Rippled Application object.
             @param view View of the LCL that was just closed or received.
-            @param timeLeap Indicates that rippled is under load so fees
+            @param timeLeap Indicates that xrpld is under load so fees
             should grow faster.
             @param setup Customization params.
         */

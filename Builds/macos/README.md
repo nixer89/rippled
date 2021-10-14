@@ -1,3 +1,3 @@
 # macOS Build Instructions
 
-[Build and Run rippled on macOS](https://xrpl.org/build-run-rippled-macos.html)
+[Build and Run xrpld on macOS](https://xrpl.org/build-run-xrpld-macos.html)

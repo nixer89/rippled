@@ -37,7 +37,7 @@ if (is_root_project)
       docker build
         --pull
         --build-arg GIT_COMMIT=${commit_hash}
-        -t rippled-rpm-builder:${container_label}
+        -t xrpld-rpm-builder:${container_label}
         $<$<BOOL:${rpm_cache_from}>:--cache-from=${rpm_cache_from}>
         -f centos-builder/Dockerfile .
       WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR}/Builds/containers
@@ -49,10 +49,10 @@ if (is_root_project)
         Builds/containers/centos-builder/centos_setup.sh
         Builds/containers/centos-builder/extras.sh
         Builds/containers/shared/build_deps.sh
-        Builds/containers/shared/rippled.service
+        Builds/containers/shared/xrpld.service
         Builds/containers/shared/update_sources.sh
-        Builds/containers/shared/update-rippled.sh
-        Builds/containers/packaging/rpm/rippled.spec
+        Builds/containers/shared/update-xrpld.sh
+        Builds/containers/packaging/rpm/xrpld.spec
         Builds/containers/packaging/rpm/build_rpm.sh
         bin/getRippledInfo
     )
@@ -61,16 +61,16 @@ if (is_root_project)
       docker run
         -e NIH_CACHE_ROOT=/opt/rippled_bld/pkg/.nih_c
         -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/rippled_bld/pkg/.nih_c
-        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/rippled
+        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/xrpld
         -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/rippled_bld/pkg/out
         "$<$<BOOL:${map_user}>:--volume=/etc/passwd:/etc/passwd;--volume=/etc/group:/etc/group;--user=${DOCKER_USER_ID}:${DOCKER_GROUP_ID}>"
-        -t rippled-rpm-builder:${container_label}
-        /bin/bash -c "cp -fpu rippled/Builds/containers/packaging/rpm/build_rpm.sh . && ./build_rpm.sh"
+        -t xrpld-rpm-builder:${container_label}
+        /bin/bash -c "cp -fpu xrpld/Builds/containers/packaging/rpm/build_rpm.sh . && ./build_rpm.sh"
       VERBATIM
       USES_TERMINAL
       COMMAND_EXPAND_LISTS
       SOURCES
-        Builds/containers/packaging/rpm/rippled.spec
+        Builds/containers/packaging/rpm/xrpld.spec
     )
     exclude_from_default (rpm)
     if (NOT have_package_container)
@@ -88,7 +88,7 @@ if (is_root_project)
         --pull
         --build-arg DIST_TAG=16.04
         --build-arg GIT_COMMIT=${commit_hash}
-        -t rippled-dpkg-builder:${container_label}
+        -t xrpld-dpkg-builder:${container_label}
         $<$<BOOL:${dpkg_cache_from}>:--cache-from=${dpkg_cache_from}>
         -f ubuntu-builder/Dockerfile .
       WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR}/Builds/containers
@@ -99,9 +99,9 @@ if (is_root_project)
         Builds/containers/ubuntu-builder/Dockerfile
         Builds/containers/ubuntu-builder/ubuntu_setup.sh
         Builds/containers/shared/build_deps.sh
-        Builds/containers/shared/rippled.service
+        Builds/containers/shared/xrpld.service
         Builds/containers/shared/update_sources.sh
-        Builds/containers/shared/update-rippled.sh
+        Builds/containers/shared/update-xrpld.sh
         Builds/containers/packaging/dpkg/build_dpkg.sh
         Builds/containers/packaging/dpkg/debian/README.Debian
         Builds/containers/packaging/dpkg/debian/conffiles
@@ -109,13 +109,13 @@ if (is_root_project)
         Builds/containers/packaging/dpkg/debian/copyright
         Builds/containers/packaging/dpkg/debian/dirs
         Builds/containers/packaging/dpkg/debian/docs
-        Builds/containers/packaging/dpkg/debian/rippled-dev.install
-        Builds/containers/packaging/dpkg/debian/rippled.install
-        Builds/containers/packaging/dpkg/debian/rippled.links
-        Builds/containers/packaging/dpkg/debian/rippled.postinst
-        Builds/containers/packaging/dpkg/debian/rippled.postrm
-        Builds/containers/packaging/dpkg/debian/rippled.preinst
-        Builds/containers/packaging/dpkg/debian/rippled.prerm
+        Builds/containers/packaging/dpkg/debian/xrpld-dev.install
+        Builds/containers/packaging/dpkg/debian/xrpld.install
+        Builds/containers/packaging/dpkg/debian/xrpld.links
+        Builds/containers/packaging/dpkg/debian/xrpld.postinst
+        Builds/containers/packaging/dpkg/debian/xrpld.postrm
+        Builds/containers/packaging/dpkg/debian/xrpld.preinst
+        Builds/containers/packaging/dpkg/debian/xrpld.prerm
         Builds/containers/packaging/dpkg/debian/rules
         bin/getRippledInfo
     )
@@ -124,11 +124,11 @@ if (is_root_project)
       docker run
         -e NIH_CACHE_ROOT=/opt/rippled_bld/pkg/.nih_c
         -v ${NIH_CACHE_ROOT}/pkgbuild:/opt/rippled_bld/pkg/.nih_c
-        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/rippled
+        -v ${CMAKE_CURRENT_SOURCE_DIR}:/opt/rippled_bld/pkg/xrpld
         -v ${CMAKE_CURRENT_BINARY_DIR}/packages:/opt/rippled_bld/pkg/out
         "$<$<BOOL:${map_user}>:--volume=/etc/passwd:/etc/passwd;--volume=/etc/group:/etc/group;--user=${DOCKER_USER_ID}:${DOCKER_GROUP_ID}>"
-        -t rippled-dpkg-builder:${container_label}
-        /bin/bash -c "cp -fpu rippled/Builds/containers/packaging/dpkg/build_dpkg.sh . && ./build_dpkg.sh"
+        -t xrpld-dpkg-builder:${container_label}
+        /bin/bash -c "cp -fpu xrpld/Builds/containers/packaging/dpkg/build_dpkg.sh . && ./build_dpkg.sh"
       VERBATIM
       USES_TERMINAL
       COMMAND_EXPAND_LISTS
@@ -152,25 +152,25 @@ if (is_root_project)
     #
     #   mkdir bld.ci && cd bld.ci && cmake -Dpackages_only=ON -Dcontainer_label=CI_LATEST
     #   cmake --build . --target ci_container --verbose
-    #   docker tag rippled-ci-builder:CI_LATEST <HUB REPO PATH>/rippled-ci-builder:YYYY-MM-DD
+    #   docker tag xrpld-ci-builder:CI_LATEST <HUB REPO PATH>/xrpld-ci-builder:YYYY-MM-DD
     #      (NOTE: change YYYY-MM-DD to match current date, or use a different
     #             tag/version scheme if you prefer)
-    #   docker push <HUB REPO PATH>/rippled-ci-builder:YYYY-MM-DD
+    #   docker push <HUB REPO PATH>/xrpld-ci-builder:YYYY-MM-DD
     #      (NOTE: <HUB REPO PATH> is probably your user or org name if using
     #             docker hub, or it might be something like
-    #             docker.pkg.github.com/xrpl/rippled if using the github pkg
+    #             docker.pkg.github.com/xrpl/xrpld if using the github pkg
     #             registry. for any registry, you will need to be logged-in via
     #             docker and have push access.)
     #
     # ...then change the DOCKER_IMAGE line in .travis.yml :
-    #     - DOCKER_IMAGE="<HUB REPO PATH>/rippled-ci-builder:YYYY-MM-DD"
+    #     - DOCKER_IMAGE="<HUB REPO PATH>/xrpld-ci-builder:YYYY-MM-DD"
     add_custom_target (ci_container
       docker build
         --pull
         --build-arg DIST_TAG=18.04
         --build-arg GIT_COMMIT=${commit_hash}
         --build-arg CI_USE=true
-        -t rippled-ci-builder:${container_label}
+        -t xrpld-ci-builder:${container_label}
         $<$<BOOL:${ci_cache_from}>:--cache-from=${ci_cache_from}>
         -f ubuntu-builder/Dockerfile .
       WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR}/Builds/containers

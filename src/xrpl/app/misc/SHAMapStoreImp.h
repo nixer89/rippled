@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -108,7 +108,7 @@ private:
     /// online_delete health check, sleep the thread
     /// for this time and check again so the node can
     /// recover.
-    /// See also: "recovery_wait_seconds" in rippled-example.cfg
+    /// See also: "recovery_wait_seconds" in xrpld-example.cfg
     std::optional<std::chrono::seconds> recoveryWaitTime_;
 
     // these do not exist upon SHAMapStore creation, but do exist
@@ -222,12 +222,12 @@ private:
     void
     clearPrior(LedgerIndex lastRotated);
 
-    // If rippled is not healthy, defer rotate-delete.
+    // If xrpld is not healthy, defer rotate-delete.
     // If already unhealthy, do not change state on further check.
     // Assume that, once unhealthy, a necessary step has been
     // aborted, so the online-delete process needs to restart
     // at next ledger.
-    // If recoveryWaitTime_ is set, this may sleep to give rippled
+    // If recoveryWaitTime_ is set, this may sleep to give xrpld
     // time to recover, so never call it from any thread other than
     // the main "run()".
     Health

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -253,14 +253,14 @@ private:
         getClientEndpoint();
 
         // If the request was proxied through
-        // another rippled node, returns the ip of the originating client.
+        // another xrpld node, returns the ip of the originating client.
         // Empty optional if request was not proxied or there was an error
         // decoding the client ip
         std::optional<boost::asio::ip::address>
         getProxiedClientIpAddress();
 
         // If the request was proxied through
-        // another rippled node, returns the endpoint of the originating client.
+        // another xrpld node, returns the endpoint of the originating client.
         // Empty optional if request was not proxied or there was an error
         // decoding the client endpoint
         std::optional<boost::asio::ip::tcp::endpoint>
@@ -280,7 +280,7 @@ private:
         bool
         clientIsUnlimited();
 
-        // True if the request was proxied through another rippled node prior
+        // True if the request was proxied through another xrpld node prior
         // to arriving here
         bool
         wasForwarded();

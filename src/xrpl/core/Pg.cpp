@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2020 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -669,12 +669,12 @@ make_PgPool(Section const& pgConfig, beast::Journal j)
  * - Schema changes such as creating new columns and indices can consume
  *   a lot of time. Therefore, before such changes, a separate script should
  *   be executed by the user to perform the schema upgrade prior to restarting
- *   rippled.
+ *   xrpld.
  * - Stored functions cannot be dropped while being accessed. Also,
  *   dropping stored functions can be ambiguous if multiple functions with
  *   the same name but different signatures exist. Further, stored function
  *   behavior from one schema version to the other would likely be handled
- *   differently by rippled. In this case, it is likely that the functions
+ *   differently by xrpld. In this case, it is likely that the functions
  *   themselves should be versioned such as by appending a number to the
  *   end of the name (abcf becomes abcf_2, abcf_3, etc.)
  *
@@ -844,9 +844,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- account_tx() RPC helper. From the rippled reporting process, only the
+-- account_tx() RPC helper. From the xrpld reporting process, only the
 -- parameters without defaults are required. For the parameters with
--- defaults, validation should be done by rippled, such as:
+-- defaults, validation should be done by xrpld, such as:
 -- _in_account_id should be a valid xrp base58 address.
 -- _in_forward either true or false according to the published api
 -- _in_limit should be validated and not simply passed through from
@@ -861,7 +861,7 @@ $$ LANGUAGE plpgsql;
 -- as is. If the type is string and contents = validated, then do not
 -- set _in_ledger_index. Instead set _in_invalidated to TRUE.
 --
--- There is no need for rippled to do any type of lookup on max/min
+-- There is no need for xrpld to do any type of lookup on max/min
 -- ledger range, lookup of hash, or the like. This functions does those
 -- things, including error responses if bad input. Only the above must
 -- be done to set the correct search range.
@@ -948,7 +948,7 @@ BEGIN
     IF _in_marker_seq IS NOT NULL OR _in_marker_index IS NOT NULL THEN
         _marker := TRUE;
         IF _in_marker_seq IS NULL OR _in_marker_index IS NULL THEN
-            -- The rippled implementation returns no transaction results
+            -- The xrpld implementation returns no transaction results
             -- if either of these values are missing.
             _between_min := 0;
             _between_max := 0;
@@ -1126,7 +1126,7 @@ $$ LANGUAGE plpgsql;
 -- Function to delete old data. All data belonging to ledgers prior to and
 -- equal to the _in_seq parameter will be deleted. This should be
 -- called with the input parameter equivalent to the value of lastRotated
--- in rippled's online_delete routine.
+-- in xrpld's online_delete routine.
 CREATE OR REPLACE FUNCTION online_delete (
     _in_seq bigint
 ) RETURNS void AS $$

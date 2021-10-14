@@ -28,7 +28,7 @@ TAGS
 GTAGS
 GRTAGS
 GPATH
-bin/rippled
+bin/xrpld
 Debug/*.*
 Release/*.*
 
@@ -55,7 +55,7 @@ db/*.db-*
 debug_log.txt
 
 # Ignore customized configs
-rippled.cfg
+xrpld.cfg
 validators.txt
 
 # Doxygen generated documentation output
@@ -88,7 +88,7 @@ My Amplifier XE Results - RippleD
 /out.txt
 
 # Build Log
-rippled-build.log
+xrpld-build.log
 
 # Profiling data
 gmon.out

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2020 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -508,7 +508,7 @@ ReportingETL::runETLPipeline(uint32_t startSequence)
                            &startSequence,
                            &writeConflict,
                            &transformQueue]() {
-        beast::setCurrentThreadName("rippled: ReportingETL extract");
+        beast::setCurrentThreadName("xrpld: ReportingETL extract");
         uint32_t currentSequence = startSequence;
 
         // there are two stopping conditions here.
@@ -560,7 +560,7 @@ ReportingETL::runETLPipeline(uint32_t startSequence)
                              &writeConflict,
                              &loadQueue,
                              &transformQueue]() {
-        beast::setCurrentThreadName("rippled: ReportingETL transform");
+        beast::setCurrentThreadName("xrpld: ReportingETL transform");
 
         assert(parent);
         parent = std::make_shared<Ledger>(*parent, NetClock::time_point{});
@@ -597,7 +597,7 @@ ReportingETL::runETLPipeline(uint32_t startSequence)
 
     std::thread loader{
         [this, &lastPublishedSequence, &loadQueue, &writeConflict]() {
-            beast::setCurrentThreadName("rippled: ReportingETL load");
+            beast::setCurrentThreadName("xrpld: ReportingETL load");
             size_t totalTransactions = 0;
             double totalTime = 0;
             while (!writeConflict)
@@ -823,7 +823,7 @@ void
 ReportingETL::doWork()
 {
     worker_ = std::thread([this]() {
-        beast::setCurrentThreadName("rippled: ReportingETL worker");
+        beast::setCurrentThreadName("xrpld: ReportingETL worker");
         if (readOnly_)
             monitorReadOnly();
         else

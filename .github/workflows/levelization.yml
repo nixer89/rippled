@@ -30,7 +30,7 @@ jobs:
         MESSAGE: |
           If you are reading this, you are looking at a failed Github
           Actions job. That means you changed the dependency relationships
-          between the modules in rippled. That may be an improvement or a
+          between the modules in xrpld. That may be an improvement or a
           regression. This check doesn't judge.
 
           A rule of thumb, though, is that if your changes caused

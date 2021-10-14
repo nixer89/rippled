@@ -5,8 +5,8 @@ The [XRP Ledger](https://xrpl.org/) is a decentralized cryptographic ledger powe
 ## XRP
 [XRP](https://xrpl.org/xrp.html) is a public, counterparty-free asset native to the XRP Ledger, and is designed to bridge the many different currencies in use worldwide. XRP is traded on the open-market and is available for anyone to access. The XRP Ledger was created in 2012 with a finite supply of 100 billion units of XRP. Its creators gifted 80 billion XRP to a company, now called [Ripple](https://ripple.com/), to develop the XRP Ledger and its ecosystem. Ripple uses XRP to help build the Internet of Value, ushering in a world in which money moves as fast and efficiently as information does today.
 
-## rippled
-The server software that powers the XRP Ledger is called `rippled` and is available in this repository under the permissive [ISC open-source license](LICENSE). The `rippled` server is written primarily in C++ and runs on a variety of platforms.
+## xrpld
+The server software that powers the XRP Ledger is called `xrpld` and is available in this repository under the permissive [ISC open-source license](LICENSE). The `xrpld` server is written primarily in C++ and runs on a variety of platforms.
 
 ### Build from Source
 
@@ -34,15 +34,15 @@ The server software that powers the XRP Ledger is called `rippled` and is availa
 
 
 ## Source Code
-[![travis-ci.com: Build Status](https://travis-ci.com/xrpl/rippled.svg?branch=develop)](https://travis-ci.com/xrpl/rippled)
-[![codecov.io: Code Coverage](https://codecov.io/gh/xrpl/rippled/branch/develop/graph/badge.svg)](https://codecov.io/gh/xrpl/rippled)
+[![travis-ci.com: Build Status](https://travis-ci.com/xrpl/xrpld.svg?branch=develop)](https://travis-ci.com/xrpl/xrpld)
+[![codecov.io: Code Coverage](https://codecov.io/gh/xrpl/xrpld/branch/develop/graph/badge.svg)](https://codecov.io/gh/xrpl/xrpld)
 
 ### Repository Contents
 
 | Folder     | Contents                                         |
 |:-----------|:-------------------------------------------------|
 | `./bin`    | Scripts and data files for Ripple integrators.   |
-| `./Builds` | Platform-specific guides for building `rippled`. |
+| `./Builds` | Platform-specific guides for building `xrpld`. |
 | `./docs`   | Source documentation files and doxygen config.   |
 | `./cfg`    | Example configuration files.                     |
 | `./src`    | Source code.                                     |
@@ -54,5 +54,5 @@ git-subtree. See those directories' README files for more details.
 ## See Also
 
 * [XRP Ledger Dev Portal](https://xrpl.org/)
-* [Setup and Installation](https://xrpl.org/install-rippled.html)
-* [Source Documentation (Doxygen)](https://ripple.github.io/rippled)
+* [Setup and Installation](https://xrpl.org/install-xrpld.html)
+* [Source Documentation (Doxygen)](https://ripple.github.io/xrpld)

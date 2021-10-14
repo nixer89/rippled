@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/xrplf/xrpld
+    This file is part of xrpld: https://github.com/xrplf/xrpld
     Copyright (c) 2020 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -1425,7 +1425,7 @@ dbHasSpace(soci::session& session, Config const& config, beast::Journal j)
         {
             JLOG(j.fatal())
                 << "Free SQLite space for transaction db is less than "
-                   "512MB. To fix this, rippled must be executed with the "
+                   "512MB. To fix this, xrpld must be executed with the "
                    "vacuum parameter before restarting. "
                    "Note that this activity can take multiple days, "
                    "depending on database size.";

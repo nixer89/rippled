@@ -1,5 +1,5 @@
 In this directory are two scripts, `build.sh` and `test.sh` used for building
-and testing rippled.
+and testing xrpld.
 
 (For now, they assume Bash and Linux. Once I get Windows containers for
 testing, I'll try them there, but if Bash is not available, then they will
