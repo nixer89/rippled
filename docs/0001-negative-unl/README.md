@@ -591,7 +591,7 @@ For example, the test cases for the prototype:
 
 We considered testing with the current unit test framework, specifically the
 [Consensus Simulation
-Framework](https://github.com/ripple/rippled/blob/develop/src/test/csf/README.md)
+Framework](https://github.com/xrplf/xrpld/blob/develop/src/test/csf/README.md)
 (CSF). However, the CSF currently can only test the generic consensus algorithm
 as in the paper: [Analysis of the XRP Ledger Consensus
 Protocol](https://arxiv.org/abs/1802.07242).

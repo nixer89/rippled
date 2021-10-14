@@ -3,7 +3,7 @@
 This document focuses on building rippled for development purposes under recent
 Ubuntu linux distributions. To build rippled for Redhat, Fedora or Centos
 builds, including docker based builds for those distributions, please consult
-the [rippled-package-builder](https://github.com/ripple/rippled-package-builder)
+the [rippled-package-builder](https://github.com/xrplf/xrpld-package-builder)
 repository. 
 
 Note: Ubuntu 16.04 users may need to update their compiler (see the dependencies
@@ -64,7 +64,7 @@ cd rippled
 ```
 
 For a stable release, choose the `master` branch or one of the tagged releases
-listed on [GitHub](https://github.com/ripple/rippled/releases). 
+listed on [GitHub](https://github.com/xrplf/xrpld/releases). 
 
 ```
 git checkout master
@@ -207,7 +207,7 @@ target_link_libraries (my-signing-app Ripple::xrpl_core)
 First, add the rippled repo as a submodule to your project repo:
 
 ```
-git submodule add -b master https://github.com/ripple/rippled.git vendor/rippled
+git submodule add -b master https://github.com/xrplf/xrpld.git vendor/rippled
 ```
 
 change the `vendor/rippled` path as desired for your repo layout. Furthermore,

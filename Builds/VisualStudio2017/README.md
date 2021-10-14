@@ -148,7 +148,7 @@ If you receive an error about not having the "correct access rights" make sure
 you have Github ssh keys, as described above.
 
 For a stable release, choose the `master` branch or one of the tagged releases
-listed on [rippled's GitHub page](https://github.com/ripple/rippled/releases).
+listed on [rippled's GitHub page](https://github.com/xrplf/xrpld/releases).
 
 ```
 git checkout master

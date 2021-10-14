@@ -39,7 +39,7 @@ rippled (${RIPPLED_DPKG_FULL_VERSION}) unstable; urgency=low
 
   * see RELEASENOTES
 
- -- Ripple Labs Inc. <support@ripple.com>  ${NOWSTR}
+ -- XRP Ledger Foundation <support@ripple.com>  ${NOWSTR}
 CHANGELOG
 
 # PATH must be preserved for our more modern cmake in /opt/local

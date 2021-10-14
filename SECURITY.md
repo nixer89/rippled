@@ -7,7 +7,7 @@ For more details on operating an XRP Ledger server securely, please visit https:
 
 ## Supported Versions
 
-Software constantly evolves. In order to focus resources, we only generally only accept vulnerability reports that affect recent and current versions of the software. We always accept reports for issues present in the **master**, **release** or **develop** branches, and with proposed, [open pull requests](https://github.com/ripple/rippled/pulls).
+Software constantly evolves. In order to focus resources, we only generally only accept vulnerability reports that affect recent and current versions of the software. We always accept reports for issues present in the **master**, **release** or **develop** branches, and with proposed, [open pull requests](https://github.com/xrplf/xrpld/pulls).
 
 ## Identifying and Reporting Vulnerabilities
 
@@ -60,7 +60,7 @@ While we commit to responding with 24 hours of your initial report with our tria
 
 ## Bug Bounty Program
 
-[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`rippled`](https://github.com/ripple/rippled) (and other related projects, like [`ripple-lib`](https://github.com/ripple/ripple-lib)).
+[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`rippled`](https://github.com/xrplf/xrpld) (and other related projects, like [`ripple-lib`](https://github.com/ripple/ripple-lib)).
 
 This program allows us to recognize and reward individuals or groups that identify and report bugs. In summary, order to qualify for a bounty, the bug must be:
 

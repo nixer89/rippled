@@ -1,8 +1,8 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
+    This file is part of rippled: https://github.com/xrplf/xrpld
 
-    Copyright 2014 Ripple Labs Inc.
+    Copyright 2014 XRP Ledger Foundation
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above
     copyright notice and this permission notice appear in all copies.

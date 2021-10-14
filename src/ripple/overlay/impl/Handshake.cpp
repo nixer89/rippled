@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
-    Copyright (c) 2012, 2013 Ripple Labs Inc.
+    This file is part of rippled: https://github.com/xrplf/xrpld
+    Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above
@@ -121,7 +121,7 @@ makeFeaturesResponseHeader(
     @note This construct is non-standard. There are potential "standard"
           alternatives that should be considered. For a discussion, on
           this topic, see https://github.com/openssl/openssl/issues/5509 and
-          https://github.com/ripple/rippled/issues/2413.
+          https://github.com/xrplf/xrpld/issues/2413.
 */
 static std::optional<base_uint<512>>
 hashLastMessage(SSL const* ssl, size_t (*get)(const SSL*, void*, size_t))

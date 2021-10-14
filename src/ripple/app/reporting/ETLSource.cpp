@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
-    Copyright (c) 2020 Ripple Labs Inc.
+    This file is part of rippled: https://github.com/xrplf/xrpld
+    Copyright (c) 2020 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above
@@ -837,7 +837,7 @@ ETLSource::forwardToP2p(RPC::JsonContext& context) const
         // Set a decorator to change the User-Agent of the handshake
         // and to tell rippled to charge the client IP for RPC
         // resources. See "secure_gateway" in
-        // https://github.com/ripple/rippled/blob/develop/cfg/rippled-example.cfg
+        // https://github.com/xrplf/xrpld/blob/develop/cfg/rippled-example.cfg
         ws->set_option(websocket::stream_base::decorator(
             [&context](websocket::request_type& req) {
                 req.set(

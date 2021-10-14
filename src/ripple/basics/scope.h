@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
+    This file is part of rippled: https://github.com/xrplf/xrpld
     Copyright (c) 2021 Ripple Inc.
 
     Permission to use, copy, modify, and/or distribute this software for any

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
+    This file is part of rippled: https://github.com/xrplf/xrpld
     Copyright 2014, Nikolaos D. Bougalis <nikb@bougalis.net>
 
 

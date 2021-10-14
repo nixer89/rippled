@@ -5,7 +5,7 @@
 This document contains the release notes for `rippled`, the reference server implementation of the XRP Ledger protocol. To learn more about how to build, run or update a `rippled` server, visit https://xrpl.org/install-rippled.html
 
  
-Have new ideas? Need help with setting up your node? Come visit us [here](https://github.com/ripple/rippled/issues/new/choose)
+Have new ideas? Need help with setting up your node? Come visit us [here](https://github.com/xrplf/xrpld/issues/new/choose)
 
 # Change log
 
@@ -40,13 +40,13 @@ If you operate an XRP Ledger validator, please learn more about this amendment s
 
 ### Bug Fixes
 
-- **fixRmSmallIncreasedQOffers Amendment:** This amendment fixes an issue where certain small offers can be left at the tip of an order book without being consumed or removed when appropriate and causes some payments and Offers to fail when they should have succeeded [(#3827)](https://github.com/ripple/rippled/pull/3827).
-- **Adjust OpenSSL defaults and mitigate CVE-2021-3499:** Prior to this fix, servers compiled against a vulnerable version of OpenSSL could have a crash triggered by a malicious network connection. This fix disables renegotiation support in OpenSSL so that the rippled server is not vulnerable to this bug regardless of the OpenSSL version used to compile the server. This also removes support for deprecated TLS versions 1.0 and 1.1 and ciphers that are not part of TLS 1.2 [(#79e69da)](https://github.com/ripple/rippled/pull/3843/commits/79e69da3647019840dca49622621c3d88bc3883f).
-- **Support HTTP health check in reporting mode:** Enables the Health Check special method when running the server in the new Reporting Mode introduced in 1.7.0 [(9c8cadd)](https://github.com/ripple/rippled/pull/3843/commits/9c8caddc5a197bdd642556f8beb14f06d53cdfd3).
-- **Maintain compatibility for forwarded RPC responses:** Fixes a case in API responses from servers in Reporting Mode, where requests that were forwarded to a P2P-mode server would have the result field nested inside another result field [(8579eb0)](https://github.com/ripple/rippled/pull/3843/commits/8579eb0c191005022dcb20641444ab471e277f67).
-- **Add load_factor in reporting mode:** Adds a load_factor value to the server info method response when running the server in Reporting Mode so that the response is compatible with the format returned by servers in P2P mode (the default) [(430802c)](https://github.com/ripple/rippled/pull/3843/commits/430802c1cf6d4179f2249a30bfab9eff8e1fa748).
-- **Properly encode metadata from tx RPC command:** Fixes a problem where transaction metadata in the tx API method response would be in JSON format even when binary was requested [(7311629)](https://github.com/ripple/rippled/pull/3843/commits/73116297aa94c4acbfc74c2593d1aa2323b4cc52).
-- **Updates to Windows builds:** When building on Windows, use vcpkg 2021 by default and add compatibility with MSVC 2019 [(36fe196)](https://github.com/ripple/rippled/pull/3843/commits/36fe1966c3cd37f668693b5d9910fab59c3f8b1f), [(30fd458)](https://github.com/ripple/rippled/pull/3843/commits/30fd45890b1d3d5f372a2091d1397b1e8e29d2ca).
+- **fixRmSmallIncreasedQOffers Amendment:** This amendment fixes an issue where certain small offers can be left at the tip of an order book without being consumed or removed when appropriate and causes some payments and Offers to fail when they should have succeeded [(#3827)](https://github.com/xrplf/xrpld/pull/3827).
+- **Adjust OpenSSL defaults and mitigate CVE-2021-3499:** Prior to this fix, servers compiled against a vulnerable version of OpenSSL could have a crash triggered by a malicious network connection. This fix disables renegotiation support in OpenSSL so that the rippled server is not vulnerable to this bug regardless of the OpenSSL version used to compile the server. This also removes support for deprecated TLS versions 1.0 and 1.1 and ciphers that are not part of TLS 1.2 [(#79e69da)](https://github.com/xrplf/xrpld/pull/3843/commits/79e69da3647019840dca49622621c3d88bc3883f).
+- **Support HTTP health check in reporting mode:** Enables the Health Check special method when running the server in the new Reporting Mode introduced in 1.7.0 [(9c8cadd)](https://github.com/xrplf/xrpld/pull/3843/commits/9c8caddc5a197bdd642556f8beb14f06d53cdfd3).
+- **Maintain compatibility for forwarded RPC responses:** Fixes a case in API responses from servers in Reporting Mode, where requests that were forwarded to a P2P-mode server would have the result field nested inside another result field [(8579eb0)](https://github.com/xrplf/xrpld/pull/3843/commits/8579eb0c191005022dcb20641444ab471e277f67).
+- **Add load_factor in reporting mode:** Adds a load_factor value to the server info method response when running the server in Reporting Mode so that the response is compatible with the format returned by servers in P2P mode (the default) [(430802c)](https://github.com/xrplf/xrpld/pull/3843/commits/430802c1cf6d4179f2249a30bfab9eff8e1fa748).
+- **Properly encode metadata from tx RPC command:** Fixes a problem where transaction metadata in the tx API method response would be in JSON format even when binary was requested [(7311629)](https://github.com/xrplf/xrpld/pull/3843/commits/73116297aa94c4acbfc74c2593d1aa2323b4cc52).
+- **Updates to Windows builds:** When building on Windows, use vcpkg 2021 by default and add compatibility with MSVC 2019 [(36fe196)](https://github.com/xrplf/xrpld/pull/3843/commits/36fe1966c3cd37f668693b5d9910fab59c3f8b1f), [(30fd458)](https://github.com/xrplf/xrpld/pull/3843/commits/30fd45890b1d3d5f372a2091d1397b1e8e29d2ca).
 
 ## Version 1.7.0 
 
@@ -104,26 +104,26 @@ Going forward, use the [feature method](https://xrpl.org/feature.html) to view a
 - **Support UNLs with future effective dates:** Updates the format for the recommended validator list file format, allowing publishers to pre-publish the next recommended UNL while the current one is still valid. The server is still backwards compatible with the previous format, but the new format removes some uncertainty during the transition from one list to the next. Also, starting with this release, the server locks down and reports an error if it has no valid validator list. You can clear the error by loading a validator list from a file or by configuring a different UNL and restarting; the error also goes away on its own if the server is able to obtain a trusted validator list from the network (for example, after an network outage resolves itself).
 - **Improve manifest relaying:** Servers now propagate change messages for validators' ephemeral public keys ("manifests") on a best-effort basis, to make manifests more available throughout the peer-to-peer network. Previously, the server would only relay manifests from validators it trusts locally, which made it difficult to detect and track validators that are not broadly trusted.
 - **Implement ledger forward replay feature:** The server can now sync up to the network by "playing forward" transactions from a previously saved ledger until it catches up to the network. Compared with the default behavior of fetching the latest state and working backwards, forward replay can save time and bandwidth by reconstructing previous ledgers' state data rather than downloading the pre-calculated results from the network. As an added bonus, forward replay confirms that the rest of the network followed the same transaction processing rules as the local server when processing the intervening ledgers. This feature is considered experimental this time and can be enabled with an option in the config file.
-- **Make the transaction job queue limit adjustable:** The server uses a job queue to manage tasks, with limits on how many jobs of a particular type can be queued. The previously hard-coded limit associated with transactions is now configurable. Server operators can increase the number of transactions their server is able to queue, which may be useful if your server has a large memory capacity or you expect an influx of transactions. (https://github.com/ripple/rippled/issues/3556)
-- **Add public_key to the Validator List method response:** The [Validator List method](https://xrpl.org/validator-list.html) can be used to request a recommended validator list from a rippled instance. The response now includes the public key of the requested list. (https://github.com/ripple/rippled/issues/3392)
+- **Make the transaction job queue limit adjustable:** The server uses a job queue to manage tasks, with limits on how many jobs of a particular type can be queued. The previously hard-coded limit associated with transactions is now configurable. Server operators can increase the number of transactions their server is able to queue, which may be useful if your server has a large memory capacity or you expect an influx of transactions. (https://github.com/xrplf/xrpld/issues/3556)
+- **Add public_key to the Validator List method response:** The [Validator List method](https://xrpl.org/validator-list.html) can be used to request a recommended validator list from a rippled instance. The response now includes the public key of the requested list. (https://github.com/xrplf/xrpld/issues/3392)
 - **Server operators can now configure maximum inbound and outbound peers separately:** The new `peers_in_max` and `peers_out_max` config options allow server operators to independently control the maximum number of inbound and outbound peers the server allows. [70c4ecc]
 - **Improvements to shard downloading:** Previously the download_shard command could only load shards over HTTPS. Compressed shards can now also be downloaded over plain HTTP. The server fully checks the data for integrity and consistency, so the encryption is not strictly necessary. When initiating multiple shard downloads, the server now returns an error if there is not enough space to store all the shards currently being downloaded.
 - **The manifest command is now public:** The manifest API method returns public information about a given validator. The required permissions have been changed so it is now part of the public API.
 
 ### Bug Fixes
 
-- **Implement sticky DNS resolution for validator list retrieval:** When attempting to load a validator list from a configured site, attempt to reuse the last IP that was successfully used if that IP is still present in the DNS response. (https://github.com/ripple/rippled/issues/3494).
-- **Improve handling of RPC ledger_index argument:** You can now provide the `ledger_index` as a numeric string. This allows you to copy and use the numeric string `ledger_index` value returned by certain RPC commands. Previously you could only send native JSON numbers or shortcut strings such as "validated" in the `ledger_index` field. (https://github.com/ripple/rippled/issues/3533)
+- **Implement sticky DNS resolution for validator list retrieval:** When attempting to load a validator list from a configured site, attempt to reuse the last IP that was successfully used if that IP is still present in the DNS response. (https://github.com/xrplf/xrpld/issues/3494).
+- **Improve handling of RPC ledger_index argument:** You can now provide the `ledger_index` as a numeric string. This allows you to copy and use the numeric string `ledger_index` value returned by certain RPC commands. Previously you could only send native JSON numbers or shortcut strings such as "validated" in the `ledger_index` field. (https://github.com/xrplf/xrpld/issues/3533)
 - **Fix improper promotion of bool on return**  [6968da1]
 - **Fix ledger sequence on copynode** [ef53197] 
--  **Fix parsing of node public keys in `manifest` CLI:** The previous code attempts to validate the provided node public key using a function that assumes that the encoded public key is for an account. This causes the parsing to fail. This commit fixes #3317 (https://github.com/ripple/rippled/issues/3317) by letting the caller specify the type of the public key being checked.
-- **Fix idle peer timer:** Fixes a bug where a function to remove idle peers was called every second instead of every 4 seconds. #3754 (https://github.com/ripple/rippled/issues/3754)
+-  **Fix parsing of node public keys in `manifest` CLI:** The previous code attempts to validate the provided node public key using a function that assumes that the encoded public key is for an account. This causes the parsing to fail. This commit fixes #3317 (https://github.com/xrplf/xrpld/issues/3317) by letting the caller specify the type of the public key being checked.
+- **Fix idle peer timer:** Fixes a bug where a function to remove idle peers was called every second instead of every 4 seconds. #3754 (https://github.com/xrplf/xrpld/issues/3754)
 - **Add database counters:** Fix bug where DatabaseRotateImp::getBackend and ::sync utilized the writable backend without a lock. ::getBackend was replaced with ::getCounters.
 - **Improve online_delete configuration and DB tuning** [6e9051e]
-- **Improve handling of burst writes in NuDB database** ( https://github.com/ripple/rippled/pull/3662 )
+- **Improve handling of burst writes in NuDB database** ( https://github.com/xrplf/xrpld/pull/3662 )
 - **Fix excessive logging after disabling history shards.** Previously if you configured the server with a shard store, then disabled it, the server output excessive warning messages about the shard limit being exceeded.
-- **Fixed some issues with negotiating link compression.** ( https://github.com/ripple/rippled/pull/3705 )
-- **Fixed a potential thread deadlock with history sharding.** ( https://github.com/ripple/rippled/pull/3683 )
+- **Fixed some issues with negotiating link compression.** ( https://github.com/xrplf/xrpld/pull/3705 )
+- **Fixed a potential thread deadlock with history sharding.** ( https://github.com/xrplf/xrpld/pull/3683 )
 - **Various fixes to typos and comments, refactoring, and build system improvements**
 
 ## Version 1.6.0
@@ -133,32 +133,32 @@ adverse conditions, as well as numerous bug fixes and optimizations.
 
 ### New and Improved Features
 
-- Initial implementation of Negative UNL functionality: This change can improve the liveness of the network during periods of network instability, by allowing servers to track which validators are temporarily offline and to adjust quorum calculations to match. This change requires an amendment, but the amendment is not in the **1.6.0** release. Ripple expects to run extensive public testing for Negative UNL functionality on the Devnet in the coming weeks. If public testing satisfies all requirements across security, reliability, stability, and performance, then the amendment could be included in a version 2.0 release. [[#3380](https://github.com/ripple/rippled/pull/3380)]
-- Validation Hardening: This change allows servers to detect accidental misconfiguration of validators, as well as potentially Byzantine behavior by malicious validators. Servers can now log a message to notify operators if they detect a single validator issuing validations for multiple, incompatible ledger versions, or validations from multiple servers sharing a key. As part of this update, validators report the version of `rippled` they are using, as well as the hash of the last ledger they consider to be fully validated, in validation messages. [[#3291](https://github.com/ripple/rippled/pull/3291)] ![Amendment: Required](https://img.shields.io/badge/Amendment-Required-red)
-- Software Upgrade Monitoring & Notification: After the `HardenedValidations` amendment is enabled and the validators begin reporting the versions of `rippled` they are running, a server can check how many of the validators on its UNL run a newer version of the software than itself. If more than 60% of a server's validators are running a newer version, the server writes a message to notify the operator to consider upgrading their software. [[#3447](https://github.com/ripple/rippled/pull/3447)]
-- Link Compression: Beginning with **1.6.0**, server operators can enable support for compressing peer-to-peer messages. This can save bandwidth at a cost of higher CPU usage. This support is disabled by default and should prove useful for servers with a large number of peers. [[#3287](https://github.com/ripple/rippled/pull/3287)]
-- Unconditionalize Amendments that were enabled in 2017: This change removes legacy code which the network has not used since 2017. This change limits the ability to [replay](https://github.com/xrp-community/standards-drafts/issues/14) ledgers that rely on the pre-2017 behavior. [[#3292](https://github.com/ripple/rippled/pull/3292)]
-- New Health Check Method: Perform a simple HTTP request to get a summary of the health of the server: Healthy, Warning, or Critical. [[#3365](https://github.com/ripple/rippled/pull/3365)]
-- Start work on API version 2. Version 2 of the API will be part of a future release. The first breaking change will be to consolidate several closely related error messages that can occur when the server is not synced into a single "notSynced" error message. [[#3269](https://github.com/ripple/rippled/pull/3269)]
-- Improved shard concurrency: Improvements to the shard engine have helped reduce the lock scope on all public functions, increasing the concurrency of the code. [[#3251](https://github.com/ripple/rippled/pull/3251)]
-- Default Port: In the config file, the `[ips_fixed]` and `[ips]` stanzas now use the [IANA-assigned port](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=2459) for the XRP Ledger protocol (2459) when no port is specified. The `connect` API method also uses the same port by default. [[#2861](https://github.com/ripple/rippled/pull/2861)].
-- Improve proposal and validation relaying. The peer-to-peer protocol always relays trusted proposals and validations (as part of the [consensus process](https://xrpl.org/consensus.html)), but only relays _untrusted_ proposals and validations in certain circumstances. This update adds configuration options so server operators can fine-tune how their server handles untrusted proposals and validations, and changes the default behavior to prioritize untrusted validations higher than untrusted proposals.  [[#3391](https://github.com/ripple/rippled/pull/3391)]
-- Various Build and CI Improvements including updates to RocksDB 6.7.3 [[#3356](https://github.com/ripple/rippled/pull/3356)], NuDB 2.0.3 [[#3437](https://github.com/ripple/rippled/pull/3437)], adjusting CMake settings so that rippled can be built as a submodule [[#3449](https://github.com/ripple/rippled/pull/3449)], and adding Travis CI settings for Ubuntu Bionic Beaver [[#3319](https://github.com/ripple/rippled/pull/3319)].
-- Better documentation in the config file for online deletion and database tuning. [[#3429](https://github.com/ripple/rippled/pull/3429)]
+- Initial implementation of Negative UNL functionality: This change can improve the liveness of the network during periods of network instability, by allowing servers to track which validators are temporarily offline and to adjust quorum calculations to match. This change requires an amendment, but the amendment is not in the **1.6.0** release. Ripple expects to run extensive public testing for Negative UNL functionality on the Devnet in the coming weeks. If public testing satisfies all requirements across security, reliability, stability, and performance, then the amendment could be included in a version 2.0 release. [[#3380](https://github.com/xrplf/xrpld/pull/3380)]
+- Validation Hardening: This change allows servers to detect accidental misconfiguration of validators, as well as potentially Byzantine behavior by malicious validators. Servers can now log a message to notify operators if they detect a single validator issuing validations for multiple, incompatible ledger versions, or validations from multiple servers sharing a key. As part of this update, validators report the version of `rippled` they are using, as well as the hash of the last ledger they consider to be fully validated, in validation messages. [[#3291](https://github.com/xrplf/xrpld/pull/3291)] ![Amendment: Required](https://img.shields.io/badge/Amendment-Required-red)
+- Software Upgrade Monitoring & Notification: After the `HardenedValidations` amendment is enabled and the validators begin reporting the versions of `rippled` they are running, a server can check how many of the validators on its UNL run a newer version of the software than itself. If more than 60% of a server's validators are running a newer version, the server writes a message to notify the operator to consider upgrading their software. [[#3447](https://github.com/xrplf/xrpld/pull/3447)]
+- Link Compression: Beginning with **1.6.0**, server operators can enable support for compressing peer-to-peer messages. This can save bandwidth at a cost of higher CPU usage. This support is disabled by default and should prove useful for servers with a large number of peers. [[#3287](https://github.com/xrplf/xrpld/pull/3287)]
+- Unconditionalize Amendments that were enabled in 2017: This change removes legacy code which the network has not used since 2017. This change limits the ability to [replay](https://github.com/xrp-community/standards-drafts/issues/14) ledgers that rely on the pre-2017 behavior. [[#3292](https://github.com/xrplf/xrpld/pull/3292)]
+- New Health Check Method: Perform a simple HTTP request to get a summary of the health of the server: Healthy, Warning, or Critical. [[#3365](https://github.com/xrplf/xrpld/pull/3365)]
+- Start work on API version 2. Version 2 of the API will be part of a future release. The first breaking change will be to consolidate several closely related error messages that can occur when the server is not synced into a single "notSynced" error message. [[#3269](https://github.com/xrplf/xrpld/pull/3269)]
+- Improved shard concurrency: Improvements to the shard engine have helped reduce the lock scope on all public functions, increasing the concurrency of the code. [[#3251](https://github.com/xrplf/xrpld/pull/3251)]
+- Default Port: In the config file, the `[ips_fixed]` and `[ips]` stanzas now use the [IANA-assigned port](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=2459) for the XRP Ledger protocol (2459) when no port is specified. The `connect` API method also uses the same port by default. [[#2861](https://github.com/xrplf/xrpld/pull/2861)].
+- Improve proposal and validation relaying. The peer-to-peer protocol always relays trusted proposals and validations (as part of the [consensus process](https://xrpl.org/consensus.html)), but only relays _untrusted_ proposals and validations in certain circumstances. This update adds configuration options so server operators can fine-tune how their server handles untrusted proposals and validations, and changes the default behavior to prioritize untrusted validations higher than untrusted proposals.  [[#3391](https://github.com/xrplf/xrpld/pull/3391)]
+- Various Build and CI Improvements including updates to RocksDB 6.7.3 [[#3356](https://github.com/xrplf/xrpld/pull/3356)], NuDB 2.0.3 [[#3437](https://github.com/xrplf/xrpld/pull/3437)], adjusting CMake settings so that rippled can be built as a submodule [[#3449](https://github.com/xrplf/xrpld/pull/3449)], and adding Travis CI settings for Ubuntu Bionic Beaver [[#3319](https://github.com/xrplf/xrpld/pull/3319)].
+- Better documentation in the config file for online deletion and database tuning. [[#3429](https://github.com/xrplf/xrpld/pull/3429)]
 
 
 ### Bug Fixes
 
-- Fix the 14 day timer to enable amendment to start at the correct quorum size [[#3396](https://github.com/ripple/rippled/pull/3396)]
-- Improve online delete backend lock which addresses a possibility in the online delete process where one or more backend shared pointer references may become invalid during rotation. [[#3342](https://github.com/ripple/rippled/pull/3342)]
-- Address an issue that can occur during the loading of validator tokens, where a deliberately malformed token could cause the server to crash during startup. [[#3326](https://github.com/ripple/rippled/pull/3326)]
-- Add delivered amount to GetAccountTransactionHistory. The delivered_amount field was not being populated when calling GetAccountTransactionHistory. In contrast, the delivered_amount field was being populated when calling GetTransaction. This change populates delivered_amount in the response to GetAccountTransactionHistory, and adds a unit test to make sure the results delivered by GetTransaction and GetAccountTransactionHistory match each other. [[#3370](https://github.com/ripple/rippled/pull/3370)]
-- Fix build issues for GCC 10 [[#3393](https://github.com/ripple/rippled/pull/3393)]
-- Fix historical ledger acquisition - this fixes an issue where historical ledgers were acquired only since the last online deletion interval instead of the configured value to allow deletion.[[#3369](https://github.com/ripple/rippled/pull/3369)]
-- Fix build issue with Docker [#3416](https://github.com/ripple/rippled/pull/3416)]
-- Add Shard family. The App Family utilizes a single shared Tree Node and Full Below cache for all history shards. This can create a problem when acquiring a shard that shares an account state node that was recently cached from another shard operation. The new Shard Family class solves this issue by managing separate Tree Node and Full Below caches for each shard. [#3448](https://github.com/ripple/rippled/pull/3448)]
-- Amendment table clean up which fixes a calculation issue with majority. [#3428](https://github.com/ripple/rippled/pull/3428)]
-- Add the `ledger_cleaner` command to rippled command line help [[#3305](https://github.com/ripple/rippled/pull/3305)]
+- Fix the 14 day timer to enable amendment to start at the correct quorum size [[#3396](https://github.com/xrplf/xrpld/pull/3396)]
+- Improve online delete backend lock which addresses a possibility in the online delete process where one or more backend shared pointer references may become invalid during rotation. [[#3342](https://github.com/xrplf/xrpld/pull/3342)]
+- Address an issue that can occur during the loading of validator tokens, where a deliberately malformed token could cause the server to crash during startup. [[#3326](https://github.com/xrplf/xrpld/pull/3326)]
+- Add delivered amount to GetAccountTransactionHistory. The delivered_amount field was not being populated when calling GetAccountTransactionHistory. In contrast, the delivered_amount field was being populated when calling GetTransaction. This change populates delivered_amount in the response to GetAccountTransactionHistory, and adds a unit test to make sure the results delivered by GetTransaction and GetAccountTransactionHistory match each other. [[#3370](https://github.com/xrplf/xrpld/pull/3370)]
+- Fix build issues for GCC 10 [[#3393](https://github.com/xrplf/xrpld/pull/3393)]
+- Fix historical ledger acquisition - this fixes an issue where historical ledgers were acquired only since the last online deletion interval instead of the configured value to allow deletion.[[#3369](https://github.com/xrplf/xrpld/pull/3369)]
+- Fix build issue with Docker [#3416](https://github.com/xrplf/xrpld/pull/3416)]
+- Add Shard family. The App Family utilizes a single shared Tree Node and Full Below cache for all history shards. This can create a problem when acquiring a shard that shares an account state node that was recently cached from another shard operation. The new Shard Family class solves this issue by managing separate Tree Node and Full Below caches for each shard. [#3448](https://github.com/xrplf/xrpld/pull/3448)]
+- Amendment table clean up which fixes a calculation issue with majority. [#3428](https://github.com/xrplf/xrpld/pull/3428)]
+- Add the `ledger_cleaner` command to rippled command line help [[#3305](https://github.com/xrplf/xrpld/pull/3305)]
 - Various typo and comments fixes.
 
 
@@ -174,24 +174,24 @@ At this time, the developers recommend running with sharding disabled, pending t
 
  
 **New and Updated Features**
-- The `RequireFullyCanonicalSig` amendment which changes the signature requirements for the XRP Ledger protocol so that non-fully-canonical signatures are no longer valid. This protects against transaction malleability on all transactions, instead of just transactions with the tfFullyCanonicalSig flag enabled. Without this amendment, a transaction is malleable if it uses a secp256k1 signature and does not have tfFullyCanonicalSig enabled. Most signing utilities enable tfFullyCanonicalSig by default, but there are exceptions. With this amendment, no single-signed transactions are malleable. (Multi-signed transactions may still be malleable if signers provide more signatures than are necessary.) All transactions must use the fully canonical form of the signature, regardless of the tfFullyCanonicalSig flag. Signing utilities that do not create fully canonical signatures are not supported. All of Ripple's signing utilities have been providing fully-canonical signatures exclusively since at least 2014. For more information. [`ec137044a`](https://github.com/ripple/rippled/commit/ec137044a014530263cd3309d81643a5a3c1fdab)
-- Native [gRPC API](https://grpc.io/) support. Currently, this API provides a subset of the full `rippled` [API](https://xrpl.org/rippled-api.html). You can enable the gRPC API on your server with a new configuration stanza. [`7d867b806`](https://github.com/ripple/rippled/commit/7d867b806d70fc41fb45e3e61b719397033b272c)
-- API Versioning which allows for future breaking change of RPC methods to co-exist with existing versions. [`2aa11fa41`](https://github.com/ripple/rippled/commit/2aa11fa41d4a7849ae6a5d7a11df6f367191e3ef)
-- Nodes now receive and broadcast UNLs over the peer network under various conditions. [`2c71802e3`](https://github.com/ripple/rippled/commit/2c71802e389a59118024ea0152123144c084b31c)
-- Augmented `submit` method to include additional details on the status of the command. [`79e9085dd`](https://github.com/ripple/rippled/commit/79e9085dd1eb72864afe841225b78ec96e72b5ca)
-- Improved `tx` method response with additional details on ledgers searched. [`47501b7f9`](https://github.com/ripple/rippled/commit/47501b7f99d4103d9ad405e399169fc251161548)
-- New `validator_info` method which returns information pertaining to the current validator's keys, manifest sequence, and domain. [`3578acaf0`](https://github.com/ripple/rippled/commit/3578acaf0b5f2d27ddc33f5b4cc81d21be1903ae)
-- New `manifest` method which looks up manifest information for the specified key (either master or ephemeral). [`3578acaf0`](https://github.com/ripple/rippled/commit/3578acaf0b5f2d27ddc33f5b4cc81d21be1903ae)
-- Introduce handshake protocol for compression negotiation (compression is not implemented at this point) and other minor improvements. [`f6916bfd4`](https://github.com/ripple/rippled/commit/f6916bfd429ce654e017ae9686cb023d9e05408b)
-- Remove various old conditionals introduced by amendments. [`(51ed7db00`](https://github.com/ripple/rippled/commit/51ed7db0027ba822739bd9de6f2613f97c1b227b), [`6e4945c56)`](https://github.com/ripple/rippled/commit/6e4945c56b1a1c063b32921d7750607587ec3063)
-- Add `getRippledInfo` info gathering script to `rippled` Linux packages. [`acf4b7889`](https://github.com/ripple/rippled/commit/acf4b78892074303cb1fa22b778da5e7e7eddeda)
+- The `RequireFullyCanonicalSig` amendment which changes the signature requirements for the XRP Ledger protocol so that non-fully-canonical signatures are no longer valid. This protects against transaction malleability on all transactions, instead of just transactions with the tfFullyCanonicalSig flag enabled. Without this amendment, a transaction is malleable if it uses a secp256k1 signature and does not have tfFullyCanonicalSig enabled. Most signing utilities enable tfFullyCanonicalSig by default, but there are exceptions. With this amendment, no single-signed transactions are malleable. (Multi-signed transactions may still be malleable if signers provide more signatures than are necessary.) All transactions must use the fully canonical form of the signature, regardless of the tfFullyCanonicalSig flag. Signing utilities that do not create fully canonical signatures are not supported. All of Ripple's signing utilities have been providing fully-canonical signatures exclusively since at least 2014. For more information. [`ec137044a`](https://github.com/xrplf/xrpld/commit/ec137044a014530263cd3309d81643a5a3c1fdab)
+- Native [gRPC API](https://grpc.io/) support. Currently, this API provides a subset of the full `rippled` [API](https://xrpl.org/rippled-api.html). You can enable the gRPC API on your server with a new configuration stanza. [`7d867b806`](https://github.com/xrplf/xrpld/commit/7d867b806d70fc41fb45e3e61b719397033b272c)
+- API Versioning which allows for future breaking change of RPC methods to co-exist with existing versions. [`2aa11fa41`](https://github.com/xrplf/xrpld/commit/2aa11fa41d4a7849ae6a5d7a11df6f367191e3ef)
+- Nodes now receive and broadcast UNLs over the peer network under various conditions. [`2c71802e3`](https://github.com/xrplf/xrpld/commit/2c71802e389a59118024ea0152123144c084b31c)
+- Augmented `submit` method to include additional details on the status of the command. [`79e9085dd`](https://github.com/xrplf/xrpld/commit/79e9085dd1eb72864afe841225b78ec96e72b5ca)
+- Improved `tx` method response with additional details on ledgers searched. [`47501b7f9`](https://github.com/xrplf/xrpld/commit/47501b7f99d4103d9ad405e399169fc251161548)
+- New `validator_info` method which returns information pertaining to the current validator's keys, manifest sequence, and domain. [`3578acaf0`](https://github.com/xrplf/xrpld/commit/3578acaf0b5f2d27ddc33f5b4cc81d21be1903ae)
+- New `manifest` method which looks up manifest information for the specified key (either master or ephemeral). [`3578acaf0`](https://github.com/xrplf/xrpld/commit/3578acaf0b5f2d27ddc33f5b4cc81d21be1903ae)
+- Introduce handshake protocol for compression negotiation (compression is not implemented at this point) and other minor improvements. [`f6916bfd4`](https://github.com/xrplf/xrpld/commit/f6916bfd429ce654e017ae9686cb023d9e05408b)
+- Remove various old conditionals introduced by amendments. [`(51ed7db00`](https://github.com/xrplf/xrpld/commit/51ed7db0027ba822739bd9de6f2613f97c1b227b), [`6e4945c56)`](https://github.com/xrplf/xrpld/commit/6e4945c56b1a1c063b32921d7750607587ec3063)
+- Add `getRippledInfo` info gathering script to `rippled` Linux packages. [`acf4b7889`](https://github.com/xrplf/xrpld/commit/acf4b78892074303cb1fa22b778da5e7e7eddeda)
 
 **Bug Fixes and Improvements**
-- The `fixQualityUpperBound` amendment which fixes a bug in unused code for estimating the ratio of input to output of individual steps in cross-currency payments. [`9d3626fec`](https://github.com/ripple/rippled/commit/9d3626fec5b610100f401dc0d25b9ec8e4a9a362)
-- `tx` method now properly fetches all historical tx if they are incorporated into a validated ledger under rules that applied at the time. [`11cf27e00`](https://github.com/ripple/rippled/commit/11cf27e00698dbfc099b23463927d1dac829ed19)
-- Fix to how `fail_hard` flag is handled with the `submit` method - transactions that are submitted with the `fail_hard` flag that result in any TER code besides tesSUCCESS is neither queued nor held. [`cd9732b47`](https://github.com/ripple/rippled/commit/cd9732b47a9d4e95bcb74e048d2c76fa118b80fb)
-- Remove unused `Beast` code. [`172ead822`](https://github.com/ripple/rippled/commit/172ead822159a3c1f9b73217da4316df48851ab6)
-- Lag ratchet code fix to use proper ephemeral public keys instead of the long-term master public keys.[`6529d3e6f`](https://github.com/ripple/rippled/commit/6529d3e6f7333fc5226e5aa9ae65f834cb93dfe5)
+- The `fixQualityUpperBound` amendment which fixes a bug in unused code for estimating the ratio of input to output of individual steps in cross-currency payments. [`9d3626fec`](https://github.com/xrplf/xrpld/commit/9d3626fec5b610100f401dc0d25b9ec8e4a9a362)
+- `tx` method now properly fetches all historical tx if they are incorporated into a validated ledger under rules that applied at the time. [`11cf27e00`](https://github.com/xrplf/xrpld/commit/11cf27e00698dbfc099b23463927d1dac829ed19)
+- Fix to how `fail_hard` flag is handled with the `submit` method - transactions that are submitted with the `fail_hard` flag that result in any TER code besides tesSUCCESS is neither queued nor held. [`cd9732b47`](https://github.com/xrplf/xrpld/commit/cd9732b47a9d4e95bcb74e048d2c76fa118b80fb)
+- Remove unused `Beast` code. [`172ead822`](https://github.com/xrplf/xrpld/commit/172ead822159a3c1f9b73217da4316df48851ab6)
+- Lag ratchet code fix to use proper ephemeral public keys instead of the long-term master public keys.[`6529d3e6f`](https://github.com/xrplf/xrpld/commit/6529d3e6f7333fc5226e5aa9ae65f834cb93dfe5)
 
 
 ## Version 1.4.0
@@ -456,37 +456,37 @@ Highlights of this release include:
 
 **New and Updated Features**
 
-- Add support for Deposit Authorization account root flag ([#2239](https://github.com/ripple/rippled/issues/2239))
-- Implement history shards ([#2258](https://github.com/ripple/rippled/issues/2258))
-- Preferred ledger by branch ([#2300](https://github.com/ripple/rippled/issues/2300))
-- Redesign Consensus Simulation Framework ([#2209](https://github.com/ripple/rippled/issues/2209))
-- Tune for higher transaction processing ([#2294](https://github.com/ripple/rippled/issues/2294))
-- Optimize queries for `account_tx` to work around SQLite query planner ([#2312](https://github.com/ripple/rippled/issues/2312))
-- Allow `Journal` to be copied/moved ([#2292](https://github.com/ripple/rippled/issues/2292))
-- Cleanly report invalid `[server]` settings ([#2305](https://github.com/ripple/rippled/issues/2305))
-- Improve log scrubbing ([#2358](https://github.com/ripple/rippled/issues/2358))
-- Update `rippled-example.cfg` ([#2307](https://github.com/ripple/rippled/issues/2307))
-- Force json commands to be objects ([#2319](https://github.com/ripple/rippled/issues/2319))
-- Fix cmake clang build for sanitizers ([#2325](https://github.com/ripple/rippled/issues/2325))
-- Allow `account_objects` RPC to filter by “check” ([#2356](https://github.com/ripple/rippled/issues/2356))
-- Limit nesting of json commands ([#2326](https://github.com/ripple/rippled/issues/2326))
-- Unit test that `sign_for` returns a correct hash ([#2333](https://github.com/ripple/rippled/issues/2333))
-- Update Visual Studio build instructions ([#2355](https://github.com/ripple/rippled/issues/2355))
-- Force boost static linking for MacOS builds ([#2334](https://github.com/ripple/rippled/issues/2334))
-- Update MacOS build instructions ([#2342](https://github.com/ripple/rippled/issues/2342))
-- Add dev docs generation to Jenkins ([#2343](https://github.com/ripple/rippled/issues/2343))
-- Poll if process is still alive in Test.py ([#2290](https://github.com/ripple/rippled/issues/2290))
-- Remove unused `beast::currentTimeMillis()` ([#2345](https://github.com/ripple/rippled/issues/2345))
+- Add support for Deposit Authorization account root flag ([#2239](https://github.com/xrplf/xrpld/issues/2239))
+- Implement history shards ([#2258](https://github.com/xrplf/xrpld/issues/2258))
+- Preferred ledger by branch ([#2300](https://github.com/xrplf/xrpld/issues/2300))
+- Redesign Consensus Simulation Framework ([#2209](https://github.com/xrplf/xrpld/issues/2209))
+- Tune for higher transaction processing ([#2294](https://github.com/xrplf/xrpld/issues/2294))
+- Optimize queries for `account_tx` to work around SQLite query planner ([#2312](https://github.com/xrplf/xrpld/issues/2312))
+- Allow `Journal` to be copied/moved ([#2292](https://github.com/xrplf/xrpld/issues/2292))
+- Cleanly report invalid `[server]` settings ([#2305](https://github.com/xrplf/xrpld/issues/2305))
+- Improve log scrubbing ([#2358](https://github.com/xrplf/xrpld/issues/2358))
+- Update `rippled-example.cfg` ([#2307](https://github.com/xrplf/xrpld/issues/2307))
+- Force json commands to be objects ([#2319](https://github.com/xrplf/xrpld/issues/2319))
+- Fix cmake clang build for sanitizers ([#2325](https://github.com/xrplf/xrpld/issues/2325))
+- Allow `account_objects` RPC to filter by “check” ([#2356](https://github.com/xrplf/xrpld/issues/2356))
+- Limit nesting of json commands ([#2326](https://github.com/xrplf/xrpld/issues/2326))
+- Unit test that `sign_for` returns a correct hash ([#2333](https://github.com/xrplf/xrpld/issues/2333))
+- Update Visual Studio build instructions ([#2355](https://github.com/xrplf/xrpld/issues/2355))
+- Force boost static linking for MacOS builds ([#2334](https://github.com/xrplf/xrpld/issues/2334))
+- Update MacOS build instructions ([#2342](https://github.com/xrplf/xrpld/issues/2342))
+- Add dev docs generation to Jenkins ([#2343](https://github.com/xrplf/xrpld/issues/2343))
+- Poll if process is still alive in Test.py ([#2290](https://github.com/xrplf/xrpld/issues/2290))
+- Remove unused `beast::currentTimeMillis()` ([#2345](https://github.com/xrplf/xrpld/issues/2345))
 
 
 **Bug Fixes**
-- Improve error message on mistyped command ([#2283](https://github.com/ripple/rippled/issues/2283))
-- Add missing includes ([#2368](https://github.com/ripple/rippled/issues/2368))
-- Link boost statically only when requested ([#2291](https://github.com/ripple/rippled/issues/2291))
-- Unit test logging fixes ([#2293](https://github.com/ripple/rippled/issues/2293))
-- Fix Jenkins pipeline for branches ([#2289](https://github.com/ripple/rippled/issues/2289))
-- Avoid AppVeyor stack overflow ([#2344](https://github.com/ripple/rippled/issues/2344))
-- Reduce noise in log ([#2352](https://github.com/ripple/rippled/issues/2352))
+- Improve error message on mistyped command ([#2283](https://github.com/xrplf/xrpld/issues/2283))
+- Add missing includes ([#2368](https://github.com/xrplf/xrpld/issues/2368))
+- Link boost statically only when requested ([#2291](https://github.com/xrplf/xrpld/issues/2291))
+- Unit test logging fixes ([#2293](https://github.com/xrplf/xrpld/issues/2293))
+- Fix Jenkins pipeline for branches ([#2289](https://github.com/xrplf/xrpld/issues/2289))
+- Avoid AppVeyor stack overflow ([#2344](https://github.com/xrplf/xrpld/issues/2344))
+- Reduce noise in log ([#2352](https://github.com/xrplf/xrpld/issues/2352))
 
 
 ## Version 0.81.0
@@ -500,7 +500,7 @@ The `rippled` 0.81.0 release introduces changes that improve the scalability of 
 
 **Bug Fixes**
 
-- Optimize queries for account_tx to work around SQLite query planner ([#2312](https://github.com/ripple/rippled/issues/2312))
+- Optimize queries for account_tx to work around SQLite query planner ([#2312](https://github.com/xrplf/xrpld/issues/2312))
 
 
 ## Version 0.80.2
@@ -515,7 +515,7 @@ This release has no new features.
 
 - Do not dispatch a transaction received from a peer for processing if it has already been dispatched within the past ten seconds.
 - Increase the number of transaction handlers that can be in flight in the job queue and decrease the relative cost for peers to share transaction and ledger data.
-- Make better use of resources by adjusting the number of threads we initialize, by reverting commit [#68b8ffd](https://github.com/ripple/rippled/commit/68b8ffdb638d07937f841f7217edeb25efdb3b5d).
+- Make better use of resources by adjusting the number of threads we initialize, by reverting commit [#68b8ffd](https://github.com/xrplf/xrpld/commit/68b8ffdb638d07937f841f7217edeb25efdb3b5d).
 
 ## Version 0.80.1
 
@@ -523,17 +523,17 @@ The `rippled` 0.80.1 release provides several enhancements in support of publish
 
 **New and Updated Features**
 
-- Allow including validator manifests in published list ([#2278](https://github.com/ripple/rippled/issues/2278))
-- Add validator list RPC commands ([#2242](https://github.com/ripple/rippled/issues/2242))
-- Support [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) when querying published list sites and use Windows system root certificates ([#2275](https://github.com/ripple/rippled/issues/2275))
-- Grow TxQ expected size quickly, shrink slowly ([#2235](https://github.com/ripple/rippled/issues/2235))
+- Allow including validator manifests in published list ([#2278](https://github.com/xrplf/xrpld/issues/2278))
+- Add validator list RPC commands ([#2242](https://github.com/xrplf/xrpld/issues/2242))
+- Support [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) when querying published list sites and use Windows system root certificates ([#2275](https://github.com/xrplf/xrpld/issues/2275))
+- Grow TxQ expected size quickly, shrink slowly ([#2235](https://github.com/xrplf/xrpld/issues/2235))
 
 **Bug Fixes**
 
-- Make consensus quorum unreachable if validator list expires ([#2240](https://github.com/ripple/rippled/issues/2240))
-- Properly use ledger hash to break ties when determing working ledger for consensus ([#2257](https://github.com/ripple/rippled/issues/2257))
-- Explictly use std::deque for missing node handler in SHAMap code ([#2252](https://github.com/ripple/rippled/issues/2252))
-- Verify validator token manifest matches private key ([#2268](https://github.com/ripple/rippled/issues/2268))
+- Make consensus quorum unreachable if validator list expires ([#2240](https://github.com/xrplf/xrpld/issues/2240))
+- Properly use ledger hash to break ties when determing working ledger for consensus ([#2257](https://github.com/xrplf/xrpld/issues/2257))
+- Explictly use std::deque for missing node handler in SHAMap code ([#2252](https://github.com/xrplf/xrpld/issues/2252))
+- Verify validator token manifest matches private key ([#2268](https://github.com/xrplf/xrpld/issues/2268))
 
 
 ## Version 0.80.0
@@ -550,18 +550,18 @@ Highlights of this release include:
 
 **New and Updated Features**
 
-- Improve directory insertion and deletion ([#2165](https://github.com/ripple/rippled/issues/2165))
-- Move consensus thread safety logic from the generic implementation in Consensus into the RCL adapted version RCLConsensus ([#2106](https://github.com/ripple/rippled/issues/2106))
-- Refactor Validations class into a generic version that can be adapted ([#2084](https://github.com/ripple/rippled/issues/2084))
-- Make minimum quorum Byzantine fault tolerant ([#2093](https://github.com/ripple/rippled/issues/2093))
-- Make amendment blocked state thread-safe and simplify a constructor ([#2207](https://github.com/ripple/rippled/issues/2207))
-- Use ledger hash to break ties ([#2169](https://github.com/ripple/rippled/issues/2169))
-- Refactor RangeSet ([#2113](https://github.com/ripple/rippled/issues/2113))
+- Improve directory insertion and deletion ([#2165](https://github.com/xrplf/xrpld/issues/2165))
+- Move consensus thread safety logic from the generic implementation in Consensus into the RCL adapted version RCLConsensus ([#2106](https://github.com/xrplf/xrpld/issues/2106))
+- Refactor Validations class into a generic version that can be adapted ([#2084](https://github.com/xrplf/xrpld/issues/2084))
+- Make minimum quorum Byzantine fault tolerant ([#2093](https://github.com/xrplf/xrpld/issues/2093))
+- Make amendment blocked state thread-safe and simplify a constructor ([#2207](https://github.com/xrplf/xrpld/issues/2207))
+- Use ledger hash to break ties ([#2169](https://github.com/xrplf/xrpld/issues/2169))
+- Refactor RangeSet ([#2113](https://github.com/xrplf/xrpld/issues/2113))
 
 **Bug Fixes**
 
-- Fix an issue where `setAmendmentBlocked` is only called when processing the `EnableAmendment` transaction for the amendment ([#2137](https://github.com/ripple/rippled/issues/2137))
-- Track escrow in recipient's owner directory ([#2212](https://github.com/ripple/rippled/issues/2212))
+- Fix an issue where `setAmendmentBlocked` is only called when processing the `EnableAmendment` transaction for the amendment ([#2137](https://github.com/xrplf/xrpld/issues/2137))
+- Track escrow in recipient's owner directory ([#2212](https://github.com/xrplf/xrpld/issues/2212))
 
 ## Version 0.70.2
 
@@ -575,7 +575,7 @@ This release has no new features.
 
 **Bug Fixes**
 
-- Recent fee rises and TxQ issues ([#2215](https://github.com/ripple/rippled/issues/2215))
+- Recent fee rises and TxQ issues ([#2215](https://github.com/xrplf/xrpld/issues/2215))
 
 
 ## Version 0.70.1
@@ -589,9 +589,9 @@ This release has no new features.
 
 **Bug Fixes**
 
-- Allow compiling against OpenSSL 1.1.0 ([#2151](https://github.com/ripple/rippled/pull/2151))
-- Log invariant check messages at "fatal" level ([2154](https://github.com/ripple/rippled/pull/2154))
-- Fix the consensus code to update all disputed transactions after a node changes a position ([2156](https://github.com/ripple/rippled/pull/2156))
+- Allow compiling against OpenSSL 1.1.0 ([#2151](https://github.com/xrplf/xrpld/pull/2151))
+- Log invariant check messages at "fatal" level ([2154](https://github.com/xrplf/xrpld/pull/2154))
+- Fix the consensus code to update all disputed transactions after a node changes a position ([2156](https://github.com/xrplf/xrpld/pull/2156))
 
 
 ## Version 0.70.0
@@ -641,7 +641,7 @@ This release has no new features.
 
 **Bug Fixes**
 
-Server overlay improvements ([#2110](https://github.com/ripple/rippled/pull/2011))
+Server overlay improvements ([#2110](https://github.com/xrplf/xrpld/pull/2011))
 
 ## Version 0.60.2
 
@@ -653,7 +653,7 @@ This release has no new features.
 
 **Bug Fixes**
 
-Prevent the ability to bypass the `NoRipple` flag using offers ([#7cd4d78](https://github.com/ripple/rippled/commit/4ff40d4954dfaa237c8b708c2126cb39566776da))
+Prevent the ability to bypass the `NoRipple` flag using offers ([#7cd4d78](https://github.com/xrplf/xrpld/commit/4ff40d4954dfaa237c8b708c2126cb39566776da))
 
 ## Version 0.60.1
 
@@ -1104,7 +1104,7 @@ Additionally, `rippled` 0.31.0 now checks at start-up time that it has sufficien
 
 ## Version 0.30.1
 
-rippled 0.30.1 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.30.1>
+rippled 0.30.1 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.30.1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1114,7 +1114,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
        Set version to 0.30.1
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.30.1) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.30.1) for more detailed information.
 
 **Release Overview**
 
@@ -1177,7 +1177,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.30.0
 
-rippled 0.30.0 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.30.0>
+rippled 0.30.0 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.30.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1187,7 +1187,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.30.0
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.30.0) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.30.0) for more detailed information.
 
 **Release Overview**
 
@@ -1244,7 +1244,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.29.0
 
-rippled 0.29.0 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/commits/0.29.0>
+rippled 0.29.0 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/commits/0.29.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1254,7 +1254,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.29.0
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.29.0) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.29.0) for more detailed information.
 
 **Release Overview**
 
@@ -1311,7 +1311,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.28.2
 
-rippled 0.28.2 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/commits/release>
+rippled 0.28.2 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/commits/release>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1321,7 +1321,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.28.2
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/release) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/release) for more detailed information.
 
 **Release Overview**
 
@@ -1378,7 +1378,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.28.1
 
-rippled 0.28.1 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.28.1>
+rippled 0.28.1 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.28.1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1388,7 +1388,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.28.1
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.28.1) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.28.1) for more detailed information.
 
 **Toolchain support**
 
@@ -1444,7 +1444,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.28.0
 
-rippled 0.28.0 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.28.0>
+rippled 0.28.0 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.28.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1454,7 +1454,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.28.0
 
-This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.28.0) for more detailed information.
+This release incorporates a number of important features, bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.28.0) for more detailed information.
 
 **Release Overview**
 
@@ -1555,7 +1555,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.4
 
-rippled 0.27.4 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.4>
+rippled 0.27.4 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.4>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1565,7 +1565,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.27.4
 
-This release includes one new feature. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.4) for more detailed information.
+This release includes one new feature. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.4) for more detailed information.
 
 **Toolchain support**
 
@@ -1597,7 +1597,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.3-sp2
 
-rippled 0.27.3-sp2 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.3-sp2>
+rippled 0.27.3-sp2 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.3-sp2>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1607,7 +1607,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.27.3-sp2
 
-This release includes one new feature. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.3-sp2) for more detailed information.
+This release includes one new feature. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.3-sp2) for more detailed information.
 
 **Toolchain support**
 
@@ -1639,7 +1639,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.3-sp1
 
-rippled 0.27.3-sp1 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.3-sp1>
+rippled 0.27.3-sp1 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.3-sp1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1649,7 +1649,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
        Set version to 0.27.3-sp1
 
-This release includes one new feature. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.3-sp1) for more detailed information.
+This release includes one new feature. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.3-sp1) for more detailed information.
 
 **Toolchain support**
 
@@ -1679,7 +1679,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.3
 
-rippled 0.27.3 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.3>
+rippled 0.27.3 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.3>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1689,7 +1689,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.27.3
 
-This release includes one new feature. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.3) for more detailed information.
+This release includes one new feature. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.3) for more detailed information.
 
 **Toolchain support**
 
@@ -1719,7 +1719,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.2
 
-rippled 0.27.2 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.2>
+rippled 0.27.2 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.2>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1729,7 +1729,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
        Set version to 0.27.2
 
-This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.2) for more detailed information.
+This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.2) for more detailed information.
 
 **Toolchain support**
 
@@ -1771,7 +1771,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.1
 
-rippled 0.27.1 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.1>
+rippled 0.27.1 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1781,7 +1781,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
        Set version to 0.27.1
 
-This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.1) for more detailed information.
+This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.1) for more detailed information.
 
 **Toolchain support**
 
@@ -1826,7 +1826,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.27.0
 
-rippled 0.27.0 has been released. The commit can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.27.0>
+rippled 0.27.0 has been released. The commit can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.27.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1836,7 +1836,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.27.0
 
-This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.27.0) for more detailed information.
+This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.27.0) for more detailed information.
 
 **Release Overview**
 
@@ -1974,7 +1974,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.26.4
 
-rippled 0.26.4 has been released. The repository tag is *0.26.4* and can be found on GitHub at: <https://github.com/ripple/rippled/commits/0.26.4>
+rippled 0.26.4 has been released. The repository tag is *0.26.4* and can be found on GitHub at: <https://github.com/xrplf/xrpld/commits/0.26.4>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -1984,7 +1984,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.26.4
 
-This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.26.4) for more detailed information.
+This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.26.4) for more detailed information.
 
 **Toolchain support**
 
@@ -1996,7 +1996,7 @@ The minimum supported version of Boost is v1.55.0. You **must** upgrade to this 
 
 **Important JSON-RPC Update**
 
-With rippled version 0.26.4, the [rippled.cfg](https://github.com/ripple/rippled/blob/0.26.4/doc/rippled-example.cfg) file must set the ssl\_verify property to 0. Without this update, JSON-RPC API calls may not work.
+With rippled version 0.26.4, the [rippled.cfg](https://github.com/xrplf/xrpld/blob/0.26.4/doc/rippled-example.cfg) file must set the ssl\_verify property to 0. Without this update, JSON-RPC API calls may not work.
 
 **New Features**
 
@@ -2056,7 +2056,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.26.3-sp1
 
-rippled 0.26.3-sp1 has been released. The repository tag is *0.26.3-sp1* and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.26.3-sp1>
+rippled 0.26.3-sp1 has been released. The repository tag is *0.26.3-sp1* and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.26.3-sp1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2066,7 +2066,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.26.3-sp1
 
-This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.26.3-sp1) for more detailed information.
+This release incorporates a number of important bugfixes and functional improvements. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.26.3-sp1) for more detailed information.
 
 **Toolchain support**
 
@@ -2125,7 +2125,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.26.2
 
-rippled 0.26.2 has been released. The repository tag is *0.26.2* and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.26.2>
+rippled 0.26.2 has been released. The repository tag is *0.26.2* and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.26.2>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2135,7 +2135,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
         Set version to 0.26.2
 
-This release incorporates a small number of important bugfixes. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.26.2) for more detailed information.
+This release incorporates a small number of important bugfixes. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.26.2) for more detailed information.
 
 **Toolchain support**
 
@@ -2174,7 +2174,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.26.1
 
-rippled v0.26.1 has been released. The repository tag is **0.26.1** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.26.1>
+rippled v0.26.1 has been released. The repository tag is **0.26.1** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.26.1>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2184,7 +2184,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.26.1
 
-This release incorporates a small number of important bugfixes. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/0.26.1) for more detailed information.
+This release incorporates a small number of important bugfixes. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/0.26.1) for more detailed information.
 
 **Toolchain support**
 
@@ -2211,7 +2211,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.26.0
 
-rippled v0.26.0 has been released. The repository tag is **0.26.0** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.26.0>
+rippled v0.26.0 has been released. The repository tag is **0.26.0** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.26.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2221,7 +2221,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.26.0
 
-This release incorporates a significant number of improvements and important bugfixes. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more detailed information.
+This release incorporates a significant number of improvements and important bugfixes. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more detailed information.
 
 **Toolchain support**
 
@@ -2239,8 +2239,8 @@ The minimum supported version of Boost is v1.55.0. You **must** upgrade to this 
 -   Improve transaction fee and execution logic ([RIPD-323](https://ripplelabs.atlassian.net/browse/RIPD-323)).
 -   Implemented finding of 'sabfd' paths ([RIPD-335](https://ripplelabs.atlassian.net/browse/RIPD-335)).
 -   Imposed a local limit on paths lengths ([RIPD-350](https://ripplelabs.atlassian.net/browse/RIPD-350)).
--   Documented [ledger entries](https://github.com/ripple/rippled/blob/develop/src/ripple/module/app/ledger/README.md) ([RIPD-361](https://ripplelabs.atlassian.net/browse/RIPD-361)).
--   Documented [SHAMap](https://github.com/ripple/rippled/blob/develop/src/ripple/module/app/shamap/README.md).
+-   Documented [ledger entries](https://github.com/xrplf/xrpld/blob/develop/src/ripple/module/app/ledger/README.md) ([RIPD-361](https://ripplelabs.atlassian.net/browse/RIPD-361)).
+-   Documented [SHAMap](https://github.com/xrplf/xrpld/blob/develop/src/ripple/module/app/shamap/README.md).
 
 **Bug Fixes**
 
@@ -2264,7 +2264,7 @@ For more information or assistance, the following resources will be of use:
 
 ## Version 0.25.2
 
-rippled v0.25.2 has been released. The repository tag is **0.25.2** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.25.2>
+rippled v0.25.2 has been released. The repository tag is **0.25.2** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.25.2>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2274,7 +2274,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.25.2
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2301,7 +2301,7 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 ## Version 0.25.1
 
-`rippled` v0.25.1 has been released. The repository tag is `0.25.1` and can be found on GitHub at: https://github.com/ripple/rippled/tree/0.25.1
+`rippled` v0.25.1 has been released. The repository tag is `0.25.1` and can be found on GitHub at: https://github.com/xrplf/xrpld/tree/0.25.1
 
 Prior to building, please confirm you have the correct source tree with the `git log` command. The first log entry should be the change setting the version:
 
@@ -2311,7 +2311,7 @@ Prior to building, please confirm you have the correct source tree with the `git
 
          Set version to 0.25.1
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines.  Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines.  Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2323,7 +2323,7 @@ The minimum supported version of Boost is v1.55.  You **must** upgrade to this r
 
 **Major Features**
 
-* Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/ripple/rippled/blob/0.25.1/doc/rippled-example.cfg#L691)
+* Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/xrplf/xrpld/blob/0.25.1/doc/rippled-example.cfg#L691)
 
 **Improvements**
 
@@ -2348,7 +2348,7 @@ The minimum supported version of Boost is v1.55.  You **must** upgrade to this r
 
 ## Version 0.25.0
 
-rippled version 0.25.0 has been released. The repository tag is **0.25.0** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.25.0>
+rippled version 0.25.0 has been released. The repository tag is **0.25.0** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.25.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2358,7 +2358,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.25.0
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2370,7 +2370,7 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 **Major Features**
 
--   Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/ripple/rippled/blob/0.25.0/doc/rippled-example.cfg#L691)
+-   Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/xrplf/xrpld/blob/0.25.0/doc/rippled-example.cfg#L691)
 
 **Improvements**
 
@@ -2393,7 +2393,7 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 ## Version 0.24.0
 
-rippled version 0.24.0 has been released. The repository tag is **0.24.0** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.24.0>
+rippled version 0.24.0 has been released. The repository tag is **0.24.0** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.24.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2403,7 +2403,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.24.0
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2433,7 +2433,7 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 ## Version 0.23.0
 
-rippled version 0.23.0 has been released. The repository tag is **0.23.0** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.23.0>
+rippled version 0.23.0 has been released. The repository tag is **0.23.0** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.23.0>
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
@@ -2443,7 +2443,7 @@ Prior to building, please confirm you have the correct source tree with the **gi
 
          Set version to 0.23.0
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2484,13 +2484,13 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 ## Version 0.22.0
 
-rippled version 0.22.0 has been released. This release is currently the tip of the **develop/** branch and can be found on GitHub at: <https://github.com/ripple/rippled/tree/develop> The tag is **0.22.0** and can be found on GitHub at: <https://github.com/ripple/rippled/tree/0.22.0>
+rippled version 0.22.0 has been released. This release is currently the tip of the **develop/** branch and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/develop> The tag is **0.22.0** and can be found on GitHub at: <https://github.com/xrplf/xrpld/tree/0.22.0>
 
 **This is a critical release affecting transaction processing. All partners should update immediately.**
 
 Prior to building, please confirm you have the correct source tree with the **git log** command. The first log entry should be the change setting the version:
 
-This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/ripple/rippled/commits/develop) for more information.
+This release incorporates significant improvements which may not warrant separate entries but are incorporated into the feature changes as summary lines. Please refer to the [Git commit history](https://github.com/xrplf/xrpld/commits/develop) for more information.
 
 **Toolchain support**
 
@@ -2549,7 +2549,7 @@ The minimum supported version of libBOOST is v1.55. You **must** upgrade to this
 
 ## Version 0.21.0
 
-rippled version 0.21.0 has been released. This release is currently the tip of the **develop/** branch and can be found on GitHub at [1](https://github.com/ripple/rippled/tree/develop). The tag is **0.21.0-rc2** and can be found on GitHub at [2](https://github.com/ripple/rippled/tree/0.21.0-rc2).
+rippled version 0.21.0 has been released. This release is currently the tip of the **develop/** branch and can be found on GitHub at [1](https://github.com/xrplf/xrpld/tree/develop). The tag is **0.21.0-rc2** and can be found on GitHub at [2](https://github.com/xrplf/xrpld/tree/0.21.0-rc2).
 
 **This is a critical release. All partners should update immediately.**
 
@@ -2661,7 +2661,7 @@ You need to configure the [NodeBackEnd](https://wiki.ripple.com/NodeBackEnd) tha
 
 ## Version 0.20.1
 
-rippled version 0.20.1 has been released. This release is currently the tip of the [develop](https://github.com/ripple/rippled/tree/develop) branch and the tag is [0.20.1](https://github.com/ripple/rippled/tree/0.20.1).
+rippled version 0.20.1 has been released. This release is currently the tip of the [develop](https://github.com/xrplf/xrpld/tree/develop) branch and the tag is [0.20.1](https://github.com/xrplf/xrpld/tree/0.20.1).
 
 **This is a critical release. All partners should update immediately.**
 
@@ -2785,7 +2785,7 @@ You need to configure the [NodeBackEnd](https://wiki.ripple.com/NodeBackEnd) tha
 
 ## Version 0.19
 
-rippled version 0.19 has now been released. This release is currently the tip of the [release](https://github.com/ripple/rippled/tree/release) branch and the tag is [0.19.0](https://github.com/ripple/rippled/tree/0.19.0).
+rippled version 0.19 has now been released. This release is currently the tip of the [release](https://github.com/xrplf/xrpld/tree/release) branch and the tag is [0.19.0](https://github.com/xrplf/xrpld/tree/0.19.0).
 
 Prior to building, please confirm you have the correct source tree with the `git log` command. The first log entry should be the change setting the version:
 
@@ -2865,7 +2865,7 @@ You need to configure the [NodeBackEnd](https://wiki.ripple.com/NodeBackEnd) tha
 
 ## Version 0.16
 
-rippled version 0.16 has now been released. This release is currently the tip of the [master](https://github.com/ripple/rippled/tree/master) branch and the tag is [v0.16.0](https://github.com/ripple/rippled/tree/v0.16.0).
+rippled version 0.16 has now been released. This release is currently the tip of the [master](https://github.com/xrplf/xrpld/tree/master) branch and the tag is [v0.16.0](https://github.com/xrplf/xrpld/tree/v0.16.0).
 
 Prior to building, please confirm you have the correct source tree with the `git log` command. The first log entry should be the change setting the version:
 
@@ -2937,7 +2937,7 @@ None known
 
 ## Version 0.14
 
-rippled version 0.14 has now been released. This release is currently the tip of the [master](https://github.com/ripple/rippled/tree/master) branch and the tag is [v0.12.0](https://github.com/ripple/rippled/tree/v0.14.0).
+rippled version 0.14 has now been released. This release is currently the tip of the [master](https://github.com/xrplf/xrpld/tree/master) branch and the tag is [v0.12.0](https://github.com/xrplf/xrpld/tree/v0.14.0).
 
 Prior to building, please confirm you have the correct source tree with the `git log` command. The first log entry should be the change setting the version:
 
@@ -3009,7 +3009,7 @@ None known
 
 ## Version 0.12
 
-rippled version 0.12 has now been released. This release is currently the tip of the [master branch](https://github.com/ripple/rippled/tree/master) and can be found on GitHub. The tag is [v0.12.0](https://github.com/ripple/rippled/tree/v0.12.0).
+rippled version 0.12 has now been released. This release is currently the tip of the [master branch](https://github.com/xrplf/xrpld/tree/master) and can be found on GitHub. The tag is [v0.12.0](https://github.com/xrplf/xrpld/tree/v0.12.0).
 
 Prior to building, please confirm you have the correct source tree with the `git log` command. The first log entry should be the change setting the version:
 

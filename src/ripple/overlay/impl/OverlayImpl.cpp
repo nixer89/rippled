@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github.com/ripple/rippled
-    Copyright (c) 2012, 2013 Ripple Labs Inc.
+    This file is part of rippled: https://github.com/xrplf/xrpld
+    Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above
@@ -488,7 +488,7 @@ OverlayImpl::start()
     // servers to serve as bootstrap:
     if (bootstrapIps.empty())
     {
-        // Pool of servers operated by Ripple Labs Inc. - https://ripple.com
+        // Pool of servers operated by XRP Ledger Foundation - https://ripple.com
         bootstrapIps.push_back("r.ripple.com 51235");
 
         // Pool of servers operated by Alloy Networks - https://www.alloy.ee

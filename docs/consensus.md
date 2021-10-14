@@ -5,7 +5,7 @@
 Consensus is the task of reaching agreement within a distributed system in the
 presence of faulty or even malicious participants.  This document outlines the
 [XRP Ledger Consensus Algorithm](https://arxiv.org/abs/1802.07242)
-as implemented in [rippled](https://github.com/ripple/rippled), but
+as implemented in [rippled](https://github.com/xrplf/xrpld), but
 focuses on its utility as a generic consensus algorithm independent of the
 detailed mechanics of the Ripple Consensus Ledger. Most notably, the algorithm
 does not require fully synchronous communication between all nodes in the
