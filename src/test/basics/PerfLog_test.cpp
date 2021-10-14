@@ -17,13 +17,13 @@
 */
 //==============================================================================
 
-#include <ripple/basics/PerfLog.h>
-#include <ripple/basics/random.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/Journal.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/protocol/jss.h>
-#include <ripple/rpc/impl/Handler.h>
+#include <xrpl/basics/PerfLog.h>
+#include <xrpl/basics/random.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/beast/utility/Journal.h>
+#include <xrpl/json/json_reader.h>
+#include <xrpl/protocol/jss.h>
+#include <xrpl/rpc/impl/Handler.h>
 #include <atomic>
 #include <chrono>
 #include <cmath>

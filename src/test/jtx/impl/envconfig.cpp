@@ -17,7 +17,7 @@
 */
 //==============================================================================
 
-#include <ripple/core/ConfigSections.h>
+#include <xrpl/core/ConfigSections.h>
 #include <test/jtx/Env.h>
 #include <test/jtx/envconfig.h>
 

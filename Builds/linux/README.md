@@ -59,7 +59,7 @@ the necessary components, see [this document](../../docs/README.md)
 From a shell:
 
 ```
-git clone git@github.com:ripple/rippled.git
+git clone git@github.com:xrplf/xrpld.git
 cd rippled
 ```
 
@@ -228,7 +228,7 @@ build and install the desired version of rippled.
 To make use of the installed files, add the following to your CMakeLists.txt file:
 
 ```
-set (CMAKE_MODULE_PATH /opt/local/lib/cmake/ripple ${CMAKE_MODULE_PATH})
+set (CMAKE_MODULE_PATH /opt/local/lib/cmake/xrpl ${CMAKE_MODULE_PATH})
 find_package(Ripple REQUIRED)
 ```
 

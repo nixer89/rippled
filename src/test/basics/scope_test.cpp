@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github0.com/ripple/rippled
+    This file is part of rippled: https://github0.com/xrpl/rippled
     Copyright (c) 2021 Ripple Inc.
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/basics/scope.h>
-#include <ripple/beast/unit_test.h>
+#include <xrpl/basics/scope.h>
+#include <xrpl/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

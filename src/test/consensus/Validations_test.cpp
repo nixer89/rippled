@@ -17,10 +17,10 @@
 */
 //==============================================================================
 
-#include <ripple/basics/tagged_integer.h>
-#include <ripple/beast/clock/manual_clock.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/consensus/Validations.h>
+#include <xrpl/basics/tagged_integer.h>
+#include <xrpl/beast/clock/manual_clock.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/consensus/Validations.h>
 #include <test/csf/Validation.h>
 
 #include <memory>

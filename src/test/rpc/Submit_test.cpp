@@ -17,15 +17,15 @@
 */
 //==============================================================================
 
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/jss.h>
+#include <xrpl/basics/StringUtilities.h>
+#include <xrpl/protocol/Feature.h>
+#include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 
-#include <ripple/resource/Charge.h>
-#include <ripple/resource/Fees.h>
-#include <ripple/rpc/GRPCHandlers.h>
+#include <xrpl/resource/Charge.h>
+#include <xrpl/resource/Fees.h>
+#include <xrpl/rpc/GRPCHandlers.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
 namespace ripple {

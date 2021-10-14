@@ -7,8 +7,8 @@
 # before sharing with any third parties.
 
 
-rippled_exe=/opt/ripple/bin/rippled
-conf_file=/etc/opt/ripple/rippled.cfg
+rippled_exe=/opt/xrpl/bin/rippled
+conf_file=/etc/opt/xrpl/rippled.cfg
 
 while getopts ":e:c:" opt; do
     case $opt in

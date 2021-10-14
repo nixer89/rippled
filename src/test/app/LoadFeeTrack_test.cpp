@@ -17,10 +17,10 @@
 */
 //==============================================================================
 
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/core/Config.h>
-#include <ripple/ledger/ReadView.h>
+#include <xrpl/app/misc/LoadFeeTrack.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/core/Config.h>
+#include <xrpl/ledger/ReadView.h>
 
 namespace ripple {
 

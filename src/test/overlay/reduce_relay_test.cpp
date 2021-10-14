@@ -16,13 +16,13 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#include <ripple/basics/random.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/overlay/Message.h>
-#include <ripple/overlay/Peer.h>
-#include <ripple/overlay/Slot.h>
-#include <ripple/overlay/impl/Handshake.h>
-#include <ripple/protocol/SecretKey.h>
+#include <xrpl/basics/random.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/overlay/Message.h>
+#include <xrpl/overlay/Peer.h>
+#include <xrpl/overlay/Slot.h>
+#include <xrpl/overlay/impl/Handshake.h>
+#include <xrpl/protocol/SecretKey.h>
 #include <ripple.pb.h>
 #include <test/jtx/Env.h>
 

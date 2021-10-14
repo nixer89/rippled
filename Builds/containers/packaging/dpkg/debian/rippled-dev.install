@@ -1,3 +1,3 @@
-opt/ripple/include
-opt/ripple/lib/*.a
-opt/ripple/lib/cmake/ripple
+opt/xrpl/include
+opt/xrpl/lib/*.a
+opt/xrpl/lib/cmake/xrpl

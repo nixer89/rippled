@@ -17,20 +17,20 @@
 */
 //==============================================================================
 
-#include <ripple/app/ledger/LedgerMaster.h>
-#include <ripple/app/misc/TxQ.h>
-#include <ripple/app/rdb/backend/RelationalDBInterfaceSqlite.h>
-#include <ripple/basics/mulDiv.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/jss.h>
-#include <ripple/rpc/impl/RPCHelpers.h>
+#include <xrpl/app/ledger/LedgerMaster.h>
+#include <xrpl/app/misc/TxQ.h>
+#include <xrpl/app/rdb/backend/RelationalDBInterfaceSqlite.h>
+#include <xrpl/basics/mulDiv.h>
+#include <xrpl/protocol/ErrorCodes.h>
+#include <xrpl/protocol/jss.h>
+#include <xrpl/rpc/impl/RPCHelpers.h>
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
 #include <test/jtx/envconfig.h>
 
-#include <ripple/rpc/GRPCHandlers.h>
-#include <ripple/rpc/impl/GRPCHelpers.h>
-#include <ripple/rpc/impl/RPCHelpers.h>
+#include <xrpl/rpc/GRPCHandlers.h>
+#include <xrpl/rpc/impl/GRPCHelpers.h>
+#include <xrpl/rpc/impl/RPCHelpers.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
 #include <string>

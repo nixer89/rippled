@@ -17,7 +17,7 @@
 */
 //==============================================================================
 
-#include <ripple/net/DatabaseDownloader.h>
+#include <xrpl/net/DatabaseDownloader.h>
 #include <boost/filesystem/operations.hpp>
 #include <boost/predef.h>
 #include <condition_variable>

@@ -34,8 +34,8 @@ The server software that powers the XRP Ledger is called `rippled` and is availa
 
 
 ## Source Code
-[![travis-ci.com: Build Status](https://travis-ci.com/ripple/rippled.svg?branch=develop)](https://travis-ci.com/ripple/rippled)
-[![codecov.io: Code Coverage](https://codecov.io/gh/ripple/rippled/branch/develop/graph/badge.svg)](https://codecov.io/gh/ripple/rippled)
+[![travis-ci.com: Build Status](https://travis-ci.com/xrpl/rippled.svg?branch=develop)](https://travis-ci.com/xrpl/rippled)
+[![codecov.io: Code Coverage](https://codecov.io/gh/xrpl/rippled/branch/develop/graph/badge.svg)](https://codecov.io/gh/xrpl/rippled)
 
 ### Repository Contents
 

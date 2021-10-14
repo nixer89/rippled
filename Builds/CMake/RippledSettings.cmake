@@ -26,7 +26,7 @@ if (is_gcc OR is_clang)
     set (coverage ON CACHE BOOL "gcc/clang only" FORCE)
   endif ()
   option (coverage_core_only
-    "Include only src/ripple files when generating coverage report. \
+    "Include only src/xrpl files when generating coverage report. \
     Set to OFF to include all sources in coverage report."
     ON)
   option (wextra "compile with extra gcc/clang warnings enabled" ON)

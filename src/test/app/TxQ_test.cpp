@@ -17,15 +17,15 @@
 */
 //==============================================================================
 
-#include <ripple/app/main/Application.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/app/misc/TxQ.h>
-#include <ripple/app/tx/apply.h>
-#include <ripple/basics/Log.h>
-#include <ripple/basics/mulDiv.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/jss.h>
-#include <ripple/protocol/st.h>
+#include <xrpl/app/main/Application.h>
+#include <xrpl/app/misc/LoadFeeTrack.h>
+#include <xrpl/app/misc/TxQ.h>
+#include <xrpl/app/tx/apply.h>
+#include <xrpl/basics/Log.h>
+#include <xrpl/basics/mulDiv.h>
+#include <xrpl/protocol/ErrorCodes.h>
+#include <xrpl/protocol/jss.h>
+#include <xrpl/protocol/st.h>
 #include <test/jtx.h>
 #include <test/jtx/TestSuite.h>
 #include <test/jtx/WSClient.h>

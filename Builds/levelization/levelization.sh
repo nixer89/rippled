@@ -18,7 +18,7 @@ mkdir results
 includes="$( pwd )/results/rawincludes.txt"
 pushd ../..
 echo Raw includes:
-grep -r '#include.*/.*\.h' src/ripple/ src/test/ | \
+grep -r '#include.*/.*\.h' src/xrpl/ src/test/ | \
     grep -v boost | tee ${includes}
 popd
 pushd results

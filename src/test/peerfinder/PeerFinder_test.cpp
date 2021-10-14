@@ -17,13 +17,13 @@
 */
 //==============================================================================
 
-#include <ripple/basics/Slice.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/core/Config.h>
-#include <ripple/peerfinder/impl/Logic.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
+#include <xrpl/basics/Slice.h>
+#include <xrpl/basics/chrono.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/core/Config.h>
+#include <xrpl/peerfinder/impl/Logic.h>
+#include <xrpl/protocol/PublicKey.h>
+#include <xrpl/protocol/SecretKey.h>
 #include <test/unit_test/SuiteJournal.h>
 
 namespace ripple {

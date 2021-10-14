@@ -30,7 +30,7 @@ endif()
 install (EXPORT RippleExports
   FILE RippleTargets.cmake
   NAMESPACE Ripple::
-  DESTINATION lib/cmake/ripple)
+  DESTINATION lib/cmake/xrpl)
 include (CMakePackageConfigHelpers)
 write_basic_package_version_file (
   RippleConfigVersion.cmake
@@ -44,7 +44,7 @@ if (is_root_project)
     FILES
       ${CMAKE_CURRENT_SOURCE_DIR}/Builds/CMake/RippleConfig.cmake
       ${CMAKE_CURRENT_BINARY_DIR}/RippleConfigVersion.cmake
-    DESTINATION lib/cmake/ripple)
+    DESTINATION lib/cmake/xrpl)
   # sample configs should not overwrite existing files
   # install if-not-exists workaround as suggested by
   # https://cmake.org/Bug/view.php?id=12646

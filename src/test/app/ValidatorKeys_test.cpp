@@ -17,12 +17,12 @@
 */
 //==============================================================================
 
-#include <ripple/app/misc/Manifest.h>
-#include <ripple/app/misc/ValidatorKeys.h>
-#include <ripple/basics/base64.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/core/Config.h>
-#include <ripple/core/ConfigSections.h>
+#include <xrpl/app/misc/Manifest.h>
+#include <xrpl/app/misc/ValidatorKeys.h>
+#include <xrpl/basics/base64.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/core/Config.h>
+#include <xrpl/core/ConfigSections.h>
 #include <string>
 #include <test/unit_test/SuiteJournal.h>
 

@@ -17,9 +17,9 @@
 */
 //==============================================================================
 
-#include <ripple/app/rdb/backend/RelationalDBInterfaceSqlite.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/jss.h>
+#include <xrpl/app/rdb/backend/RelationalDBInterfaceSqlite.h>
+#include <xrpl/protocol/ErrorCodes.h>
+#include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
 #include <test/jtx/envconfig.h>

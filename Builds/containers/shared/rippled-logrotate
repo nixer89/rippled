@@ -10,6 +10,6 @@
   compressoptions -n19 ionice -c3 gzip
   compressext .gz
   postrotate
-    /opt/ripple/bin/rippled --conf /opt/ripple/etc/rippled.cfg logrotate
+    /opt/xrpl/bin/rippled --conf /opt/xrpl/etc/rippled.cfg logrotate
   endscript
 }

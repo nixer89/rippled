@@ -16,8 +16,8 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#include <ripple/beast/asio/io_latency_probe.h>
-#include <ripple/beast/unit_test.h>
+#include <xrpl/beast/asio/io_latency_probe.h>
+#include <xrpl/beast/unit_test.h>
 
 #include <beast/test/yield_to.hpp>
 

@@ -15,8 +15,8 @@
 */
 //==============================================================================
 
-#include <ripple/app/tx/apply.h>
-#include <ripple/protocol/STAccount.h>
+#include <xrpl/app/tx/apply.h>
+#include <xrpl/protocol/STAccount.h>
 #include <string>
 #include <test/jtx.h>
 #include <vector>

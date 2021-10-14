@@ -17,10 +17,10 @@
 */
 //==============================================================================
 
-#include <ripple/basics/contract.h>
-#include <ripple/core/Config.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/server/Port.h>
+#include <xrpl/basics/contract.h>
+#include <xrpl/core/Config.h>
+#include <xrpl/core/ConfigSections.h>
+#include <xrpl/server/Port.h>
 #include <boost/filesystem.hpp>
 #include <boost/format.hpp>
 #include <fstream>
@@ -73,7 +73,7 @@ medium
 # external administrative command to initiate deletion.
 [node_db]
 type=memory
-path=/Users/dummy/ripple/config/db/rocksdb
+path=/Users/dummy/xrpl/config/db/rocksdb
 open_files=2000
 filter_bits=12
 cache_mb=256
@@ -87,7 +87,7 @@ file_size_mult=2
 # This needs to be an absolute directory reference, not a relative one.
 # Modify this value as required.
 [debug_logfile]
-/Users/dummy/ripple/config/log/debug.log
+/Users/dummy/xrpl/config/log/debug.log
 
 [sntp_servers]
 time.windows.com

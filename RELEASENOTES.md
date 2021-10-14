@@ -2239,8 +2239,8 @@ The minimum supported version of Boost is v1.55.0. You **must** upgrade to this 
 -   Improve transaction fee and execution logic ([RIPD-323](https://ripplelabs.atlassian.net/browse/RIPD-323)).
 -   Implemented finding of 'sabfd' paths ([RIPD-335](https://ripplelabs.atlassian.net/browse/RIPD-335)).
 -   Imposed a local limit on paths lengths ([RIPD-350](https://ripplelabs.atlassian.net/browse/RIPD-350)).
--   Documented [ledger entries](https://github.com/xrplf/xrpld/blob/develop/src/ripple/module/app/ledger/README.md) ([RIPD-361](https://ripplelabs.atlassian.net/browse/RIPD-361)).
--   Documented [SHAMap](https://github.com/xrplf/xrpld/blob/develop/src/ripple/module/app/shamap/README.md).
+-   Documented [ledger entries](https://github.com/xrplf/xrpld/blob/develop/src/xrpl/module/app/ledger/README.md) ([RIPD-361](https://ripplelabs.atlassian.net/browse/RIPD-361)).
+-   Documented [SHAMap](https://github.com/xrplf/xrpld/blob/develop/src/xrpl/module/app/shamap/README.md).
 
 **Bug Fixes**
 

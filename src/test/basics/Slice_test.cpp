@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 /*
-    This file is part of rippled: https://github0.com/ripple/rippled
+    This file is part of rippled: https://github0.com/xrpl/rippled
     Copyright (c) 2012-2016 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/basics/Slice.h>
-#include <ripple/beast/unit_test.h>
+#include <xrpl/basics/Slice.h>
+#include <xrpl/beast/unit_test.h>
 #include <array>
 #include <cstdint>
 

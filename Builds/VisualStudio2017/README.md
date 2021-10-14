@@ -125,7 +125,7 @@ select the install option to add CMake to your path.
 ## Clone the rippled repository
 
 If you are familiar with cloning github repositories, just follow your normal
-process and clone `git@github.com:ripple/rippled.git`. Otherwise follow this
+process and clone `git@github.com:xrplf/xrpld.git`. Otherwise follow this
 section for instructions.
 
 1. If you don't have a github account, sign up for one at
@@ -141,7 +141,7 @@ repository and optionally switch to the *master* branch. Type the following at
 the bash prompt:
 
 ```powershell
-git clone git@github.com:ripple/rippled.git
+git clone git@github.com:xrplf/xrpld.git
 cd rippled
 ```
 If you receive an error about not having the "correct access rights" make sure

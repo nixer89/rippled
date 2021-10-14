@@ -28,7 +28,7 @@ if (coverage)
 
     set (extract_pattern "")
     if (coverage_core_only)
-      set (extract_pattern "${CMAKE_CURRENT_SOURCE_DIR}/src/ripple/")
+      set (extract_pattern "${CMAKE_CURRENT_SOURCE_DIR}/src/xrpl/")
     endif ()
 
     if (LLVM_COV AND LLVM_PROFDATA)
@@ -63,7 +63,7 @@ if (coverage)
 
     set (extract_pattern "*")
     if (coverage_core_only)
-      set (extract_pattern "*/src/ripple/*")
+      set (extract_pattern "*/src/xrpl/*")
     endif ()
 
     if (LCOV AND GENHTML)

@@ -18,10 +18,10 @@
 */
 //==============================================================================
 
-#include <ripple/app/ledger/LedgerMaster.h>
-#include <ripple/app/reporting/P2pProxy.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/rpc/impl/Tuning.h>
+#include <xrpl/app/ledger/LedgerMaster.h>
+#include <xrpl/app/reporting/P2pProxy.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/rpc/impl/Tuning.h>
 
 #include <test/jtx.h>
 #include <test/jtx/Env.h>

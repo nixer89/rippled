@@ -158,7 +158,7 @@ if (is_root_project)
     #   docker push <HUB REPO PATH>/rippled-ci-builder:YYYY-MM-DD
     #      (NOTE: <HUB REPO PATH> is probably your user or org name if using
     #             docker hub, or it might be something like
-    #             docker.pkg.github.com/ripple/rippled if using the github pkg
+    #             docker.pkg.github.com/xrpl/rippled if using the github pkg
     #             registry. for any registry, you will need to be logged-in via
     #             docker and have push access.)
     #

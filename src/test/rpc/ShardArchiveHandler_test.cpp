@@ -17,14 +17,14 @@
 */
 //==============================================================================
 
-#include <ripple/app/rdb/RelationalDBInterface_shards.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/nodestore/impl/DecodedBlob.h>
-#include <ripple/protocol/jss.h>
-#include <ripple/rpc/ShardArchiveHandler.h>
+#include <xrpl/app/rdb/RelationalDBInterface_shards.h>
+#include <xrpl/beast/utility/temp_dir.h>
+#include <xrpl/core/ConfigSections.h>
+#include <xrpl/nodestore/DummyScheduler.h>
+#include <xrpl/nodestore/Manager.h>
+#include <xrpl/nodestore/impl/DecodedBlob.h>
+#include <xrpl/protocol/jss.h>
+#include <xrpl/rpc/ShardArchiveHandler.h>
 #include <test/jtx/CaptureLogs.h>
 #include <test/jtx/Env.h>
 #include <test/jtx/TrustedPublisherServer.h>

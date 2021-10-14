@@ -17,11 +17,11 @@
 */
 //==============================================================================
 
-#include <ripple/basics/safe_cast.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/protocol/InnerObjectFormats.h>
-#include <ripple/protocol/LedgerFormats.h>
-#include <ripple/protocol/TxFormats.h>
+#include <xrpl/basics/safe_cast.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/protocol/InnerObjectFormats.h>
+#include <xrpl/protocol/LedgerFormats.h>
+#include <xrpl/protocol/TxFormats.h>
 
 #include "org/xrpl/rpc/v1/ledger_objects.pb.h"
 #include "org/xrpl/rpc/v1/transaction.pb.h"

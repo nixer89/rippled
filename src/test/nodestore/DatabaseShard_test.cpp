@@ -17,20 +17,20 @@
 */
 //==============================================================================
 
-#include <ripple/app/ledger/LedgerMaster.h>
-#include <ripple/app/ledger/LedgerToJson.h>
-#include <ripple/app/misc/SHAMapStore.h>
-#include <ripple/app/rdb/backend/RelationalDBInterfaceSqlite.h>
-#include <ripple/basics/Slice.h>
-#include <ripple/basics/random.h>
-#include <ripple/beast/hash/hash_append.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/nodestore/DatabaseShard.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/impl/DecodedBlob.h>
-#include <ripple/nodestore/impl/Shard.h>
-#include <ripple/protocol/digest.h>
+#include <xrpl/app/ledger/LedgerMaster.h>
+#include <xrpl/app/ledger/LedgerToJson.h>
+#include <xrpl/app/misc/SHAMapStore.h>
+#include <xrpl/app/rdb/backend/RelationalDBInterfaceSqlite.h>
+#include <xrpl/basics/Slice.h>
+#include <xrpl/basics/random.h>
+#include <xrpl/beast/hash/hash_append.h>
+#include <xrpl/beast/utility/temp_dir.h>
+#include <xrpl/core/ConfigSections.h>
+#include <xrpl/nodestore/DatabaseShard.h>
+#include <xrpl/nodestore/DummyScheduler.h>
+#include <xrpl/nodestore/impl/DecodedBlob.h>
+#include <xrpl/nodestore/impl/Shard.h>
+#include <xrpl/protocol/digest.h>
 #include <test/jtx.h>
 #include <test/jtx/CaptureLogs.h>
 #include <test/nodestore/TestBase.h>

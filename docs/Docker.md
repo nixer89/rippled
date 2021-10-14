@@ -5,11 +5,11 @@ docker image for quick testing and deployment.
 
 To run the tip of the latest release via docker:
 
-```$ docker run -P -v /srv/rippled/ ripple/rippled:latest```
+```$ docker run -P -v /srv/rippled/ xrpl/rippled:latest```
 
 To run the tip of active development:
 
-```$ docker run -P -v /srv/rippled/ ripple/rippled:develop```
+```$ docker run -P -v /srv/rippled/ xrpl/rippled:develop```
 
 Where ```/srv/rippled``` points to a directory containing a rippled.cfg and
 database files. By default, port 5005/tcp maps to the RPC port and 51235/udp to

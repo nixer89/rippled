@@ -20,7 +20,7 @@ override_dh_auto_configure:
 	mkdir -p bld
 	cd bld && \
 	cmake .. -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/opt/ripple \
+		-DCMAKE_INSTALL_PREFIX=/opt/xrpl \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_UNITY_BUILD_BATCH_SIZE=10 \
 		-Dstatic=ON \
@@ -33,11 +33,11 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	cd bld && DESTDIR=../debian/tmp cmake --build . --target install -- -v
-	install -D bld/validator-keys/validator-keys debian/tmp/opt/ripple/bin/validator-keys
-	install -D Builds/containers/shared/update-rippled.sh debian/tmp/opt/ripple/bin/update-rippled.sh
-	install -D bin/getRippledInfo debian/tmp/opt/ripple/bin/getRippledInfo
-	install -D Builds/containers/shared/update-rippled-cron debian/tmp/opt/ripple/etc/update-rippled-cron
+	install -D bld/validator-keys/validator-keys debian/tmp/opt/xrpl/bin/validator-keys
+	install -D Builds/containers/shared/update-rippled.sh debian/tmp/opt/xrpl/bin/update-rippled.sh
+	install -D bin/getRippledInfo debian/tmp/opt/xrpl/bin/getRippledInfo
+	install -D Builds/containers/shared/update-rippled-cron debian/tmp/opt/xrpl/etc/update-rippled-cron
 	install -D Builds/containers/shared/rippled-logrotate debian/tmp/etc/logrotate.d/rippled
-	rm -rf debian/tmp/opt/ripple/lib64/cmake/date
+	rm -rf debian/tmp/opt/xrpl/lib64/cmake/date
 	rm -rf bld
 	rm -rf bld_vl

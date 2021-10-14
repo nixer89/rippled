@@ -17,14 +17,14 @@
 */
 //==============================================================================
 
-#include <ripple/app/misc/TxQ.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/jss.h>
-#include <ripple/resource/ResourceManager.h>
-#include <ripple/resource/impl/Entry.h>
-#include <ripple/resource/impl/Tuning.h>
-#include <ripple/rpc/impl/Tuning.h>
+#include <xrpl/app/misc/TxQ.h>
+#include <xrpl/beast/utility/temp_dir.h>
+#include <xrpl/protocol/Feature.h>
+#include <xrpl/protocol/jss.h>
+#include <xrpl/resource/ResourceManager.h>
+#include <xrpl/resource/impl/Entry.h>
+#include <xrpl/resource/impl/Tuning.h>
+#include <xrpl/rpc/impl/Tuning.h>
 #include <boost/algorithm/string/predicate.hpp>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>

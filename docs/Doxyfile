@@ -104,7 +104,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = \
     docs \
-    src/ripple \
+    src/xrpl \
     src/test \
     src/README.md \
     README.md \

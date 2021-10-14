@@ -1,7 +1,7 @@
 %define rippled_version %(echo $RIPPLED_RPM_VERSION)
 %define rpm_release %(echo $RPM_RELEASE)
 %define rpm_patch %(echo $RPM_PATCH)
-%define _prefix /opt/ripple
+%define _prefix /opt/xrpl
 Name:           rippled
 # Dashes in Version extensions must be converted to underscores
 Version:        %{rippled_version}
@@ -42,10 +42,10 @@ test -e /etc/pki/tls || { mkdir -p /etc/pki; ln -s /usr/lib/ssl /etc/pki/tls; }
 rm -rf $RPM_BUILD_ROOT
 DESTDIR=$RPM_BUILD_ROOT cmake --build rippled/bld.release --target install -- -v
 rm -rf ${RPM_BUILD_ROOT}/%{_prefix}/lib64/cmake/date
-install -d ${RPM_BUILD_ROOT}/etc/opt/ripple
+install -d ${RPM_BUILD_ROOT}/etc/opt/xrpl
 install -d ${RPM_BUILD_ROOT}/usr/local/bin
-ln -s %{_prefix}/etc/rippled.cfg ${RPM_BUILD_ROOT}/etc/opt/ripple/rippled.cfg
-ln -s %{_prefix}/etc/validators.txt ${RPM_BUILD_ROOT}/etc/opt/ripple/validators.txt
+ln -s %{_prefix}/etc/rippled.cfg ${RPM_BUILD_ROOT}/etc/opt/xrpl/rippled.cfg
+ln -s %{_prefix}/etc/validators.txt ${RPM_BUILD_ROOT}/etc/opt/xrpl/validators.txt
 ln -s %{_prefix}/bin/rippled ${RPM_BUILD_ROOT}/usr/local/bin/rippled
 install -D rippled/bld.release/validator-keys/validator-keys ${RPM_BUILD_ROOT}%{_bindir}/validator-keys
 install -D ./rippled/Builds/containers/shared/rippled.service ${RPM_BUILD_ROOT}/usr/lib/systemd/system/rippled.service
@@ -84,9 +84,9 @@ chown -R root:$GROUP_NAME %{_prefix}/etc/update-rippled-cron
 %{_prefix}/etc/update-rippled-cron
 %{_bindir}/validator-keys
 %config(noreplace) %{_prefix}/etc/rippled.cfg
-%config(noreplace) /etc/opt/ripple/rippled.cfg
+%config(noreplace) /etc/opt/xrpl/rippled.cfg
 %config(noreplace) %{_prefix}/etc/validators.txt
-%config(noreplace) /etc/opt/ripple/validators.txt
+%config(noreplace) /etc/opt/xrpl/validators.txt
 %config(noreplace) /etc/logrotate.d/rippled
 %config(noreplace) /usr/lib/systemd/system/rippled.service
 %config(noreplace) /usr/lib/systemd/system-preset/50-rippled.preset
@@ -96,7 +96,7 @@ chown -R root:$GROUP_NAME %{_prefix}/etc/update-rippled-cron
 %files devel
 %{_prefix}/include
 %{_prefix}/lib/*.a
-%{_prefix}/lib/cmake/ripple
+%{_prefix}/lib/cmake/xrpl
 
 %changelog
 * Wed Aug 28 2019 Mike Ellery <mellery451@gmail.com>

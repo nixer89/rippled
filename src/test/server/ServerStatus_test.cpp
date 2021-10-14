@@ -17,12 +17,12 @@
 */
 //==============================================================================
 
-#include <ripple/app/ledger/LedgerMaster.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/app/misc/NetworkOPs.h>
-#include <ripple/basics/base64.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/rpc/ServerHandler.h>
+#include <xrpl/app/ledger/LedgerMaster.h>
+#include <xrpl/app/misc/LoadFeeTrack.h>
+#include <xrpl/app/misc/NetworkOPs.h>
+#include <xrpl/basics/base64.h>
+#include <xrpl/json/json_reader.h>
+#include <xrpl/rpc/ServerHandler.h>
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>

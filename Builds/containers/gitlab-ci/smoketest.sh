@@ -87,13 +87,13 @@ else
 fi
 
 # verify installed version
-INSTALLED=$(/opt/ripple/bin/rippled --version | awk '{print $NF}')
+INSTALLED=$(/opt/xrpl/bin/rippled --version | awk '{print $NF}')
 if [ "${rippled_version}" != "${INSTALLED}" ] ; then
     echo "INSTALLED version ${INSTALLED} does not match ${rippled_version}"
     exit 1
 fi
 # run unit tests
-/opt/ripple/bin/rippled --unittest --unittest-jobs $(nproc)
-/opt/ripple/bin/validator-keys --unittest
+/opt/xrpl/bin/rippled --unittest --unittest-jobs $(nproc)
+/opt/xrpl/bin/validator-keys --unittest
 
 

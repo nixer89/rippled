@@ -27,15 +27,15 @@ listed later.
 
 | Level / Tier | Module(s)                                     |
 |--------------|-----------------------------------------------|
-| 01           | ripple/beast ripple/unity
-| 02           | ripple/basics
-| 03           | ripple/json ripple/crypto
-| 04           | ripple/protocol
-| 05           | ripple/core ripple/conditions ripple/consensus ripple/resource ripple/server
-| 06           | ripple/peerfinder ripple/ledger ripple/nodestore ripple/net
-| 07           | ripple/shamap ripple/overlay
-| 08           | ripple/app
-| 09           | ripple/rpc
+| 01           | xrpl/beast xrpl/unity
+| 02           | xrpl/basics
+| 03           | xrpl/json xrpl/crypto
+| 04           | xrpl/protocol
+| 05           | xrpl/core xrpl/conditions xrpl/consensus xrpl/resource xrpl/server
+| 06           | xrpl/peerfinder xrpl/ledger xrpl/nodestore xrpl/net
+| 07           | xrpl/shamap xrpl/overlay
+| 08           | xrpl/app
+| 09           | xrpl/rpc
 | 10           | test/jtx test/beast test/csf
 | 11           | test/unit_test
 | 12           | test/crypto test/conditions test/json test/resource test/shamap test/peerfinder test/basics test/overlay

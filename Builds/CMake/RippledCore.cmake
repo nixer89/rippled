@@ -4,8 +4,8 @@
 #]===================================================================]
 
 file (GLOB_RECURSE rb_headers
-  src/ripple/beast/*.h
-  src/ripple/beast/*.hpp)
+  src/xrpl/beast/*.h
+  src/xrpl/beast/*.hpp)
 
 add_library (xrpl_core
   ${rb_headers}) ## headers added here for benefit of IDEs
@@ -19,22 +19,22 @@ endif ()
     TODO: review these sources for removal or replacement
 #]===============================]
 target_sources (xrpl_core PRIVATE
-  src/ripple/beast/clock/basic_seconds_clock.cpp
-  src/ripple/beast/core/CurrentThreadName.cpp
-  src/ripple/beast/core/SemanticVersion.cpp
-  src/ripple/beast/hash/impl/xxhash.cpp
-  src/ripple/beast/insight/impl/Collector.cpp
-  src/ripple/beast/insight/impl/Groups.cpp
-  src/ripple/beast/insight/impl/Hook.cpp
-  src/ripple/beast/insight/impl/Metric.cpp
-  src/ripple/beast/insight/impl/NullCollector.cpp
-  src/ripple/beast/insight/impl/StatsDCollector.cpp
-  src/ripple/beast/net/impl/IPAddressConversion.cpp
-  src/ripple/beast/net/impl/IPAddressV4.cpp
-  src/ripple/beast/net/impl/IPAddressV6.cpp
-  src/ripple/beast/net/impl/IPEndpoint.cpp
-  src/ripple/beast/utility/src/beast_Journal.cpp
-  src/ripple/beast/utility/src/beast_PropertyStream.cpp)
+  src/xrpl/beast/clock/basic_seconds_clock.cpp
+  src/xrpl/beast/core/CurrentThreadName.cpp
+  src/xrpl/beast/core/SemanticVersion.cpp
+  src/xrpl/beast/hash/impl/xxhash.cpp
+  src/xrpl/beast/insight/impl/Collector.cpp
+  src/xrpl/beast/insight/impl/Groups.cpp
+  src/xrpl/beast/insight/impl/Hook.cpp
+  src/xrpl/beast/insight/impl/Metric.cpp
+  src/xrpl/beast/insight/impl/NullCollector.cpp
+  src/xrpl/beast/insight/impl/StatsDCollector.cpp
+  src/xrpl/beast/net/impl/IPAddressConversion.cpp
+  src/xrpl/beast/net/impl/IPAddressV4.cpp
+  src/xrpl/beast/net/impl/IPAddressV6.cpp
+  src/xrpl/beast/net/impl/IPEndpoint.cpp
+  src/xrpl/beast/utility/src/beast_Journal.cpp
+  src/xrpl/beast/utility/src/beast_PropertyStream.cpp)
 
 #[===============================[
     core sources
@@ -44,83 +44,83 @@ target_sources (xrpl_core PRIVATE
     main sources:
       subdir: basics (partial)
   #]===============================]
-  src/ripple/basics/impl/base64.cpp
-  src/ripple/basics/impl/contract.cpp
-  src/ripple/basics/impl/CountedObject.cpp
-  src/ripple/basics/impl/FileUtilities.cpp
-  src/ripple/basics/impl/IOUAmount.cpp
-  src/ripple/basics/impl/Log.cpp
-  src/ripple/basics/impl/strHex.cpp
-  src/ripple/basics/impl/StringUtilities.cpp
+  src/xrpl/basics/impl/base64.cpp
+  src/xrpl/basics/impl/contract.cpp
+  src/xrpl/basics/impl/CountedObject.cpp
+  src/xrpl/basics/impl/FileUtilities.cpp
+  src/xrpl/basics/impl/IOUAmount.cpp
+  src/xrpl/basics/impl/Log.cpp
+  src/xrpl/basics/impl/strHex.cpp
+  src/xrpl/basics/impl/StringUtilities.cpp
   #[===============================[
     main sources:
       subdir: json
   #]===============================]
-  src/ripple/json/impl/JsonPropertyStream.cpp
-  src/ripple/json/impl/Object.cpp
-  src/ripple/json/impl/Output.cpp
-  src/ripple/json/impl/Writer.cpp
-  src/ripple/json/impl/json_reader.cpp
-  src/ripple/json/impl/json_value.cpp
-  src/ripple/json/impl/json_valueiterator.cpp
-  src/ripple/json/impl/json_writer.cpp
-  src/ripple/json/impl/to_string.cpp
+  src/xrpl/json/impl/JsonPropertyStream.cpp
+  src/xrpl/json/impl/Object.cpp
+  src/xrpl/json/impl/Output.cpp
+  src/xrpl/json/impl/Writer.cpp
+  src/xrpl/json/impl/json_reader.cpp
+  src/xrpl/json/impl/json_value.cpp
+  src/xrpl/json/impl/json_valueiterator.cpp
+  src/xrpl/json/impl/json_writer.cpp
+  src/xrpl/json/impl/to_string.cpp
   #[===============================[
     main sources:
       subdir: protocol
   #]===============================]
-  src/ripple/protocol/impl/AccountID.cpp
-  src/ripple/protocol/impl/Book.cpp
-  src/ripple/protocol/impl/BuildInfo.cpp
-  src/ripple/protocol/impl/ErrorCodes.cpp
-  src/ripple/protocol/impl/Feature.cpp
-  src/ripple/protocol/impl/Indexes.cpp
-  src/ripple/protocol/impl/InnerObjectFormats.cpp
-  src/ripple/protocol/impl/Issue.cpp
-  src/ripple/protocol/impl/Keylet.cpp
-  src/ripple/protocol/impl/LedgerFormats.cpp
-  src/ripple/protocol/impl/PublicKey.cpp
-  src/ripple/protocol/impl/Quality.cpp
-  src/ripple/protocol/impl/Rate2.cpp
-  src/ripple/protocol/impl/SField.cpp
-  src/ripple/protocol/impl/SOTemplate.cpp
-  src/ripple/protocol/impl/STAccount.cpp
-  src/ripple/protocol/impl/STAmount.cpp
-  src/ripple/protocol/impl/STArray.cpp
-  src/ripple/protocol/impl/STBase.cpp
-  src/ripple/protocol/impl/STBlob.cpp
-  src/ripple/protocol/impl/STInteger.cpp
-  src/ripple/protocol/impl/STLedgerEntry.cpp
-  src/ripple/protocol/impl/STObject.cpp
-  src/ripple/protocol/impl/STParsedJSON.cpp
-  src/ripple/protocol/impl/STPathSet.cpp
-  src/ripple/protocol/impl/STTx.cpp
-  src/ripple/protocol/impl/STValidation.cpp
-  src/ripple/protocol/impl/STVar.cpp
-  src/ripple/protocol/impl/STVector256.cpp
-  src/ripple/protocol/impl/SecretKey.cpp
-  src/ripple/protocol/impl/Seed.cpp
-  src/ripple/protocol/impl/Serializer.cpp
-  src/ripple/protocol/impl/Sign.cpp
-  src/ripple/protocol/impl/TER.cpp
-  src/ripple/protocol/impl/TxFormats.cpp
-  src/ripple/protocol/impl/TxMeta.cpp
-  src/ripple/protocol/impl/UintTypes.cpp
-  src/ripple/protocol/impl/digest.cpp
-  src/ripple/protocol/impl/tokens.cpp
+  src/xrpl/protocol/impl/AccountID.cpp
+  src/xrpl/protocol/impl/Book.cpp
+  src/xrpl/protocol/impl/BuildInfo.cpp
+  src/xrpl/protocol/impl/ErrorCodes.cpp
+  src/xrpl/protocol/impl/Feature.cpp
+  src/xrpl/protocol/impl/Indexes.cpp
+  src/xrpl/protocol/impl/InnerObjectFormats.cpp
+  src/xrpl/protocol/impl/Issue.cpp
+  src/xrpl/protocol/impl/Keylet.cpp
+  src/xrpl/protocol/impl/LedgerFormats.cpp
+  src/xrpl/protocol/impl/PublicKey.cpp
+  src/xrpl/protocol/impl/Quality.cpp
+  src/xrpl/protocol/impl/Rate2.cpp
+  src/xrpl/protocol/impl/SField.cpp
+  src/xrpl/protocol/impl/SOTemplate.cpp
+  src/xrpl/protocol/impl/STAccount.cpp
+  src/xrpl/protocol/impl/STAmount.cpp
+  src/xrpl/protocol/impl/STArray.cpp
+  src/xrpl/protocol/impl/STBase.cpp
+  src/xrpl/protocol/impl/STBlob.cpp
+  src/xrpl/protocol/impl/STInteger.cpp
+  src/xrpl/protocol/impl/STLedgerEntry.cpp
+  src/xrpl/protocol/impl/STObject.cpp
+  src/xrpl/protocol/impl/STParsedJSON.cpp
+  src/xrpl/protocol/impl/STPathSet.cpp
+  src/xrpl/protocol/impl/STTx.cpp
+  src/xrpl/protocol/impl/STValidation.cpp
+  src/xrpl/protocol/impl/STVar.cpp
+  src/xrpl/protocol/impl/STVector256.cpp
+  src/xrpl/protocol/impl/SecretKey.cpp
+  src/xrpl/protocol/impl/Seed.cpp
+  src/xrpl/protocol/impl/Serializer.cpp
+  src/xrpl/protocol/impl/Sign.cpp
+  src/xrpl/protocol/impl/TER.cpp
+  src/xrpl/protocol/impl/TxFormats.cpp
+  src/xrpl/protocol/impl/TxMeta.cpp
+  src/xrpl/protocol/impl/UintTypes.cpp
+  src/xrpl/protocol/impl/digest.cpp
+  src/xrpl/protocol/impl/tokens.cpp
   #[===============================[
     main sources:
       subdir: crypto
   #]===============================]
-  src/ripple/crypto/impl/RFC1751.cpp
-  src/ripple/crypto/impl/csprng.cpp
-  src/ripple/crypto/impl/secure_erase.cpp)
+  src/xrpl/crypto/impl/RFC1751.cpp
+  src/xrpl/crypto/impl/csprng.cpp
+  src/xrpl/crypto/impl/secure_erase.cpp)
 
 add_library (Ripple::xrpl_core ALIAS xrpl_core)
 target_include_directories (xrpl_core
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/ripple>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/xrpl>
     # this one is for beast/legacy files:
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/beast/extras>
     $<INSTALL_INTERFACE:include>)
@@ -148,147 +148,147 @@ target_link_libraries (xrpl_core
 #]=================================]
 install (
   FILES
-    src/ripple/basics/base64.h
-    src/ripple/basics/Blob.h
-    src/ripple/basics/Buffer.h
-    src/ripple/basics/CountedObject.h
-    src/ripple/basics/FileUtilities.h
-    src/ripple/basics/IOUAmount.h
-    src/ripple/basics/LocalValue.h
-    src/ripple/basics/Log.h
-    src/ripple/basics/MathUtilities.h
-    src/ripple/basics/safe_cast.h
-    src/ripple/basics/Slice.h
-    src/ripple/basics/StringUtilities.h
-    src/ripple/basics/ToString.h
-    src/ripple/basics/UnorderedContainers.h
-    src/ripple/basics/XRPAmount.h
-    src/ripple/basics/algorithm.h
-    src/ripple/basics/base_uint.h
-    src/ripple/basics/chrono.h
-    src/ripple/basics/contract.h
-    src/ripple/basics/FeeUnits.h
-    src/ripple/basics/hardened_hash.h
-    src/ripple/basics/strHex.h
-  DESTINATION include/ripple/basics)
+    src/xrpl/basics/base64.h
+    src/xrpl/basics/Blob.h
+    src/xrpl/basics/Buffer.h
+    src/xrpl/basics/CountedObject.h
+    src/xrpl/basics/FileUtilities.h
+    src/xrpl/basics/IOUAmount.h
+    src/xrpl/basics/LocalValue.h
+    src/xrpl/basics/Log.h
+    src/xrpl/basics/MathUtilities.h
+    src/xrpl/basics/safe_cast.h
+    src/xrpl/basics/Slice.h
+    src/xrpl/basics/StringUtilities.h
+    src/xrpl/basics/ToString.h
+    src/xrpl/basics/UnorderedContainers.h
+    src/xrpl/basics/XRPAmount.h
+    src/xrpl/basics/algorithm.h
+    src/xrpl/basics/base_uint.h
+    src/xrpl/basics/chrono.h
+    src/xrpl/basics/contract.h
+    src/xrpl/basics/FeeUnits.h
+    src/xrpl/basics/hardened_hash.h
+    src/xrpl/basics/strHex.h
+  DESTINATION include/xrpl/basics)
 install (
   FILES
-    src/ripple/crypto/RFC1751.h
-    src/ripple/crypto/csprng.h
-    src/ripple/crypto/secure_erase.h
-  DESTINATION include/ripple/crypto)
+    src/xrpl/crypto/RFC1751.h
+    src/xrpl/crypto/csprng.h
+    src/xrpl/crypto/secure_erase.h
+  DESTINATION include/xrpl/crypto)
 install (
   FILES
-    src/ripple/json/JsonPropertyStream.h
-    src/ripple/json/Object.h
-    src/ripple/json/Output.h
-    src/ripple/json/Writer.h
-    src/ripple/json/json_forwards.h
-    src/ripple/json/json_reader.h
-    src/ripple/json/json_value.h
-    src/ripple/json/json_writer.h
-    src/ripple/json/to_string.h
-  DESTINATION include/ripple/json)
+    src/xrpl/json/JsonPropertyStream.h
+    src/xrpl/json/Object.h
+    src/xrpl/json/Output.h
+    src/xrpl/json/Writer.h
+    src/xrpl/json/json_forwards.h
+    src/xrpl/json/json_reader.h
+    src/xrpl/json/json_value.h
+    src/xrpl/json/json_writer.h
+    src/xrpl/json/to_string.h
+  DESTINATION include/xrpl/json)
 install (
   FILES
-    src/ripple/json/impl/json_assert.h
-  DESTINATION include/ripple/json/impl)
+    src/xrpl/json/impl/json_assert.h
+  DESTINATION include/xrpl/json/impl)
 install (
   FILES
-    src/ripple/protocol/AccountID.h
-    src/ripple/protocol/AmountConversions.h
-    src/ripple/protocol/Book.h
-    src/ripple/protocol/BuildInfo.h
-    src/ripple/protocol/ErrorCodes.h
-    src/ripple/protocol/Feature.h
-    src/ripple/protocol/HashPrefix.h
-    src/ripple/protocol/Indexes.h
-    src/ripple/protocol/InnerObjectFormats.h
-    src/ripple/protocol/Issue.h
-    src/ripple/protocol/KeyType.h
-    src/ripple/protocol/Keylet.h
-    src/ripple/protocol/KnownFormats.h
-    src/ripple/protocol/LedgerFormats.h
-    src/ripple/protocol/Protocol.h
-    src/ripple/protocol/PublicKey.h
-    src/ripple/protocol/Quality.h
-    src/ripple/protocol/Rate.h
-    src/ripple/protocol/SField.h
-    src/ripple/protocol/SOTemplate.h
-    src/ripple/protocol/STAccount.h
-    src/ripple/protocol/STAmount.h
-    src/ripple/protocol/STArray.h
-    src/ripple/protocol/STBase.h
-    src/ripple/protocol/STBitString.h
-    src/ripple/protocol/STBlob.h
-    src/ripple/protocol/STExchange.h
-    src/ripple/protocol/STInteger.h
-    src/ripple/protocol/STLedgerEntry.h
-    src/ripple/protocol/STObject.h
-    src/ripple/protocol/STParsedJSON.h
-    src/ripple/protocol/STPathSet.h
-    src/ripple/protocol/STTx.h
-    src/ripple/protocol/STValidation.h
-    src/ripple/protocol/STVector256.h
-    src/ripple/protocol/SecretKey.h
-    src/ripple/protocol/Seed.h
-    src/ripple/protocol/SeqProxy.h
-    src/ripple/protocol/Serializer.h
-    src/ripple/protocol/Sign.h
-    src/ripple/protocol/SystemParameters.h
-    src/ripple/protocol/TER.h
-    src/ripple/protocol/TxFlags.h
-    src/ripple/protocol/TxFormats.h
-    src/ripple/protocol/TxMeta.h
-    src/ripple/protocol/UintTypes.h
-    src/ripple/protocol/digest.h
-    src/ripple/protocol/jss.h
-    src/ripple/protocol/tokens.h
-  DESTINATION include/ripple/protocol)
+    src/xrpl/protocol/AccountID.h
+    src/xrpl/protocol/AmountConversions.h
+    src/xrpl/protocol/Book.h
+    src/xrpl/protocol/BuildInfo.h
+    src/xrpl/protocol/ErrorCodes.h
+    src/xrpl/protocol/Feature.h
+    src/xrpl/protocol/HashPrefix.h
+    src/xrpl/protocol/Indexes.h
+    src/xrpl/protocol/InnerObjectFormats.h
+    src/xrpl/protocol/Issue.h
+    src/xrpl/protocol/KeyType.h
+    src/xrpl/protocol/Keylet.h
+    src/xrpl/protocol/KnownFormats.h
+    src/xrpl/protocol/LedgerFormats.h
+    src/xrpl/protocol/Protocol.h
+    src/xrpl/protocol/PublicKey.h
+    src/xrpl/protocol/Quality.h
+    src/xrpl/protocol/Rate.h
+    src/xrpl/protocol/SField.h
+    src/xrpl/protocol/SOTemplate.h
+    src/xrpl/protocol/STAccount.h
+    src/xrpl/protocol/STAmount.h
+    src/xrpl/protocol/STArray.h
+    src/xrpl/protocol/STBase.h
+    src/xrpl/protocol/STBitString.h
+    src/xrpl/protocol/STBlob.h
+    src/xrpl/protocol/STExchange.h
+    src/xrpl/protocol/STInteger.h
+    src/xrpl/protocol/STLedgerEntry.h
+    src/xrpl/protocol/STObject.h
+    src/xrpl/protocol/STParsedJSON.h
+    src/xrpl/protocol/STPathSet.h
+    src/xrpl/protocol/STTx.h
+    src/xrpl/protocol/STValidation.h
+    src/xrpl/protocol/STVector256.h
+    src/xrpl/protocol/SecretKey.h
+    src/xrpl/protocol/Seed.h
+    src/xrpl/protocol/SeqProxy.h
+    src/xrpl/protocol/Serializer.h
+    src/xrpl/protocol/Sign.h
+    src/xrpl/protocol/SystemParameters.h
+    src/xrpl/protocol/TER.h
+    src/xrpl/protocol/TxFlags.h
+    src/xrpl/protocol/TxFormats.h
+    src/xrpl/protocol/TxMeta.h
+    src/xrpl/protocol/UintTypes.h
+    src/xrpl/protocol/digest.h
+    src/xrpl/protocol/jss.h
+    src/xrpl/protocol/tokens.h
+  DESTINATION include/xrpl/protocol)
 install (
   FILES
-    src/ripple/protocol/impl/STVar.h
-    src/ripple/protocol/impl/secp256k1.h
-  DESTINATION include/ripple/protocol/impl)
+    src/xrpl/protocol/impl/STVar.h
+    src/xrpl/protocol/impl/secp256k1.h
+  DESTINATION include/xrpl/protocol/impl)
 
 #[===================================[
    beast/legacy headers installation
 #]===================================]
 install (
   FILES
-    src/ripple/beast/clock/abstract_clock.h
-    src/ripple/beast/clock/basic_seconds_clock.h
-    src/ripple/beast/clock/manual_clock.h
-  DESTINATION include/ripple/beast/clock)
+    src/xrpl/beast/clock/abstract_clock.h
+    src/xrpl/beast/clock/basic_seconds_clock.h
+    src/xrpl/beast/clock/manual_clock.h
+  DESTINATION include/xrpl/beast/clock)
 install (
   FILES
-    src/ripple/beast/core/LexicalCast.h
-    src/ripple/beast/core/List.h
-    src/ripple/beast/core/SemanticVersion.h
-  DESTINATION include/ripple/beast/core)
+    src/xrpl/beast/core/LexicalCast.h
+    src/xrpl/beast/core/List.h
+    src/xrpl/beast/core/SemanticVersion.h
+  DESTINATION include/xrpl/beast/core)
 install (
   FILES
-    src/ripple/beast/hash/hash_append.h
-    src/ripple/beast/hash/uhash.h
-    src/ripple/beast/hash/xxhasher.h
-  DESTINATION include/ripple/beast/hash)
+    src/xrpl/beast/hash/hash_append.h
+    src/xrpl/beast/hash/uhash.h
+    src/xrpl/beast/hash/xxhasher.h
+  DESTINATION include/xrpl/beast/hash)
 install (
-  FILES src/ripple/beast/hash/impl/xxhash.h
-  DESTINATION include/ripple/beast/hash/impl)
-install (
-  FILES
-    src/ripple/beast/rfc2616.h
-    src/ripple/beast/type_name.h
-    src/ripple/beast/unit_test.h
-    src/ripple/beast/xor_shift_engine.h
-  DESTINATION include/ripple/beast)
+  FILES src/xrpl/beast/hash/impl/xxhash.h
+  DESTINATION include/xrpl/beast/hash/impl)
 install (
   FILES
-    src/ripple/beast/utility/Journal.h
-    src/ripple/beast/utility/PropertyStream.h
-    src/ripple/beast/utility/Zero.h
-    src/ripple/beast/utility/rngfill.h
-  DESTINATION include/ripple/beast/utility)
+    src/xrpl/beast/rfc2616.h
+    src/xrpl/beast/type_name.h
+    src/xrpl/beast/unit_test.h
+    src/xrpl/beast/xor_shift_engine.h
+  DESTINATION include/xrpl/beast)
+install (
+  FILES
+    src/xrpl/beast/utility/Journal.h
+    src/xrpl/beast/utility/PropertyStream.h
+    src/xrpl/beast/utility/Zero.h
+    src/xrpl/beast/utility/rngfill.h
+  DESTINATION include/xrpl/beast/utility)
 # WARNING!! -- horrible levelization ahead
 # (these files should be isolated or moved...but
 #  unfortunately unit_test.h above creates this dependency)
@@ -321,7 +321,7 @@ install (
    versions of cmake happy. cmake 3.10+ allows
    add_executable with no sources
 #]=========================================================]
-add_executable (rippled src/ripple/app/main/Application.h)
+add_executable (rippled src/xrpl/app/main/Application.h)
 if (unity)
   set_target_properties(rippled PROPERTIES UNITY_BUILD ON)
 endif ()
@@ -330,332 +330,332 @@ target_sources (rippled PRIVATE
      main sources:
        subdir: app
   #]===============================]
-  src/ripple/app/consensus/RCLConsensus.cpp
-  src/ripple/app/consensus/RCLCxPeerPos.cpp
-  src/ripple/app/consensus/RCLValidations.cpp
-  src/ripple/app/ledger/AcceptedLedger.cpp
-  src/ripple/app/ledger/AcceptedLedgerTx.cpp
-  src/ripple/app/ledger/AccountStateSF.cpp
-  src/ripple/app/ledger/BookListeners.cpp
-  src/ripple/app/ledger/ConsensusTransSetSF.cpp
-  src/ripple/app/ledger/Ledger.cpp
-  src/ripple/app/ledger/LedgerHistory.cpp
-  src/ripple/app/ledger/OrderBookDB.cpp
-  src/ripple/app/ledger/TransactionStateSF.cpp
-  src/ripple/app/ledger/impl/BuildLedger.cpp
-  src/ripple/app/ledger/impl/InboundLedger.cpp
-  src/ripple/app/ledger/impl/InboundLedgers.cpp
-  src/ripple/app/ledger/impl/InboundTransactions.cpp
-  src/ripple/app/ledger/impl/LedgerCleaner.cpp
-  src/ripple/app/ledger/impl/LedgerDeltaAcquire.cpp
-  src/ripple/app/ledger/impl/LedgerMaster.cpp
-  src/ripple/app/ledger/impl/LedgerReplay.cpp
-  src/ripple/app/ledger/impl/LedgerReplayer.cpp
-  src/ripple/app/ledger/impl/LedgerReplayMsgHandler.cpp
-  src/ripple/app/ledger/impl/LedgerReplayTask.cpp
-  src/ripple/app/ledger/impl/LedgerToJson.cpp
-  src/ripple/app/ledger/impl/LocalTxs.cpp
-  src/ripple/app/ledger/impl/OpenLedger.cpp
-  src/ripple/app/ledger/impl/SkipListAcquire.cpp
-  src/ripple/app/ledger/impl/TimeoutCounter.cpp
-  src/ripple/app/ledger/impl/TransactionAcquire.cpp
-  src/ripple/app/ledger/impl/TransactionMaster.cpp
-  src/ripple/app/main/Application.cpp
-  src/ripple/app/main/BasicApp.cpp
-  src/ripple/app/main/CollectorManager.cpp
-  src/ripple/app/main/GRPCServer.cpp
-  src/ripple/app/main/LoadManager.cpp
-  src/ripple/app/main/Main.cpp
-  src/ripple/app/main/NodeIdentity.cpp
-  src/ripple/app/main/NodeStoreScheduler.cpp
-  src/ripple/app/reporting/ReportingETL.cpp
-  src/ripple/app/reporting/ETLSource.cpp
-  src/ripple/app/reporting/P2pProxy.cpp
-  src/ripple/app/misc/CanonicalTXSet.cpp
-  src/ripple/app/misc/FeeVoteImpl.cpp
-  src/ripple/app/misc/HashRouter.cpp
-  src/ripple/app/misc/NegativeUNLVote.cpp
-  src/ripple/app/misc/NetworkOPs.cpp
-  src/ripple/app/misc/SHAMapStoreImp.cpp
-  src/ripple/app/misc/detail/impl/WorkSSL.cpp
-  src/ripple/app/misc/impl/AccountTxPaging.cpp
-  src/ripple/app/misc/impl/AmendmentTable.cpp
-  src/ripple/app/misc/impl/LoadFeeTrack.cpp
-  src/ripple/app/misc/impl/Manifest.cpp
-  src/ripple/app/misc/impl/Transaction.cpp
-  src/ripple/app/misc/impl/TxQ.cpp
-  src/ripple/app/misc/impl/ValidatorKeys.cpp
-  src/ripple/app/misc/impl/ValidatorList.cpp
-  src/ripple/app/misc/impl/ValidatorSite.cpp
-  src/ripple/app/paths/AccountCurrencies.cpp
-  src/ripple/app/paths/Credit.cpp
-  src/ripple/app/paths/Flow.cpp
-  src/ripple/app/paths/PathRequest.cpp
-  src/ripple/app/paths/PathRequests.cpp
-  src/ripple/app/paths/Pathfinder.cpp
-  src/ripple/app/paths/RippleCalc.cpp
-  src/ripple/app/paths/RippleLineCache.cpp
-  src/ripple/app/paths/RippleState.cpp
-  src/ripple/app/paths/impl/BookStep.cpp
-  src/ripple/app/paths/impl/DirectStep.cpp
-  src/ripple/app/paths/impl/PaySteps.cpp
-  src/ripple/app/paths/impl/XRPEndpointStep.cpp
-  src/ripple/app/rdb/backend/RelationalDBInterfacePostgres.cpp
-  src/ripple/app/rdb/backend/RelationalDBInterfaceSqlite.cpp
-  src/ripple/app/rdb/impl/RelationalDBInterface.cpp
-  src/ripple/app/rdb/impl/RelationalDBInterface_global.cpp
-  src/ripple/app/rdb/impl/RelationalDBInterface_nodes.cpp
-  src/ripple/app/rdb/impl/RelationalDBInterface_postgres.cpp
-  src/ripple/app/rdb/impl/RelationalDBInterface_shards.cpp
-  src/ripple/app/tx/impl/ApplyContext.cpp
-  src/ripple/app/tx/impl/BookTip.cpp
-  src/ripple/app/tx/impl/CancelCheck.cpp
-  src/ripple/app/tx/impl/CancelOffer.cpp
-  src/ripple/app/tx/impl/CashCheck.cpp
-  src/ripple/app/tx/impl/Change.cpp
-  src/ripple/app/tx/impl/CreateCheck.cpp
-  src/ripple/app/tx/impl/CreateOffer.cpp
-  src/ripple/app/tx/impl/CreateTicket.cpp
-  src/ripple/app/tx/impl/DeleteAccount.cpp
-  src/ripple/app/tx/impl/DepositPreauth.cpp
-  src/ripple/app/tx/impl/Escrow.cpp
-  src/ripple/app/tx/impl/InvariantCheck.cpp
-  src/ripple/app/tx/impl/OfferStream.cpp
-  src/ripple/app/tx/impl/PayChan.cpp
-  src/ripple/app/tx/impl/Payment.cpp
-  src/ripple/app/tx/impl/SetAccount.cpp
-  src/ripple/app/tx/impl/SetRegularKey.cpp
-  src/ripple/app/tx/impl/SetSignerList.cpp
-  src/ripple/app/tx/impl/SetTrust.cpp
-  src/ripple/app/tx/impl/SignerEntries.cpp
-  src/ripple/app/tx/impl/Taker.cpp
-  src/ripple/app/tx/impl/Transactor.cpp
-  src/ripple/app/tx/impl/apply.cpp
-  src/ripple/app/tx/impl/applySteps.cpp
+  src/xrpl/app/consensus/RCLConsensus.cpp
+  src/xrpl/app/consensus/RCLCxPeerPos.cpp
+  src/xrpl/app/consensus/RCLValidations.cpp
+  src/xrpl/app/ledger/AcceptedLedger.cpp
+  src/xrpl/app/ledger/AcceptedLedgerTx.cpp
+  src/xrpl/app/ledger/AccountStateSF.cpp
+  src/xrpl/app/ledger/BookListeners.cpp
+  src/xrpl/app/ledger/ConsensusTransSetSF.cpp
+  src/xrpl/app/ledger/Ledger.cpp
+  src/xrpl/app/ledger/LedgerHistory.cpp
+  src/xrpl/app/ledger/OrderBookDB.cpp
+  src/xrpl/app/ledger/TransactionStateSF.cpp
+  src/xrpl/app/ledger/impl/BuildLedger.cpp
+  src/xrpl/app/ledger/impl/InboundLedger.cpp
+  src/xrpl/app/ledger/impl/InboundLedgers.cpp
+  src/xrpl/app/ledger/impl/InboundTransactions.cpp
+  src/xrpl/app/ledger/impl/LedgerCleaner.cpp
+  src/xrpl/app/ledger/impl/LedgerDeltaAcquire.cpp
+  src/xrpl/app/ledger/impl/LedgerMaster.cpp
+  src/xrpl/app/ledger/impl/LedgerReplay.cpp
+  src/xrpl/app/ledger/impl/LedgerReplayer.cpp
+  src/xrpl/app/ledger/impl/LedgerReplayMsgHandler.cpp
+  src/xrpl/app/ledger/impl/LedgerReplayTask.cpp
+  src/xrpl/app/ledger/impl/LedgerToJson.cpp
+  src/xrpl/app/ledger/impl/LocalTxs.cpp
+  src/xrpl/app/ledger/impl/OpenLedger.cpp
+  src/xrpl/app/ledger/impl/SkipListAcquire.cpp
+  src/xrpl/app/ledger/impl/TimeoutCounter.cpp
+  src/xrpl/app/ledger/impl/TransactionAcquire.cpp
+  src/xrpl/app/ledger/impl/TransactionMaster.cpp
+  src/xrpl/app/main/Application.cpp
+  src/xrpl/app/main/BasicApp.cpp
+  src/xrpl/app/main/CollectorManager.cpp
+  src/xrpl/app/main/GRPCServer.cpp
+  src/xrpl/app/main/LoadManager.cpp
+  src/xrpl/app/main/Main.cpp
+  src/xrpl/app/main/NodeIdentity.cpp
+  src/xrpl/app/main/NodeStoreScheduler.cpp
+  src/xrpl/app/reporting/ReportingETL.cpp
+  src/xrpl/app/reporting/ETLSource.cpp
+  src/xrpl/app/reporting/P2pProxy.cpp
+  src/xrpl/app/misc/CanonicalTXSet.cpp
+  src/xrpl/app/misc/FeeVoteImpl.cpp
+  src/xrpl/app/misc/HashRouter.cpp
+  src/xrpl/app/misc/NegativeUNLVote.cpp
+  src/xrpl/app/misc/NetworkOPs.cpp
+  src/xrpl/app/misc/SHAMapStoreImp.cpp
+  src/xrpl/app/misc/detail/impl/WorkSSL.cpp
+  src/xrpl/app/misc/impl/AccountTxPaging.cpp
+  src/xrpl/app/misc/impl/AmendmentTable.cpp
+  src/xrpl/app/misc/impl/LoadFeeTrack.cpp
+  src/xrpl/app/misc/impl/Manifest.cpp
+  src/xrpl/app/misc/impl/Transaction.cpp
+  src/xrpl/app/misc/impl/TxQ.cpp
+  src/xrpl/app/misc/impl/ValidatorKeys.cpp
+  src/xrpl/app/misc/impl/ValidatorList.cpp
+  src/xrpl/app/misc/impl/ValidatorSite.cpp
+  src/xrpl/app/paths/AccountCurrencies.cpp
+  src/xrpl/app/paths/Credit.cpp
+  src/xrpl/app/paths/Flow.cpp
+  src/xrpl/app/paths/PathRequest.cpp
+  src/xrpl/app/paths/PathRequests.cpp
+  src/xrpl/app/paths/Pathfinder.cpp
+  src/xrpl/app/paths/RippleCalc.cpp
+  src/xrpl/app/paths/RippleLineCache.cpp
+  src/xrpl/app/paths/RippleState.cpp
+  src/xrpl/app/paths/impl/BookStep.cpp
+  src/xrpl/app/paths/impl/DirectStep.cpp
+  src/xrpl/app/paths/impl/PaySteps.cpp
+  src/xrpl/app/paths/impl/XRPEndpointStep.cpp
+  src/xrpl/app/rdb/backend/RelationalDBInterfacePostgres.cpp
+  src/xrpl/app/rdb/backend/RelationalDBInterfaceSqlite.cpp
+  src/xrpl/app/rdb/impl/RelationalDBInterface.cpp
+  src/xrpl/app/rdb/impl/RelationalDBInterface_global.cpp
+  src/xrpl/app/rdb/impl/RelationalDBInterface_nodes.cpp
+  src/xrpl/app/rdb/impl/RelationalDBInterface_postgres.cpp
+  src/xrpl/app/rdb/impl/RelationalDBInterface_shards.cpp
+  src/xrpl/app/tx/impl/ApplyContext.cpp
+  src/xrpl/app/tx/impl/BookTip.cpp
+  src/xrpl/app/tx/impl/CancelCheck.cpp
+  src/xrpl/app/tx/impl/CancelOffer.cpp
+  src/xrpl/app/tx/impl/CashCheck.cpp
+  src/xrpl/app/tx/impl/Change.cpp
+  src/xrpl/app/tx/impl/CreateCheck.cpp
+  src/xrpl/app/tx/impl/CreateOffer.cpp
+  src/xrpl/app/tx/impl/CreateTicket.cpp
+  src/xrpl/app/tx/impl/DeleteAccount.cpp
+  src/xrpl/app/tx/impl/DepositPreauth.cpp
+  src/xrpl/app/tx/impl/Escrow.cpp
+  src/xrpl/app/tx/impl/InvariantCheck.cpp
+  src/xrpl/app/tx/impl/OfferStream.cpp
+  src/xrpl/app/tx/impl/PayChan.cpp
+  src/xrpl/app/tx/impl/Payment.cpp
+  src/xrpl/app/tx/impl/SetAccount.cpp
+  src/xrpl/app/tx/impl/SetRegularKey.cpp
+  src/xrpl/app/tx/impl/SetSignerList.cpp
+  src/xrpl/app/tx/impl/SetTrust.cpp
+  src/xrpl/app/tx/impl/SignerEntries.cpp
+  src/xrpl/app/tx/impl/Taker.cpp
+  src/xrpl/app/tx/impl/Transactor.cpp
+  src/xrpl/app/tx/impl/apply.cpp
+  src/xrpl/app/tx/impl/applySteps.cpp
   #[===============================[
      main sources:
        subdir: basics (partial)
   #]===============================]
-  src/ripple/basics/impl/Archive.cpp
-  src/ripple/basics/impl/BasicConfig.cpp
-  src/ripple/basics/impl/PerfLogImp.cpp
-  src/ripple/basics/impl/ResolverAsio.cpp
-  src/ripple/basics/impl/UptimeClock.cpp
-  src/ripple/basics/impl/make_SSLContext.cpp
-  src/ripple/basics/impl/mulDiv.cpp
+  src/xrpl/basics/impl/Archive.cpp
+  src/xrpl/basics/impl/BasicConfig.cpp
+  src/xrpl/basics/impl/PerfLogImp.cpp
+  src/xrpl/basics/impl/ResolverAsio.cpp
+  src/xrpl/basics/impl/UptimeClock.cpp
+  src/xrpl/basics/impl/make_SSLContext.cpp
+  src/xrpl/basics/impl/mulDiv.cpp
   #[===============================[
      main sources:
        subdir: conditions
   #]===============================]
-  src/ripple/conditions/impl/Condition.cpp
-  src/ripple/conditions/impl/Fulfillment.cpp
-  src/ripple/conditions/impl/error.cpp
+  src/xrpl/conditions/impl/Condition.cpp
+  src/xrpl/conditions/impl/Fulfillment.cpp
+  src/xrpl/conditions/impl/error.cpp
   #[===============================[
      main sources:
        subdir: core
   #]===============================]
-  src/ripple/core/impl/Config.cpp
-  src/ripple/core/impl/DatabaseCon.cpp
-  src/ripple/core/impl/Job.cpp
-  src/ripple/core/impl/JobQueue.cpp
-  src/ripple/core/impl/LoadEvent.cpp
-  src/ripple/core/impl/LoadMonitor.cpp
-  src/ripple/core/impl/SNTPClock.cpp
-  src/ripple/core/impl/SociDB.cpp
-  src/ripple/core/impl/TimeKeeper.cpp
-  src/ripple/core/impl/Workers.cpp
-  src/ripple/core/Pg.cpp
+  src/xrpl/core/impl/Config.cpp
+  src/xrpl/core/impl/DatabaseCon.cpp
+  src/xrpl/core/impl/Job.cpp
+  src/xrpl/core/impl/JobQueue.cpp
+  src/xrpl/core/impl/LoadEvent.cpp
+  src/xrpl/core/impl/LoadMonitor.cpp
+  src/xrpl/core/impl/SNTPClock.cpp
+  src/xrpl/core/impl/SociDB.cpp
+  src/xrpl/core/impl/TimeKeeper.cpp
+  src/xrpl/core/impl/Workers.cpp
+  src/xrpl/core/Pg.cpp
   #[===============================[
      main sources:
        subdir: consensus
   #]===============================]
-  src/ripple/consensus/Consensus.cpp
+  src/xrpl/consensus/Consensus.cpp
   #[===============================[
      main sources:
        subdir: ledger
   #]===============================]
-  src/ripple/ledger/impl/ApplyStateTable.cpp
-  src/ripple/ledger/impl/ApplyView.cpp
-  src/ripple/ledger/impl/ApplyViewBase.cpp
-  src/ripple/ledger/impl/ApplyViewImpl.cpp
-  src/ripple/ledger/impl/BookDirs.cpp
-  src/ripple/ledger/impl/CachedSLEs.cpp
-  src/ripple/ledger/impl/CachedView.cpp
-  src/ripple/ledger/impl/Directory.cpp
-  src/ripple/ledger/impl/OpenView.cpp
-  src/ripple/ledger/impl/PaymentSandbox.cpp
-  src/ripple/ledger/impl/RawStateTable.cpp
-  src/ripple/ledger/impl/ReadView.cpp
-  src/ripple/ledger/impl/View.cpp
+  src/xrpl/ledger/impl/ApplyStateTable.cpp
+  src/xrpl/ledger/impl/ApplyView.cpp
+  src/xrpl/ledger/impl/ApplyViewBase.cpp
+  src/xrpl/ledger/impl/ApplyViewImpl.cpp
+  src/xrpl/ledger/impl/BookDirs.cpp
+  src/xrpl/ledger/impl/CachedSLEs.cpp
+  src/xrpl/ledger/impl/CachedView.cpp
+  src/xrpl/ledger/impl/Directory.cpp
+  src/xrpl/ledger/impl/OpenView.cpp
+  src/xrpl/ledger/impl/PaymentSandbox.cpp
+  src/xrpl/ledger/impl/RawStateTable.cpp
+  src/xrpl/ledger/impl/ReadView.cpp
+  src/xrpl/ledger/impl/View.cpp
   #[===============================[
      main sources:
        subdir: net
   #]===============================]
-  src/ripple/net/impl/DatabaseDownloader.cpp
-  src/ripple/net/impl/HTTPClient.cpp
-  src/ripple/net/impl/HTTPDownloader.cpp
-  src/ripple/net/impl/HTTPStream.cpp
-  src/ripple/net/impl/InfoSub.cpp
-  src/ripple/net/impl/RPCCall.cpp
-  src/ripple/net/impl/RPCErr.cpp
-  src/ripple/net/impl/RPCSub.cpp
-  src/ripple/net/impl/RegisterSSLCerts.cpp
+  src/xrpl/net/impl/DatabaseDownloader.cpp
+  src/xrpl/net/impl/HTTPClient.cpp
+  src/xrpl/net/impl/HTTPDownloader.cpp
+  src/xrpl/net/impl/HTTPStream.cpp
+  src/xrpl/net/impl/InfoSub.cpp
+  src/xrpl/net/impl/RPCCall.cpp
+  src/xrpl/net/impl/RPCErr.cpp
+  src/xrpl/net/impl/RPCSub.cpp
+  src/xrpl/net/impl/RegisterSSLCerts.cpp
   #[===============================[
      main sources:
        subdir: nodestore
   #]===============================]
-  src/ripple/nodestore/backend/CassandraFactory.cpp
-  src/ripple/nodestore/backend/MemoryFactory.cpp
-  src/ripple/nodestore/backend/NuDBFactory.cpp
-  src/ripple/nodestore/backend/NullFactory.cpp
-  src/ripple/nodestore/backend/RocksDBFactory.cpp
-  src/ripple/nodestore/impl/BatchWriter.cpp
-  src/ripple/nodestore/impl/Database.cpp
-  src/ripple/nodestore/impl/DatabaseNodeImp.cpp
-  src/ripple/nodestore/impl/DatabaseRotatingImp.cpp
-  src/ripple/nodestore/impl/DatabaseShardImp.cpp
-  src/ripple/nodestore/impl/DeterministicShard.cpp
-  src/ripple/nodestore/impl/DecodedBlob.cpp
-  src/ripple/nodestore/impl/DummyScheduler.cpp
-  src/ripple/nodestore/impl/EncodedBlob.cpp
-  src/ripple/nodestore/impl/ManagerImp.cpp
-  src/ripple/nodestore/impl/NodeObject.cpp
-  src/ripple/nodestore/impl/Shard.cpp
-  src/ripple/nodestore/impl/ShardInfo.cpp
-  src/ripple/nodestore/impl/TaskQueue.cpp
+  src/xrpl/nodestore/backend/CassandraFactory.cpp
+  src/xrpl/nodestore/backend/MemoryFactory.cpp
+  src/xrpl/nodestore/backend/NuDBFactory.cpp
+  src/xrpl/nodestore/backend/NullFactory.cpp
+  src/xrpl/nodestore/backend/RocksDBFactory.cpp
+  src/xrpl/nodestore/impl/BatchWriter.cpp
+  src/xrpl/nodestore/impl/Database.cpp
+  src/xrpl/nodestore/impl/DatabaseNodeImp.cpp
+  src/xrpl/nodestore/impl/DatabaseRotatingImp.cpp
+  src/xrpl/nodestore/impl/DatabaseShardImp.cpp
+  src/xrpl/nodestore/impl/DeterministicShard.cpp
+  src/xrpl/nodestore/impl/DecodedBlob.cpp
+  src/xrpl/nodestore/impl/DummyScheduler.cpp
+  src/xrpl/nodestore/impl/EncodedBlob.cpp
+  src/xrpl/nodestore/impl/ManagerImp.cpp
+  src/xrpl/nodestore/impl/NodeObject.cpp
+  src/xrpl/nodestore/impl/Shard.cpp
+  src/xrpl/nodestore/impl/ShardInfo.cpp
+  src/xrpl/nodestore/impl/TaskQueue.cpp
   #[===============================[
      main sources:
        subdir: overlay
   #]===============================]
-  src/ripple/overlay/impl/Cluster.cpp
-  src/ripple/overlay/impl/ConnectAttempt.cpp
-  src/ripple/overlay/impl/Handshake.cpp
-  src/ripple/overlay/impl/Message.cpp
-  src/ripple/overlay/impl/OverlayImpl.cpp
-  src/ripple/overlay/impl/PeerImp.cpp
-  src/ripple/overlay/impl/PeerReservationTable.cpp
-  src/ripple/overlay/impl/PeerSet.cpp
-  src/ripple/overlay/impl/ProtocolVersion.cpp
-  src/ripple/overlay/impl/TrafficCount.cpp
-  src/ripple/overlay/impl/TxMetrics.cpp
+  src/xrpl/overlay/impl/Cluster.cpp
+  src/xrpl/overlay/impl/ConnectAttempt.cpp
+  src/xrpl/overlay/impl/Handshake.cpp
+  src/xrpl/overlay/impl/Message.cpp
+  src/xrpl/overlay/impl/OverlayImpl.cpp
+  src/xrpl/overlay/impl/PeerImp.cpp
+  src/xrpl/overlay/impl/PeerReservationTable.cpp
+  src/xrpl/overlay/impl/PeerSet.cpp
+  src/xrpl/overlay/impl/ProtocolVersion.cpp
+  src/xrpl/overlay/impl/TrafficCount.cpp
+  src/xrpl/overlay/impl/TxMetrics.cpp
   #[===============================[
      main sources:
        subdir: peerfinder
   #]===============================]
-  src/ripple/peerfinder/impl/Bootcache.cpp
-  src/ripple/peerfinder/impl/Endpoint.cpp
-  src/ripple/peerfinder/impl/PeerfinderConfig.cpp
-  src/ripple/peerfinder/impl/PeerfinderManager.cpp
-  src/ripple/peerfinder/impl/SlotImp.cpp
-  src/ripple/peerfinder/impl/SourceStrings.cpp
+  src/xrpl/peerfinder/impl/Bootcache.cpp
+  src/xrpl/peerfinder/impl/Endpoint.cpp
+  src/xrpl/peerfinder/impl/PeerfinderConfig.cpp
+  src/xrpl/peerfinder/impl/PeerfinderManager.cpp
+  src/xrpl/peerfinder/impl/SlotImp.cpp
+  src/xrpl/peerfinder/impl/SourceStrings.cpp
   #[===============================[
      main sources:
        subdir: resource
   #]===============================]
-  src/ripple/resource/impl/Charge.cpp
-  src/ripple/resource/impl/Consumer.cpp
-  src/ripple/resource/impl/Fees.cpp
-  src/ripple/resource/impl/ResourceManager.cpp
+  src/xrpl/resource/impl/Charge.cpp
+  src/xrpl/resource/impl/Consumer.cpp
+  src/xrpl/resource/impl/Fees.cpp
+  src/xrpl/resource/impl/ResourceManager.cpp
   #[===============================[
      main sources:
        subdir: rpc
   #]===============================]
-  src/ripple/rpc/handlers/AccountChannels.cpp
-  src/ripple/rpc/handlers/AccountCurrenciesHandler.cpp
-  src/ripple/rpc/handlers/AccountInfo.cpp
-  src/ripple/rpc/handlers/AccountLines.cpp
-  src/ripple/rpc/handlers/AccountObjects.cpp
-  src/ripple/rpc/handlers/AccountOffers.cpp
-  src/ripple/rpc/handlers/AccountTx.cpp
-  src/ripple/rpc/handlers/AccountTxOld.cpp
-  src/ripple/rpc/handlers/BlackList.cpp
-  src/ripple/rpc/handlers/BookOffers.cpp
-  src/ripple/rpc/handlers/CanDelete.cpp
-  src/ripple/rpc/handlers/Connect.cpp
-  src/ripple/rpc/handlers/ConsensusInfo.cpp
-  src/ripple/rpc/handlers/CrawlShards.cpp
-  src/ripple/rpc/handlers/DepositAuthorized.cpp
-  src/ripple/rpc/handlers/DownloadShard.cpp
-  src/ripple/rpc/handlers/Feature1.cpp
-  src/ripple/rpc/handlers/Fee1.cpp
-  src/ripple/rpc/handlers/FetchInfo.cpp
-  src/ripple/rpc/handlers/GatewayBalances.cpp
-  src/ripple/rpc/handlers/GetCounts.cpp
-  src/ripple/rpc/handlers/LedgerAccept.cpp
-  src/ripple/rpc/handlers/LedgerCleanerHandler.cpp
-  src/ripple/rpc/handlers/LedgerClosed.cpp
-  src/ripple/rpc/handlers/LedgerCurrent.cpp
-  src/ripple/rpc/handlers/LedgerData.cpp
-  src/ripple/rpc/handlers/LedgerDiff.cpp
-  src/ripple/rpc/handlers/LedgerEntry.cpp
-  src/ripple/rpc/handlers/LedgerHandler.cpp
-  src/ripple/rpc/handlers/LedgerHeader.cpp
-  src/ripple/rpc/handlers/LedgerRequest.cpp
-  src/ripple/rpc/handlers/LogLevel.cpp
-  src/ripple/rpc/handlers/LogRotate.cpp
-  src/ripple/rpc/handlers/Manifest.cpp
-  src/ripple/rpc/handlers/NodeToShardStatus.cpp
-  src/ripple/rpc/handlers/NoRippleCheck.cpp
-  src/ripple/rpc/handlers/OwnerInfo.cpp
-  src/ripple/rpc/handlers/PathFind.cpp
-  src/ripple/rpc/handlers/PayChanClaim.cpp
-  src/ripple/rpc/handlers/Peers.cpp
-  src/ripple/rpc/handlers/Ping.cpp
-  src/ripple/rpc/handlers/Print.cpp
-  src/ripple/rpc/handlers/Random.cpp
-  src/ripple/rpc/handlers/Reservations.cpp
-  src/ripple/rpc/handlers/RipplePathFind.cpp
-  src/ripple/rpc/handlers/ServerInfo.cpp
-  src/ripple/rpc/handlers/ServerState.cpp
-  src/ripple/rpc/handlers/SignFor.cpp
-  src/ripple/rpc/handlers/SignHandler.cpp
-  src/ripple/rpc/handlers/Stop.cpp
-  src/ripple/rpc/handlers/Submit.cpp
-  src/ripple/rpc/handlers/SubmitMultiSigned.cpp
-  src/ripple/rpc/handlers/Subscribe.cpp
-  src/ripple/rpc/handlers/TransactionEntry.cpp
-  src/ripple/rpc/handlers/Tx.cpp
-  src/ripple/rpc/handlers/TxHistory.cpp
-  src/ripple/rpc/handlers/TxReduceRelay.cpp
-  src/ripple/rpc/handlers/UnlList.cpp
-  src/ripple/rpc/handlers/Unsubscribe.cpp
-  src/ripple/rpc/handlers/ValidationCreate.cpp
-  src/ripple/rpc/handlers/ValidatorInfo.cpp
-  src/ripple/rpc/handlers/ValidatorListSites.cpp
-  src/ripple/rpc/handlers/Validators.cpp
-  src/ripple/rpc/handlers/WalletPropose.cpp
-  src/ripple/rpc/impl/DeliveredAmount.cpp
-  src/ripple/rpc/impl/Handler.cpp
-  src/ripple/rpc/impl/GRPCHelpers.cpp
-  src/ripple/rpc/impl/LegacyPathFind.cpp
-  src/ripple/rpc/impl/RPCHandler.cpp
-  src/ripple/rpc/impl/RPCHelpers.cpp
-  src/ripple/rpc/impl/Role.cpp
-  src/ripple/rpc/impl/ServerHandlerImp.cpp
-  src/ripple/rpc/impl/ShardArchiveHandler.cpp
-  src/ripple/rpc/impl/ShardVerificationScheduler.cpp
-  src/ripple/rpc/impl/Status.cpp
-  src/ripple/rpc/impl/TransactionSign.cpp
+  src/xrpl/rpc/handlers/AccountChannels.cpp
+  src/xrpl/rpc/handlers/AccountCurrenciesHandler.cpp
+  src/xrpl/rpc/handlers/AccountInfo.cpp
+  src/xrpl/rpc/handlers/AccountLines.cpp
+  src/xrpl/rpc/handlers/AccountObjects.cpp
+  src/xrpl/rpc/handlers/AccountOffers.cpp
+  src/xrpl/rpc/handlers/AccountTx.cpp
+  src/xrpl/rpc/handlers/AccountTxOld.cpp
+  src/xrpl/rpc/handlers/BlackList.cpp
+  src/xrpl/rpc/handlers/BookOffers.cpp
+  src/xrpl/rpc/handlers/CanDelete.cpp
+  src/xrpl/rpc/handlers/Connect.cpp
+  src/xrpl/rpc/handlers/ConsensusInfo.cpp
+  src/xrpl/rpc/handlers/CrawlShards.cpp
+  src/xrpl/rpc/handlers/DepositAuthorized.cpp
+  src/xrpl/rpc/handlers/DownloadShard.cpp
+  src/xrpl/rpc/handlers/Feature1.cpp
+  src/xrpl/rpc/handlers/Fee1.cpp
+  src/xrpl/rpc/handlers/FetchInfo.cpp
+  src/xrpl/rpc/handlers/GatewayBalances.cpp
+  src/xrpl/rpc/handlers/GetCounts.cpp
+  src/xrpl/rpc/handlers/LedgerAccept.cpp
+  src/xrpl/rpc/handlers/LedgerCleanerHandler.cpp
+  src/xrpl/rpc/handlers/LedgerClosed.cpp
+  src/xrpl/rpc/handlers/LedgerCurrent.cpp
+  src/xrpl/rpc/handlers/LedgerData.cpp
+  src/xrpl/rpc/handlers/LedgerDiff.cpp
+  src/xrpl/rpc/handlers/LedgerEntry.cpp
+  src/xrpl/rpc/handlers/LedgerHandler.cpp
+  src/xrpl/rpc/handlers/LedgerHeader.cpp
+  src/xrpl/rpc/handlers/LedgerRequest.cpp
+  src/xrpl/rpc/handlers/LogLevel.cpp
+  src/xrpl/rpc/handlers/LogRotate.cpp
+  src/xrpl/rpc/handlers/Manifest.cpp
+  src/xrpl/rpc/handlers/NodeToShardStatus.cpp
+  src/xrpl/rpc/handlers/NoRippleCheck.cpp
+  src/xrpl/rpc/handlers/OwnerInfo.cpp
+  src/xrpl/rpc/handlers/PathFind.cpp
+  src/xrpl/rpc/handlers/PayChanClaim.cpp
+  src/xrpl/rpc/handlers/Peers.cpp
+  src/xrpl/rpc/handlers/Ping.cpp
+  src/xrpl/rpc/handlers/Print.cpp
+  src/xrpl/rpc/handlers/Random.cpp
+  src/xrpl/rpc/handlers/Reservations.cpp
+  src/xrpl/rpc/handlers/RipplePathFind.cpp
+  src/xrpl/rpc/handlers/ServerInfo.cpp
+  src/xrpl/rpc/handlers/ServerState.cpp
+  src/xrpl/rpc/handlers/SignFor.cpp
+  src/xrpl/rpc/handlers/SignHandler.cpp
+  src/xrpl/rpc/handlers/Stop.cpp
+  src/xrpl/rpc/handlers/Submit.cpp
+  src/xrpl/rpc/handlers/SubmitMultiSigned.cpp
+  src/xrpl/rpc/handlers/Subscribe.cpp
+  src/xrpl/rpc/handlers/TransactionEntry.cpp
+  src/xrpl/rpc/handlers/Tx.cpp
+  src/xrpl/rpc/handlers/TxHistory.cpp
+  src/xrpl/rpc/handlers/TxReduceRelay.cpp
+  src/xrpl/rpc/handlers/UnlList.cpp
+  src/xrpl/rpc/handlers/Unsubscribe.cpp
+  src/xrpl/rpc/handlers/ValidationCreate.cpp
+  src/xrpl/rpc/handlers/ValidatorInfo.cpp
+  src/xrpl/rpc/handlers/ValidatorListSites.cpp
+  src/xrpl/rpc/handlers/Validators.cpp
+  src/xrpl/rpc/handlers/WalletPropose.cpp
+  src/xrpl/rpc/impl/DeliveredAmount.cpp
+  src/xrpl/rpc/impl/Handler.cpp
+  src/xrpl/rpc/impl/GRPCHelpers.cpp
+  src/xrpl/rpc/impl/LegacyPathFind.cpp
+  src/xrpl/rpc/impl/RPCHandler.cpp
+  src/xrpl/rpc/impl/RPCHelpers.cpp
+  src/xrpl/rpc/impl/Role.cpp
+  src/xrpl/rpc/impl/ServerHandlerImp.cpp
+  src/xrpl/rpc/impl/ShardArchiveHandler.cpp
+  src/xrpl/rpc/impl/ShardVerificationScheduler.cpp
+  src/xrpl/rpc/impl/Status.cpp
+  src/xrpl/rpc/impl/TransactionSign.cpp
 
   #[===============================[
      main sources:
        subdir: server
   #]===============================]
-  src/ripple/server/impl/JSONRPCUtil.cpp
-  src/ripple/server/impl/Port.cpp
+  src/xrpl/server/impl/JSONRPCUtil.cpp
+  src/xrpl/server/impl/Port.cpp
   #[===============================[
      main sources:
        subdir: shamap
   #]===============================]
-  src/ripple/shamap/impl/NodeFamily.cpp
-  src/ripple/shamap/impl/SHAMap.cpp
-  src/ripple/shamap/impl/SHAMapDelta.cpp
-  src/ripple/shamap/impl/SHAMapInnerNode.cpp
-  src/ripple/shamap/impl/SHAMapLeafNode.cpp
-  src/ripple/shamap/impl/SHAMapNodeID.cpp
-  src/ripple/shamap/impl/SHAMapSync.cpp
-  src/ripple/shamap/impl/SHAMapTreeNode.cpp
-  src/ripple/shamap/impl/ShardFamily.cpp
+  src/xrpl/shamap/impl/NodeFamily.cpp
+  src/xrpl/shamap/impl/SHAMap.cpp
+  src/xrpl/shamap/impl/SHAMapDelta.cpp
+  src/xrpl/shamap/impl/SHAMapInnerNode.cpp
+  src/xrpl/shamap/impl/SHAMapLeafNode.cpp
+  src/xrpl/shamap/impl/SHAMapNodeID.cpp
+  src/xrpl/shamap/impl/SHAMapSync.cpp
+  src/xrpl/shamap/impl/SHAMapTreeNode.cpp
+  src/xrpl/shamap/impl/ShardFamily.cpp
   #[===============================[
      test sources:
        subdir: app

@@ -15,9 +15,9 @@ set (doxyfile "${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile")
 
 file (GLOB_RECURSE doxygen_input
   docs/*.md
-  src/ripple/*.h
-  src/ripple/*.cpp
-  src/ripple/*.md
+  src/xrpl/*.h
+  src/xrpl/*.cpp
+  src/xrpl/*.md
   src/test/*.h
   src/test/*.md
   Builds/*/README.md)

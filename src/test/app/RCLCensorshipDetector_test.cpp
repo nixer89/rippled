@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/app/consensus/RCLCensorshipDetector.h>
-#include <ripple/beast/unit_test.h>
+#include <xrpl/app/consensus/RCLCensorshipDetector.h>
+#include <xrpl/beast/unit_test.h>
 #include <algorithm>
 #include <vector>
 

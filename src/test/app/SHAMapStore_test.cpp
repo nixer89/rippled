@@ -17,11 +17,11 @@
 */
 //==============================================================================
 
-#include <ripple/app/main/Application.h>
-#include <ripple/app/misc/SHAMapStore.h>
-#include <ripple/app/rdb/backend/RelationalDBInterfaceSqlite.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/protocol/jss.h>
+#include <xrpl/app/main/Application.h>
+#include <xrpl/app/misc/SHAMapStore.h>
+#include <xrpl/app/rdb/backend/RelationalDBInterfaceSqlite.h>
+#include <xrpl/core/ConfigSections.h>
+#include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 

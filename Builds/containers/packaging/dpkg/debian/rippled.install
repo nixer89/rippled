@@ -1,8 +1,8 @@
-opt/ripple/bin/rippled
-opt/ripple/bin/validator-keys
-opt/ripple/bin/update-rippled.sh
-opt/ripple/bin/getRippledInfo
-opt/ripple/etc/rippled.cfg
-opt/ripple/etc/validators.txt
-opt/ripple/etc/update-rippled-cron
+opt/xrpl/bin/rippled
+opt/xrpl/bin/validator-keys
+opt/xrpl/bin/update-rippled.sh
+opt/xrpl/bin/getRippledInfo
+opt/xrpl/etc/rippled.cfg
+opt/xrpl/etc/validators.txt
+opt/xrpl/etc/update-rippled-cron
 etc/logrotate.d/rippled

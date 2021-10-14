@@ -17,15 +17,15 @@
 */
 //==============================================================================
 
-#include <ripple/basics/BasicConfig.h>
-#include <ripple/basics/ByteUtilities.h>
-#include <ripple/basics/safe_cast.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/unity/rocksdb.h>
+#include <xrpl/basics/BasicConfig.h>
+#include <xrpl/basics/ByteUtilities.h>
+#include <xrpl/basics/safe_cast.h>
+#include <xrpl/beast/unit_test.h>
+#include <xrpl/beast/utility/temp_dir.h>
+#include <xrpl/beast/xor_shift_engine.h>
+#include <xrpl/nodestore/DummyScheduler.h>
+#include <xrpl/nodestore/Manager.h>
+#include <xrpl/unity/rocksdb.h>
 #include <boost/algorithm/string.hpp>
 #include <atomic>
 #include <beast/unit_test/thread.hpp>
