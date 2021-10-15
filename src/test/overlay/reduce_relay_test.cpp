@@ -23,7 +23,7 @@
 #include <xrpl/overlay/Slot.h>
 #include <xrpl/overlay/impl/Handshake.h>
 #include <xrpl/protocol/SecretKey.h>
-#include <ripple.pb.h>
+#include <xrpl.pb.h>
 #include <test/jtx/Env.h>
 
 #include <boost/thread.hpp>

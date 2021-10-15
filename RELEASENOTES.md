@@ -184,7 +184,7 @@ At this time, the developers recommend running with sharding disabled, pending t
 - New `manifest` method which looks up manifest information for the specified key (either master or ephemeral). [`3578acaf0`](https://github.com/xrplf/xrpld/commit/3578acaf0b5f2d27ddc33f5b4cc81d21be1903ae)
 - Introduce handshake protocol for compression negotiation (compression is not implemented at this point) and other minor improvements. [`f6916bfd4`](https://github.com/xrplf/xrpld/commit/f6916bfd429ce654e017ae9686cb023d9e05408b)
 - Remove various old conditionals introduced by amendments. [`(51ed7db00`](https://github.com/xrplf/xrpld/commit/51ed7db0027ba822739bd9de6f2613f97c1b227b), [`6e4945c56)`](https://github.com/xrplf/xrpld/commit/6e4945c56b1a1c063b32921d7750607587ec3063)
-- Add `getRippledInfo` info gathering script to `xrpld` Linux packages. [`acf4b7889`](https://github.com/xrplf/xrpld/commit/acf4b78892074303cb1fa22b778da5e7e7eddeda)
+- Add `getXrpldInfo` info gathering script to `xrpld` Linux packages. [`acf4b7889`](https://github.com/xrplf/xrpld/commit/acf4b78892074303cb1fa22b778da5e7e7eddeda)
 
 **Bug Fixes and Improvements**
 - The `fixQualityUpperBound` amendment which fixes a bug in unused code for estimating the ratio of input to output of individual steps in cross-currency payments. [`9d3626fec`](https://github.com/xrplf/xrpld/commit/9d3626fec5b610100f401dc0d25b9ec8e4a9a362)
@@ -693,7 +693,7 @@ Highlights of this release include:
 - Do not close socket on a foreign thread (#2014)
 - Update build scripts to support latest boost and ubuntu distros (#1997)
 - Handle protoc targets in scons ninja build (#2022)
-- Specify syntax version for ripple.proto file (#2007)
+- Specify syntax version for xrpl.proto file (#2007)
 - Eliminate protocol header dependency (#1962)
 - Use gnu gold or clang lld linkers if available (#2031)
 - Add tests for `lookupLedger` (#1989)

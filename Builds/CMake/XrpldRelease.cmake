@@ -54,7 +54,7 @@ if (is_root_project)
         Builds/containers/shared/update-xrpld.sh
         Builds/containers/packaging/rpm/xrpld.spec
         Builds/containers/packaging/rpm/build_rpm.sh
-        bin/getRippledInfo
+        bin/getXrpldInfo
     )
     exclude_from_default (rpm_container)
     add_custom_target (rpm
@@ -117,7 +117,7 @@ if (is_root_project)
         Builds/containers/packaging/dpkg/debian/xrpld.preinst
         Builds/containers/packaging/dpkg/debian/xrpld.prerm
         Builds/containers/packaging/dpkg/debian/rules
-        bin/getRippledInfo
+        bin/getXrpldInfo
     )
     exclude_from_default (dpkg_container)
     add_custom_target (dpkg

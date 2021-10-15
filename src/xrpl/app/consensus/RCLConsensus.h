@@ -32,7 +32,7 @@
 #include <xrpl/consensus/Consensus.h>
 #include <xrpl/core/JobQueue.h>
 #include <xrpl/overlay/Message.h>
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <xrpl/protocol/STValidation.h>
 #include <xrpl/shamap/SHAMap.h>
 #include <atomic>

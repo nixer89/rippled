@@ -1,50 +1,50 @@
-Loop: ripple.app ripple.core
-  ripple.app > ripple.core
+Loop: xrpl.app xrpl.core
+  xrpl.app > xrpl.core
 
-Loop: ripple.app ripple.ledger
-  ripple.app > ripple.ledger
+Loop: xrpl.app xrpl.ledger
+  xrpl.app > xrpl.ledger
 
-Loop: ripple.app ripple.net
-  ripple.app > ripple.net
+Loop: xrpl.app xrpl.net
+  xrpl.app > xrpl.net
 
-Loop: ripple.app ripple.nodestore
-  ripple.nodestore ~= ripple.app
+Loop: xrpl.app xrpl.nodestore
+  xrpl.nodestore ~= xrpl.app
 
-Loop: ripple.app ripple.overlay
-  ripple.overlay ~= ripple.app
+Loop: xrpl.app xrpl.overlay
+  xrpl.overlay ~= xrpl.app
 
-Loop: ripple.app ripple.peerfinder
-  ripple.peerfinder ~= ripple.app
+Loop: xrpl.app xrpl.peerfinder
+  xrpl.peerfinder ~= xrpl.app
 
-Loop: ripple.app ripple.rpc
-  ripple.rpc > ripple.app
+Loop: xrpl.app xrpl.rpc
+  xrpl.rpc > xrpl.app
 
-Loop: ripple.app ripple.shamap
-  ripple.app > ripple.shamap
+Loop: xrpl.app xrpl.shamap
+  xrpl.app > xrpl.shamap
 
-Loop: ripple.basics ripple.core
-  ripple.core > ripple.basics
+Loop: xrpl.basics xrpl.core
+  xrpl.core > xrpl.basics
 
-Loop: ripple.basics ripple.json
-  ripple.json ~= ripple.basics
+Loop: xrpl.basics xrpl.json
+  xrpl.json ~= xrpl.basics
 
-Loop: ripple.basics ripple.protocol
-  ripple.protocol > ripple.basics
+Loop: xrpl.basics xrpl.protocol
+  xrpl.protocol > xrpl.basics
 
-Loop: ripple.basics ripple.rpc
-  ripple.rpc > ripple.basics
+Loop: xrpl.basics xrpl.rpc
+  xrpl.rpc > xrpl.basics
 
-Loop: ripple.core ripple.net
-  ripple.net > ripple.core
+Loop: xrpl.core xrpl.net
+  xrpl.net > xrpl.core
 
-Loop: ripple.net ripple.rpc
-  ripple.rpc > ripple.net
+Loop: xrpl.net xrpl.rpc
+  xrpl.rpc > xrpl.net
 
-Loop: ripple.nodestore ripple.overlay
-  ripple.overlay ~= ripple.nodestore
+Loop: xrpl.nodestore xrpl.overlay
+  xrpl.overlay ~= xrpl.nodestore
 
-Loop: ripple.overlay ripple.rpc
-  ripple.rpc ~= ripple.overlay
+Loop: xrpl.overlay xrpl.rpc
+  xrpl.rpc ~= xrpl.overlay
 
 Loop: test.jtx test.toplevel
   test.toplevel > test.jtx

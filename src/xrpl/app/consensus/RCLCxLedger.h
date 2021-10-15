@@ -23,7 +23,7 @@
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/ledger/LedgerToJson.h>
 #include <xrpl/ledger/ReadView.h>
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <memory>
 
 namespace ripple {

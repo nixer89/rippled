@@ -20,7 +20,7 @@
 #ifndef RIPPLE_APP_MISC_CANONICALTXSET_H_INCLUDED
 #define RIPPLE_APP_MISC_CANONICALTXSET_H_INCLUDED
 
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <xrpl/protocol/STTx.h>
 #include <xrpl/protocol/SeqProxy.h>
 

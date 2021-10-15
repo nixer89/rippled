@@ -35,7 +35,7 @@ override_dh_auto_install:
 	cd bld && DESTDIR=../debian/tmp cmake --build . --target install -- -v
 	install -D bld/validator-keys/validator-keys debian/tmp/opt/xrpl/bin/validator-keys
 	install -D Builds/containers/shared/update-xrpld.sh debian/tmp/opt/xrpl/bin/update-xrpld.sh
-	install -D bin/getRippledInfo debian/tmp/opt/xrpl/bin/getRippledInfo
+	install -D bin/getXrpldInfo debian/tmp/opt/xrpl/bin/getXrpldInfo
 	install -D Builds/containers/shared/update-xrpld-cron debian/tmp/opt/xrpl/etc/update-xrpld-cron
 	install -D Builds/containers/shared/xrpld-logrotate debian/tmp/etc/logrotate.d/xrpld
 	rm -rf debian/tmp/opt/xrpl/lib64/cmake/date

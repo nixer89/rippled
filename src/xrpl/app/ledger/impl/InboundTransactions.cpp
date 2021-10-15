@@ -24,7 +24,7 @@
 #include <xrpl/app/misc/NetworkOPs.h>
 #include <xrpl/basics/Log.h>
 #include <xrpl/core/JobQueue.h>
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <xrpl/resource/Fees.h>
 #include <memory>
 #include <mutex>

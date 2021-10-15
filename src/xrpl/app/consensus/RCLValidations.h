@@ -23,7 +23,7 @@
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/consensus/Validations.h>
 #include <xrpl/protocol/Protocol.h>
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <xrpl/protocol/STValidation.h>
 #include <vector>
 

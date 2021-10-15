@@ -23,7 +23,7 @@
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/rdb/RelationalDBInterface.h>
 #include <xrpl/core/Config.h>
-#include <xrpl/protocol/RippleLedgerHash.h>
+#include <xrpl/protocol/XrplLedgerHash.h>
 #include <boost/filesystem.hpp>
 
 namespace ripple {

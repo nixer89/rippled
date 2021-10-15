@@ -1,7 +1,7 @@
 opt/xrpl/bin/xrpld
 opt/xrpl/bin/validator-keys
 opt/xrpl/bin/update-xrpld.sh
-opt/xrpl/bin/getRippledInfo
+opt/xrpl/bin/getXrpldInfo
 opt/xrpl/etc/xrpld.cfg
 opt/xrpl/etc/validators.txt
 opt/xrpl/etc/update-xrpld-cron

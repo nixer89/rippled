@@ -51,7 +51,7 @@ install -D xrpld/bld.release/validator-keys/validator-keys ${RPM_BUILD_ROOT}%{_b
 install -D ./xrpld/Builds/containers/shared/xrpld.service ${RPM_BUILD_ROOT}/usr/lib/systemd/system/xrpld.service
 install -D ./xrpld/Builds/containers/packaging/rpm/50-xrpld.preset ${RPM_BUILD_ROOT}/usr/lib/systemd/system-preset/50-xrpld.preset
 install -D ./xrpld/Builds/containers/shared/update-xrpld.sh ${RPM_BUILD_ROOT}%{_bindir}/update-xrpld.sh
-install -D ./xrpld/bin/getRippledInfo ${RPM_BUILD_ROOT}%{_bindir}/getRippledInfo
+install -D ./xrpld/bin/getXrpldInfo ${RPM_BUILD_ROOT}%{_bindir}/getXrpldInfo
 install -D ./xrpld/Builds/containers/shared/update-xrpld-cron ${RPM_BUILD_ROOT}%{_prefix}/etc/update-xrpld-cron
 install -D ./xrpld/Builds/containers/shared/xrpld-logrotate ${RPM_BUILD_ROOT}/etc/logrotate.d/xrpld
 install -d $RPM_BUILD_ROOT/var/log/xrpld
@@ -80,7 +80,7 @@ chown -R root:$GROUP_NAME %{_prefix}/etc/update-xrpld-cron
 %{_bindir}/xrpld
 /usr/local/bin/xrpld
 %{_bindir}/update-xrpld.sh
-%{_bindir}/getRippledInfo
+%{_bindir}/getXrpldInfo
 %{_prefix}/etc/update-xrpld-cron
 %{_bindir}/validator-keys
 %config(noreplace) %{_prefix}/etc/xrpld.cfg

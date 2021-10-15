@@ -25,8 +25,8 @@ if (process.argv[2] == null) {
   process.exit();
 } else {
   var testRange = process.argv[2].split(',').map(Number);
-  var rippledPath = process.argv[3] || 'build/xrpld'
-  var rippledConf = process.argv[4] || 'xrpld.cfg'
+  var xrpldPath = process.argv[3] || 'build/xrpld'
+  var xrpldConf = process.argv[4] || 'xrpld.cfg'
 }
 
 var options = {
@@ -35,16 +35,16 @@ var options = {
 };
 
 // default args
-var conf_args = ['--conf='+rippledConf];
+var conf_args = ['--conf='+xrpldConf];
 var start_args  = conf_args.concat([/*'--net'*/])
 var stop_args = conf_args.concat(['stop']);
 
 /* --------------------------------- HELPERS -------------------------------- */
 
 function start(args) {
-    return child.spawn(rippledPath, args, options);
+    return child.spawn(xrpldPath, args, options);
 }
-function stop(xrpld) { child.execFile(rippledPath, stop_args, options)}
+function stop(xrpld) { child.execFile(xrpldPath, stop_args, options)}
 function secs_l8r(ms, f) {setTimeout(f, ms * 1000); }
 
 function show_results_and_exit(results) {
@@ -82,10 +82,10 @@ console.log("Test will take ~%s seconds", timeTakes(testRange));
   results.push(result);
 
   console.log("\nLaunching `%s` with `%s` for %d seconds",
-                rippledPath, JSON.stringify(args), n);
+                xrpldPath, JSON.stringify(args), n);
 
   xrpld = start(args);
-  console.log("Rippled pid: %d", xrpld.pid);
+  console.log("Xrpld pid: %d", xrpld.pid);
 
   // defaults
   var b4StopSent = false;
@@ -94,7 +94,7 @@ console.log("Test will take ~%s seconds", timeTakes(testRange));
 
   xrpld.once('exit', function(){
     if (!stopSent && !b4StopSent) {
-      console.warn('\nRippled exited itself b4 stop issued');
+      console.warn('\nXrpld exited itself b4 stop issued');
       process.exit();
     };
 
