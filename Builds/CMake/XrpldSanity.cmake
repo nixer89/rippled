@@ -79,7 +79,7 @@ if ("${CMAKE_GENERATOR}" MATCHES "Visual Studio" AND
 endif ()
 
 if (NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
-  message (FATAL_ERROR "Rippled requires a 64 bit target architecture.\n"
+  message (FATAL_ERROR "Xrpld requires a 64 bit target architecture.\n"
     "The most likely cause of this warning is trying to build xrpld with a 32-bit OS.")
 endif ()
 

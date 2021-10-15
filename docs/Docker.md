@@ -1,6 +1,6 @@
-# Rippled Docker Image
+# Xrpld Docker Image
 
-Rippled has a continuous deployment pipeline that turns every git commit into a
+Xrpld has a continuous deployment pipeline that turns every git commit into a
 docker image for quick testing and deployment.
 
 To run the tip of the latest release via docker:

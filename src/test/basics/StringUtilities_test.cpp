@@ -47,7 +47,7 @@ public:
     {
         testcase("strUnHex");
 
-        testUnHexSuccess("526970706c6544", "RippleD");
+        testUnHexSuccess("5872706c44", "XrplD");
         testUnHexSuccess("A", "\n");
         testUnHexSuccess("0A", "\n");
         testUnHexSuccess("D0A", "\r\n");
