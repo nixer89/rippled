@@ -20,7 +20,7 @@
 #include <xrpl/app/main/CollectorManager.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 class CollectorManagerImp : public CollectorManager
 {
@@ -74,4 +74,4 @@ make_CollectorManager(Section const& params, beast::Journal journal)
     return std::make_unique<CollectorManagerImp>(params, journal);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

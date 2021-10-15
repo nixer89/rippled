@@ -26,7 +26,7 @@
 
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 // a non-hashing Hasher that just copies the bytes.
@@ -293,7 +293,7 @@ struct base_uint_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(base_uint, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(base_uint, ripple_basics, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

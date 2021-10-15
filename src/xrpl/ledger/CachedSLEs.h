@@ -26,7 +26,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 /** Caches SLEs by their digest. */
 class CachedSLEs
@@ -104,6 +104,6 @@ private:
         map_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

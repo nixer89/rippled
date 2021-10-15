@@ -24,7 +24,7 @@
 #include <xrpl/protocol/TER.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 /** Status represents the results of an operation that might fail.
@@ -155,6 +155,6 @@ private:
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

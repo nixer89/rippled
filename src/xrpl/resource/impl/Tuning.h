@@ -22,7 +22,7 @@
 
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 /** Tunable constants. */
@@ -51,6 +51,6 @@ std::chrono::seconds constexpr secondsUntilExpiration{300};
 std::chrono::seconds constexpr gossipExpirationSeconds{30};
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

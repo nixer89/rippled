@@ -23,7 +23,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/Handler.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doLedgerCleaner(RPC::JsonContext& context)
@@ -32,4 +32,4 @@ doLedgerCleaner(RPC::JsonContext& context)
     return RPC::makeObjectValue("Cleaner configured");
 }
 
-}  // namespace ripple
+}  // namespace xrpl

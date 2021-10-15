@@ -27,7 +27,7 @@
 #include <xrpl/shamap/SHAMapLeafNode.h>
 #include <xrpl/shamap/SHAMapNodeID.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** A leaf node for a transaction and its associated metadata. */
 class SHAMapTxPlusMetaLeafNode final
@@ -87,6 +87,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

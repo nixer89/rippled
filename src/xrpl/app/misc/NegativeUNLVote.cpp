@@ -21,7 +21,7 @@
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/misc/NegativeUNLVote.h>
 
-namespace ripple {
+namespace xrpl {
 
 NegativeUNLVote::NegativeUNLVote(NodeID const& myId, beast::Journal j)
     : myId_(myId), j_(j)
@@ -348,4 +348,4 @@ NegativeUNLVote::purgeNewValidators(LedgerIndex seq)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

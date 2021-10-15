@@ -35,7 +35,7 @@
 
 #include <atomic>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 using PCache = TaggedCache<uint256, NodeObject>;
@@ -422,6 +422,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

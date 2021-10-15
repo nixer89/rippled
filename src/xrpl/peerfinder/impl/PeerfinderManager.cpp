@@ -28,7 +28,7 @@
 #include <optional>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 class ManagerImp : public Manager
@@ -282,4 +282,4 @@ make_Manager(
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

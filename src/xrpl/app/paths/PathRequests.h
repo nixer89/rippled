@@ -28,7 +28,7 @@
 #include <mutex>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class PathRequests
 {
@@ -119,6 +119,6 @@ private:
     std::recursive_mutex mLock;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

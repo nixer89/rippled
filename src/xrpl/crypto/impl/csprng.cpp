@@ -26,7 +26,7 @@
 #include <random>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 
 void
 csprng_engine::mix(void* data, std::size_t size, double bitsPerByte)
@@ -111,4 +111,4 @@ crypto_prng()
     return engine;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

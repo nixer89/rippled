@@ -26,7 +26,7 @@
 #include <cstdint>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -90,6 +90,6 @@ using offers = owner_count<ltOFFER>;
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

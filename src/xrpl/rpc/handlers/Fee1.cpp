@@ -26,7 +26,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/GRPCHandlers.h>
 
-namespace ripple {
+namespace xrpl {
 Json::Value
 doFee(RPC::JsonContext& context)
 {
@@ -83,4 +83,4 @@ doFeeGrpc(RPC::GRPCContext<org::xrpl::rpc::v1::GetFeeRequest>& context)
             .drops());
     return {reply, status};
 }
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 #include <test/jtx/JSONRPCClient.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class RPCOverload_test : public beast::unit_test::suite
@@ -85,7 +85,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RPCOverload, app, ripple);
+BEAST_DEFINE_TESTSUITE(RPCOverload, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -21,7 +21,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class contract_test : public beast::unit_test::suite
 {
@@ -57,6 +57,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(contract, basics, ripple);
+BEAST_DEFINE_TESTSUITE(contract, basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

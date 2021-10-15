@@ -69,7 +69,7 @@
 
 namespace po = boost::program_options;
 
-namespace ripple {
+namespace xrpl {
 
 bool
 adjustDescriptorLimit(int needed, beast::Journal j)
@@ -164,7 +164,7 @@ printHelp(const po::options_description& desc)
            "     peer_reservations_add <public_key> [<description>]\n"
            "     peer_reservations_del <public_key>\n"
            "     peer_reservations_list\n"
-           "     ripple ...\n"
+           "     xrpl ...\n"
            "     ripple_path_find <json> [<ledger>]\n"
            "     server_info [counters]\n"
            "     server_state [counters]\n"
@@ -261,9 +261,9 @@ runUnitTests(
     char** argv)
 {
     using namespace beast::unit_test;
-    using namespace ripple::test;
+    using namespace xrpl::test;
 
-    ripple::test::envUseIPv4 = (!ipv6);
+    xrpl::test::envUseIPv4 = (!ipv6);
 
     if (!child && num_jobs == 1)
     {
@@ -744,7 +744,7 @@ run(int argc, char** argv)
         *config, vm["parameters"].as<std::vector<std::string>>(), *logs);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 int
 main(int argc, char** argv)
@@ -769,5 +769,5 @@ main(int argc, char** argv)
 
     atexit(&google::protobuf::ShutdownProtobufLibrary);
 
-    return ripple::run(argc, argv);
+    return xrpl::run(argc, argv);
 }

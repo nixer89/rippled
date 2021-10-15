@@ -23,7 +23,7 @@
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class RobustTransaction_test : public beast::unit_test::suite
@@ -507,7 +507,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RobustTransaction, app, ripple);
+BEAST_DEFINE_TESTSUITE(RobustTransaction, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

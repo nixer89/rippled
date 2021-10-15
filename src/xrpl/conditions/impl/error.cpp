@@ -23,7 +23,7 @@
 #include <system_error>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 namespace cryptoconditions {
 namespace detail {
 
@@ -135,4 +135,4 @@ make_error_code(error ev)
 }
 
 }  // namespace cryptoconditions
-}  // namespace ripple
+}  // namespace xrpl

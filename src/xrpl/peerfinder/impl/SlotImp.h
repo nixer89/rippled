@@ -27,7 +27,7 @@
 #include <atomic>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 class SlotImp : public Slot
@@ -210,6 +210,6 @@ public:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

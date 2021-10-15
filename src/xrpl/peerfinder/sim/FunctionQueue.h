@@ -20,7 +20,7 @@
 #ifndef RIPPLE_PEERFINDER_SIM_FUNCTIONQUEUE_H_INCLUDED
 #define RIPPLE_PEERFINDER_SIM_FUNCTIONQUEUE_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 namespace Sim {
 
@@ -95,6 +95,6 @@ public:
 
 }  // namespace Sim
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

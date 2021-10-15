@@ -23,7 +23,7 @@
 #include <xrpl/protocol/Issue.h>
 #include <boost/utility/base_from_member.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /** Specifies an order book.
     The order book is a pair of Issues called in and out.
@@ -88,28 +88,28 @@ bool
 operator<=(Book const& lhs, Book const& rhs);
 /** @} */
 
-}  // namespace ripple
+}  // namespace xrpl
 
 //------------------------------------------------------------------------------
 
 namespace std {
 
 template <>
-struct hash<ripple::Issue>
-    : private boost::base_from_member<std::hash<ripple::Currency>, 0>,
-      private boost::base_from_member<std::hash<ripple::AccountID>, 1>
+struct hash<xrpl::Issue>
+    : private boost::base_from_member<std::hash<xrpl::Currency>, 0>,
+      private boost::base_from_member<std::hash<xrpl::AccountID>, 1>
 {
 private:
     using currency_hash_type =
-        boost::base_from_member<std::hash<ripple::Currency>, 0>;
+        boost::base_from_member<std::hash<xrpl::Currency>, 0>;
     using issuer_hash_type =
-        boost::base_from_member<std::hash<ripple::AccountID>, 1>;
+        boost::base_from_member<std::hash<xrpl::AccountID>, 1>;
 
 public:
     explicit hash() = default;
 
     using value_type = std::size_t;
-    using argument_type = ripple::Issue;
+    using argument_type = xrpl::Issue;
 
     value_type
     operator()(argument_type const& value) const
@@ -125,10 +125,10 @@ public:
 //------------------------------------------------------------------------------
 
 template <>
-struct hash<ripple::Book>
+struct hash<xrpl::Book>
 {
 private:
-    using hasher = std::hash<ripple::Issue>;
+    using hasher = std::hash<xrpl::Issue>;
 
     hasher m_hasher;
 
@@ -136,7 +136,7 @@ public:
     explicit hash() = default;
 
     using value_type = std::size_t;
-    using argument_type = ripple::Book;
+    using argument_type = xrpl::Book;
 
     value_type
     operator()(argument_type const& value) const
@@ -154,21 +154,21 @@ public:
 namespace boost {
 
 template <>
-struct hash<ripple::Issue> : std::hash<ripple::Issue>
+struct hash<xrpl::Issue> : std::hash<xrpl::Issue>
 {
     explicit hash() = default;
 
-    using Base = std::hash<ripple::Issue>;
+    using Base = std::hash<xrpl::Issue>;
     // VFALCO NOTE broken in vs2012
     // using Base::Base; // inherit ctors
 };
 
 template <>
-struct hash<ripple::Book> : std::hash<ripple::Book>
+struct hash<xrpl::Book> : std::hash<xrpl::Book>
 {
     explicit hash() = default;
 
-    using Base = std::hash<ripple::Book>;
+    using Base = std::hash<xrpl::Book>;
     // VFALCO NOTE broken in vs2012
     // using Base::Base; // inherit ctors
 };

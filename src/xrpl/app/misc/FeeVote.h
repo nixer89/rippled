@@ -26,7 +26,7 @@
 #include <xrpl/protocol/SystemParameters.h>
 #include <xrpl/shamap/SHAMap.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Manager to process fee votes. */
 class FeeVote
@@ -85,6 +85,6 @@ setup_FeeVote(Section const& section);
 std::unique_ptr<FeeVote>
 make_FeeVote(FeeVote::Setup const& setup, beast::Journal journal);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

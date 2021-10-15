@@ -28,7 +28,7 @@
 
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 using namespace boost::filesystem;
@@ -581,4 +581,4 @@ RecoveryHandler::RecoveryHandler(Application& app) : ShardArchiveHandler(app)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

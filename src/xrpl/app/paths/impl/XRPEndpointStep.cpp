@@ -33,7 +33,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TDerived>
 class XRPEndpointStep
@@ -125,7 +125,7 @@ protected:
     XRPAmount
     xrpLiquidImpl(ReadView& sb, std::int32_t reserveReduction) const
     {
-        return ripple::xrpLiquid(sb, acc_, reserveReduction, j_);
+        return xrpl::xrpLiquid(sb, acc_, reserveReduction, j_);
     }
 
     std::string
@@ -419,4 +419,4 @@ make_XRPEndpointStep(StrandContext const& ctx, AccountID const& acc)
     return {tesSUCCESS, std::move(r)};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

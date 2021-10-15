@@ -23,7 +23,7 @@
 #include <xrpl/protocol/UintTypes.h>
 #include <string_view>
 
-namespace ripple {
+namespace xrpl {
 
 // For details on the protocol-level serialization please visit
 // https://xrpl.org/serialization.html#currency-codes
@@ -138,4 +138,4 @@ badCurrency()
     return currency;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

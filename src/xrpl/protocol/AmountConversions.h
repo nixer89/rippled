@@ -24,7 +24,7 @@
 #include <xrpl/basics/XRPAmount.h>
 #include <xrpl/protocol/STAmount.h>
 
-namespace ripple {
+namespace xrpl {
 
 inline STAmount
 toSTAmount(IOUAmount const& iou, Issue const& iss)
@@ -120,6 +120,6 @@ toAmount<XRPAmount>(XRPAmount const& amt)
     return amt;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

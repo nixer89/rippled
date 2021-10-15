@@ -31,7 +31,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 namespace unl {
 class Manager;
@@ -274,6 +274,6 @@ make_Application(
     std::unique_ptr<Logs> logs,
     std::unique_ptr<TimeKeeper> timeKeeper);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -27,7 +27,7 @@
 #include <xrpl/rpc/Role.h>
 #include <xrpl/rpc/impl/TransactionSign.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doServerInfo(RPC::JsonContext& context)
@@ -49,4 +49,4 @@ doServerInfo(RPC::JsonContext& context)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

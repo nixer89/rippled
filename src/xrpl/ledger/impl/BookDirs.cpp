@@ -22,7 +22,7 @@
 #include <xrpl/ledger/View.h>
 #include <xrpl/protocol/Indexes.h>
 
-namespace ripple {
+namespace xrpl {
 
 BookDirs::BookDirs(ReadView const& view, Book const& book)
     : view_(&view)
@@ -119,4 +119,4 @@ BookDirs::const_iterator::operator++(int)
     return tmp;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -40,7 +40,7 @@
 #define SF_CF_INVALID SF_PRIVATE5
 #define SF_CF_VALID SF_PRIVATE6
 
-namespace ripple {
+namespace xrpl {
 
 /*
     Escrow
@@ -134,7 +134,7 @@ EscrowCreate::preflight(PreflightContext const& ctx)
 
     if (auto const cb = ctx.tx[~sfCondition])
     {
-        using namespace ripple::cryptoconditions;
+        using namespace xrpl::cryptoconditions;
 
         std::error_code ec;
 
@@ -277,7 +277,7 @@ EscrowCreate::doApply()
 static bool
 checkCondition(Slice f, Slice c)
 {
-    using namespace ripple::cryptoconditions;
+    using namespace xrpl::cryptoconditions;
 
     std::error_code ec;
 
@@ -586,4 +586,4 @@ EscrowCancel::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

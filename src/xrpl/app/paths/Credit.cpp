@@ -22,7 +22,7 @@
 #include <xrpl/protocol/Indexes.h>
 #include <xrpl/protocol/STAmount.h>
 
-namespace ripple {
+namespace xrpl {
 
 STAmount
 creditLimit(
@@ -81,4 +81,4 @@ creditBalance(
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

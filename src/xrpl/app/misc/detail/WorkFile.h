@@ -26,7 +26,7 @@
 #include <cassert>
 #include <cerrno>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -101,6 +101,6 @@ WorkFile::cancel()
 
 }  // namespace detail
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

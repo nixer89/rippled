@@ -26,7 +26,7 @@
 #include <stdexcept>
 #include <test/jtx/Account.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -63,6 +63,6 @@ fill_seq(Json::Value& jv, ReadView const& view);
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

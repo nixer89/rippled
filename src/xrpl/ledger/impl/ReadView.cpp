@@ -19,7 +19,7 @@
 
 #include <xrpl/ledger/ReadView.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Rules::Impl
 {
@@ -167,4 +167,4 @@ ReadView::txs_type::end() const -> iterator
     return iterator(view_, view_->txsEnd());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

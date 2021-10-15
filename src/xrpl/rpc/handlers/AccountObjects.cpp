@@ -33,7 +33,7 @@
 #include <sstream>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** General RPC command that can retrieve objects in the account root.
     {
@@ -161,4 +161,4 @@ doAccountObjects(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

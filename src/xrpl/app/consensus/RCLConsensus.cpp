@@ -47,7 +47,7 @@
 #include <algorithm>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 RCLConsensus::RCLConsensus(
     Application& app,
@@ -199,8 +199,8 @@ void
 RCLConsensus::Adaptor::propose(RCLCxPeerPos::Proposal const& proposal)
 {
     JLOG(j_.trace()) << (proposal.isBowOut() ? "We bow out: " : "We propose: ")
-                     << ripple::to_string(proposal.prevLedger()) << " -> "
-                     << ripple::to_string(proposal.position());
+                     << xrpl::to_string(proposal.prevLedger()) << " -> "
+                     << xrpl::to_string(proposal.position());
 
     protocol::TMProposeSet prop;
 
@@ -1060,4 +1060,4 @@ RCLConsensus::startRound(
         nowUntrusted,
         adaptor_.preStartRound(prevLgr, nowTrusted));
 }
-}  // namespace ripple
+}  // namespace xrpl

@@ -21,7 +21,7 @@
 #include <xrpl/app/misc/NetworkOPs.h>
 #include <xrpl/json/to_string.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 BookListeners::addSubscriber(InfoSub::ref sub)
@@ -63,4 +63,4 @@ BookListeners::publish(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

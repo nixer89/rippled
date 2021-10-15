@@ -20,7 +20,7 @@
 #include <xrpl/peerfinder/PeerfinderManager.h>
 #include <xrpl/peerfinder/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 Config::Config()
@@ -76,7 +76,7 @@ Config::onWrite(beast::PropertyStream::Map& map)
 
 Config
 Config::makeConfig(
-    ripple::Config const& cfg,
+    xrpl::Config const& cfg,
     std::uint16_t port,
     bool validationPublicKey,
     int ipLimit)
@@ -137,4 +137,4 @@ Config::makeConfig(
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

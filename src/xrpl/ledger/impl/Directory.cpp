@@ -20,7 +20,7 @@
 
 #include <xrpl/ledger/Directory.h>
 
-namespace ripple {
+namespace xrpl {
 
 using const_iterator = Dir::const_iterator;
 
@@ -121,4 +121,4 @@ const_iterator::operator++(int)
     return tmp;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <test/jtx/WSClient.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Subscribe_test : public beast::unit_test::suite
@@ -749,7 +749,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Subscribe, app, ripple);
+BEAST_DEFINE_TESTSUITE(Subscribe, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

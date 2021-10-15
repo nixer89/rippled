@@ -20,7 +20,7 @@
 #include <xrpl/basics/contract.h>
 #include <xrpl/ledger/detail/RawStateTable.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 class RawStateTable::sles_iter_impl : public ReadView::sles_type::iter_base
@@ -350,4 +350,4 @@ RawStateTable::slesUpperBound(ReadView const& base, uint256 const& key) const
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl

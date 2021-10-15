@@ -22,7 +22,7 @@
 #include <xrpl/protocol/SecretKey.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class PublicKey_test : public beast::unit_test::suite
 {
@@ -462,6 +462,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(PublicKey, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(PublicKey, protocol, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

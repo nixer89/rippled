@@ -22,7 +22,7 @@
 
 #include <xrpl/protocol/STBase.h>
 
-namespace ripple {
+namespace xrpl {
 
 template <typename Integer>
 class STInteger : public STBase
@@ -114,6 +114,6 @@ using STUInt16 = STInteger<std::uint16_t>;
 using STUInt32 = STInteger<std::uint32_t>;
 using STUInt64 = STInteger<std::uint64_t>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

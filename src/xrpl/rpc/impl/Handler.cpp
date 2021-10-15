@@ -22,7 +22,7 @@
 #include <xrpl/rpc/impl/Handler.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 namespace {
 
@@ -247,4 +247,4 @@ getHandlerNames()
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

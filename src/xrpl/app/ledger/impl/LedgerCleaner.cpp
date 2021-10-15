@@ -24,7 +24,7 @@
 #include <xrpl/beast/core/CurrentThreadName.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 /*
 
@@ -457,4 +457,4 @@ make_LedgerCleaner(Application& app, beast::Journal journal)
     return std::make_unique<LedgerCleanerImp>(app, journal);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

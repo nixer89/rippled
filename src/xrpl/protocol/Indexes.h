@@ -30,7 +30,7 @@
 #include <xrpl/protocol/UintTypes.h>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 class SeqProxy;
 /** Keylet computation funclets.
@@ -245,6 +245,6 @@ getTicketIndex(AccountID const& account, std::uint32_t uSequence);
 uint256
 getTicketIndex(AccountID const& account, SeqProxy ticketSeq);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

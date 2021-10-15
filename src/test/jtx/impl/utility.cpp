@@ -27,7 +27,7 @@
 #include <cstring>
 #include <test/jtx/utility.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -47,7 +47,7 @@ sign(Json::Value& jv, Account const& account)
     Serializer ss;
     ss.add32(HashPrefix::txSign);
     parse(jv).addWithoutSigningFields(ss);
-    auto const sig = ripple::sign(account.pk(), account.sk(), ss.slice());
+    auto const sig = xrpl::sign(account.pk(), account.sk(), ss.slice());
     jv[jss::TxnSignature] = strHex(Slice{sig.data(), sig.size()});
 }
 
@@ -75,4 +75,4 @@ fill_seq(Json::Value& jv, ReadView const& view)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

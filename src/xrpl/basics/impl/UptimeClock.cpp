@@ -19,7 +19,7 @@
 
 #include <xrpl/basics/UptimeClock.h>
 
-namespace ripple {
+namespace xrpl {
 
 std::atomic<UptimeClock::rep> UptimeClock::now_{0};  // seconds since start
 std::atomic<bool> UptimeClock::stop_{false};         // stop update thread
@@ -69,4 +69,4 @@ UptimeClock::now()
     return time_point{duration{now_}};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

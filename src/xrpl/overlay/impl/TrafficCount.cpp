@@ -19,7 +19,7 @@
 
 #include <xrpl/overlay/impl/TrafficCount.h>
 
-namespace ripple {
+namespace xrpl {
 
 TrafficCount::category
 TrafficCount::categorize(
@@ -166,4 +166,4 @@ TrafficCount::categorize(
     return TrafficCount::category::unknown;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 #include <xrpl/protocol/Seed.h>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 class Seed_test : public beast::unit_test::suite
 {
@@ -358,6 +358,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Seed, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(Seed, protocol, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -24,7 +24,7 @@
 #include <xrpl/shamap/SHAMapNodeID.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 static uint256 const&
 depthMask(unsigned int depth)
@@ -139,4 +139,4 @@ SHAMapNodeID::createID(int depth, uint256 const& key)
     return SHAMapNodeID(depth, key & depthMask(depth));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

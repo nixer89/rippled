@@ -30,7 +30,7 @@
 #include <xrpl/protocol/STVector256.h>
 #include <xrpl/protocol/impl/STVar.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 defaultObject_t defaultObject;
@@ -229,4 +229,4 @@ STVar::destroy()
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl

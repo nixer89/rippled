@@ -23,7 +23,7 @@
 #include <xrpl/beast/utility/Journal.h>
 #include <xrpl/ledger/ApplyViewImpl.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class STTx;
@@ -336,6 +336,6 @@ calculateDefaultBaseFee(ReadView const& view, STTx const& tx);
 std::pair<TER, bool>
 doApply(PreclaimResult const& preclaimResult, Application& app, OpenView& view);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

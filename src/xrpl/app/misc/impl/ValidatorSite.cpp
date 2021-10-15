@@ -29,7 +29,7 @@
 #include <xrpl/protocol/jss.h>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 auto constexpr default_refresh_interval = std::chrono::minutes{5};
 auto constexpr error_retry_interval = std::chrono::seconds{30};
@@ -682,4 +682,4 @@ ValidatorSite::getJson() const
     }
     return jrr;
 }
-}  // namespace ripple
+}  // namespace xrpl

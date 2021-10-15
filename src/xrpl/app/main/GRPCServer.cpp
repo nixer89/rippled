@@ -24,7 +24,7 @@
 
 #include <beast/net/IPAddressConversion.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 
@@ -804,4 +804,4 @@ GRPCServer::~GRPCServer()
     assert(!running_);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

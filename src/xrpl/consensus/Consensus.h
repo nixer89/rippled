@@ -33,7 +33,7 @@
 #include <optional>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 /** Determines whether the current ledger should close at this time.
 
@@ -1695,6 +1695,6 @@ Consensus<Adaptor>::asCloseTime(NetClock::time_point raw) const
     return roundCloseTime(raw, closeResolution_);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

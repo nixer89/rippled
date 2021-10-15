@@ -49,7 +49,7 @@
 #include <type_traits>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 class RPCParser;
 
@@ -1750,4 +1750,4 @@ fromNetwork(
 
 }  // namespace RPCCall
 
-}  // namespace ripple
+}  // namespace xrpl

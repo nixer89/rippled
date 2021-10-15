@@ -21,7 +21,7 @@
 #include <xrpl/protocol/SField.h>
 #include <test/jtx/quality.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -69,4 +69,4 @@ qualityOutPercent::operator()(Env&, JTx& jt) const
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

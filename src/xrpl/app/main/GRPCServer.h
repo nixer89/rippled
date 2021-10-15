@@ -35,7 +35,7 @@
 #include "org/xrpl/rpc/v1/xrp_ledger.grpc.pb.h"
 #include <grpcpp/grpcpp.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Interface that CallData implements
 class Processor
@@ -318,5 +318,5 @@ private:
     std::thread thread_;
     bool running_ = false;
 };
-}  // namespace ripple
+}  // namespace xrpl
 #endif

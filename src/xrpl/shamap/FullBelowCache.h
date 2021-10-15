@@ -26,7 +26,7 @@
 #include <atomic>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -146,6 +146,6 @@ private:
 
 using FullBelowCache = detail::BasicFullBelowCache<uint256>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

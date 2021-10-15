@@ -26,7 +26,7 @@
 
 #include <boost/asio/basic_waitable_timer.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class DatabaseShardImp : public DatabaseShard
@@ -410,6 +410,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

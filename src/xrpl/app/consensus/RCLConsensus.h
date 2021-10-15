@@ -38,7 +38,7 @@
 #include <atomic>
 #include <mutex>
 #include <set>
-namespace ripple {
+namespace xrpl {
 
 class InboundTransactions;
 class LocalTxs;
@@ -530,6 +530,6 @@ private:
     Consensus<Adaptor> consensus_;
     beast::Journal const j_;
 };
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

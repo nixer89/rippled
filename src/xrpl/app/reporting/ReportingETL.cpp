@@ -34,7 +34,7 @@
 #include <string>
 #include <variant>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 /// Convenience function for printing out basic ledger info
@@ -951,4 +951,4 @@ ReportingETL::ReportingETL(Application& app)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

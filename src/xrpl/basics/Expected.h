@@ -25,7 +25,7 @@
 #include <stdexcept>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 /** Expected is an approximation of std::expected (hoped for in C++23)
 
@@ -238,6 +238,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_BASICS_EXPECTED_H_INCLUDED

@@ -20,7 +20,7 @@
 #ifndef RIPPLE_PEERFINDER_SIM_MESSAGE_H_INCLUDED
 #define RIPPLE_PEERFINDER_SIM_MESSAGE_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 namespace Sim {
 
@@ -42,6 +42,6 @@ private:
 
 }  // namespace Sim
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

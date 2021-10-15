@@ -32,7 +32,7 @@
 #include <ostream>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** A public key.
 
@@ -266,6 +266,6 @@ calcNodeID(PublicKey const&);
 AccountID
 calcAccountID(PublicKey const& pk);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -30,7 +30,7 @@
 #include <boost/intrusive/set.hpp>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class Config;
@@ -842,6 +842,6 @@ toFeeLevel(XRPAmount const& drops, XRPAmount const& baseFee)
     return FeeLevel64(std::numeric_limits<std::uint64_t>::max());
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

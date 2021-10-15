@@ -30,7 +30,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class HTTPStream
 {
@@ -160,6 +160,6 @@ private:
     boost::asio::io_service::strand& strand_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_NET_HTTPSTREAM_H

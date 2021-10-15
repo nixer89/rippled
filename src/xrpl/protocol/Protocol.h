@@ -24,7 +24,7 @@
 #include <xrpl/basics/base_uint.h>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 /** Protocol specific constants, types, and data.
 
@@ -64,6 +64,6 @@ using TxID = uint256;
 
 using TxSeq = std::uint32_t;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -25,7 +25,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace cryptoconditions {
 
 bool
@@ -150,4 +150,4 @@ Fulfillment::deserialize(Slice s, std::error_code& ec)
 }
 
 }  // namespace cryptoconditions
-}  // namespace ripple
+}  // namespace xrpl

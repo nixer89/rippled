@@ -27,7 +27,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** A type-safe wrap around standard integral types
 
@@ -213,11 +213,11 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 namespace beast {
 template <class Int, class Tag, class HashAlgorithm>
-struct is_contiguously_hashable<ripple::tagged_integer<Int, Tag>, HashAlgorithm>
+struct is_contiguously_hashable<xrpl::tagged_integer<Int, Tag>, HashAlgorithm>
     : public is_contiguously_hashable<Int, HashAlgorithm>
 {
     explicit is_contiguously_hashable() = default;

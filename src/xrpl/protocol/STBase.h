@@ -29,7 +29,7 @@
 #include <type_traits>
 #include <typeinfo>
 #include <utility>
-namespace ripple {
+namespace xrpl {
 
 enum class JsonOptions { none = 0, include_date = 1 };
 
@@ -160,6 +160,6 @@ protected:
 std::ostream&
 operator<<(std::ostream& out, const STBase& t);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

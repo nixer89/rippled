@@ -24,7 +24,7 @@
 #include <map>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 class Ledger;
 class STTx;
@@ -70,6 +70,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

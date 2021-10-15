@@ -29,7 +29,7 @@
 #include <xrpl/protocol/TxFlags.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 NotTEC
 DeleteAccount::preflight(PreflightContext const& ctx)
@@ -345,4 +345,4 @@ DeleteAccount::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

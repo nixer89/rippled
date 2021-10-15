@@ -43,7 +43,7 @@
 #include <memory>
 #include <set>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** The Logic for maintaining the list of Slot addresses.
@@ -1216,6 +1216,6 @@ Logic<Checker>::onRedirects(
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

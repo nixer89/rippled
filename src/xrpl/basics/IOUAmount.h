@@ -26,7 +26,7 @@
 #include <string>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Floating point representation of amounts with high dynamic range
 
@@ -149,6 +149,6 @@ mulRatio(
     std::uint32_t den,
     bool roundUp);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -25,7 +25,7 @@
 #include <xrpl/resource/Fees.h>
 #include <beast/utility/Journal.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 
@@ -70,6 +70,6 @@ private:
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

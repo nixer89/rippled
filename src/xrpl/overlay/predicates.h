@@ -25,7 +25,7 @@
 
 #include <set>
 
-namespace ripple {
+namespace xrpl {
 
 /** Sends a message to all peers */
 struct send_always
@@ -175,6 +175,6 @@ struct peer_in_set
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -57,7 +57,7 @@ multi(32gb):
 
 */
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 namespace detail {
@@ -546,11 +546,11 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL(import, NodeStore, ripple);
+BEAST_DEFINE_TESTSUITE_MANUAL(import, NodeStore, xrpl);
 
 #endif
 
 //------------------------------------------------------------------------------
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

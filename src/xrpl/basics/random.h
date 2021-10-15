@@ -30,7 +30,7 @@
 #include <random>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 #ifndef __INTELLISENSE__
 static_assert(
@@ -205,6 +205,6 @@ rand_bool()
 }
 /** @} */
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_BASICS_RANDOM_H_INCLUDED

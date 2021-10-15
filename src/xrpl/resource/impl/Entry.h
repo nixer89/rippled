@@ -27,7 +27,7 @@
 #include <xrpl/resource/impl/Tuning.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 using clock_type = beast::abstract_clock<std::chrono::steady_clock>;
@@ -109,6 +109,6 @@ operator<<(std::ostream& os, Entry const& v)
 }
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

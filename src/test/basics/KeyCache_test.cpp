@@ -22,7 +22,7 @@
 #include <xrpl/beast/clock/manual_clock.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 
 class KeyCache_test : public beast::unit_test::suite
 {
@@ -93,6 +93,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(KeyCache, common, ripple);
+BEAST_DEFINE_TESTSUITE(KeyCache, common, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

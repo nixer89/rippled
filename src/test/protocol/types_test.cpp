@@ -20,7 +20,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <xrpl/protocol/UintTypes.h>
 
-namespace ripple {
+namespace xrpl {
 
 struct types_test : public beast::unit_test::suite
 {
@@ -39,6 +39,6 @@ struct types_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(types, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(types, protocol, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class DepositAuthorized_test : public beast::unit_test::suite
@@ -284,7 +284,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(DepositAuthorized, app, ripple);
+BEAST_DEFINE_TESTSUITE(DepositAuthorized, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

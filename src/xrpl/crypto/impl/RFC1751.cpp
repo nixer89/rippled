@@ -24,7 +24,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 //
 // RFC 1751 code converted to C++/Boost.
@@ -514,4 +514,4 @@ RFC1751::getWordFromBlob(void const* blob, size_t bytes)
         [hash % (sizeof(s_dictionary) / sizeof(s_dictionary[0]))];
 }
 
-}  // namespace ripple
+}  // namespace xrpl

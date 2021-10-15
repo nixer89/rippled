@@ -28,7 +28,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 template <class Adaptor>
 class Validations;
@@ -212,6 +212,6 @@ private:
     friend class test::NegativeUNLVoteScoreTable_test;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

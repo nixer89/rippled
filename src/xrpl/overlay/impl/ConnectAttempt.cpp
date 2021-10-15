@@ -23,7 +23,7 @@
 #include <xrpl/overlay/impl/PeerImp.h>
 #include <xrpl/overlay/impl/ProtocolVersion.h>
 
-namespace ripple {
+namespace xrpl {
 
 ConnectAttempt::ConnectAttempt(
     Application& app,
@@ -398,4 +398,4 @@ ConnectAttempt::processResponse()
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 #include <xrpl/core/JobQueue.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 JobQueue::JobQueue(
     beast::insight::Collector::ptr const& collector,
@@ -444,4 +444,4 @@ JobQueue::getJobLimit(JobType type)
     return j.limit();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

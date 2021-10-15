@@ -38,7 +38,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 /** Result of flow() execution of a single Strand. */
 template <class TInAmt, class TOutAmt>
@@ -776,6 +776,6 @@ flow(
     return {actualIn, actualOut, std::move(sb), std::move(ofrsToRmOnFail)};
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

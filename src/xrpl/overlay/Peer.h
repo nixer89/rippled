@@ -26,7 +26,7 @@
 #include <xrpl/overlay/Message.h>
 #include <xrpl/protocol/PublicKey.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace Resource {
 class Charge;
@@ -138,6 +138,6 @@ public:
     txReduceRelayEnabled() const = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

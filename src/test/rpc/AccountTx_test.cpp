@@ -25,7 +25,7 @@
 
 #include <boost/container/flat_set.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -595,7 +595,7 @@ public:
         testAccountDelete();
     }
 };
-BEAST_DEFINE_TESTSUITE(AccountTx, app, ripple);
+BEAST_DEFINE_TESTSUITE(AccountTx, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

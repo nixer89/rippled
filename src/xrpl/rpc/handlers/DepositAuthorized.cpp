@@ -24,7 +24,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   source_account : <ident>
@@ -114,4 +114,4 @@ doDepositAuthorized(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

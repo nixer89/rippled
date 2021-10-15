@@ -39,7 +39,7 @@
 #include <sys/statvfs.h>
 #endif
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -437,7 +437,7 @@ DatabaseShardImp::getPreShards()
     if (rs.empty())
         return {};
 
-    return ripple::to_string(rs);
+    return xrpl::to_string(rs);
 };
 
 bool
@@ -2150,4 +2150,4 @@ make_ShardStore(
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

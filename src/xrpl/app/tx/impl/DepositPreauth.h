@@ -22,7 +22,7 @@
 
 #include <xrpl/app/tx/impl/Transactor.h>
 
-namespace ripple {
+namespace xrpl {
 
 class DepositPreauth : public Transactor
 {
@@ -51,6 +51,6 @@ public:
         beast::Journal j);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

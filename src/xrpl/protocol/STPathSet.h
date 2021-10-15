@@ -28,7 +28,7 @@
 #include <cstddef>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class STPathElement
 {
@@ -406,6 +406,6 @@ private:
     std::vector<STPath> value;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

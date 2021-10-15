@@ -28,7 +28,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   ledger_hash : <ledger>
@@ -155,4 +155,4 @@ doLedgerRequest(RPC::JsonContext& context)
         rpcNOT_READY, "findCreate failed to return an inbound ledger");
 }
 
-}  // namespace ripple
+}  // namespace xrpl

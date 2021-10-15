@@ -34,7 +34,7 @@
 #include <cassert>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 class Logic
@@ -558,6 +558,6 @@ public:
 };
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

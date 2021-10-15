@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx/acctdelete.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -37,4 +37,4 @@ acctdelete(jtx::Account const& account, jtx::Account const& dest)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

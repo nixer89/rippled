@@ -23,7 +23,7 @@
 #include <test/jtx/Account.h>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -34,6 +34,6 @@ acctdelete(Account const& account, Account const& dest);
 }  // namespace jtx
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

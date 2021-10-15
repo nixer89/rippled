@@ -33,7 +33,7 @@
 #include <xrpl/rpc/Status.h>
 #include <boost/format.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   start: <index>
@@ -69,4 +69,4 @@ doTxHistory(RPC::JsonContext& context)
     return obj;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

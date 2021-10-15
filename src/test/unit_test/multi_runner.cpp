@@ -29,7 +29,7 @@
 #include <sstream>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 extern void
@@ -652,4 +652,4 @@ template class multi_runner_base<false>;
 }  // namespace detail
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

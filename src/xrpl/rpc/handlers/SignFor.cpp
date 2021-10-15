@@ -24,7 +24,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/TransactionSign.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   tx_json: <object>,
@@ -58,4 +58,4 @@ doSignFor(RPC::JsonContext& context)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

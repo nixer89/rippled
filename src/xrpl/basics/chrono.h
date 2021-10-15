@@ -29,7 +29,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 // A few handy aliases
 
@@ -92,6 +92,6 @@ stopwatch()
     return beast::get_abstract_clock<Facade, Clock>();
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

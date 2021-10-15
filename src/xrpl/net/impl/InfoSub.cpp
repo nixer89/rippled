@@ -20,7 +20,7 @@
 #include <xrpl/net/InfoSub.h>
 #include <atomic>
 
-namespace ripple {
+namespace xrpl {
 
 // This is the primary interface into the "client" portion of the program.
 // Code that wants to do normal operations on the network such as
@@ -119,4 +119,4 @@ InfoSub::getPathRequest()
     return mPathRequest;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

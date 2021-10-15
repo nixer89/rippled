@@ -69,7 +69,7 @@
 #include <tuple>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 class NetworkOPsImp final : public NetworkOPs
 {
@@ -3831,4 +3831,4 @@ make_NetworkOPs(
         collector);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

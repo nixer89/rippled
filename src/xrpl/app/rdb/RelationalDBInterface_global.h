@@ -28,7 +28,7 @@
 #include <xrpl/peerfinder/impl/Store.h>
 #include <boost/filesystem.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /* Wallet DB */
 
@@ -328,6 +328,6 @@ savePeerFinderDB(
     soci::session& session,
     std::vector<PeerFinder::Store::Entry> const& v);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

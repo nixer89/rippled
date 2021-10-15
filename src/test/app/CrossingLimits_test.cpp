@@ -19,7 +19,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class CrossingLimits_test : public beast::unit_test::suite
@@ -581,7 +581,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(CrossingLimits, tx, ripple, 10);
+BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(CrossingLimits, tx, xrpl, 10);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <xrpl/protocol/ErrorCodes.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 struct JsonContext;
@@ -55,4 +55,4 @@ doRandom(RPC::JsonContext& context)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 #include <xrpl/nodestore/Manager.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class NullBackend : public Backend
@@ -143,4 +143,4 @@ public:
 static NullFactory nullFactory;
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

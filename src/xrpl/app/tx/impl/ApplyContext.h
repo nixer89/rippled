@@ -29,7 +29,7 @@
 #include <optional>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** State information when applying a tx. */
 class ApplyContext
@@ -126,6 +126,6 @@ private:
     std::optional<ApplyViewImpl> view_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -31,7 +31,7 @@
 #include <condition_variable>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 class NetworkOPs;
 
@@ -245,6 +245,6 @@ public:
     stop() override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

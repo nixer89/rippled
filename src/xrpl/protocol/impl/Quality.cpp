@@ -21,7 +21,7 @@
 #include <cassert>
 #include <limits>
 
-namespace ripple {
+namespace xrpl {
 
 Quality::Quality(std::uint64_t value) : m_value(value)
 {
@@ -148,4 +148,4 @@ Quality::round(int digits) const
     return Quality{(exponent << (64 - 8)) | mantissa};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

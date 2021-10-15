@@ -30,7 +30,7 @@
 #include <limits>
 #include <numeric>
 
-namespace ripple {
+namespace xrpl {
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -1662,7 +1662,7 @@ TxQ::tryDirectApply(
                          << " to open ledger.";
 
         auto const [txnResult, didApply] =
-            ripple::apply(app, view, *tx, flags, j);
+            xrpl::apply(app, view, *tx, flags, j);
 
         JLOG(j_.trace()) << "New transaction " << transactionID
                          << (didApply ? " applied successfully with "
@@ -1903,4 +1903,4 @@ setup_TxQ(Config const& config)
     return setup;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

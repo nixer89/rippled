@@ -23,7 +23,7 @@
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct Regression_test : public beast::unit_test::suite
@@ -75,7 +75,7 @@ struct Regression_test : public beast::unit_test::suite
             OpenView accum(&*next);
 
             auto const result =
-                ripple::apply(env.app(), accum, *jt.stx, tapNONE, env.journal);
+                xrpl::apply(env.app(), accum, *jt.stx, tapNONE, env.journal);
             BEAST_EXPECT(result.first == tesSUCCESS);
             BEAST_EXPECT(result.second);
 
@@ -99,7 +99,7 @@ struct Regression_test : public beast::unit_test::suite
             OpenView accum(&*next);
 
             auto const result =
-                ripple::apply(env.app(), accum, *jt.stx, tapNONE, env.journal);
+                xrpl::apply(env.app(), accum, *jt.stx, tapNONE, env.journal);
             BEAST_EXPECT(result.first == tecINSUFF_FEE);
             BEAST_EXPECT(result.second);
 
@@ -257,7 +257,7 @@ struct Regression_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Regression, app, ripple);
+BEAST_DEFINE_TESTSUITE(Regression, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

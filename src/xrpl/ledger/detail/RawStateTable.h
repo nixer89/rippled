@@ -29,7 +29,7 @@
 #include <map>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 // Helper class that buffers raw modifications
@@ -137,6 +137,6 @@ private:
 };
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

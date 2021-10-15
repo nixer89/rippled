@@ -24,7 +24,7 @@
 #include <xrpl/protocol/STAmount.h>
 #include <test/jtx/Account.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -42,6 +42,6 @@ trust(
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

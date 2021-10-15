@@ -19,7 +19,7 @@
 
 #include <xrpl/net/DatabaseDownloader.h>
 
-namespace ripple {
+namespace xrpl {
 
 std::shared_ptr<DatabaseDownloader>
 make_DatabaseDownloader(
@@ -89,4 +89,4 @@ DatabaseDownloader::size(std::shared_ptr<parser> p)
     return databaseBodyParser->get().body().size();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

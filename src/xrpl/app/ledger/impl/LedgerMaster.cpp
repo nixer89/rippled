@@ -61,7 +61,7 @@
 #include <memory>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 
@@ -2322,4 +2322,4 @@ LedgerMaster::minSqlSeq()
     return app_.getRelationalDBInterface().getMinLedgerSeq();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

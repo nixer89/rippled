@@ -21,7 +21,7 @@
 #include <xrpl/basics/BasicConfig.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class FeeVote_test : public beast::unit_test::suite
@@ -99,7 +99,7 @@ class FeeVote_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(FeeVote, server, ripple);
+BEAST_DEFINE_TESTSUITE(FeeVote, server, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

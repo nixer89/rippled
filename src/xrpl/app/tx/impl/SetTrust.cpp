@@ -25,7 +25,7 @@
 #include <xrpl/protocol/Quality.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 NotTEC
 SetTrust::preflight(PreflightContext const& ctx)
@@ -503,4 +503,4 @@ SetTrust::doApply()
     return terResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

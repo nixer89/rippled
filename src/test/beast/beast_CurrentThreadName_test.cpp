@@ -22,7 +22,7 @@
 #include <atomic>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class CurrentThreadName_test : public beast::unit_test::suite
@@ -89,4 +89,4 @@ public:
 BEAST_DEFINE_TESTSUITE(CurrentThreadName, core, beast);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -23,7 +23,7 @@
 #include <xrpl/basics/CountedObject.h>
 #include <xrpl/protocol/STObject.h>
 
-namespace ripple {
+namespace xrpl {
 
 class STArray final : public STBase, public CountedObject<STArray>
 {
@@ -193,6 +193,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

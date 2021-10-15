@@ -26,7 +26,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 struct MemoryDB
@@ -240,4 +240,4 @@ MemoryFactory::createInstance(
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

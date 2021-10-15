@@ -29,7 +29,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #include <mutex>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /**
  * Dummy class for unit tests.
@@ -174,6 +174,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Workers, core, ripple);
+BEAST_DEFINE_TESTSUITE(Workers, core, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <test/jtx/WSClient.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class AccountInfo_test : public beast::unit_test::suite
@@ -725,7 +725,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(AccountInfo, app, ripple);
+BEAST_DEFINE_TESTSUITE(AccountInfo, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

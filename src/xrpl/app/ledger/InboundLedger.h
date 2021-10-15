@@ -29,7 +29,7 @@
 #include <set>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 // A ledger we are trying to acquire
 class InboundLedger final : public TimeoutCounter,
@@ -206,6 +206,6 @@ deserializeHeader(Slice data, bool hasHash = false);
 LedgerInfo
 deserializePrefixedHeader(Slice data, bool hasHash = false);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

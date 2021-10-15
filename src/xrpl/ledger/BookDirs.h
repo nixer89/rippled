@@ -22,7 +22,7 @@
 
 #include <xrpl/ledger/ReadView.h>
 
-namespace ripple {
+namespace xrpl {
 
 class BookDirs
 {
@@ -107,6 +107,6 @@ private:
     static beast::Journal j_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

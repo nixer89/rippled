@@ -24,7 +24,7 @@
 #include <streambuf>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 
 class CryptoPRNG_test : public beast::unit_test::suite
 {
@@ -57,6 +57,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(CryptoPRNG, core, ripple);
+BEAST_DEFINE_TESTSUITE(CryptoPRNG, core, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

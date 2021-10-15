@@ -30,7 +30,7 @@
 #include <boost/range/begin.hpp>  // workaround for boost 1.72 bug
 #include <boost/range/end.hpp>    // workaround for boost 1.72 bug
 
-namespace ripple {
+namespace xrpl {
 
 namespace perf {
 class PerfLog;
@@ -422,11 +422,11 @@ private:
             lock is released which only happens after the coroutine completes.
 */
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #include <xrpl/core/Coro.ipp>
 
-namespace ripple {
+namespace xrpl {
 
 template <class F>
 std::shared_ptr<JobQueue::Coro>
@@ -448,6 +448,6 @@ JobQueue::postCoro(JobType t, std::string const& name, F&& f)
     return coro;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

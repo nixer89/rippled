@@ -26,7 +26,7 @@
 
 // VFALCO NOTE Intentionally not in the NodeStore namespace
 
-namespace ripple {
+namespace xrpl {
 
 /** The types of node objects. */
 enum NodeObjectType : std::uint32_t {
@@ -99,6 +99,6 @@ private:
     Blob const mData;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

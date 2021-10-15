@@ -40,7 +40,7 @@
 
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 //------------------------------------------------------------------------------
 //
@@ -361,6 +361,6 @@ transferXRP(
     STAmount const& amount,
     beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

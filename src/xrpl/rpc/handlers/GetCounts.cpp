@@ -34,7 +34,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/shamap/ShardFamily.h>
 
-namespace ripple {
+namespace xrpl {
 
 static void
 textTime(
@@ -167,4 +167,4 @@ doGetCounts(RPC::JsonContext& context)
     return getCountsJson(context.app, minCount);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

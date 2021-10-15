@@ -19,7 +19,7 @@
 
 #include <xrpl/protocol/InnerObjectFormats.h>
 
-namespace ripple {
+namespace xrpl {
 
 InnerObjectFormats::InnerObjectFormats()
 {
@@ -70,4 +70,4 @@ InnerObjectFormats::findSOTemplateBySField(SField const& sField) const
     return nullptr;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

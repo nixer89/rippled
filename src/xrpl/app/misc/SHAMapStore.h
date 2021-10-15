@@ -25,7 +25,7 @@
 #include <xrpl/protocol/ErrorCodes.h>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class TransactionMaster;
 
@@ -106,6 +106,6 @@ make_SHAMapStore(
     Application& app,
     NodeStore::Scheduler& scheduler,
     beast::Journal journal);
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

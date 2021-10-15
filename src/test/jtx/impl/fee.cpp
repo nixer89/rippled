@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx/fee.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -36,4 +36,4 @@ fee::operator()(Env&, JTx& jt) const
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

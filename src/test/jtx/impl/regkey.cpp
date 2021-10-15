@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx/regkey.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -45,4 +45,4 @@ regkey(Account const& account, Account const& signer)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

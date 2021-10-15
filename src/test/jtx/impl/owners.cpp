@@ -19,7 +19,7 @@
 
 #include <test/jtx/owners.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -57,4 +57,4 @@ owners::operator()(Env& env) const
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

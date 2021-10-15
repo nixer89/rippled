@@ -22,7 +22,7 @@
 
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 
 namespace reduce_relay {
 
@@ -56,6 +56,6 @@ static constexpr std::size_t MAX_TX_QUEUE_SIZE = 10000;
 
 }  // namespace reduce_relay
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // XRPLD_REDUCERELAYCOMMON_H_INCLUDED

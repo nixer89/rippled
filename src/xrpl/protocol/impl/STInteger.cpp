@@ -27,7 +27,7 @@
 #include <xrpl/protocol/TxFormats.h>
 #include <charconv>
 
-namespace ripple {
+namespace xrpl {
 
 template <>
 STInteger<unsigned char>::STInteger(SerialIter& sit, SField const& name)
@@ -201,4 +201,4 @@ Json::Value STUInt64::getJson(JsonOptions) const
     return str;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

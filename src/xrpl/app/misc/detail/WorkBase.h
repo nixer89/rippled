@@ -32,7 +32,7 @@
 
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -303,6 +303,6 @@ WorkBase<Impl>::close()
 
 }  // namespace detail
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

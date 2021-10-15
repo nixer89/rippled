@@ -23,7 +23,7 @@
 #include <string_view>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 // Storage for static const members.
 SField::IsSigning const SField::notSigning;
@@ -357,4 +357,4 @@ SField::getField(std::string const& fieldName)
     return sfInvalid;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

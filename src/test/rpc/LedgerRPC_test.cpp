@@ -25,7 +25,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 class LedgerRPC_test : public beast::unit_test::suite
 {
@@ -50,7 +50,7 @@ class LedgerRPC_test : public beast::unit_test::suite
     }
 
     // Corrupt a valid address by replacing the 10th character with '!'.
-    // '!' is not part of the ripple alphabet.
+    // '!' is not part of the xrpl alphabet.
     std::string
     makeBadAddress(std::string good)
     {
@@ -1709,6 +1709,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(LedgerRPC, app, ripple);
+BEAST_DEFINE_TESTSUITE(LedgerRPC, app, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -29,7 +29,7 @@
 
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -74,6 +74,6 @@ private:
 
 }  // namespace detail
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

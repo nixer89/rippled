@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/Types.h>
 #include <xrpl/protocol/messages.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /* Contains information on the status of shards for a node
@@ -117,6 +117,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -37,7 +37,7 @@
 #include <stack>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class SHAMapNodeID;
 class SHAMapSyncFilter;
@@ -709,6 +709,6 @@ SHAMap::end() const
     return const_iterator(this, nullptr);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -57,7 +57,7 @@
 
 #include <xrpl/nodestore/impl/DatabaseNodeImp.h>
 
-namespace ripple {
+namespace xrpl {
 
 create_genesis_t const create_genesis{};
 
@@ -1169,4 +1169,4 @@ flatFetchTransactions(ReadView const& ledger, Application& app)
 
     return flatFetchTransactions(app, nodestoreHashes);
 }
-}  // namespace ripple
+}  // namespace xrpl

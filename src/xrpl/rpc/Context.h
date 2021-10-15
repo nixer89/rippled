@@ -27,7 +27,7 @@
 
 #include <xrpl/beast/utility/Journal.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class NetworkOPs;
@@ -73,6 +73,6 @@ struct GRPCContext : public Context
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

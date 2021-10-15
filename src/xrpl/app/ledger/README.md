@@ -276,7 +276,7 @@ transaction on this account.
 **Sequence:** Must be a value of 1 for the account to process a valid
 transaction.  The value initially matches the sequence number of the state
 tree of the account that signed the transaction.  The process of executing
-the transaction increments the sequence number.  This is how ripple prevents
+the transaction increments the sequence number.  This is how xrpl prevents
 a transaction from executing more than once.
 
 **index:** 256-bit hash of this AccountRoot.

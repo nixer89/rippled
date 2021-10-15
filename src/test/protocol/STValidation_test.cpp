@@ -31,7 +31,7 @@
 #include <memory>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 class STValidation_test : public beast::unit_test::suite
 {
@@ -210,7 +210,7 @@ public:
         try
         {
             SerialIter sit{payload1};
-            auto val = std::make_shared<ripple::STValidation>(
+            auto val = std::make_shared<xrpl::STValidation>(
                 sit, [](PublicKey const& pk) { return calcNodeID(pk); }, false);
             fail("An exception should have been thrown");
         }
@@ -225,7 +225,7 @@ public:
         try
         {
             SerialIter sit{payload2};
-            auto val = std::make_shared<ripple::STValidation>(
+            auto val = std::make_shared<xrpl::STValidation>(
                 sit, [](PublicKey const& pk) { return calcNodeID(pk); }, false);
             fail("An exception should have been thrown");
         }
@@ -238,7 +238,7 @@ public:
         try
         {
             SerialIter sit{payload3};
-            auto val = std::make_shared<ripple::STValidation>(
+            auto val = std::make_shared<xrpl::STValidation>(
                 sit, [](PublicKey const& pk) { return calcNodeID(pk); }, false);
             fail("An exception should have been thrown");
         }
@@ -251,7 +251,7 @@ public:
         try
         {
             SerialIter sit{payload4};
-            auto val = std::make_shared<ripple::STValidation>(
+            auto val = std::make_shared<xrpl::STValidation>(
                 sit, [](PublicKey const& pk) { return calcNodeID(pk); }, false);
             fail("An exception should have been thrown");
         }
@@ -353,6 +353,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(STValidation, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(STValidation, protocol, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

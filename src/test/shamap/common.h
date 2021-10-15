@@ -26,7 +26,7 @@
 #include <xrpl/nodestore/Manager.h>
 #include <xrpl/shamap/Family.h>
 
-namespace ripple {
+namespace xrpl {
 namespace tests {
 
 class TestNodeFamily : public Family
@@ -130,6 +130,6 @@ public:
 };
 
 }  // namespace tests
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

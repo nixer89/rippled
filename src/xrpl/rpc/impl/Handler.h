@@ -32,7 +32,7 @@ namespace Json {
 class Object;
 }
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 // Under what condition can we call this RPC?
@@ -155,6 +155,6 @@ conditionMet(Condition condition_required, T& context)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

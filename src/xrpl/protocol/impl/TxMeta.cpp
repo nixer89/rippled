@@ -24,7 +24,7 @@
 #include <xrpl/protocol/TxMeta.h>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 template <class T>
 TxMeta::TxMeta(
@@ -228,4 +228,4 @@ TxMeta::addRaw(Serializer& s, TER result, std::uint32_t index)
     getAsObject().add(s);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

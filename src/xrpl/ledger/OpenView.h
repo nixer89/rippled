@@ -31,7 +31,7 @@
 #include <functional>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Open ledger construction tag.
 
@@ -255,6 +255,6 @@ public:
         std::shared_ptr<Serializer const> const& metaData) override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

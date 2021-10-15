@@ -26,7 +26,7 @@
 #include <boost/format.hpp>
 #include <boost/optional.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 std::pair<PublicKey, SecretKey>
 getNodeIdentity(Application& app)
@@ -51,4 +51,4 @@ getNodeIdentity(Application& app)
     return getNodeIdentity(*db);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

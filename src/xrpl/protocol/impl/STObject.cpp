@@ -24,7 +24,7 @@
 #include <xrpl/protocol/STBlob.h>
 #include <xrpl/protocol/STObject.h>
 
-namespace ripple {
+namespace xrpl {
 
 STObject::STObject(STObject&& other)
     : STBase(other.getFName()), v_(std::move(other.v_)), mType(other.mType)
@@ -800,4 +800,4 @@ STObject::getSortedFields(STObject const& objToSort, WhichFields whichFields)
     return sf;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

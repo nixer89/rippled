@@ -25,7 +25,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 Json::Value
 doValidatorInfo(RPC::JsonContext& context)
 {
@@ -60,4 +60,4 @@ doValidatorInfo(RPC::JsonContext& context)
 
     return ret;
 }
-}  // namespace ripple
+}  // namespace xrpl

@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx/pay.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -40,4 +40,4 @@ pay(Account const& account, Account const& to, AnyAmount amount)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

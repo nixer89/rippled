@@ -22,7 +22,7 @@
 
 #include <xrpl/nodestore/Database.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /* This class has two key-value store Backend objects for persisting SHAMap
@@ -52,6 +52,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

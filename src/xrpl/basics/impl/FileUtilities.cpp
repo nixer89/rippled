@@ -19,7 +19,7 @@
 
 #include <xrpl/basics/FileUtilities.h>
 
-namespace ripple {
+namespace xrpl {
 
 std::string
 getFileContents(
@@ -88,4 +88,4 @@ writeFileContents(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

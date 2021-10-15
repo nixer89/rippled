@@ -25,7 +25,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class ClusterNode
 {
@@ -72,6 +72,6 @@ private:
     NetClock::time_point mReportTime = {};
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -32,7 +32,7 @@
 
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 std::optional<AccountID>
@@ -910,4 +910,4 @@ getAPIVersionNumber(Json::Value const& jv, bool betaEnabled)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

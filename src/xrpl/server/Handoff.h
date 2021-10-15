@@ -25,7 +25,7 @@
 #include <boost/beast/http/message.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 using http_request_type =
     boost::beast::http::request<boost::beast::http::dynamic_body>;
@@ -53,6 +53,6 @@ struct Handoff
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

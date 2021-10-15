@@ -21,7 +21,7 @@
 #include <xrpl/shamap/SHAMap.h>
 #include <xrpl/shamap/SHAMapSyncFilter.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 SHAMap::visitLeaves(
@@ -867,4 +867,4 @@ SHAMap::verifyProofPath(
     return false;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

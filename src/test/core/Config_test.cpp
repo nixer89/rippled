@@ -28,7 +28,7 @@
 #include <test/jtx/TestSuite.h>
 #include <test/unit_test/FileDirGuard.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 std::string
 configContents(std::string const& dbPath, std::string const& validatorsFile)
@@ -124,7 +124,7 @@ backend=sqlite
 /**
    Write a xrpld config file and remove when done.
  */
-class RippledCfgGuard : public ripple::test::detail::FileDirGuard
+class RippledCfgGuard : public xrpl::test::detail::FileDirGuard
 {
 private:
     path dataDir_;
@@ -338,7 +338,7 @@ port_wss_admin
         {
             // read from file absolute path
             auto const cwd = current_path();
-            ripple::test::detail::DirGuard const g0(*this, "test_db");
+            xrpl::test::detail::DirGuard const g0(*this, "test_db");
             path const dataDirRel("test_data_dir");
             path const dataDirAbs(cwd / g0.subdir() / dataDirRel);
             detail::RippledCfgGuard const g(
@@ -1157,6 +1157,6 @@ r.ripple.com 51235
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Config, core, ripple);
+BEAST_DEFINE_TESTSUITE(Config, core, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

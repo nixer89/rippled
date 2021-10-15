@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -279,7 +279,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(NoRipple, app, ripple);
+BEAST_DEFINE_TESTSUITE(NoRipple, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

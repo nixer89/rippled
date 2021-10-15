@@ -23,7 +23,7 @@
 #include <chrono>
 #include <cstddef>
 
-namespace ripple {
+namespace xrpl {
 
 /** Consensus algorithm parameters
 
@@ -137,5 +137,5 @@ struct ConsensusParms
     std::size_t avCT_CONSENSUS_PCT = 75;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

@@ -38,7 +38,7 @@
 #include <memory>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class TrustedPublisherServer
@@ -180,7 +180,7 @@ public:
         int sequence = 1)
         : sock_{ioc}
         , ep_{beast::IP::Address::from_string(
-                  ripple::test::getEnvLocalhostAddr()),
+                  xrpl::test::getEnvLocalhostAddr()),
               // 0 means let OS pick the port based on what's available
               0}
         , acceptor_{ioc}
@@ -728,5 +728,5 @@ make_TrustedPublisherServer(
 }
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 #endif

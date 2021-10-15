@@ -20,7 +20,7 @@
 #include <xrpl/app/paths/RippleLineCache.h>
 #include <xrpl/ledger/OpenView.h>
 
-namespace ripple {
+namespace xrpl {
 
 RippleLineCache::RippleLineCache(std::shared_ptr<ReadView const> const& ledger)
 {
@@ -46,4 +46,4 @@ RippleLineCache::getRippleLines(AccountID const& accountID)
     return it->second;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -21,7 +21,7 @@
 #include <algorithm>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 CountedObjects&
 CountedObjects::getInstance() noexcept
@@ -55,4 +55,4 @@ CountedObjects::getCounts(int minimumThreshold) const
     return counts;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

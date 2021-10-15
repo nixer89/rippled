@@ -25,7 +25,7 @@
 #include <xrpl/core/Config.h>
 #include <xrpl/core/ConfigSections.h>
 
-namespace ripple {
+namespace xrpl {
 ValidatorKeys::ValidatorKeys(Config const& config, beast::Journal j)
 {
     if (config.exists(SECTION_VALIDATOR_TOKEN) &&
@@ -91,4 +91,4 @@ ValidatorKeys::ValidatorKeys(Config const& config, beast::Journal j)
         }
     }
 }
-}  // namespace ripple
+}  // namespace xrpl

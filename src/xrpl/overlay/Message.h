@@ -33,7 +33,7 @@
 #include <memory>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 constexpr std::size_t maximiumMessageSize = megabytes(64);
 
@@ -140,6 +140,6 @@ private:
     getType(std::uint8_t const* in) const;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

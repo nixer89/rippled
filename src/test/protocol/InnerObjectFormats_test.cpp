@@ -25,7 +25,7 @@
 #include <xrpl/protocol/STParsedJSON.h>  // STParsedJSONObject
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace InnerObjectFormatsUnitTestDetail {
 
@@ -201,6 +201,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(InnerObjectFormatsParsedJSON, ripple_app, ripple);
+BEAST_DEFINE_TESTSUITE(InnerObjectFormatsParsedJSON, ripple_app, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

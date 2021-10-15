@@ -24,7 +24,7 @@
 #include <test/jtx/PathSet.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Offer_test : public beast::unit_test::suite
@@ -5195,8 +5195,8 @@ class Offer_manual_test : public Offer_test
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(Offer, tx, ripple, 4);
-BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(Offer_manual, tx, ripple, 20);
+BEAST_DEFINE_TESTSUITE_PRIO(Offer, tx, xrpl, 4);
+BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(Offer_manual, tx, xrpl, 20);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

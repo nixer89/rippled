@@ -28,7 +28,7 @@
 #include <test/jtx/envconfig.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class ReportingETL_test : public beast::unit_test::suite
@@ -1039,7 +1039,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(ReportingETL, app, ripple, 2);
+BEAST_DEFINE_TESTSUITE_PRIO(ReportingETL, app, xrpl, 2);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

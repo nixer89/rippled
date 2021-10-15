@@ -27,7 +27,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 template <class T>
@@ -71,11 +71,11 @@ public:
 };
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 //------------------------------------------------------------------------------
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -168,11 +168,11 @@ using sha256_t = unsigned_integer<256, std::size_t>;
 static_assert(sha256_t::bits == 256, "sha256_t must have 256 bits");
 #endif
 
-}  // namespace ripple
+}  // namespace xrpl
 
 //------------------------------------------------------------------------------
 
-namespace ripple {
+namespace xrpl {
 
 class hardened_hash_test : public beast::unit_test::suite
 {
@@ -254,6 +254,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(hardened_hash, basics, ripple);
+BEAST_DEFINE_TESTSUITE(hardened_hash, basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

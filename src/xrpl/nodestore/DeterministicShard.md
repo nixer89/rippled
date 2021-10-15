@@ -148,12 +148,12 @@ Final key of the shard is visited at the end.
 To perform test to deterministic shards implementation one can enter
 the following command:
 ```
-xrpld --unittest ripple.NodeStore.DatabaseShard
+xrpld --unittest xrpl.NodeStore.DatabaseShard
 ```
 
 The following is the right output of deterministic shards test:
 ```
-ripple.NodeStore.DatabaseShard DatabaseShard deterministic_shard
+xrpl.NodeStore.DatabaseShard DatabaseShard deterministic_shard
 with backend nudb
 Iteration 0: RIPEMD160[nudb.key] = F96BF2722AB2EE009FFAE4A36AAFC4F220E21951
 Iteration 0: RIPEMD160[nudb.dat] = FAE6AE84C15968B0419FDFC014931EA12A396C71

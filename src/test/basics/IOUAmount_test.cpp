@@ -20,7 +20,7 @@
 #include <xrpl/basics/IOUAmount.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 
 class IOUAmount_test : public beast::unit_test::suite
 {
@@ -251,7 +251,7 @@ public:
     IOUAmount big(maxMantissa, maxExponent);
     except([&] { mulRatio(big, 2, 0, true); });
 }
-}  // namespace ripple
+}  // namespace xrpl
 
 //--------------------------------------------------------------------------
 
@@ -268,6 +268,6 @@ run() override
 }
 ;
 
-BEAST_DEFINE_TESTSUITE(IOUAmount, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(IOUAmount, protocol, xrpl);
 
 }  // ripple

@@ -20,7 +20,7 @@
 #include <xrpl/ledger/CachedSLEs.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 void
 CachedSLEs::expire()
@@ -54,4 +54,4 @@ CachedSLEs::rate() const
     return double(hit_) / tot;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

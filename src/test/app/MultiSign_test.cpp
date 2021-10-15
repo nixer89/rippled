@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class MultiSign_test : public beast::unit_test::suite
@@ -1553,7 +1553,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(MultiSign, app, ripple);
+BEAST_DEFINE_TESTSUITE(MultiSign, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

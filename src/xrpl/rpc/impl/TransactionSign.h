@@ -24,7 +24,7 @@
 #include <xrpl/ledger/ApplyView.h>
 #include <xrpl/rpc/Role.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Forward declarations
 class Application;
@@ -129,6 +129,6 @@ transactionSubmitMultiSigned(
     ProcessTransactionFn const& processTransaction);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

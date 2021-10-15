@@ -25,7 +25,7 @@
 #include <xrpl/nodestore/Scheduler.h>
 #include <nudb/store.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -78,6 +78,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

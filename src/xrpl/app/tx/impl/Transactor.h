@@ -25,7 +25,7 @@
 #include <xrpl/basics/XRPAmount.h>
 #include <xrpl/beast/utility/Journal.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** State information when preflighting a tx. */
 struct PreflightContext
@@ -175,7 +175,7 @@ protected:
 
         @param app The application hosting the server
         @param baseFee The base fee of a candidate transaction
-            @see ripple::calculateBaseFee
+            @see xrpl::calculateBaseFee
         @param fees Fee settings from the current ledger
         @param flags Transaction processing fees
      */
@@ -212,6 +212,6 @@ preflight1(PreflightContext const& ctx);
 NotTEC
 preflight2(PreflightContext const& ctx);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

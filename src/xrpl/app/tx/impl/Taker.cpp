@@ -21,7 +21,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/basics/contract.h>
 
-namespace ripple {
+namespace xrpl {
 
 static std::string
 format_amount(STAmount const& amount)
@@ -627,7 +627,7 @@ Taker::transferXRP(
     if (amount == beast::zero)
         return tesSUCCESS;
 
-    return ripple::transferXRP(view_, from, to, amount, journal_);
+    return xrpl::transferXRP(view_, from, to, amount, journal_);
 }
 
 TER
@@ -651,7 +651,7 @@ Taker::redeemIOU(
     if (get_funds(account, amount) <= beast::zero)
         Throw<std::logic_error>("redeemIOU has no funds to redeem");
 
-    auto ret = ripple::redeemIOU(view_, account, amount, issue, journal_);
+    auto ret = xrpl::redeemIOU(view_, account, amount, issue, journal_);
 
     if (get_funds(account, amount) < beast::zero)
         Throw<std::logic_error>("redeemIOU redeemed more funds than available");
@@ -675,7 +675,7 @@ Taker::issueIOU(
     if (amount == beast::zero)
         return tesSUCCESS;
 
-    return ripple::issueIOU(view_, account, amount, issue, journal_);
+    return xrpl::issueIOU(view_, account, amount, issue, journal_);
 }
 
 // Performs funds transfers to fill the given offer and adjusts offer.
@@ -827,4 +827,4 @@ Taker::calculateRate(
                                                 : transferRate(view, issuer);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

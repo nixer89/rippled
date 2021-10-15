@@ -22,7 +22,7 @@
 
 #include <xrpl/resource/Charge.h>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 /** Schedule of fees charged for imposing load on the server. */
@@ -64,6 +64,6 @@ extern Charge const feeDrop;     // The cost of being dropped for excess load
 /** @} */
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -20,7 +20,7 @@
 #include <xrpl/basics/strHex.h>
 #include <array>
 
-namespace ripple {
+namespace xrpl {
 
 int
 charUnHex(unsigned char c)
@@ -46,4 +46,4 @@ charUnHex(unsigned char c)
     return xtab[c];
 }
 
-}  // namespace ripple
+}  // namespace xrpl

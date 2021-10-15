@@ -21,7 +21,7 @@
 #include <test/jtx/Env.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 int port_base = 8000;
@@ -132,4 +132,4 @@ addGrpcConfigWithSecureGateway(
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

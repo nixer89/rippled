@@ -22,7 +22,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <xrpl/protocol/STAmount.h>
 
-namespace ripple {
+namespace xrpl {
 
 class STAmount_test : public beast::unit_test::suite
 {
@@ -687,6 +687,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(STAmount, ripple_data, ripple);
+BEAST_DEFINE_TESTSUITE(STAmount, ripple_data, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -28,7 +28,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 Logs::Sink::Sink(
     std::string const& partition,
@@ -454,4 +454,4 @@ debugLog()
     return beast::Journal(debugSink().get());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

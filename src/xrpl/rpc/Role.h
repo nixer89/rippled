@@ -29,7 +29,7 @@
 #include <string>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** Indicates the level of administrative permission to grant.
  * IDENTIFIED role has unlimited resources but cannot perform some
@@ -84,6 +84,6 @@ ipAllowed(
 boost::string_view
 forwardedFor(http_request_type const& request);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

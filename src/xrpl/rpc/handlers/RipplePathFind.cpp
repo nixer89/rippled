@@ -25,7 +25,7 @@
 #include <xrpl/rpc/impl/LegacyPathFind.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // This interface is deprecated.
 Json::Value
@@ -173,4 +173,4 @@ doRipplePathFind(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

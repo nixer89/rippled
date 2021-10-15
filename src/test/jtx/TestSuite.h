@@ -23,7 +23,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class TestSuite : public beast::unit_test::suite
 {
@@ -137,6 +137,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

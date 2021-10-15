@@ -29,7 +29,7 @@
 #include <test/jtx/envconfig.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Fee_test : public beast::unit_test::suite
@@ -132,7 +132,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Fee, app, ripple);
+BEAST_DEFINE_TESTSUITE(Fee, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

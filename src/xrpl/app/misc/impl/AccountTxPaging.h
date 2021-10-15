@@ -27,7 +27,7 @@
 
 //------------------------------------------------------------------------------
 
-namespace ripple {
+namespace xrpl {
 
 void
 convertBlobsToTxResult(
@@ -41,6 +41,6 @@ convertBlobsToTxResult(
 void
 saveLedgerAsync(Application& app, std::uint32_t seq);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

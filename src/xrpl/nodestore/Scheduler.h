@@ -23,7 +23,7 @@
 #include <xrpl/nodestore/Task.h>
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 enum class FetchType { synchronous, async };
@@ -84,6 +84,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

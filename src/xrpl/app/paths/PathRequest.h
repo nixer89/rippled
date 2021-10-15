@@ -32,7 +32,7 @@
 #include <set>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 // A pathfinding request submitted by a client
 // The request issuer must maintain a strong pointer
@@ -165,6 +165,6 @@ private:
     static unsigned int const max_paths_ = 4;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

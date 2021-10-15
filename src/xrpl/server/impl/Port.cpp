@@ -24,7 +24,7 @@
 
 #include <boost/algorithm/string/predicate.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 Port::secure() const
@@ -264,4 +264,4 @@ parse_Port(ParsedPort& port, Section const& section, std::ostream& log)
     port.pmd_options.memLevel = section.value_or("memory_level", 4);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

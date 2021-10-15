@@ -29,7 +29,7 @@
 #include "org/xrpl/rpc/v1/xrp_ledger.grpc.pb.h"
 #include <grpcpp/grpcpp.h>
 
-namespace ripple {
+namespace xrpl {
 /// Forward a JSON request to a p2p node and return the response
 /// @param context context of the request
 /// @return response from p2p node
@@ -112,5 +112,5 @@ shouldForwardToP2p(RPC::GRPCContext<Request>& context, RPC::Condition condition)
 std::unique_ptr<org::xrpl::rpc::v1::XRPLedgerAPIService::Stub>
 getP2pForwardingStub(RPC::Context& context);
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

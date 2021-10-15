@@ -276,14 +276,14 @@ Writer::output(Json::Value const& value)
 void
 Writer::output(float f)
 {
-    auto s = ripple::to_string(f);
+    auto s = xrpl::to_string(f);
     impl_->output({s.data(), lengthWithoutTrailingZeros(s)});
 }
 
 void
 Writer::output(double f)
 {
-    auto s = ripple::to_string(f);
+    auto s = xrpl::to_string(f);
     impl_->output({s.data(), lengthWithoutTrailingZeros(s)});
 }
 

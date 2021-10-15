@@ -32,7 +32,7 @@
 #include <test/jtx/tags.h>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -155,9 +155,9 @@ operator<<(std::ostream& os, PrettyAmount const& amount);
 struct BookSpec
 {
     AccountID account;
-    ripple::Currency currency;
+    xrpl::Currency currency;
 
-    BookSpec(AccountID const& account_, ripple::Currency const& currency_)
+    BookSpec(AccountID const& account_, xrpl::Currency const& currency_)
         : account(account_), currency(currency_)
     {
     }
@@ -292,9 +292,9 @@ class IOU
 {
 public:
     Account account;
-    ripple::Currency currency;
+    xrpl::Currency currency;
 
-    IOU(Account const& account_, ripple::Currency const& currency_)
+    IOU(Account const& account_, xrpl::Currency const& currency_)
         : account(account_), currency(currency_)
     {
     }
@@ -400,6 +400,6 @@ extern any_t const any;
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

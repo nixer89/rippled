@@ -37,7 +37,7 @@
 
 #include <tuple>
 
-namespace ripple {
+namespace xrpl {
 
 PathRequest::PathRequest(
     Application& app,
@@ -735,4 +735,4 @@ PathRequest::getSubscriber()
     return wpSubscriber.lock();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

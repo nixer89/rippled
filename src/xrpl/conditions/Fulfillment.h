@@ -25,7 +25,7 @@
 #include <xrpl/conditions/Condition.h>
 #include <xrpl/conditions/impl/utils.h>
 
-namespace ripple {
+namespace xrpl {
 namespace cryptoconditions {
 
 struct Fulfillment
@@ -141,6 +141,6 @@ bool
 validate(Fulfillment const& f, Condition const& c);
 
 }  // namespace cryptoconditions
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

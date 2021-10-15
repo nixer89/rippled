@@ -31,7 +31,7 @@
 #include <numeric>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 LoadFeeTrack::raiseLocalFee()
@@ -164,4 +164,4 @@ scaleFeeLoad(
     return result.second;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

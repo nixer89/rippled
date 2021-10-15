@@ -31,7 +31,7 @@
 #include <memory>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 // Validation flags
 
@@ -231,6 +231,6 @@ private:
     NetClock::time_point seenTime_ = {};
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

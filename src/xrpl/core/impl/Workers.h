@@ -28,7 +28,7 @@
 #include <string>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 namespace perf {
 class PerfLog;
@@ -221,6 +221,6 @@ private:
         m_paused;  // holds just paused workers
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

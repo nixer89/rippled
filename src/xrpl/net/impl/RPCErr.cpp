@@ -20,7 +20,7 @@
 #include <xrpl/net/RPCErr.h>
 #include <xrpl/protocol/ErrorCodes.h>
 
-namespace ripple {
+namespace xrpl {
 
 struct RPCErr;
 
@@ -39,4 +39,4 @@ isRpcError(Json::Value jvResult)
     return jvResult.isObject() && jvResult.isMember(jss::error);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

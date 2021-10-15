@@ -24,7 +24,7 @@
 #include <xrpl/protocol/digest.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Used to construct received proposals
 RCLCxPeerPos::RCLCxPeerPos(
@@ -100,4 +100,4 @@ RCLCxPeerPos::Data::Data(
 {
 }
 
-}  // namespace ripple
+}  // namespace xrpl

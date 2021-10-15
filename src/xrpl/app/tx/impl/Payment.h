@@ -25,7 +25,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/protocol/TxFlags.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Payment : public Transactor
 {
@@ -55,6 +55,6 @@ public:
     doApply() override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

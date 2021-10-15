@@ -28,7 +28,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 static constexpr char const* alphabetForward =
     "rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz";
@@ -242,4 +242,4 @@ decodeBase58Token(std::string const& s, TokenType type)
     return ret.substr(1, ret.size() - 1 - guard.size());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

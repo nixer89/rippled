@@ -21,7 +21,7 @@
 #include <xrpl/core/Job.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 Job::Job() : mType(jtINVALID), mJobIndex(0)
 {
@@ -143,4 +143,4 @@ Job::operator<=(const Job& j) const
     return mJobIndex <= j.mJobIndex;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

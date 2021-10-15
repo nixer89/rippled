@@ -26,7 +26,7 @@
 #include <xrpl/protocol/jss.h>
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 Database::Database(
@@ -347,4 +347,4 @@ Database::getCountsJson(Json::Value& obj)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

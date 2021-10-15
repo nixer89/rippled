@@ -25,7 +25,7 @@
 #include <xrpl/protocol/TxFlags.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 NotTEC
 DepositPreauth::preflight(PreflightContext const& ctx)
@@ -201,4 +201,4 @@ DepositPreauth::removeFromLedger(
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

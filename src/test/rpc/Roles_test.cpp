@@ -25,7 +25,7 @@
 #include <test/jtx/WSClient.h>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -114,8 +114,8 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Roles, app, ripple);
+BEAST_DEFINE_TESTSUITE(Roles, app, xrpl);
 
 }  // namespace test
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -32,7 +32,7 @@
 #include <memory>
 #include <nudb/nudb.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class NuDBBackend : public Backend
@@ -396,4 +396,4 @@ public:
 static NuDBFactory nuDBFactory;
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

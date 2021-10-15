@@ -27,7 +27,7 @@
 #include <boost/format.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 void
 convertBlobsToTxResult(
@@ -60,4 +60,4 @@ saveLedgerAsync(Application& app, std::uint32_t seq)
         pendSaveValidated(app, l, false, false);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

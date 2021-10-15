@@ -37,7 +37,7 @@
 #include <numeric>
 #include <shared_mutex>
 
-namespace ripple {
+namespace xrpl {
 
 std::string
 to_string(ListDisposition disposition)
@@ -1287,7 +1287,7 @@ ValidatorList::verify(
     auto const sig = strUnHex(signature);
     auto const data = base64_decode(blob);
     if (!sig ||
-        !ripple::verify(
+        !xrpl::verify(
             publisherManifests_.getSigningKey(pubKey),
             makeSlice(data),
             makeSlice(*sig)))
@@ -1986,4 +1986,4 @@ ValidatorList::negativeUNLFilter(
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <map>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -207,6 +207,6 @@ private:
     PaymentSandbox const* ps_ = nullptr;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

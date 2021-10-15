@@ -59,7 +59,7 @@
 #include <cctype>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 namespace base64 {
 
@@ -251,4 +251,4 @@ base64_decode(std::string const& data)
     return dest;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

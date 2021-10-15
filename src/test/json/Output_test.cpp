@@ -23,7 +23,7 @@
 
 namespace Json {
 
-struct Output_test : ripple::test::TestOutputSuite
+struct Output_test : xrpl::test::TestOutputSuite
 {
     void
     runTest(std::string const& name, std::string const& valueDesc)
@@ -60,6 +60,6 @@ struct Output_test : ripple::test::TestOutputSuite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Output, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(Output, ripple_basics, xrpl);
 
 }  // namespace Json

@@ -23,7 +23,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/protocol/Feature.h>
 
-namespace ripple {
+namespace xrpl {
 
 // These are the same flags defined as SF_PRIVATE1-4 in HashRouter.h
 #define SF_SIGBAD SF_PRIVATE1     // Signature is bad
@@ -165,4 +165,4 @@ applyTransaction(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

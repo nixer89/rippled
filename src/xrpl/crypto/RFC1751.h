@@ -23,7 +23,7 @@
 #include <string>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class RFC1751
 {
@@ -61,6 +61,6 @@ private:
     static char const* s_dictionary[];
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

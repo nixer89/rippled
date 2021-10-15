@@ -23,7 +23,7 @@
 #include <ios>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 /** A consumption charge. */
@@ -65,6 +65,6 @@ std::ostream&
 operator<<(std::ostream& os, Charge const& v);
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

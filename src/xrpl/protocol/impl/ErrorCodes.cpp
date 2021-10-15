@@ -21,7 +21,7 @@
 #include <cassert>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 namespace detail {
@@ -238,4 +238,4 @@ rpcErrorString(Json::Value const& jv)
     return jv[jss::error].asString() + jv[jss::error_message].asString();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

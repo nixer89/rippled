@@ -24,7 +24,7 @@
 #include <xrpl/ledger/RawView.h>
 #include <xrpl/ledger/ReadView.h>
 
-namespace ripple {
+namespace xrpl {
 
 enum ApplyFlags : std::uint32_t {
     tapNONE = 0x00,
@@ -373,6 +373,6 @@ public:
     emptyDirDelete(Keylet const& directory);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

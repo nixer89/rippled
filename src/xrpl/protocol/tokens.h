@@ -24,7 +24,7 @@
 #include <optional>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 enum class TokenType : std::uint8_t {
     None = 1,  // unused
@@ -70,6 +70,6 @@ encodeBase58Token(TokenType type, void const* token, std::size_t size);
 std::string
 decodeBase58Token(std::string const& s, TokenType type);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

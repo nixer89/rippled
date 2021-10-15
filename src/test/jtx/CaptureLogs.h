@@ -19,7 +19,7 @@
 
 #include <xrpl/basics/Log.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 /**
@@ -83,4 +83,4 @@ public:
 };
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -66,6 +66,6 @@ using tickets = owner_count<ltTICKET>;
 }  // namespace jtx
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

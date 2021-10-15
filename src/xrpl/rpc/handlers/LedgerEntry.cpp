@@ -30,7 +30,7 @@
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   ledger_hash : <ledger>
@@ -420,4 +420,4 @@ doLedgerEntryGrpc(
         return {response, status};
     }
 }
-}  // namespace ripple
+}  // namespace xrpl

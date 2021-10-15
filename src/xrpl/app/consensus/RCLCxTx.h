@@ -25,7 +25,7 @@
 #include <xrpl/protocol/UintTypes.h>
 #include <xrpl/shamap/SHAMap.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents a transaction in RCLConsensus.
 
@@ -188,5 +188,5 @@ public:
     //! The SHAMap representing the transactions.
     std::shared_ptr<SHAMap> map_;
 };
-}  // namespace ripple
+}  // namespace xrpl
 #endif

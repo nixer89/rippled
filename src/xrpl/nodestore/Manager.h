@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/DatabaseShard.h>
 #include <xrpl/nodestore/Factory.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -103,6 +103,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -89,7 +89,7 @@ else:
         [tuple(x) for x in powerset(['-GNinja', '-Dstatic=true', '-Dassert=true', '-Dsan=thread'])]))
 
 parser = argparse.ArgumentParser(
-    description='Test.py - run ripple tests'
+    description='Test.py - run xrpl tests'
 )
 
 parser.add_argument(

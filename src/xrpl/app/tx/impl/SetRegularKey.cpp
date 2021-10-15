@@ -22,7 +22,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <xrpl/protocol/TxFlags.h>
 
-namespace ripple {
+namespace xrpl {
 
 FeeUnit64
 SetRegularKey::calculateBaseFee(ReadView const& view, STTx const& tx)
@@ -100,4 +100,4 @@ SetRegularKey::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

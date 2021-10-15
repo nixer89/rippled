@@ -27,7 +27,7 @@
 #include <cstring>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 // variable length byte string
 class STBlob : public STBase
@@ -136,6 +136,6 @@ private:
     Buffer value_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

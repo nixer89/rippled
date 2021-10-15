@@ -22,7 +22,7 @@
 
 #include <boost/algorithm/string/predicate.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -123,4 +123,4 @@ Manager::instance()
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

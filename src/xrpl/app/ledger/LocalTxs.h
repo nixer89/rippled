@@ -24,7 +24,7 @@
 #include <xrpl/ledger/ReadView.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 // Track transactions issued by local clients
 // Ensure we always apply them to our open ledger
@@ -54,6 +54,6 @@ public:
 std::unique_ptr<LocalTxs>
 make_LocalTxs();
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

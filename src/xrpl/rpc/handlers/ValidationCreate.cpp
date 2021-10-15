@@ -24,7 +24,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 static std::optional<Seed>
 validationSeed(Json::Value const& params)
@@ -66,4 +66,4 @@ doValidationCreate(RPC::JsonContext& context)
     return obj;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 
 #include <xrpl/protocol/KnownFormats.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Identifiers for on-ledger objects.
 
@@ -256,6 +256,6 @@ public:
     getInstance();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -38,7 +38,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 class STArray;
 
@@ -1063,6 +1063,6 @@ STObject::at(OptionaledField<T> const& of) -> OptionalProxy<T>
     return OptionalProxy<T>(this, of.f);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

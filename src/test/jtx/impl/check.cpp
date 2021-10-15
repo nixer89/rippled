@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx/check.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -88,4 +88,4 @@ cancel(jtx::Account const& dest, uint256 const& checkId)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

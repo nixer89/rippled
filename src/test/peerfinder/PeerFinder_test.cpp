@@ -26,7 +26,7 @@
 #include <xrpl/protocol/SecretKey.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 class PeerFinder_test : public beast::unit_test::suite
@@ -170,7 +170,7 @@ public:
                        std::uint16_t expectOut,
                        std::uint16_t expectIn,
                        std::uint16_t expectIpLimit) {
-            ripple::Config c;
+            xrpl::Config c;
 
             testcase(test);
 
@@ -235,7 +235,7 @@ public:
         testcase("invalid config");
 
         auto run = [&](std::string const& toLoad) {
-            ripple::Config c;
+            xrpl::Config c;
             try
             {
                 c.loadFromString(toLoad);
@@ -284,7 +284,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(PeerFinder, PeerFinder, ripple);
+BEAST_DEFINE_TESTSUITE(PeerFinder, PeerFinder, xrpl);
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

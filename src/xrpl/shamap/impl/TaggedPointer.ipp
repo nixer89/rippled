@@ -25,7 +25,7 @@
 
 #include <boost/pool/pool_alloc.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 // Sparse array size boundaries.
@@ -596,4 +596,4 @@ inline TaggedPointer::~TaggedPointer()
     destroyHashesAndChildren();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

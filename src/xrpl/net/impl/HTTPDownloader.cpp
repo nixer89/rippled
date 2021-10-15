@@ -20,7 +20,7 @@
 #include <xrpl/net/HTTPDownloader.h>
 #include <boost/asio/ssl.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 HTTPDownloader::HTTPDownloader(
     boost::asio::io_service& io_service,
@@ -323,4 +323,4 @@ HTTPDownloader::fail(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

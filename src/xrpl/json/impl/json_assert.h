@@ -27,6 +27,6 @@
     assert(condition);  // @todo <= change this into an exception throw
 #define JSON_ASSERT_MESSAGE(condition, message) \
     if (!(condition))                           \
-        ripple::Throw<Json::error>(message);
+        xrpl::Throw<Json::error>(message);
 
 #endif

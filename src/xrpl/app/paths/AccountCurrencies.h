@@ -23,7 +23,7 @@
 #include <xrpl/app/paths/RippleLineCache.h>
 #include <xrpl/protocol/UintTypes.h>
 
-namespace ripple {
+namespace xrpl {
 
 hash_set<Currency>
 accountDestCurrencies(
@@ -37,6 +37,6 @@ accountSourceCurrencies(
     std::shared_ptr<RippleLineCache> const& lrLedger,
     bool includeXRP);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -28,7 +28,7 @@
 #include <typeinfo>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 struct defaultObject_t
@@ -160,6 +160,6 @@ operator!=(STVar const& lhs, STVar const& rhs)
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

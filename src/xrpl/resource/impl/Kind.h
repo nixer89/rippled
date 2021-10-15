@@ -20,7 +20,7 @@
 #ifndef RIPPLE_RESOURCE_KIND_H_INCLUDED
 #define RIPPLE_RESOURCE_KIND_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 /**
@@ -34,6 +34,6 @@ namespace Resource {
 enum Kind { kindInbound, kindOutbound, kindUnlimited };
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

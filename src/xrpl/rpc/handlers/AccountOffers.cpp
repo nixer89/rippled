@@ -29,7 +29,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 appendOfferJson(std::shared_ptr<SLE const> const& offer, Json::Value& offers)
@@ -157,4 +157,4 @@ doAccountOffers(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

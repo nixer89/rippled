@@ -34,7 +34,7 @@
 
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class WSClientImpl : public WSClient
@@ -307,4 +307,4 @@ makeWSClient(
 }
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

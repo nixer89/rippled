@@ -23,7 +23,7 @@
 #include <xrpl/app/main/Application.h>
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 class ShardVerificationScheduler
@@ -79,6 +79,6 @@ private:
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED

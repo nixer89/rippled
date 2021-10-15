@@ -24,7 +24,7 @@
 #include <xrpl/beast/insight/Collector.h>
 #include <xrpl/core/JobTypeInfo.h>
 
-namespace ripple {
+namespace xrpl {
 
 struct JobTypeData
 {
@@ -102,6 +102,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -26,7 +26,7 @@
 #include <xrpl/protocol/XrplLedgerHash.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents a ledger in RCLConsensus.
 
@@ -88,7 +88,7 @@ public:
     bool
     closeAgree() const
     {
-        return ripple::getCloseAgree(ledger_->info());
+        return xrpl::getCloseAgree(ledger_->info());
     }
 
     //! The close time of this ledger
@@ -109,7 +109,7 @@ public:
     Json::Value
     getJson() const
     {
-        return ripple::getJson({*ledger_, {}});
+        return xrpl::getJson({*ledger_, {}});
     }
 
     /** The ledger instance.
@@ -119,5 +119,5 @@ public:
     */
     std::shared_ptr<Ledger const> ledger_;
 };
-}  // namespace ripple
+}  // namespace xrpl
 #endif

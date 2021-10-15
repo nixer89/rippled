@@ -32,7 +32,7 @@
 
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 template <class>
@@ -569,6 +569,6 @@ Livecache<Allocator>::hops_t::remove(Element& e)
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

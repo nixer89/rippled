@@ -20,7 +20,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 // Helper function that returns the reserve on an account based on
@@ -735,8 +735,8 @@ struct DepositPreauth_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(DepositAuth, app, ripple);
-BEAST_DEFINE_TESTSUITE(DepositPreauth, app, ripple);
+BEAST_DEFINE_TESTSUITE(DepositAuth, app, xrpl);
+BEAST_DEFINE_TESTSUITE(DepositPreauth, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

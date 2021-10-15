@@ -29,7 +29,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Get state nodes from a ledger
 //   Inputs:
@@ -199,4 +199,4 @@ doLedgerDataGrpc(
     return {response, status};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

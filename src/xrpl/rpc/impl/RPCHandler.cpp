@@ -39,7 +39,7 @@
 #include <atomic>
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 namespace {
@@ -301,4 +301,4 @@ roleRequired(unsigned int version, bool betaEnabled, std::string const& method)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

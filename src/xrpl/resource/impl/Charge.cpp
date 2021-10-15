@@ -20,7 +20,7 @@
 #include <xrpl/resource/Charge.h>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 Charge::Charge(value_type cost, std::string const& label)
@@ -68,4 +68,4 @@ Charge::operator!=(Charge const& c) const
 }
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl

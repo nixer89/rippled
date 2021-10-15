@@ -24,7 +24,7 @@
 #include <test/csf/Validation.h>
 #include <test/csf/ledgers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace csf {
 /** Proposal is a position taken in the consensus process and is represented
@@ -34,6 +34,6 @@ using Proposal = ConsensusProposal<PeerID, Ledger::ID, TxSet::ID>;
 
 }  // namespace csf
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

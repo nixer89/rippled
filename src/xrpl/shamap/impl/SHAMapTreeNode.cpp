@@ -34,7 +34,7 @@
 
 #include <openssl/sha.h>
 
-namespace ripple {
+namespace xrpl {
 
 std::shared_ptr<SHAMapTreeNode>
 SHAMapTreeNode::makeTransaction(
@@ -186,4 +186,4 @@ SHAMapTreeNode::getString(const SHAMapNodeID& id) const
     return to_string(id);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

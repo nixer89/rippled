@@ -28,7 +28,7 @@
 #include <cstring>
 #include <ed25519-donna/ed25519.h>
 
-namespace ripple {
+namespace xrpl {
 
 SecretKey::~SecretKey()
 {
@@ -383,4 +383,4 @@ parseBase58(TokenType type, std::string const& s)
     return SecretKey(makeSlice(result));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

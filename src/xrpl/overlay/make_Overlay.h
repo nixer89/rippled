@@ -27,7 +27,7 @@
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/ssl/context.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 Overlay::Setup
 setup_Overlay(BasicConfig const& config);
@@ -44,6 +44,6 @@ make_Overlay(
     BasicConfig const& config,
     beast::insight::Collector::ptr const& collector);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

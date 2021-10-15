@@ -32,7 +32,7 @@
 #include <test/jtx/envconfig.h>
 #include <test/jtx/ticket.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -139,7 +139,7 @@ class TxQ1_test : public beast::unit_test::suite
         // fee (1) and amendment (numUpVotedAmendments())
         // pseudotransactions. The queue treats the fees on these
         // transactions as though they are ordinary transactions.
-        auto const flagPerLedger = 1 + ripple::detail::numUpVotedAmendments();
+        auto const flagPerLedger = 1 + xrpl::detail::numUpVotedAmendments();
         auto const flagMaxQueue = ledgersInQueue * flagPerLedger;
         checkMetrics(env, 0, flagMaxQueue, 0, flagPerLedger, 256);
 
@@ -993,7 +993,7 @@ public:
 
             env.app().openLedger().modify(
                 [&](OpenView& view, beast::Journal j) {
-                    std::tie(ter, didApply) = ripple::apply(
+                    std::tie(ter, didApply) = xrpl::apply(
                         env.app(), view, *jt.stx, tapNONE, env.journal);
                     return didApply;
                 });
@@ -3987,7 +3987,7 @@ public:
             auto const tx =
                 env.jt(noop(alice), seq(aliceSeq), openLedgerFee(env));
             auto const result =
-                ripple::apply(env.app(), view, *tx.stx, tapUNLIMITED, j);
+                xrpl::apply(env.app(), view, *tx.stx, tapUNLIMITED, j);
             BEAST_EXPECT(result.first == tesSUCCESS && result.second);
             return result.second;
         });
@@ -4059,7 +4059,7 @@ public:
             auto const tx = env.jt(
                 noop(alice), ticket::use(tktSeq0 + 1), openLedgerFee(env));
             auto const result =
-                ripple::apply(env.app(), view, *tx.stx, tapUNLIMITED, j);
+                xrpl::apply(env.app(), view, *tx.stx, tapUNLIMITED, j);
             BEAST_EXPECT(result.first == tesSUCCESS && result.second);
             return result.second;
         });
@@ -4156,7 +4156,7 @@ public:
             if (!getMajorityAmendments(*env.closed()).empty())
                 break;
         }
-        auto expectedPerLedger = ripple::detail::numUpVotedAmendments() + 1;
+        auto expectedPerLedger = xrpl::detail::numUpVotedAmendments() + 1;
         checkMetrics(env, 0, 5 * expectedPerLedger, 0, expectedPerLedger, 256);
 
         // Now wait 2 weeks modulo 256 ledgers for the amendments to be
@@ -4646,8 +4646,8 @@ class TxQ2_test : public TxQ1_test
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(TxQ1, app, ripple, 1);
-BEAST_DEFINE_TESTSUITE_PRIO(TxQ2, app, ripple, 1);
+BEAST_DEFINE_TESTSUITE_PRIO(TxQ1, app, xrpl, 1);
+BEAST_DEFINE_TESTSUITE_PRIO(TxQ2, app, xrpl, 1);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

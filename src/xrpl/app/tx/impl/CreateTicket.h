@@ -25,7 +25,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/protocol/Indexes.h>
 
-namespace ripple {
+namespace xrpl {
 
 class CreateTicket : public Transactor
 {
@@ -84,6 +84,6 @@ public:
     doApply() override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

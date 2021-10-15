@@ -24,7 +24,7 @@
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 
 class AmendmentBlocked_test : public beast::unit_test::suite
 {
@@ -248,6 +248,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(AmendmentBlocked, app, ripple);
+BEAST_DEFINE_TESTSUITE(AmendmentBlocked, app, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

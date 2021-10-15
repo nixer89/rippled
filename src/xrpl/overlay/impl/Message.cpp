@@ -21,7 +21,7 @@
 #include <xrpl/overlay/impl/TrafficCount.h>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 Message::Message(
     ::google::protobuf::Message const& message,
@@ -30,7 +30,7 @@ Message::Message(
     : category_(TrafficCount::categorize(message, type, false))
     , validatorKey_(validator)
 {
-    using namespace ripple::compression;
+    using namespace xrpl::compression;
 
     auto const messageBytes = messageSize(message);
 
@@ -67,7 +67,7 @@ Message::totalSize(::google::protobuf::Message const& message)
 void
 Message::compress()
 {
-    using namespace ripple::compression;
+    using namespace xrpl::compression;
     auto const messageBytes = buffer_.size() - headerBytes;
 
     auto type = getType(buffer_.data());
@@ -111,7 +111,7 @@ Message::compress()
     {
         auto payload = static_cast<void const*>(buffer_.data() + headerBytes);
 
-        auto compressedSize = ripple::compression::compress(
+        auto compressedSize = xrpl::compression::compress(
             payload,
             messageBytes,
             [&](std::size_t inSize) {  // size of required compressed buffer
@@ -227,4 +227,4 @@ Message::getType(std::uint8_t const* in) const
     return type;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -20,7 +20,7 @@
 #ifndef RIPPLE_PEERFINDER_SIM_GRAPHALGORITHMS_H_INCLUDED
 #define RIPPLE_PEERFINDER_SIM_GRAPHALGORITHMS_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 namespace Sim {
 
@@ -71,6 +71,6 @@ breadth_first_traverse(Vertex& start, Function f)
 
 }  // namespace Sim
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

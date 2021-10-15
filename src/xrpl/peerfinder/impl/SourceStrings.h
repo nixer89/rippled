@@ -23,7 +23,7 @@
 #include <xrpl/peerfinder/impl/Source.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Provides addresses from a static set of strings. */
@@ -39,6 +39,6 @@ public:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

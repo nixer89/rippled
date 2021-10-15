@@ -27,7 +27,7 @@
 #include <optional>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 /**
  * The role of a `ClosureCounter` is to assist in shutdown by letting callers
@@ -221,6 +221,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_CORE_CLOSURE_COUNTER_H_INCLUDED

@@ -28,7 +28,7 @@
 #include <xrpl/protocol/HashPrefix.h>
 #include <xrpl/protocol/digest.h>
 
-namespace ripple {
+namespace xrpl {
 
 ConsensusTransSetSF::ConsensusTransSetSF(Application& app, NodeCache& nodeCache)
     : app_(app), m_nodeCache(nodeCache), j_(app.journal("TransactionAcquire"))
@@ -99,4 +99,4 @@ ConsensusTransSetSF::getNode(SHAMapHash const& nodeHash) const
     return std::nullopt;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

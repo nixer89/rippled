@@ -24,7 +24,7 @@
 #include <test/jtx/Account.h>
 #include <test/jtx/amount.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -127,4 +127,4 @@ any_t const any{};
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

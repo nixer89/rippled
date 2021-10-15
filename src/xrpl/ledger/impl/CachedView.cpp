@@ -21,7 +21,7 @@
 #include <xrpl/ledger/CachedView.h>
 #include <xrpl/protocol/Serializer.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 bool
@@ -66,4 +66,4 @@ CachedViewImpl::read(Keylet const& k) const
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl

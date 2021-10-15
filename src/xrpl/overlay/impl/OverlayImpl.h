@@ -50,7 +50,7 @@
 #include <optional>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 class PeerImp;
 class BasicConfig;
@@ -631,6 +631,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

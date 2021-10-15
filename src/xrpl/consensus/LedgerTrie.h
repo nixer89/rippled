@@ -30,7 +30,7 @@
 #include <stack>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** The tip of a span of ledger ancestry
  */
@@ -842,5 +842,5 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

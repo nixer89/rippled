@@ -29,7 +29,7 @@
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 
@@ -2519,7 +2519,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(JSONRPC, ripple_app, ripple);
+BEAST_DEFINE_TESTSUITE(JSONRPC, ripple_app, xrpl);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

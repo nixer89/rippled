@@ -23,7 +23,7 @@
 #include <cstdint>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Return value*mul/div accurately.
     Computes the result of the multiplication and division in
@@ -41,6 +41,6 @@ namespace ripple {
 std::pair<bool, std::uint64_t>
 mulDiv(std::uint64_t value, std::uint64_t mul, std::uint64_t div);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

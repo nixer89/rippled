@@ -20,7 +20,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <xrpl/overlay/impl/Handshake.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -58,7 +58,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(handshake, ripple_data, ripple);
+BEAST_DEFINE_TESTSUITE(handshake, ripple_data, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

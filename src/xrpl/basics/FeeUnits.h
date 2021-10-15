@@ -31,7 +31,7 @@
 #include <sstream>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 namespace feeunit {
 
@@ -552,6 +552,6 @@ unsafe_cast(Src s) noexcept
     return Dest{unsafe_cast<typename Dest::value_type>(s.value())};
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // BASICS_FEES_H_INCLUDED

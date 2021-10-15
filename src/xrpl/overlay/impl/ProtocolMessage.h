@@ -36,7 +36,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 inline protocol::MessageType
 protocolMessageType(protocol::TMGetLedger const&)
@@ -180,7 +180,7 @@ parseMessageHeader(
     BufferSequence const& bufs,
     std::size_t size)
 {
-    using namespace ripple::compression;
+    using namespace xrpl::compression;
 
     MessageHeader hdr;
     auto iter = buffersBegin(bufs);
@@ -282,7 +282,7 @@ parseMessageContent(MessageHeader const& header, Buffers const& buffers)
         std::vector<std::uint8_t> payload;
         payload.resize(header.uncompressed_size);
 
-        auto const payloadSize = ripple::compression::decompress(
+        auto const payloadSize = xrpl::compression::decompress(
             stream,
             header.payload_wire_size,
             payload.data(),
@@ -311,7 +311,7 @@ invoke(MessageHeader const& header, Buffers const& buffers, Handler& handler)
     if (!m)
         return false;
 
-    using namespace ripple::compression;
+    using namespace xrpl::compression;
     handler.onMessageBegin(
         header.message_type,
         m,
@@ -507,6 +507,6 @@ invokeProtocolMessage(
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -28,7 +28,7 @@
 #include <boost/algorithm/string/case_conv.hpp>
 #include <boost/format.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 // can_delete [<ledgerid>|<ledgerhash>|now|always|never]
 Json::Value
@@ -101,4 +101,4 @@ doCanDelete(RPC::JsonContext& context)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

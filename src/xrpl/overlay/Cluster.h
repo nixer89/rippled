@@ -33,7 +33,7 @@
 #include <set>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 class Cluster
 {
@@ -115,6 +115,6 @@ public:
     load(Section const& nodes);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

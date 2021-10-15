@@ -20,7 +20,7 @@
 #include <xrpl/protocol/TxFormats.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 TxFormats::TxFormats()
 {
@@ -280,4 +280,4 @@ TxFormats::getInstance()
     return instance;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

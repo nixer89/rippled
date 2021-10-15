@@ -31,7 +31,7 @@
 #include <optional>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 namespace path {
 namespace detail {
 // Track performance information of a single payment
@@ -233,7 +233,7 @@ struct FlowDebugInfo
                                        std::vector<EitherAmount> const& amts,
                                        char delim = ';') {
                 auto get_val = [](EitherAmount const& a) -> std::string {
-                    return ripple::to_string(a.xrp);
+                    return xrpl::to_string(a.xrp);
                 };
                 write_list(amts, get_val, delim);
             };
@@ -241,7 +241,7 @@ struct FlowDebugInfo
                                        std::vector<EitherAmount> const& amts,
                                        char delim = ';') {
                 auto get_val = [](EitherAmount const& a) -> std::string {
-                    return ripple::to_string(a.iou);
+                    return xrpl::to_string(a.iou);
                 };
                 write_list(amts, get_val, delim);
             };
@@ -372,5 +372,5 @@ balanceDiffsToString(std::optional<BalanceDiffs> const& bd)
 
 }  // namespace detail
 }  // namespace path
-}  // namespace ripple
+}  // namespace xrpl
 #endif

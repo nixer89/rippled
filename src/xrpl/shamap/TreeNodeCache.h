@@ -22,10 +22,10 @@
 
 #include <xrpl/shamap/SHAMapTreeNode.h>
 
-namespace ripple {
+namespace xrpl {
 
 using TreeNodeCache = TaggedCache<uint256, SHAMapTreeNode>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

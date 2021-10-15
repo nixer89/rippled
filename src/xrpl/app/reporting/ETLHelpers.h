@@ -27,7 +27,7 @@
 #include <queue>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 /// This datastructure is used to keep track of the sequence of the most recent
 /// ledger validated by the network. There are two methods that will wait until
@@ -181,5 +181,5 @@ getMarkers(size_t numMarkers)
     return markers;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

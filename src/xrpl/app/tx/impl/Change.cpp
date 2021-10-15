@@ -27,7 +27,7 @@
 #include <xrpl/protocol/Indexes.h>
 #include <xrpl/protocol/TxFlags.h>
 
-namespace ripple {
+namespace xrpl {
 
 NotTEC
 Change::preflight(PreflightContext const& ctx)
@@ -369,4 +369,4 @@ Change::applyUNLModify()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <boost/regex.hpp>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 std::string
 sqlBlobLiteral(Blob const& blob)
@@ -139,4 +139,4 @@ isProperlyFormedTomlDomain(std::string const& domain)
     return boost::regex_match(domain, re);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

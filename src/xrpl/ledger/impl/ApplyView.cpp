@@ -22,7 +22,7 @@
 #include <xrpl/protocol/Protocol.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 std::optional<std::uint64_t>
 ApplyView::dirAdd(
@@ -334,4 +334,4 @@ ApplyView::dirRemove(
     return true;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

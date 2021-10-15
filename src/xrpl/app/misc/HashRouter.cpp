@@ -19,7 +19,7 @@
 
 #include <xrpl/app/misc/HashRouter.h>
 
-namespace ripple {
+namespace xrpl {
 
 auto
 HashRouter::emplace(uint256 const& key) -> std::pair<Entry&, bool>
@@ -138,4 +138,4 @@ HashRouter::shouldRecover(uint256 const& key)
     return s.shouldRecover(recoverLimit_);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

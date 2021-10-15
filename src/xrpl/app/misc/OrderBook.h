@@ -20,7 +20,7 @@
 #ifndef RIPPLE_APP_MISC_ORDERBOOK_H_INCLUDED
 #define RIPPLE_APP_MISC_ORDERBOOK_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 
 /** Describes a serialized ledger entry for an order book. */
 class OrderBook
@@ -82,6 +82,6 @@ private:
     Book const mBook;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

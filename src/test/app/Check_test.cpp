@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -1952,7 +1952,7 @@ class Check_test : public beast::unit_test::suite
                 return acct;
             }
 
-            operator ripple::AccountID() const
+            operator xrpl::AccountID() const
             {
                 return acct.id();
             }
@@ -2627,6 +2627,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Check, tx, ripple);
+BEAST_DEFINE_TESTSUITE(Check, tx, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

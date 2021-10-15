@@ -23,7 +23,7 @@
 #include <boost/asio/ssl/context.hpp>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** Create a self-signed SSL context that allows anonymous Diffie Hellman. */
 std::shared_ptr<boost::asio::ssl::context>
@@ -37,6 +37,6 @@ make_SSLContextAuthed(
     std::string const& chainFile,
     std::string const& cipherList);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -37,7 +37,7 @@
 #include <unordered_map>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace perf {
 
 PerfLogImp::Counters::Counters(
@@ -498,4 +498,4 @@ make_PerfLog(
 }
 
 }  // namespace perf
-}  // namespace ripple
+}  // namespace xrpl

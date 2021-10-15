@@ -30,7 +30,7 @@
 #include <condition_variable>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 class Ledger;
 
@@ -404,6 +404,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

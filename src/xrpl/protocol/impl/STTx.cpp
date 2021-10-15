@@ -39,7 +39,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 static auto
 getTxFormat(TxType type)
@@ -180,7 +180,7 @@ STTx::sign(PublicKey const& publicKey, SecretKey const& secretKey)
 {
     auto const data = getSigningData(*this);
 
-    auto const sig = ripple::sign(publicKey, secretKey, makeSlice(data));
+    auto const sig = xrpl::sign(publicKey, secretKey, makeSlice(data));
 
     setFieldVL(sfTxnSignature, sig);
     tid_ = getHash(HashPrefix::transactionID);
@@ -541,4 +541,4 @@ isPseudoTx(STObject const& tx)
     return tt == ttAMENDMENT || tt == ttFEE || tt == ttUNL_MODIFY;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

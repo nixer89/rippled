@@ -34,7 +34,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 Transaction::Transaction(
     std::shared_ptr<STTx const> const& stx,
@@ -175,4 +175,4 @@ Transaction::getJson(JsonOptions options, bool binary) const
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -23,7 +23,7 @@
 
 #include <set>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Scheduler_test : public beast::unit_test::suite
@@ -83,7 +83,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Scheduler, test, ripple);
+BEAST_DEFINE_TESTSUITE(Scheduler, test, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 class AccountSet_test : public beast::unit_test::suite
 {
@@ -555,6 +555,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(AccountSet, app, ripple, 1);
+BEAST_DEFINE_TESTSUITE_PRIO(AccountSet, app, xrpl, 1);
 
-}  // namespace ripple
+}  // namespace xrpl

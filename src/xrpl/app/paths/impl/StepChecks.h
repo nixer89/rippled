@@ -26,7 +26,7 @@
 #include <xrpl/protocol/AccountID.h>
 #include <xrpl/protocol/UintTypes.h>
 
-namespace ripple {
+namespace xrpl {
 
 inline TER
 checkFreeze(
@@ -85,6 +85,6 @@ checkNoRipple(
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -20,7 +20,7 @@
 #ifndef RIPPLE_LEDGER_READVIEWFWDRANGEINL_H_INCLUDED
 #define RIPPLE_LEDGER_READVIEWFWDRANGEINL_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 template <class ValueType>
@@ -131,6 +131,6 @@ ReadViewFwdRange<ValueType>::iterator::operator++(int) -> iterator
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

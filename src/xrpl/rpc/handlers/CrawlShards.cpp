@@ -27,7 +27,7 @@
 #include <xrpl/resource/Fees.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** RPC command that reports stored shards by nodes.
     {
@@ -70,4 +70,4 @@ doCrawlShards(RPC::JsonContext& context)
     return jvResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

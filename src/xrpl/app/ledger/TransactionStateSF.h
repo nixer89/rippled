@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/Database.h>
 #include <xrpl/shamap/SHAMapSyncFilter.h>
 
-namespace ripple {
+namespace xrpl {
 
 // This class is only needed on add functions
 // sync filter for transactions tree during ledger sync
@@ -52,6 +52,6 @@ private:
     AbstractFetchPackContainer& fp_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

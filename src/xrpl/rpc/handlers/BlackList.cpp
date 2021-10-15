@@ -22,7 +22,7 @@
 #include <xrpl/resource/ResourceManager.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doBlackList(RPC::JsonContext& context)
@@ -34,4 +34,4 @@ doBlackList(RPC::JsonContext& context)
         return rm.getJson();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

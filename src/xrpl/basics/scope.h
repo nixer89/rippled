@@ -24,7 +24,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 // RAII scope helpers.  As specified in Library Fundamental, Version 3
 // Basic design of idea:  https://www.youtube.com/watch?v=WjTrfoiB0MQ
@@ -186,6 +186,6 @@ public:
 template <class EF>
 scope_success(EF) -> scope_success<EF>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

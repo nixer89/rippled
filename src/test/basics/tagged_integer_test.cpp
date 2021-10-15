@@ -22,7 +22,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class tagged_integer_test : public beast::unit_test::suite
@@ -251,7 +251,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(tagged_integer, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(tagged_integer, ripple_basics, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

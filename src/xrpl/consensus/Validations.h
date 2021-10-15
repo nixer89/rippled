@@ -32,7 +32,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** Timing parameters to control validation staleness and expiration.
 
@@ -1128,5 +1128,5 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

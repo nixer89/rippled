@@ -24,7 +24,7 @@
 #include <test/jtx/Env.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Transaction_test : public beast::unit_test::suite
 {
@@ -287,6 +287,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Transaction, rpc, ripple);
+BEAST_DEFINE_TESTSUITE(Transaction, rpc, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

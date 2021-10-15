@@ -20,7 +20,7 @@
 #include <test/jtx/sig.h>
 #include <test/jtx/utility.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -40,4 +40,4 @@ sig::operator()(Env&, JTx& jt) const
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

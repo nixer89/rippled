@@ -23,7 +23,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 
 /*
 I guess you can put some items in, make sure they're still there. Let some
@@ -150,6 +150,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(TaggedCache, common, ripple);
+BEAST_DEFINE_TESTSUITE(TaggedCache, common, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

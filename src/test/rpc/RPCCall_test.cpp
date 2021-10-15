@@ -26,7 +26,7 @@
 #include <initializer_list>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct RPCCallTestData
@@ -6522,7 +6522,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RPCCall, app, ripple);
+BEAST_DEFINE_TESTSUITE(RPCCall, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 #include <xrpl/protocol/Indexes.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 ApplyContext::ApplyContext(
     Application& app_,
@@ -154,4 +154,4 @@ ApplyContext::checkInvariants(TER const result, XRPAmount const fee)
         std::make_index_sequence<std::tuple_size<InvariantChecks>::value>{});
 }
 
-}  // namespace ripple
+}  // namespace xrpl

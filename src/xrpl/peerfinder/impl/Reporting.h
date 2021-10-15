@@ -20,7 +20,7 @@
 #ifndef RIPPLE_PEERFINDER_REPORTING_H_INCLUDED
 #define RIPPLE_PEERFINDER_REPORTING_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Severity levels for test reporting.
@@ -44,6 +44,6 @@ struct Reporting
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

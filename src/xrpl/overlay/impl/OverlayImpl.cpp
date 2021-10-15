@@ -41,7 +41,7 @@
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/utility/in_place_factory.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace CrawlOptions {
 enum {
@@ -1660,4 +1660,4 @@ make_Overlay(
         collector);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

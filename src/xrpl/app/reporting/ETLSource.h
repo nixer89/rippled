@@ -32,7 +32,7 @@
 #include "org/xrpl/rpc/v1/xrp_ledger.grpc.pb.h"
 #include <grpcpp/grpcpp.h>
 
-namespace ripple {
+namespace xrpl {
 
 class ReportingETL;
 
@@ -431,5 +431,5 @@ private:
     execute(Func f, uint32_t ledgerSequence);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

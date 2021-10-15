@@ -33,7 +33,7 @@
 #include <atomic>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class RocksDBEnv : public rocksdb::EnvWrapper
@@ -462,6 +462,6 @@ public:
 static RocksDBFactory rocksDBFactory;
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

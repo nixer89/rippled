@@ -31,7 +31,7 @@
 #include <optional>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -130,7 +130,7 @@ public:
 
     explicit AccountIDCache(std::size_t capacity);
 
-    /** Return ripple::toBase58 for the AccountID
+    /** Return xrpl::toBase58 for the AccountID
 
         Thread Safety:
             Safe to call from any thread concurrently
@@ -142,7 +142,7 @@ public:
     toBase58(AccountID const&) const;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 //------------------------------------------------------------------------------
 
@@ -151,7 +151,7 @@ namespace std {
 // DEPRECATED
 // VFALCO Use beast::uhash or a hardened container
 template <>
-struct hash<ripple::AccountID> : ripple::AccountID::hasher
+struct hash<xrpl::AccountID> : xrpl::AccountID::hasher
 {
     explicit hash() = default;
 };

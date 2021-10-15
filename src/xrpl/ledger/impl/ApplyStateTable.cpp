@@ -24,7 +24,7 @@
 #include <xrpl/protocol/st.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 void
@@ -652,4 +652,4 @@ ApplyStateTable::threadOwners(
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl

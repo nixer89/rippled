@@ -22,7 +22,7 @@
 
 #include <xrpl/app/rdb/RelationalDBInterface.h>
 
-namespace ripple {
+namespace xrpl {
 
 class RelationalDBInterfaceSqlite : public RelationalDBInterface
 {
@@ -297,6 +297,6 @@ public:
     closeTransactionDB() = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

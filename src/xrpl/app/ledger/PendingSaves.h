@@ -25,7 +25,7 @@
 #include <map>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 /** Keeps track of which ledgers haven't been fully saved.
 
@@ -142,6 +142,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

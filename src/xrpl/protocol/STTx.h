@@ -29,7 +29,7 @@
 #include <boost/container/flat_set.hpp>
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 enum TxnSql : char {
     txnSqlNew = 'N',
@@ -178,6 +178,6 @@ sterilize(STTx const& stx);
 bool
 isPseudoTx(STObject const& tx);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -27,7 +27,7 @@
 #include <xrpl/resource/Consumer.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 // Operations that clients may wish to perform against the network
 // Master operational handler, server sequencer, network tracker
@@ -196,6 +196,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

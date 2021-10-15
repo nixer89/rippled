@@ -22,7 +22,7 @@
 
 #include <boost/utility/string_ref.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 using Output = std::function<void(boost::string_ref const&)>;
@@ -34,6 +34,6 @@ stringOutput(std::string& s)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -88,7 +88,7 @@
 #include <utility>
 #include <variant>
 
-namespace ripple {
+namespace xrpl {
 
 // VFALCO TODO Move the function definitions into the class declaration
 class ApplicationImp : public Application, public BasicApp
@@ -1256,7 +1256,7 @@ ApplicationImp::setup()
             supported.reserve(amendments.size());
             for (auto const& [a, vote] : amendments)
             {
-                auto const f = ripple::getRegisteredFeature(a);
+                auto const f = xrpl::getRegisteredFeature(a);
                 assert(f);
                 if (f)
                     supported.emplace_back(a, *f, vote);
@@ -2144,4 +2144,4 @@ make_Application(
         std::move(config), std::move(logs), std::move(timeKeeper));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

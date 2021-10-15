@@ -22,7 +22,7 @@
 #include <test/csf/ledgers.h>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class LedgerTrie_test : public beast::unit_test::suite
@@ -677,6 +677,6 @@ class LedgerTrie_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(LedgerTrie, consensus, ripple);
+BEAST_DEFINE_TESTSUITE(LedgerTrie, consensus, xrpl);
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

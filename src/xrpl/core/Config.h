@@ -39,7 +39,7 @@
 #include <unordered_set>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class Rules;
 
@@ -339,6 +339,6 @@ public:
         const;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

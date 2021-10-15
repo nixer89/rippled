@@ -20,7 +20,7 @@
 #include <xrpl/basics/StringUtilities.h>
 #include <xrpl/protocol/STBlob.h>
 
-namespace ripple {
+namespace xrpl {
 
 STBlob::STBlob(SerialIter& st, SField const& name)
     : STBase(name), value_(st.getVLBuffer())
@@ -40,4 +40,4 @@ STBlob::isEquivalent(const STBase& t) const
     return v && (value_ == v->value_);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

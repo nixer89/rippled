@@ -28,7 +28,7 @@
 
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 using namespace std::chrono_literals;
 
@@ -271,4 +271,4 @@ TransactionAcquire::stillNeed()
         timeouts_ = NORM_TIMEOUTS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

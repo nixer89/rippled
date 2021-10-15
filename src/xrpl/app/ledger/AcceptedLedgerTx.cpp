@@ -24,7 +24,7 @@
 #include <xrpl/protocol/UintTypes.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 AcceptedLedgerTx::AcceptedLedgerTx(
     std::shared_ptr<ReadView const> const& ledger,
@@ -117,4 +117,4 @@ AcceptedLedgerTx::buildJson()
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

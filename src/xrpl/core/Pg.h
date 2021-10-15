@@ -37,7 +37,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 // These postgres structs must be freed only by the postgres API.
 using pg_result_type = std::unique_ptr<PGresult, void (*)(PGresult*)>;
@@ -514,7 +514,7 @@ make_PgPool(Section const& pgConfig, beast::Journal j);
 void
 initSchema(std::shared_ptr<PgPool> const& pool);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_CORE_PG_H_INCLUDED
 #endif  // XRPLD_REPORTING

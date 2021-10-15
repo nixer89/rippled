@@ -35,7 +35,7 @@
 
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Tx_test : public beast::unit_test::suite
@@ -825,6 +825,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Tx, app, ripple);
+BEAST_DEFINE_TESTSUITE(Tx, app, xrpl);
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

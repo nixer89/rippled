@@ -26,7 +26,7 @@
 #include <xrpl/core/JobQueue.h>
 #include <xrpl/overlay/PeerSet.h>
 
-namespace ripple {
+namespace xrpl {
 
 LedgerDeltaAcquire::LedgerDeltaAcquire(
     Application& app,
@@ -276,4 +276,4 @@ LedgerDeltaAcquire::notify(ScopedLockType& sl)
     sl.lock();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

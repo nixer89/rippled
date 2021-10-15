@@ -31,7 +31,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 template <class FlowResult>
 static auto
@@ -201,4 +201,4 @@ flow(
             flowDebugInfo));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/Role.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 struct JsonContext;
@@ -59,4 +59,4 @@ doPing(RPC::JsonContext& context)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

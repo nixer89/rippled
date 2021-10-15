@@ -28,7 +28,7 @@
 #include <mutex>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 LoadManager::LoadManager(Application& app, beast::Journal journal)
     : app_(app), journal_(journal), deadLock_(), armed_(false)
@@ -199,4 +199,4 @@ make_LoadManager(Application& app, beast::Journal journal)
     return std::unique_ptr<LoadManager>{new LoadManager{app, journal}};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

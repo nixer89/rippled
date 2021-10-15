@@ -23,7 +23,7 @@
 
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 struct JsonContext;
@@ -38,4 +38,4 @@ doStop(RPC::JsonContext& context)
     return RPC::makeObjectValue(systemName() + " server stopping");
 }
 
-}  // namespace ripple
+}  // namespace xrpl

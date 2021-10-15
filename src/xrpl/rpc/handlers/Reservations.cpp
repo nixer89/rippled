@@ -29,7 +29,7 @@
 #include <string>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doPeerReservationsAdd(RPC::JsonContext& context)
@@ -135,4 +135,4 @@ doPeerReservationsList(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

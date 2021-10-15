@@ -26,7 +26,7 @@
 #include <xrpl/protocol/UintTypes.h>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class Config;
 
@@ -55,6 +55,6 @@ private:
     bool configInvalid_ = false;  //< Set to true if config was invalid
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

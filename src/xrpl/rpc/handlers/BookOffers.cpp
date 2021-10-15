@@ -29,7 +29,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doBookOffers(RPC::JsonContext& context)
@@ -200,4 +200,4 @@ doBookOffers(RPC::JsonContext& context)
     return jvResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

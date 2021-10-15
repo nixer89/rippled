@@ -24,7 +24,7 @@
 
 namespace Json {
 
-class JsonWriter_test : public ripple::test::TestOutputSuite
+class JsonWriter_test : public xrpl::test::TestOutputSuite
 {
 public:
     void
@@ -212,6 +212,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(JsonWriter, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(JsonWriter, ripple_basics, xrpl);
 
 }  // namespace Json

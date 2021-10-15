@@ -29,7 +29,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 // Check equal with tolerance
 bool
@@ -627,4 +627,4 @@ isDirectXrpToXrp<IOUAmount, XRPAmount>(Strand const& strand);
 template bool
 isDirectXrpToXrp<IOUAmount, IOUAmount>(Strand const& strand);
 
-}  // namespace ripple
+}  // namespace xrpl

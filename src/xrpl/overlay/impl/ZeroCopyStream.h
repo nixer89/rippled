@@ -24,7 +24,7 @@
 #include <cstdint>
 #include <google/protobuf/io/zero_copy_stream.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Implements ZeroCopyInputStream around a buffer sequence.
     @tparam Buffers A type meeting the requirements of ConstBufferSequence.
@@ -211,6 +211,6 @@ ZeroCopyOutputStream<Streambuf>::BackUp(int count)
     commit_ = 0;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

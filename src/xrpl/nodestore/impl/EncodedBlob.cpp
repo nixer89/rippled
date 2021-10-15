@@ -20,7 +20,7 @@
 #include <xrpl/nodestore/impl/EncodedBlob.h>
 #include <cstring>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 void
@@ -39,4 +39,4 @@ EncodedBlob::prepare(std::shared_ptr<NodeObject> const& object)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

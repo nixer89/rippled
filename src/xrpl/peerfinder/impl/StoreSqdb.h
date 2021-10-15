@@ -26,7 +26,7 @@
 #include <xrpl/peerfinder/impl/Store.h>
 #include <boost/optional.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Database persistence for PeerFinder using SQLite */
@@ -110,6 +110,6 @@ private:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

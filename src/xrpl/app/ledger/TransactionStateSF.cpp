@@ -19,7 +19,7 @@
 
 #include <xrpl/app/ledger/TransactionStateSF.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 TransactionStateSF::gotNode(
@@ -44,4 +44,4 @@ TransactionStateSF::getNode(SHAMapHash const& nodeHash) const
     return fp_.getFetchPack(nodeHash.as_uint256());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -31,7 +31,7 @@
 #include <string>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 // This test suite uses the google::protobuf::Descriptor class to do runtime
 // reflection on our gRPC stuff.  At the time of this writing documentation
@@ -960,6 +960,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(KnownFormatToGRPC, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(KnownFormatToGRPC, protocol, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

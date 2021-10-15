@@ -32,7 +32,7 @@
 #include <memory>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 using ServerHandler = ServerHandlerImp;
 
@@ -48,6 +48,6 @@ make_ServerHandler(
     Resource::Manager&,
     CollectorManager& cm);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

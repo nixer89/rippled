@@ -24,7 +24,7 @@
 #include <xrpl/app/ledger/impl/SkipListAcquire.h>
 #include <xrpl/core/JobQueue.h>
 
-namespace ripple {
+namespace xrpl {
 
 LedgerReplayTask::TaskParameter::TaskParameter(
     InboundLedger::Reason r,
@@ -303,4 +303,4 @@ LedgerReplayTask::finished() const
     return isDone();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

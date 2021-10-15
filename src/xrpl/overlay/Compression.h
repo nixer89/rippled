@@ -24,7 +24,7 @@
 #include <xrpl/basics/Log.h>
 #include <lz4frame.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace compression {
 
@@ -57,7 +57,7 @@ decompress(
     try
     {
         if (algorithm == Algorithm::LZ4)
-            return ripple::compression_algorithms::lz4Decompress(
+            return xrpl::compression_algorithms::lz4Decompress(
                 in, inSize, decompressed, decompressedSize);
         else
         {
@@ -93,7 +93,7 @@ compress(
     try
     {
         if (algorithm == Algorithm::LZ4)
-            return ripple::compression_algorithms::lz4Compress(
+            return xrpl::compression_algorithms::lz4Compress(
                 in, inSize, std::forward<BufferFactory>(bf));
         else
         {
@@ -109,6 +109,6 @@ compress(
 }
 }  // namespace compression
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // XRPLD_COMPRESSION_H_INCLUDED

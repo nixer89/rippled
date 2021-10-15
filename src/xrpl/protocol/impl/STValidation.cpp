@@ -23,7 +23,7 @@
 #include <xrpl/protocol/HashPrefix.h>
 #include <xrpl/protocol/STValidation.h>
 
-namespace ripple {
+namespace xrpl {
 
 SOTemplate const&
 STValidation::validationFormat()
@@ -122,4 +122,4 @@ STValidation::getSerialized() const
     return s.peekData();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

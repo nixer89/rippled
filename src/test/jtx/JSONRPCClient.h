@@ -24,7 +24,7 @@
 #include <memory>
 #include <test/jtx/AbstractClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 /** Returns a client using JSON-RPC over HTTP/S. */
@@ -32,6 +32,6 @@ std::unique_ptr<AbstractClient>
 makeJSONRPCClient(Config const& cfg, unsigned rpc_version = 2);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

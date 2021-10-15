@@ -26,7 +26,7 @@
 #include <xrpl/peerfinder/Slot.h>
 #include <boost/asio/ip/tcp.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 using clock_type = beast::abstract_clock<std::chrono::steady_clock>;
@@ -101,7 +101,7 @@ struct Config
      */
     static Config
     makeConfig(
-        ripple::Config const& config,
+        xrpl::Config const& config,
         std::uint16_t port,
         bool validationPublicKey,
         int ipLimit);
@@ -272,6 +272,6 @@ public:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

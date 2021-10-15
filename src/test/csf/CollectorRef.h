@@ -22,7 +22,7 @@
 #include <test/csf/SimTime.h>
 #include <test/csf/events.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace csf {
 
@@ -345,6 +345,6 @@ public:
 
 }  // namespace csf
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

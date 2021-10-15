@@ -26,7 +26,7 @@
 #include <test/shamap/common.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 namespace tests {
 
 class SHAMapSync_test : public beast::unit_test::suite
@@ -201,7 +201,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(SHAMapSync, shamap, ripple);
+BEAST_DEFINE_TESTSUITE(SHAMapSync, shamap, xrpl);
 
 }  // namespace tests
-}  // namespace ripple
+}  // namespace xrpl

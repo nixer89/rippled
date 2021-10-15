@@ -25,7 +25,7 @@
 #include <nudb/nudb.hpp>
 #include <set>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** DeterministicShard class.
@@ -169,6 +169,6 @@ make_DeterministicShard(
     beast::Journal j);
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

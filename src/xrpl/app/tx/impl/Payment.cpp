@@ -26,7 +26,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 TxConsequences
 Payment::makeTxConsequences(PreflightContext const& ctx)
@@ -515,4 +515,4 @@ Payment::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

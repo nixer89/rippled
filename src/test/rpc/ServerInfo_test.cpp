@@ -23,7 +23,7 @@
 
 #include <boost/format.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -96,7 +96,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(ServerInfo, app, ripple);
+BEAST_DEFINE_TESTSUITE(ServerInfo, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

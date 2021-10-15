@@ -23,7 +23,7 @@
 #include <xrpl/nodestore/DatabaseShard.h>
 #include <xrpl/shamap/ShardFamily.h>
 
-namespace ripple {
+namespace xrpl {
 
 static NodeStore::Database&
 getShardStore(Application& app)
@@ -192,4 +192,4 @@ ShardFamily::acquire(uint256 const& hash, std::uint32_t seq)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

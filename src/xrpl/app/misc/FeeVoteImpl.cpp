@@ -25,7 +25,7 @@
 #include <xrpl/protocol/STValidation.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -281,4 +281,4 @@ make_FeeVote(FeeVote::Setup const& setup, beast::Journal journal)
     return std::make_unique<FeeVoteImpl>(setup, journal);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 #include <xrpl/core/impl/Workers.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 Workers::Workers(
     Callback& callback,
@@ -277,4 +277,4 @@ Workers::Worker::run()
     } while (!shouldExit);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

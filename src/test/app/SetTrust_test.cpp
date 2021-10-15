@@ -20,7 +20,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -265,6 +265,6 @@ public:
         testModifyQualityOfTrustline(true, true);
     }
 };
-BEAST_DEFINE_TESTSUITE(SetTrust, app, ripple);
+BEAST_DEFINE_TESTSUITE(SetTrust, app, xrpl);
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -23,7 +23,7 @@
 #include <xrpl/basics/contract.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 // Can std::atomic<std::shared_ptr>> make this lock free?
 
@@ -70,6 +70,6 @@ private:
     std::shared_ptr<Ledger const> m_heldLedger;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

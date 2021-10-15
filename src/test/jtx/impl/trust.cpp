@@ -22,7 +22,7 @@
 #include <stdexcept>
 #include <test/jtx/trust.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -61,4 +61,4 @@ trust(
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

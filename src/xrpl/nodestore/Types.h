@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/NodeObject.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 enum {
@@ -65,6 +65,6 @@ enum class ShardState : std::uint32_t {
     queued       // Queued to be finalized
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

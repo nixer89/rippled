@@ -24,7 +24,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <xrpl/protocol/SystemParameters.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 TransactionFeeCheck::visitEntry(
@@ -485,4 +485,4 @@ ValidNewAccountRoot::finalize(
     return false;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

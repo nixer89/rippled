@@ -26,7 +26,7 @@
 #include <boost/beast/core/tcp_stream.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 template <class Handler>
 class PlainHTTPPeer
@@ -171,6 +171,6 @@ PlainHTTPPeer<Handler>::do_close()
     socket_.shutdown(socket_type::shutdown_send, ec);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

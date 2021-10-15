@@ -23,7 +23,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 
@@ -1149,7 +1149,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(AccountLinesRPC, app, ripple);
+BEAST_DEFINE_TESTSUITE(AccountLinesRPC, app, xrpl);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

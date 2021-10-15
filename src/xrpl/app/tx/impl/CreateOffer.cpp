@@ -26,7 +26,7 @@
 #include <xrpl/protocol/Quality.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 TxConsequences
 CreateOffer::makeTxConsequences(PreflightContext const& ctx)
@@ -1234,4 +1234,4 @@ CreateOffer::doApply()
     return result.first;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

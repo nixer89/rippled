@@ -20,7 +20,7 @@
 #include <xrpl/basics/contract.h>
 #include <xrpl/shamap/SHAMap.h>
 
-namespace ripple {
+namespace xrpl {
 
 // This code is used to compare another node's transaction tree
 // to our own. It returns a map containing all items that are different
@@ -286,4 +286,4 @@ SHAMap::walkMap(std::vector<SHAMapMissingNode>& missingNodes, int maxMissing)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

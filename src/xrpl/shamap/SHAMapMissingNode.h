@@ -27,7 +27,7 @@
 #include <string>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 enum class SHAMapType {
     TRANSACTION = 1,  // A tree of transactions
@@ -68,6 +68,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

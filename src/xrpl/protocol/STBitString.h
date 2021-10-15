@@ -23,7 +23,7 @@
 #include <xrpl/beast/utility/Zero.h>
 #include <xrpl/protocol/STBase.h>
 
-namespace ripple {
+namespace xrpl {
 
 template <std::size_t Bits>
 class STBitString final : public STBase
@@ -139,6 +139,6 @@ STHash256::getSType() const
     return STI_HASH256;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

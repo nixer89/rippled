@@ -23,7 +23,7 @@
 #include <cstdint>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 RippleState::pointer
 RippleState::makeItem(
@@ -82,4 +82,4 @@ getRippleStateItems(AccountID const& accountID, ReadView const& view)
     return items;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

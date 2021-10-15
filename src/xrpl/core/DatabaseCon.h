@@ -32,7 +32,7 @@ namespace soci {
 class session;
 }
 
-namespace ripple {
+namespace xrpl {
 
 class LockedSociSession
 {
@@ -236,6 +236,6 @@ setup_DatabaseCon(
     Config const& c,
     std::optional<beast::Journal> j = std::nullopt);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

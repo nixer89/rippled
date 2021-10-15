@@ -22,7 +22,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <test/unit_test/FileDirGuard.h>
 
-namespace ripple {
+namespace xrpl {
 
 class FileUtilities_test : public beast::unit_test::suite
 {
@@ -30,7 +30,7 @@ public:
     void
     testGetFileContents()
     {
-        using namespace ripple::test::detail;
+        using namespace xrpl::test::detail;
         using namespace boost::system;
 
         constexpr const char* expectedContents =
@@ -78,6 +78,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(FileUtilities, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(FileUtilities, ripple_basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

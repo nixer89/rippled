@@ -19,7 +19,7 @@
 
 #include <xrpl/protocol/Sign.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 sign(
@@ -100,4 +100,4 @@ startMultiSigningData(STObject const& obj)
     return s;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

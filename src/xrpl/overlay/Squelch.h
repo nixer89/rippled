@@ -29,7 +29,7 @@
 #include <chrono>
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 namespace reduce_relay {
 
@@ -124,6 +124,6 @@ Squelch<clock_type>::expireSquelch(PublicKey const& validator)
 
 }  // namespace reduce_relay
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // XRPLD_SQUELCH_H

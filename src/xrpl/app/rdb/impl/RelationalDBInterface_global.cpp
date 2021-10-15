@@ -32,7 +32,7 @@
 #include <boost/range/adaptor/transformed.hpp>
 #include <soci/sqlite3/soci-sqlite3.h>
 
-namespace ripple {
+namespace xrpl {
 
 /* Wallet DB */
 
@@ -833,4 +833,4 @@ savePeerFinderDB(
     tr.commit();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

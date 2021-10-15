@@ -19,7 +19,7 @@
 
 #include <xrpl/net/HTTPStream.h>
 
-namespace ripple {
+namespace xrpl {
 
 SSLStream::SSLStream(
     Config const& config,
@@ -200,4 +200,4 @@ RawStream::asyncReadSome(
     boost::beast::http::async_read_some(*stream_, buf, p, yield[ec]);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

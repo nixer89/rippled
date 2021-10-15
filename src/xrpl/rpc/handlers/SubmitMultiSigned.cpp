@@ -24,7 +24,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/TransactionSign.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   SigningAccounts <array>,
@@ -46,4 +46,4 @@ doSubmitMultiSigned(RPC::JsonContext& context)
         RPC::getProcessTxnFn(context.netOps));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

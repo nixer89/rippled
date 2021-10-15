@@ -22,7 +22,7 @@
 #include <xrpl/core/ConfigSections.h>
 #include <xrpl/nodestore/DatabaseShard.h>
 
-namespace ripple {
+namespace xrpl {
 
 extern std::unique_ptr<RelationalDBInterface>
 getRelationalDBInterfaceSqlite(
@@ -83,4 +83,4 @@ RelationalDBInterface::init(
     return std::unique_ptr<RelationalDBInterface>();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <boost/format.hpp>
 #include <limits>
 
-namespace ripple {
+namespace xrpl {
 
 STLedgerEntry::STLedgerEntry(Keylet const& k)
     : STObject(sfLedgerEntry), key_(k.key), type_(k.type)
@@ -136,4 +136,4 @@ STLedgerEntry::thread(
     return true;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

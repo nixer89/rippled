@@ -38,7 +38,7 @@
 #include <boost/range/adaptor/transformed.hpp>
 #include <soci/sqlite3/soci-sqlite3.h>
 
-namespace ripple {
+namespace xrpl {
 
 class RelationalDBInterfacePostgresImp : public RelationalDBInterfacePostgres
 {
@@ -151,25 +151,25 @@ RelationalDBInterfacePostgresImp::sweep()
 std::optional<LedgerIndex>
 RelationalDBInterfacePostgresImp::getMinLedgerSeq()
 {
-    return ripple::getMinLedgerSeq(pgPool_, j_);
+    return xrpl::getMinLedgerSeq(pgPool_, j_);
 }
 
 std::optional<LedgerIndex>
 RelationalDBInterfacePostgresImp::getMaxLedgerSeq()
 {
-    return ripple::getMaxLedgerSeq(pgPool_);
+    return xrpl::getMaxLedgerSeq(pgPool_);
 }
 
 std::string
 RelationalDBInterfacePostgresImp::getCompleteLedgers()
 {
-    return ripple::getCompleteLedgers(pgPool_);
+    return xrpl::getCompleteLedgers(pgPool_);
 }
 
 std::chrono::seconds
 RelationalDBInterfacePostgresImp::getValidatedLedgerAge()
 {
-    return ripple::getValidatedLedgerAge(pgPool_, j_);
+    return xrpl::getValidatedLedgerAge(pgPool_, j_);
 }
 
 bool
@@ -177,38 +177,38 @@ RelationalDBInterfacePostgresImp::writeLedgerAndTransactions(
     LedgerInfo const& info,
     std::vector<AccountTransactionsData> const& accountTxData)
 {
-    return ripple::writeLedgerAndTransactions(pgPool_, info, accountTxData, j_);
+    return xrpl::writeLedgerAndTransactions(pgPool_, info, accountTxData, j_);
 }
 
 std::optional<LedgerInfo>
 RelationalDBInterfacePostgresImp::getLedgerInfoByIndex(LedgerIndex ledgerSeq)
 {
-    return ripple::getLedgerInfoByIndex(pgPool_, ledgerSeq, app_);
+    return xrpl::getLedgerInfoByIndex(pgPool_, ledgerSeq, app_);
 }
 
 std::optional<LedgerInfo>
 RelationalDBInterfacePostgresImp::getNewestLedgerInfo()
 {
-    return ripple::getNewestLedgerInfo(pgPool_, app_);
+    return xrpl::getNewestLedgerInfo(pgPool_, app_);
 }
 
 std::optional<LedgerInfo>
 RelationalDBInterfacePostgresImp::getLedgerInfoByHash(uint256 const& ledgerHash)
 {
-    return ripple::getLedgerInfoByHash(pgPool_, ledgerHash, app_);
+    return xrpl::getLedgerInfoByHash(pgPool_, ledgerHash, app_);
 }
 
 uint256
 RelationalDBInterfacePostgresImp::getHashByIndex(LedgerIndex ledgerIndex)
 {
-    return ripple::getHashByIndex(pgPool_, ledgerIndex, app_);
+    return xrpl::getHashByIndex(pgPool_, ledgerIndex, app_);
 }
 
 std::optional<LedgerHashPair>
 RelationalDBInterfacePostgresImp::getHashesByIndex(LedgerIndex ledgerIndex)
 {
     LedgerHashPair p;
-    if (!ripple::getHashesByIndex(
+    if (!xrpl::getHashesByIndex(
             pgPool_, ledgerIndex, p.ledgerHash, p.parentHash, app_))
         return {};
     return p;
@@ -219,31 +219,31 @@ RelationalDBInterfacePostgresImp::getHashesByIndex(
     LedgerIndex minSeq,
     LedgerIndex maxSeq)
 {
-    return ripple::getHashesByIndex(pgPool_, minSeq, maxSeq, app_);
+    return xrpl::getHashesByIndex(pgPool_, minSeq, maxSeq, app_);
 }
 
 std::vector<uint256>
 RelationalDBInterfacePostgresImp::getTxHashes(LedgerIndex seq)
 {
-    return ripple::getTxHashes(pgPool_, seq, app_);
+    return xrpl::getTxHashes(pgPool_, seq, app_);
 }
 
 std::vector<std::shared_ptr<Transaction>>
 RelationalDBInterfacePostgresImp::getTxHistory(LedgerIndex startIndex)
 {
-    return ripple::getTxHistory(pgPool_, startIndex, app_, j_);
+    return xrpl::getTxHistory(pgPool_, startIndex, app_, j_);
 }
 
 std::pair<AccountTxResult, RPC::Status>
 RelationalDBInterfacePostgresImp::getAccountTx(AccountTxArgs const& args)
 {
-    return ripple::getAccountTx(pgPool_, args, app_, j_);
+    return xrpl::getAccountTx(pgPool_, args, app_, j_);
 }
 
 Transaction::Locator
 RelationalDBInterfacePostgresImp::locateTransaction(uint256 const& id)
 {
-    return ripple::locateTransaction(pgPool_, id, app_);
+    return xrpl::locateTransaction(pgPool_, id, app_);
 }
 
 bool
@@ -295,4 +295,4 @@ RelationalDBInterfacePostgresImp::isCaughtUp(std::string& reason)
     return true;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

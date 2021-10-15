@@ -30,7 +30,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 /** Mix-in to track when all pending I/O is complete.
     Derived classes must be callable with this signature:
@@ -410,4 +410,4 @@ ResolverAsio::New(boost::asio::io_service& io_service, beast::Journal journal)
 
 //-----------------------------------------------------------------------------
 Resolver::~Resolver() = default;
-}  // namespace ripple
+}  // namespace xrpl

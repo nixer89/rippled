@@ -31,7 +31,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <grpc/status.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   account: <ident>,
@@ -314,4 +314,4 @@ doAccountInfoGrpc(
     return {result, status};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

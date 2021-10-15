@@ -34,7 +34,7 @@ namespace beast {
 class Journal;
 }
 
-namespace ripple {
+namespace xrpl {
 namespace perf {
 
 /**
@@ -178,6 +178,6 @@ make_PerfLog(
     std::function<void()>&& signalStop);
 
 }  // namespace perf
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_BASICS_PERFLOG_H

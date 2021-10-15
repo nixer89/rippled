@@ -28,7 +28,7 @@
 #include <variant>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class PgPool;
 
@@ -243,6 +243,6 @@ writeLedgerAndTransactions(
     std::vector<AccountTransactionsData> const& accountTxData,
     beast::Journal& j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

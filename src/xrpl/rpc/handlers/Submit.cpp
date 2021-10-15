@@ -30,7 +30,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/TransactionSign.h>
 
-namespace ripple {
+namespace xrpl {
 
 static NetworkOPs::FailHard
 getFailHard(RPC::JsonContext const& context)
@@ -292,4 +292,4 @@ doSubmitGrpc(
     return {result, status};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

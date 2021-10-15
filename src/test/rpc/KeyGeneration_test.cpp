@@ -26,7 +26,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <test/jtx/TestSuite.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 
@@ -93,7 +93,7 @@ static key_strings const strong_brain_strings = {
     "attacks.",
 };
 
-class WalletPropose_test : public ripple::TestSuite
+class WalletPropose_test : public xrpl::TestSuite
 {
 public:
     void
@@ -869,7 +869,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(WalletPropose, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(WalletPropose, ripple_basics, xrpl);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

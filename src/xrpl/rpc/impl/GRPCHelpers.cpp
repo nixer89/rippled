@@ -19,7 +19,7 @@
 
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 // In the below populateProto* functions, getProto is a function that returns
@@ -1915,4 +1915,4 @@ convert(
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

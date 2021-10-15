@@ -37,7 +37,7 @@
 #include <test/jtx/TrustedPublisherServer.h>
 #include <test/unit_test/FileDirGuard.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace detail {
 constexpr const char*
@@ -712,7 +712,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(ValidatorSite, app, ripple, 2);
+BEAST_DEFINE_TESTSUITE_PRIO(ValidatorSite, app, xrpl, 2);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

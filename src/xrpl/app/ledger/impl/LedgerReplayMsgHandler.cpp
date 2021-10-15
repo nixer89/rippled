@@ -24,7 +24,7 @@
 
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 LedgerReplayMsgHandler::LedgerReplayMsgHandler(
     Application& app,
     LedgerReplayer& replayer)
@@ -290,4 +290,4 @@ LedgerReplayMsgHandler::processReplayDeltaResponse(
     return true;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

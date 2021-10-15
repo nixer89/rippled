@@ -23,7 +23,7 @@
 #include <string>
 #include <system_error>
 
-namespace ripple {
+namespace xrpl {
 namespace cryptoconditions {
 
 enum class error {
@@ -50,12 +50,12 @@ std::error_code
 make_error_code(error ev);
 
 }  // namespace cryptoconditions
-}  // namespace ripple
+}  // namespace xrpl
 
 namespace std {
 
 template <>
-struct is_error_code_enum<ripple::cryptoconditions::error>
+struct is_error_code_enum<xrpl::cryptoconditions::error>
 {
     explicit is_error_code_enum() = default;
 

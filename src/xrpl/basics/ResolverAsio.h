@@ -24,7 +24,7 @@
 #include <xrpl/beast/utility/Journal.h>
 #include <boost/asio/io_service.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 class ResolverAsio : public Resolver
 {
@@ -35,6 +35,6 @@ public:
     New(boost::asio::io_service&, beast::Journal);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

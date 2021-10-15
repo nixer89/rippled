@@ -30,7 +30,7 @@
 #include <algorithm>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 static std::vector<std::pair<uint256, std::string>>
 parseSection(Section const& section)
@@ -798,4 +798,4 @@ make_AmendmentTable(
         app, majorityTime, supported, enabled, vetoed, journal);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

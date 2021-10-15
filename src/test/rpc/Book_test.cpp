@@ -22,7 +22,7 @@
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Book_test : public beast::unit_test::suite
@@ -1729,7 +1729,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(Book, app, ripple, 1);
+BEAST_DEFINE_TESTSUITE_PRIO(Book, app, xrpl, 1);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

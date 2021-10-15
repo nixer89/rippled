@@ -24,7 +24,7 @@
 #include <test/jtx/Env.h>
 #include <test/jtx/owners.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -70,6 +70,6 @@ using checks = owner_count<ltCHECK>;
 }  // namespace jtx
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

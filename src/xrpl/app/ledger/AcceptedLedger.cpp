@@ -22,7 +22,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/basics/chrono.h>
 
-namespace ripple {
+namespace xrpl {
 
 AcceptedLedger::AcceptedLedger(
     std::shared_ptr<ReadView const> const& ledger,
@@ -54,4 +54,4 @@ AcceptedLedger::insert(AcceptedLedgerTx::ref at)
     mMap.insert(std::make_pair(at->getIndex(), at));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

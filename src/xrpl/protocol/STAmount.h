@@ -28,7 +28,7 @@
 #include <xrpl/protocol/STBase.h>
 #include <xrpl/protocol/Serializer.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Internal form:
 // 1: If amount is zero, then value is zero and offset is -100
@@ -498,6 +498,6 @@ private:
     bool saved_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

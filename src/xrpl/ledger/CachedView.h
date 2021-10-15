@@ -28,7 +28,7 @@
 #include <mutex>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -187,6 +187,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -23,7 +23,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   ledger_hash : <ledger>,
@@ -82,4 +82,4 @@ doTransactionEntry(RPC::JsonContext& context)
     return jvResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

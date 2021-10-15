@@ -24,7 +24,7 @@
 #include <boost/beast/core/tcp_stream.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 template <class Handler>
 class PlainWSPeer : public BaseWSPeer<Handler, PlainWSPeer<Handler>>,
@@ -75,6 +75,6 @@ PlainWSPeer<Handler>::PlainWSPeer(
 {
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

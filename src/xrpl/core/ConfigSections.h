@@ -22,7 +22,7 @@
 
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 // VFALCO DEPRECATED in favor of the BasicConfig interface
 struct ConfigSection
@@ -99,6 +99,6 @@ struct ConfigSection
 #define SECTION_LEDGER_REPLAY "ledger_replay"
 #define SECTION_BETA_RPC_API "beta_rpc_api"
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

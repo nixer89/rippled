@@ -25,7 +25,7 @@
 #include <xrpl/core/JobQueue.h>
 #include <xrpl/protocol/Indexes.h>
 
-namespace ripple {
+namespace xrpl {
 
 OrderBookDB::OrderBookDB(Application& app)
     : app_(app), mSeq(0), j_(app.journal("OrderBookDB"))
@@ -308,4 +308,4 @@ OrderBookDB::processTxn(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

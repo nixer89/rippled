@@ -26,7 +26,7 @@
 #include <xrpl/app/tx/apply.h>
 #include <xrpl/protocol/Feature.h>
 
-namespace ripple {
+namespace xrpl {
 
 /* Generic buildLedgerImpl that dispatches to ApplyTxs invocable with signature
     void(OpenView&, std::shared_ptr<Ledger> const&)
@@ -234,4 +234,4 @@ buildLedger(
         });
 }
 
-}  // namespace ripple
+}  // namespace xrpl

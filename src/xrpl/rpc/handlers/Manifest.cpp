@@ -25,7 +25,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 Json::Value
 doManifest(RPC::JsonContext& context)
 {
@@ -77,4 +77,4 @@ doManifest(RPC::JsonContext& context)
     ret[jss::details] = details;
     return ret;
 }
-}  // namespace ripple
+}  // namespace xrpl

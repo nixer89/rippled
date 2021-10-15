@@ -23,7 +23,7 @@
 #include <boost/algorithm/hex.hpp>
 #include <boost/endian/conversion.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /** @{ */
 /** Converts a hex digit to the corresponding integer
@@ -62,6 +62,6 @@ strHex(T const& from)
     return strHex(from.begin(), from.end());
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

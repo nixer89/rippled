@@ -20,7 +20,7 @@
 #include <xrpl/rpc/Status.h>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 constexpr Status::Code Status::OK;
@@ -99,4 +99,4 @@ Status::toString() const
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

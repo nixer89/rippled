@@ -22,7 +22,7 @@
 #include <xrpl/rpc/Status.h>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 class codeString_test : public beast::unit_test::suite
@@ -221,4 +221,4 @@ public:
 BEAST_DEFINE_TESTSUITE(fillJson, Status, RPC);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

@@ -24,7 +24,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace RPC {
 
@@ -379,7 +379,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(LedgerRequestRPC, app, ripple);
+BEAST_DEFINE_TESTSUITE(LedgerRequestRPC, app, xrpl);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

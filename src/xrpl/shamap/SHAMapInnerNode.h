@@ -34,7 +34,7 @@
 #include <optional>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class SHAMapInnerNode final : public SHAMapTreeNode,
                               public CountedObject<SHAMapInnerNode>
@@ -209,5 +209,5 @@ SHAMapInnerNode::setFullBelowGen(std::uint32_t gen)
     fullBelowGen_ = gen;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

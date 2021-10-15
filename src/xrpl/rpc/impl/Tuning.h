@@ -20,7 +20,7 @@
 #ifndef RIPPLE_RPC_TUNING_H_INCLUDED
 #define RIPPLE_RPC_TUNING_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 /** Tuned constants. */
@@ -81,6 +81,6 @@ static int constexpr max_auto_src_cur = 88;
 /** @} */
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

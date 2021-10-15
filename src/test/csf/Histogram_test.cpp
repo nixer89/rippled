@@ -20,7 +20,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <test/csf/Histogram.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Histogram_test : public beast::unit_test::suite
@@ -80,7 +80,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Histogram, test, ripple);
+BEAST_DEFINE_TESTSUITE(Histogram, test, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

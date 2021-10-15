@@ -24,7 +24,7 @@
 #include <grpcpp/grpcpp.h>
 #include <org/xrpl/rpc/v1/xrp_ledger.pb.h>
 
-namespace ripple {
+namespace xrpl {
 
 /*
  * These handlers are for gRPC. They each take in a protobuf message that is
@@ -71,6 +71,6 @@ std::pair<org::xrpl::rpc::v1::GetLedgerDiffResponse, grpc::Status>
 doLedgerDiffGrpc(
     RPC::GRPCContext<org::xrpl::rpc::v1::GetLedgerDiffRequest>& context);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

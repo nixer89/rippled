@@ -26,7 +26,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TxID, class Sequence>
 class RCLCensorshipDetector
@@ -140,6 +140,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

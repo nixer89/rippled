@@ -24,7 +24,7 @@
 #include <memory>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -127,6 +127,6 @@ LocalValue<T>::operator*()
             .emplace(this, std::make_unique<detail::LocalValues::Value<T>>(t_))
             .first->second->get());
 }
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

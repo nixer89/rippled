@@ -35,7 +35,7 @@
 
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 using namespace std::chrono_literals;
 
@@ -1314,4 +1314,4 @@ InboundLedger::getJson(int)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

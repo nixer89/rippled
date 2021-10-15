@@ -22,7 +22,7 @@
 #include <xrpl/protocol/STArray.h>
 #include <xrpl/protocol/STBase.h>
 
-namespace ripple {
+namespace xrpl {
 
 STArray::STArray(STArray&& other)
     : STBase(other.getFName()), v_(std::move(other.v_))
@@ -166,4 +166,4 @@ STArray::sort(bool (*compare)(const STObject&, const STObject&))
     std::sort(v_.begin(), v_.end(), compare);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

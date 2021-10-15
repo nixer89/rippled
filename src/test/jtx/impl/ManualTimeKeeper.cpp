@@ -19,7 +19,7 @@
 
 #include <test/jtx/ManualTimeKeeper.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 using namespace std::chrono_literals;
@@ -92,4 +92,4 @@ ManualTimeKeeper::adjust(std::chrono::system_clock::time_point when)
         when.time_since_epoch() - days(10957)));
 }
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

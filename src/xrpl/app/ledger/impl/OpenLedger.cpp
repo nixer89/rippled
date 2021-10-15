@@ -29,7 +29,7 @@
 #include <xrpl/protocol/Feature.h>
 #include <boost/range/adaptor/transformed.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 OpenLedger::OpenLedger(
     std::shared_ptr<Ledger const> const& ledger,
@@ -191,7 +191,7 @@ OpenLedger::apply_one(
         // reasons, and it can still be recovered, try to put it
         // directly into the open ledger, else drop it.
         if (queueResult.first == telCAN_NOT_QUEUE && shouldRecover)
-            return ripple::apply(app, view, *tx, flags, j);
+            return xrpl::apply(app, view, *tx, flags, j);
         return queueResult;
     }();
     if (result.second || result.first == terQUEUED)
@@ -250,4 +250,4 @@ debugTostr(std::shared_ptr<ReadView const> const& view)
     return ss.str();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

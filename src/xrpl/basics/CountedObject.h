@@ -26,7 +26,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** Manages all counted object types. */
 class CountedObjects
@@ -151,6 +151,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

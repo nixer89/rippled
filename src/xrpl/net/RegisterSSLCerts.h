@@ -23,7 +23,7 @@
 #include <xrpl/basics/Log.h>
 #include <boost/asio/ssl/context.hpp>
 
-namespace ripple {
+namespace xrpl {
 /** Register default SSL certificates.
 
     Register the system default SSL root certificates. On linux/mac,
@@ -37,6 +37,6 @@ registerSSLCerts(
     boost::system::error_code&,
     beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

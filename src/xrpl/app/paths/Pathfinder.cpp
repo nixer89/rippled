@@ -63,7 +63,7 @@ same path request (particularly if the search depth may change).
 
 */
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 
@@ -1305,4 +1305,4 @@ Pathfinder::initPathTable()
         });
 }
 
-}  // namespace ripple
+}  // namespace xrpl

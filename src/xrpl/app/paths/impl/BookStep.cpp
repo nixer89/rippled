@@ -36,7 +36,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TIn, class TOut, class TDerived>
 class BookStep : public StepImp<TIn, TOut, BookStep<TIn, TOut, TDerived>>
@@ -1112,7 +1112,7 @@ namespace test {
 
 template <class TIn, class TOut, class TDerived>
 static bool
-equalHelper(Step const& step, ripple::Book const& book)
+equalHelper(Step const& step, xrpl::Book const& book)
 {
     if (auto bs = dynamic_cast<BookStep<TIn, TOut, TDerived> const*>(&step))
         return book == bs->book();
@@ -1120,7 +1120,7 @@ equalHelper(Step const& step, ripple::Book const& book)
 }
 
 bool
-bookStepEqual(Step const& step, ripple::Book const& book)
+bookStepEqual(Step const& step, xrpl::Book const& book)
 {
     bool const inXRP = isXRP(book.in.currency);
     bool const outXRP = isXRP(book.out.currency);
@@ -1194,4 +1194,4 @@ make_BookStepXI(StrandContext const& ctx, Issue const& out)
     return make_BookStepHelper<XRPAmount, IOUAmount>(ctx, xrpIssue(), out);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

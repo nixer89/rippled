@@ -30,7 +30,7 @@
 #include <boost/asio/basic_waitable_timer.hpp>
 #include <boost/filesystem.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 class ShardArchiveHandler_test;
 }
@@ -167,6 +167,6 @@ public:
 };
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

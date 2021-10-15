@@ -26,7 +26,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
-namespace ripple {
+namespace xrpl {
 
 class AccountTxPaging_test : public beast::unit_test::suite
 {
@@ -2166,6 +2166,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(AccountTxPaging, app, ripple);
+BEAST_DEFINE_TESTSUITE(AccountTxPaging, app, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

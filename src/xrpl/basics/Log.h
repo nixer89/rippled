@@ -29,7 +29,7 @@
 #include <mutex>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 // DEPRECATED use beast::severities::Severity instead
 enum LogSeverity {
@@ -275,6 +275,6 @@ setDebugLogSink(std::unique_ptr<beast::Journal::Sink> sink);
 beast::Journal
 debugLog();
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

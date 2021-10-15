@@ -30,7 +30,7 @@
 #include <xrpl/protocol/TxFlags.h>
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 /** The flavor of an offer crossing */
 enum class CrossType { XrpToIou, IouToXrp, IouToIou };
@@ -337,6 +337,6 @@ private:
     std::uint32_t bridge_crossings_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

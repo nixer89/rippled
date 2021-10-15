@@ -23,7 +23,7 @@
 #include <xrpl/net/DatabaseBody.h>
 #include <xrpl/net/HTTPDownloader.h>
 
-namespace ripple {
+namespace xrpl {
 
 class DatabaseDownloader : public HTTPDownloader
 {
@@ -71,6 +71,6 @@ make_DatabaseDownloader(
     Config const& config,
     beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_NET_DATABASEDOWNLOADER_H

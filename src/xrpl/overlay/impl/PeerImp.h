@@ -44,7 +44,7 @@
 #include <optional>
 #include <queue>
 
-namespace ripple {
+namespace xrpl {
 
 struct ValidatorBlobInfo;
 class SHAMap;
@@ -735,6 +735,6 @@ PeerImp::sendEndpoints(FwdIt first, FwdIt last)
     send(std::make_shared<Message>(tm, protocol::mtENDPOINTS));
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

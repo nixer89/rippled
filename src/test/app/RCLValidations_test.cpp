@@ -26,7 +26,7 @@
 #include <xrpl/ledger/View.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class RCLValidations_test : public beast::unit_test::suite
@@ -37,7 +37,7 @@ class RCLValidations_test : public beast::unit_test::suite
         testcase("Change validation trusted status");
         auto keys = randomKeyPair(KeyType::secp256k1);
         auto v = std::make_shared<STValidation>(
-            ripple::NetClock::time_point{},
+            xrpl::NetClock::time_point{},
             keys.first,
             keys.second,
             calcNodeID(keys.first),
@@ -328,7 +328,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RCLValidations, app, ripple);
+BEAST_DEFINE_TESTSUITE(RCLValidations, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -30,7 +30,7 @@
 #include <algorithm>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 // We're prepared for there to be multiple signer lists in the future,
 // but we don't need them yet.  So for the time being we're manually
@@ -405,4 +405,4 @@ SetSignerList::writeSignersToSLE(
     ledgerEntry->setFieldArray(sfSignerEntries, toLedger);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

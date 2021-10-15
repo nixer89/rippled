@@ -19,7 +19,7 @@
 
 #include <xrpl/protocol/Book.h>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 isConsistent(Book const& book)
@@ -101,4 +101,4 @@ operator<=(Book const& lhs, Book const& rhs)
     return !(rhs < lhs);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

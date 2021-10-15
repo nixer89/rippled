@@ -34,7 +34,7 @@
 
 //------------------------------------------------------------------------------
 
-namespace ripple {
+namespace xrpl {
 
 class PerfLog_test : public beast::unit_test::suite
 {
@@ -303,7 +303,7 @@ public:
 
         // Get the all the labels we can use for RPC interfaces without
         // causing an assert.
-        std::vector<char const*> labels{ripple::RPC::getHandlerNames()};
+        std::vector<char const*> labels{xrpl::RPC::getHandlerNames()};
         std::shuffle(labels.begin(), labels.end(), default_prng());
 
         // Get two IDs to associate with each label.  Errors tend to happen at
@@ -1052,6 +1052,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(PerfLog, basics, ripple);
+BEAST_DEFINE_TESTSUITE(PerfLog, basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <iterator>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 namespace detail {
@@ -358,6 +358,6 @@ ConnectHandouts::try_insert(beast::IP::Endpoint const& endpoint)
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

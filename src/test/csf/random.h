@@ -23,7 +23,7 @@
 #include <random>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace csf {
 
@@ -175,6 +175,6 @@ public:
 
 }  // namespace csf
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

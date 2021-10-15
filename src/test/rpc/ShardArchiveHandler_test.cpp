@@ -31,7 +31,7 @@
 #include <test/jtx/envconfig.h>
 #include <test/nodestore/TestBase.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class ShardArchiveHandler_test : public beast::unit_test::suite
@@ -696,7 +696,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(ShardArchiveHandler, app, ripple, 3);
+BEAST_DEFINE_TESTSUITE_PRIO(ShardArchiveHandler, app, xrpl, 3);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <xrpl/protocol/TxFlags.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 TxConsequences
 CreateTicket::makeTxConsequences(PreflightContext const& ctx)
@@ -154,4 +154,4 @@ CreateTicket::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

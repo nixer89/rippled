@@ -23,7 +23,7 @@
 #include <xrpl/overlay/impl/OverlayImpl.h>
 #include <xrpl/overlay/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Manages an outbound connection attempt. */
 class ConnectAttempt : public OverlayImpl::Child,
@@ -125,6 +125,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

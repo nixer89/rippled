@@ -22,7 +22,7 @@
 #include <test/csf/random.h>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class ScaleFreeSim_test : public beast::unit_test::suite
@@ -117,7 +117,7 @@ class ScaleFreeSim_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(ScaleFreeSim, consensus, ripple, 80);
+BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(ScaleFreeSim, consensus, xrpl, 80);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

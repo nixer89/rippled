@@ -28,7 +28,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 struct VisitData
 {
@@ -212,4 +212,4 @@ doAccountLines(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

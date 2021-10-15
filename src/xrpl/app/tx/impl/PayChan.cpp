@@ -31,7 +31,7 @@
 #include <xrpl/protocol/digest.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 /*
     PaymentChannel
@@ -560,4 +560,4 @@ PayChanClaim::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

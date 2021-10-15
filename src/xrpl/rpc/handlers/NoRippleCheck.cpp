@@ -29,7 +29,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 
 static void
 fillTransaction(
@@ -192,4 +192,4 @@ doNoRippleCheck(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

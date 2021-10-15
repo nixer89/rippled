@@ -30,7 +30,7 @@
 
 #include <set>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -593,7 +593,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(ValidatorRPC, app, ripple);
+BEAST_DEFINE_TESTSUITE(ValidatorRPC, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

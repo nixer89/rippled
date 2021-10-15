@@ -22,7 +22,7 @@
 
 #include <xrpl/json/json_value.h>
 
-namespace ripple {
+namespace xrpl {
 namespace jss {
 
 // JSON static strings
@@ -626,6 +626,6 @@ JSS(NegativeUNL);  // out: ValidatorList; ledger type
 #undef JSS
 
 }  // namespace jss
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -25,7 +25,7 @@
 #include <xrpl/app/tx/impl/Transactor.h>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 class PaymentSandbox;
 class Sandbox;
@@ -142,6 +142,6 @@ private:
     OfferStream::StepCounter stepCounter_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

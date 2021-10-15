@@ -24,7 +24,7 @@
 #include <xrpl/protocol/AccountID.h>
 #include <boost/container/flat_set.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 class Logs;
 
@@ -138,6 +138,6 @@ private:
     buildJson();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -20,7 +20,7 @@
 #include <xrpl/protocol/Keylet.h>
 #include <xrpl/protocol/STLedgerEntry.h>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 Keylet::check(STLedgerEntry const& sle) const
@@ -36,4 +36,4 @@ Keylet::check(STLedgerEntry const& sle) const
     return sle.getType() == type;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -19,7 +19,7 @@
 
 #include <xrpl/peerfinder/impl/SourceStrings.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 class SourceStringsImp : public SourceStrings
@@ -68,4 +68,4 @@ SourceStrings::New(std::string const& name, Strings const& strings)
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

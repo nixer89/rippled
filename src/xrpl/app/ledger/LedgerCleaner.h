@@ -26,7 +26,7 @@
 #include <xrpl/json/json_value.h>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 /** Check the ledger/transaction databases to make sure they have continuity */
 class LedgerCleaner : public beast::PropertyStream::Source
@@ -62,6 +62,6 @@ public:
 std::unique_ptr<LedgerCleaner>
 make_LedgerCleaner(Application& app, beast::Journal journal);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

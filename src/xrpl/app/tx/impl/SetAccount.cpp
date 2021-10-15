@@ -27,7 +27,7 @@
 #include <xrpl/protocol/Quality.h>
 #include <xrpl/protocol/st.h>
 
-namespace ripple {
+namespace xrpl {
 
 TxConsequences
 SetAccount::makeTxConsequences(PreflightContext const& ctx)
@@ -522,4 +522,4 @@ SetAccount::doApply()
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

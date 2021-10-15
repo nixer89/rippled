@@ -26,7 +26,7 @@
 #include <ed25519-donna/ed25519.h>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 std::ostream&
 operator<<(std::ostream& os, PublicKey const& pk)
@@ -305,4 +305,4 @@ calcNodeID(PublicKey const& pk)
     return NodeID{static_cast<ripesha_hasher::result_type>(h)};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

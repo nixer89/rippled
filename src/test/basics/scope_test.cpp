@@ -20,7 +20,7 @@
 #include <xrpl/basics/scope.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct scope_test : beast::unit_test::suite
@@ -187,7 +187,7 @@ struct scope_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(scope, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(scope, ripple_basics, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

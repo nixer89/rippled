@@ -26,7 +26,7 @@
 #include <chrono>
 #include <map>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents how a node currently participates in Consensus.
 
@@ -239,6 +239,6 @@ struct ConsensusResult
     // The number of peers proposing during the round
     std::size_t proposers = 0;
 };
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

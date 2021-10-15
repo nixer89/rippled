@@ -36,7 +36,7 @@ namespace Json {
 class Value;
 }
 
-namespace ripple {
+namespace xrpl {
 
 class ReadView;
 class Transaction;
@@ -269,6 +269,6 @@ unsigned int
 getAPIVersionNumber(const Json::Value& value, bool betaEnabled);
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

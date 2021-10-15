@@ -31,7 +31,7 @@
 #include <numeric>
 #include <sstream>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TDerived>
 class DirectStepI : public StepImp<IOUAmount, IOUAmount, DirectStepI<TDerived>>
@@ -1001,4 +1001,4 @@ make_DirectStepI(
     return {tesSUCCESS, std::move(r)};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

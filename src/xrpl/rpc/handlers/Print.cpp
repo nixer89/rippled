@@ -23,7 +23,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doPrint(RPC::JsonContext& context)
@@ -42,4 +42,4 @@ doPrint(RPC::JsonContext& context)
     return stream.top();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

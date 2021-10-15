@@ -101,7 +101,7 @@ invoking `cmake`.
 ### Generate Configuration
 
 All builds should be done in a separate directory from the source tree root 
-(a subdirectory is fine). For example, from the root of the ripple source tree:
+(a subdirectory is fine). For example, from the root of the xrpl source tree:
 
 ```
 mkdir my_build

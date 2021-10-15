@@ -26,7 +26,7 @@
 #include <xrpl/protocol/Quality.h>
 #include <xrpl/protocol/TxFlags.h>
 
-namespace ripple {
+namespace xrpl {
 
 class SetTrust : public Transactor
 {
@@ -47,6 +47,6 @@ public:
     doApply() override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

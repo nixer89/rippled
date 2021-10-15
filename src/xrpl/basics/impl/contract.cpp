@@ -23,7 +23,7 @@
 #include <exception>
 #include <iostream>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -52,4 +52,4 @@ LogicError(std::string const& s) noexcept
     detail::accessViolation();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

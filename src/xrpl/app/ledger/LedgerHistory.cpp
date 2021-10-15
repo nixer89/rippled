@@ -24,7 +24,7 @@
 #include <xrpl/basics/contract.h>
 #include <xrpl/json/to_string.h>
 
-namespace ripple {
+namespace xrpl {
 
 // VFALCO TODO replace macros
 
@@ -541,4 +541,4 @@ LedgerHistory::clearLedgerCachePrior(LedgerIndex seq)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 // Note that this queue should only be used for CPU-bound jobs
 // It is primarily intended for signature checking
@@ -162,6 +162,6 @@ private:
 
 using JobCounter = ClosureCounter<void, Job&>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

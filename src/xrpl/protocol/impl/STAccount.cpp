@@ -21,7 +21,7 @@
 
 #include <cstring>
 
-namespace ripple {
+namespace xrpl {
 
 STAccount::STAccount() : STBase(), value_(beast::zero), default_(true)
 {
@@ -67,4 +67,4 @@ STAccount::getText() const
     return toBase58(value());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 #include <typeinfo>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /*  Programming By Contract
 
@@ -71,6 +71,6 @@ Throw(Args&&... args)
 [[noreturn]] void
 LogicError(std::string const& how) noexcept;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

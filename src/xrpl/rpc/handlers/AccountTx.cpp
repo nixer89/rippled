@@ -40,7 +40,7 @@
 
 #include <grpcpp/grpcpp.h>
 
-namespace ripple {
+namespace xrpl {
 
 using TxnsData = RelationalDBInterface::AccountTxs;
 using TxnsDataBinary = RelationalDBInterface::MetaTxsList;
@@ -648,4 +648,4 @@ doAccountTxGrpc(
     return populateProtoResponse(res, args, context);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

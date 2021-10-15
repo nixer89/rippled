@@ -25,7 +25,7 @@
 #include <functional>
 #include <queue>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class TaskQueue : private Workers::Callback
@@ -59,6 +59,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -24,7 +24,7 @@
 #include <xrpl/ledger/View.h>
 #include <xrpl/protocol/Feature.h>
 
-namespace ripple {
+namespace xrpl {
 namespace path {
 
 RippleCalc::Output
@@ -135,4 +135,4 @@ RippleCalc::rippleCalculate(
 }
 
 }  // namespace path
-}  // namespace ripple
+}  // namespace xrpl

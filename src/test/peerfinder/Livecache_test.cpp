@@ -26,7 +26,7 @@
 #include <test/beast/IPEndpointCommon.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 bool
@@ -139,7 +139,7 @@ public:
         for (auto i = 0; i < num_eps; ++i)
             add(beast::IP::randomEP(true),
                 c,
-                ripple::rand_int(0, safe_cast<int>(Tuning::maxHops + 1)));
+                xrpl::rand_int(0, safe_cast<int>(Tuning::maxHops + 1)));
         auto h = c.hops.histogram();
         if (!BEAST_EXPECT(!h.empty()))
             return;
@@ -163,9 +163,9 @@ public:
         for (auto i = 0; i < 100; ++i)
             add(beast::IP::randomEP(true),
                 c,
-                ripple::rand_int(0, safe_cast<int>(Tuning::maxHops + 1)));
+                xrpl::rand_int(0, safe_cast<int>(Tuning::maxHops + 1)));
 
-        using at_hop = std::vector<ripple::PeerFinder::Endpoint>;
+        using at_hop = std::vector<xrpl::PeerFinder::Endpoint>;
         using all_hops = std::array<at_hop, 1 + Tuning::maxHops + 1>;
 
         auto cmp_EP = [](Endpoint const& a, Endpoint const& b) {
@@ -237,7 +237,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Livecache, peerfinder, ripple);
+BEAST_DEFINE_TESTSUITE(Livecache, peerfinder, xrpl);
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

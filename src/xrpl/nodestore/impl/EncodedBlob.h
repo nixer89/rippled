@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/NodeObject.h>
 #include <cstddef>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** Utility for producing flattened node objects.
@@ -61,6 +61,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

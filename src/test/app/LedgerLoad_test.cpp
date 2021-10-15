@@ -27,7 +27,7 @@
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 
 class LedgerLoad_test : public beast::unit_test::suite
 {
@@ -236,6 +236,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(LedgerLoad, app, ripple);
+BEAST_DEFINE_TESTSUITE(LedgerLoad, app, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

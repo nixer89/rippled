@@ -22,7 +22,7 @@
 #include <stdexcept>
 #include <test/jtx/rate.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -40,4 +40,4 @@ rate(Account const& account, double multiplier)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

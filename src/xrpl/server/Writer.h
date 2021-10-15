@@ -24,7 +24,7 @@
 #include <functional>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class Writer
 {
@@ -55,6 +55,6 @@ public:
     data() = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

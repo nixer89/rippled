@@ -42,7 +42,7 @@
 #if BOOST_OS_WINDOWS
 #include <sysinfoapi.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 [[nodiscard]] std::uint64_t
@@ -55,13 +55,13 @@ getMemorySize()
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 #endif
 
 #if BOOST_OS_LINUX
 #include <sys/sysinfo.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 [[nodiscard]] std::uint64_t
@@ -76,7 +76,7 @@ getMemorySize()
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif
 
@@ -84,7 +84,7 @@ getMemorySize()
 #include <sys/sysctl.h>
 #include <sys/types.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 [[nodiscard]] std::uint64_t
@@ -101,10 +101,10 @@ getMemorySize()
 }
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 #endif
 
-namespace ripple {
+namespace xrpl {
 
 // clang-format off
 // The configurable node sizes are "tiny", "small", "medium", "large", "huge"
@@ -947,4 +947,4 @@ Config::getValueFor(SizedItem item, std::optional<std::size_t> node) const
     return sizedItems.at(index).second.at(node.value_or(NODE_SIZE));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

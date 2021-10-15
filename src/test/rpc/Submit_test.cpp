@@ -28,7 +28,7 @@
 #include <xrpl/rpc/GRPCHandlers.h>
 #include <test/rpc/GRPCTestClientBase.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Submit_test : public beast::unit_test::suite
@@ -270,7 +270,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Submit, app, ripple);
+BEAST_DEFINE_TESTSUITE(Submit, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

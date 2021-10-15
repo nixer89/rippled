@@ -27,7 +27,7 @@
 #include <boost/beast/http/write.hpp>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /// Deprecated: Writer that serializes a HTTP/1 message
 class SimpleWriter : public Writer
@@ -72,6 +72,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

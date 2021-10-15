@@ -24,7 +24,7 @@
 #include <boost/preprocessor/stringize.hpp>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 namespace BuildInfo {
 
@@ -171,4 +171,4 @@ isNewerVersion(std::uint64_t version)
 
 }  // namespace BuildInfo
 
-}  // namespace ripple
+}  // namespace xrpl

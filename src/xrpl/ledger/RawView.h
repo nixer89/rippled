@@ -27,7 +27,7 @@
 #include <memory>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Interface for ledger entry changes.
 
@@ -109,6 +109,6 @@ public:
         std::shared_ptr<Serializer const> const& metaData) = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

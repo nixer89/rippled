@@ -23,7 +23,7 @@
 #include <array>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -247,6 +247,6 @@ static constexpr std::array<char const*, 3> DatabaseBodyDBInit{
 
      "END TRANSACTION;"}};
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

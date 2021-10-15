@@ -26,7 +26,7 @@
 #include <map>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /*
 
@@ -525,6 +525,6 @@ extern SField const sfMajorities;
 extern SField const sfDisabledValidators;
 //------------------------------------------------------------------------------
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

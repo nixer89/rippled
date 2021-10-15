@@ -30,7 +30,7 @@
 #include <string>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 using IniFileSections = std::map<std::string, std::vector<std::string>>;
 
@@ -397,6 +397,6 @@ get_if_exists<bool>(Section const& section, std::string const& name, bool& v)
     return stat;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

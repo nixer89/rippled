@@ -19,7 +19,7 @@
 
 #include <xrpl/nodestore/impl/BatchWriter.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 BatchWriter::BatchWriter(Callback& callback, Scheduler& scheduler)
@@ -119,4 +119,4 @@ BatchWriter::waitForWriting()
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

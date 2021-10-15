@@ -25,7 +25,7 @@
 #include <memory>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class ReadView;
 
@@ -150,6 +150,6 @@ protected:
 };
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

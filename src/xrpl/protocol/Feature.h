@@ -64,7 +64,7 @@
  *
  */
 
-namespace ripple {
+namespace xrpl {
 
 enum class DefaultVote : bool { no = false, yes };
 
@@ -334,6 +334,6 @@ extern uint256 const fixSTAmountCanonicalize;
 extern uint256 const fixRmSmallIncreasedQOffers;
 extern uint256 const featureCheckCashMakesTrustLine;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -24,7 +24,7 @@
 #include <xrpl/json/Writer.h>
 #include <test/jtx/TestSuite.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class TestOutputSuite : public TestSuite
@@ -52,6 +52,6 @@ protected:
 };
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

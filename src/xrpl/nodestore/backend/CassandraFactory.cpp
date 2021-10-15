@@ -53,7 +53,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 void
@@ -980,5 +980,5 @@ public:
 static CassandraFactory cassandraFactory;
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 #endif

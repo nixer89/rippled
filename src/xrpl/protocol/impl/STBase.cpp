@@ -22,7 +22,7 @@
 #include <cassert>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 STBase::STBase() : fName(&sfGeneric)
 {
@@ -137,4 +137,4 @@ operator<<(std::ostream& out, const STBase& t)
     return out << t.getFullText();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

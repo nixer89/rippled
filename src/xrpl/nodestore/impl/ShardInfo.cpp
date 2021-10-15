@@ -23,14 +23,14 @@
 #include <xrpl/protocol/SecretKey.h>
 #include <xrpl/protocol/digest.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 std::string
 ShardInfo::finalizedToString() const
 {
     if (!finalized_.empty())
-        return ripple::to_string(finalized_);
+        return xrpl::to_string(finalized_);
     return {};
 }
 
@@ -114,7 +114,7 @@ ShardInfo::makeMessage(Application& app)
 
     if (!finalized_.empty())
     {
-        auto const str{ripple::to_string(finalized_)};
+        auto const str{xrpl::to_string(finalized_)};
         message.set_finalized(str);
         s.addRaw(str.data(), str.size());
     }
@@ -133,4 +133,4 @@ ShardInfo::makeMessage(Application& app)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

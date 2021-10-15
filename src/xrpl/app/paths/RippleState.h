@@ -27,7 +27,7 @@
 #include <cstdint>
 #include <memory>  // <memory>
 
-namespace ripple {
+namespace xrpl {
 
 /** Wraps a trust line SLE for convenience.
     The complication of trust lines is that there is a
@@ -176,6 +176,6 @@ private:
 std::vector<RippleState::pointer>
 getRippleStateItems(AccountID const& accountID, ReadView const& view);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

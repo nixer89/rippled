@@ -20,7 +20,7 @@
 #include <xrpl/app/ledger/LedgerMaster.h>
 #include <xrpl/rpc/ShardVerificationScheduler.h>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 ShardVerificationScheduler::ShardVerificationScheduler(
@@ -65,4 +65,4 @@ ShardVerificationScheduler::reset()
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

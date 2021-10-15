@@ -37,7 +37,7 @@
 
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 /** Provides an asynchronous HTTP[S] file downloader
  */
@@ -119,6 +119,6 @@ private:
     size(std::shared_ptr<parser> p) = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

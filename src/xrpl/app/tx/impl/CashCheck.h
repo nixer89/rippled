@@ -22,7 +22,7 @@
 
 #include <xrpl/app/tx/impl/Transactor.h>
 
-namespace ripple {
+namespace xrpl {
 
 class CashCheck : public Transactor
 {
@@ -43,6 +43,6 @@ public:
     doApply() override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

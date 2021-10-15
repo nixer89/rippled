@@ -26,7 +26,7 @@
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Invariants_test : public beast::unit_test::suite
 {
@@ -477,6 +477,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Invariants, ledger, ripple);
+BEAST_DEFINE_TESTSUITE(Invariants, ledger, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

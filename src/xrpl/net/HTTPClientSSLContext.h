@@ -29,7 +29,7 @@
 #include <boost/asio/ssl.hpp>
 #include <boost/format.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 class HTTPClientSSLContext
 {
@@ -192,6 +192,6 @@ private:
     const bool verify_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

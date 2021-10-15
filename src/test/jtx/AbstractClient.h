@@ -22,7 +22,7 @@
 
 #include <xrpl/json/json_value.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 /* Abstract Ripple Client interface.
@@ -59,6 +59,6 @@ public:
 };
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

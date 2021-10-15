@@ -31,7 +31,7 @@
 #include <optional>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class Env_test : public beast::unit_test::suite
@@ -924,7 +924,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Env, app, ripple);
+BEAST_DEFINE_TESTSUITE(Env, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

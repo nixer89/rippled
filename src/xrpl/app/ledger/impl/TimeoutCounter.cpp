@@ -22,7 +22,7 @@
 #include <xrpl/core/JobQueue.h>
 #include <xrpl/overlay/Overlay.h>
 
-namespace ripple {
+namespace xrpl {
 
 using namespace std::chrono_literals;
 
@@ -125,4 +125,4 @@ TimeoutCounter::cancel()
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

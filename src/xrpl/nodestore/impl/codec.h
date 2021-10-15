@@ -35,7 +35,7 @@
 #include <string>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 template <class BufferFactory>
@@ -331,6 +331,6 @@ filter_inner(void* in, std::size_t in_size)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

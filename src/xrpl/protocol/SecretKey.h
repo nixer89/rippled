@@ -30,7 +30,7 @@
 #include <cstring>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** A secret key. */
 class SecretKey
@@ -180,6 +180,6 @@ sign(KeyType type, SecretKey const& sk, Slice const& message)
 }
 /** @} */
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

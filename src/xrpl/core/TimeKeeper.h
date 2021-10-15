@@ -26,7 +26,7 @@
 #include <string>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** Manages various times used by the server. */
 class TimeKeeper : public beast::abstract_clock<NetClock>
@@ -89,6 +89,6 @@ public:
 extern std::unique_ptr<TimeKeeper>
 make_TimeKeeper(beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

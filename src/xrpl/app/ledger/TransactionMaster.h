@@ -26,7 +26,7 @@
 #include <xrpl/shamap/SHAMapItem.h>
 #include <xrpl/shamap/SHAMapTreeNode.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class STTx;
@@ -90,6 +90,6 @@ private:
     TaggedCache<uint256, Transaction> mCache;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

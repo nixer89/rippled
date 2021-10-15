@@ -20,7 +20,7 @@
 #include <xrpl/basics/XRPAmount.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 
 class XRPAmount_test : public beast::unit_test::suite
 {
@@ -322,7 +322,7 @@ public:
     XRPAmount bigNegative(minXRP + 10);
     BEAST_EXPECT(mulRatio(bigNegative, 2, 1, true) == minXRP);
 }
-}  // namespace ripple
+}  // namespace xrpl
 
 //--------------------------------------------------------------------------
 
@@ -340,6 +340,6 @@ run() override
 }
 ;
 
-BEAST_DEFINE_TESTSUITE(XRPAmount, protocol, ripple);
+BEAST_DEFINE_TESTSUITE(XRPAmount, protocol, xrpl);
 
 }  // ripple

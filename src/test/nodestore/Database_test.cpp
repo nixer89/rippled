@@ -27,7 +27,7 @@
 #include <test/nodestore/TestBase.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -45,8 +45,8 @@ public:
     {
         testcase("Config");
 
-        using namespace ripple::test;
-        using namespace ripple::test::jtx;
+        using namespace xrpl::test;
+        using namespace xrpl::test::jtx;
 
         auto const integrityWarning =
             "reducing the data integrity guarantees from the "
@@ -685,7 +685,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Database, NodeStore, ripple);
+BEAST_DEFINE_TESTSUITE(Database, NodeStore, xrpl);
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

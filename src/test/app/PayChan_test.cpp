@@ -28,7 +28,7 @@
 
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 struct PayChan_test : public beast::unit_test::suite
 {
@@ -1552,14 +1552,14 @@ struct PayChan_test : public beast::unit_test::suite
         auto inOwnerDir = [](ReadView const& view,
                              Account const& acc,
                              std::shared_ptr<SLE const> const& chan) -> bool {
-            ripple::Dir const ownerDir(view, keylet::ownerDir(acc.id()));
+            xrpl::Dir const ownerDir(view, keylet::ownerDir(acc.id()));
             return std::find(ownerDir.begin(), ownerDir.end(), chan) !=
                 ownerDir.end();
         };
 
         auto ownerDirCount = [](ReadView const& view,
                                 Account const& acc) -> std::size_t {
-            ripple::Dir const ownerDir(view, keylet::ownerDir(acc.id()));
+            xrpl::Dir const ownerDir(view, keylet::ownerDir(acc.id()));
             return std::distance(ownerDir.begin(), ownerDir.end());
         };
 
@@ -2065,6 +2065,6 @@ struct PayChan_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(PayChan, app, ripple);
+BEAST_DEFINE_TESTSUITE(PayChan, app, xrpl);
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

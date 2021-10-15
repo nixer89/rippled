@@ -29,7 +29,7 @@
 #include <sstream>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** Format arbitrary binary data as an SQLite "blob literal".
 
@@ -134,6 +134,6 @@ to_uint64(std::string const& s);
 bool
 isProperlyFormedTomlDomain(std::string const& domain);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

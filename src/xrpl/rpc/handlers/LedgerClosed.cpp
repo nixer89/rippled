@@ -23,7 +23,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doLedgerClosed(RPC::JsonContext& context)
@@ -38,4 +38,4 @@ doLedgerClosed(RPC::JsonContext& context)
     return jvResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

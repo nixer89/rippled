@@ -23,7 +23,7 @@
 #include <xrpl/protocol/STObject.h>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 Expected<std::vector<SignerEntries::SignerEntry>, NotTEC>
 SignerEntries::deserialize(
@@ -62,4 +62,4 @@ SignerEntries::deserialize(
     return accountVec;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

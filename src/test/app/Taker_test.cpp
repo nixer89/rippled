@@ -22,7 +22,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 class Taker_test : public beast::unit_test::suite
 {
@@ -1009,6 +1009,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Taker, tx, ripple);
+BEAST_DEFINE_TESTSUITE(Taker, tx, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

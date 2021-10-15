@@ -23,7 +23,7 @@
 #include <xrpl/peerfinder/PeerfinderManager.h>
 #include <boost/system/error_code.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** A static or dynamic source of peer addresses.
@@ -63,6 +63,6 @@ public:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

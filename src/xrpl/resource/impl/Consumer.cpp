@@ -22,7 +22,7 @@
 #include <xrpl/resource/impl/Logic.h>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 Consumer::Consumer(Logic& logic, Entry& entry)
@@ -142,4 +142,4 @@ operator<<(std::ostream& os, Consumer const& v)
 }
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl

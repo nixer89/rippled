@@ -21,7 +21,7 @@
 #include <xrpl/beast/core/LexicalCast.h>
 #include <xrpl/shamap/SHAMapLeafNode.h>
 
-namespace ripple {
+namespace xrpl {
 
 SHAMapLeafNode::SHAMapLeafNode(
     std::shared_ptr<SHAMapItem const> item,
@@ -91,4 +91,4 @@ SHAMapLeafNode::invariants(bool) const
     assert(item_ != nullptr);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

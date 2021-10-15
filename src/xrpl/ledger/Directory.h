@@ -23,7 +23,7 @@
 #include <xrpl/ledger/ReadView.h>
 #include <xrpl/protocol/Indexes.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Dir
 {
@@ -109,6 +109,6 @@ private:
     std::vector<uint256>::const_iterator it_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

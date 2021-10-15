@@ -23,7 +23,7 @@
 #include <xrpl/protocol/digest.h>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 int
 Serializer::add16(std::uint16_t i)
@@ -516,4 +516,4 @@ SerialIter::getVLBuffer()
     return getRawHelper<Buffer>(getVLDataLength());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

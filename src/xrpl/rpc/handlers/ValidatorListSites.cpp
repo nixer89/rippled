@@ -23,7 +23,7 @@
 #include <xrpl/protocol/ErrorCodes.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doValidatorListSites(RPC::JsonContext& context)
@@ -34,4 +34,4 @@ doValidatorListSites(RPC::JsonContext& context)
     return context.app.validatorSites().getJson();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

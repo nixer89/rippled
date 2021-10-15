@@ -32,7 +32,7 @@
 #include <cstring>
 #include <iterator>
 
-namespace ripple {
+namespace xrpl {
 
 Seed::~Seed()
 {
@@ -135,4 +135,4 @@ seedAs1751(Seed const& seed)
     return encodedKey;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

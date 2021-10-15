@@ -23,7 +23,7 @@
 #include <org/xrpl/rpc/v1/xrp_ledger.grpc.pb.h>
 #include <test/jtx/envconfig.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct GRPCTestClientBase
@@ -45,5 +45,5 @@ struct GRPCTestClientBase
 };
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 #endif  // XRPLD_GRPCTESTCLIENTBASE_H

@@ -33,7 +33,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** An immutable linear range of bytes.
 
@@ -258,6 +258,6 @@ makeSlice(std::basic_string<char, Traits, Alloc> const& s)
     return Slice(s.data(), s.size());
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

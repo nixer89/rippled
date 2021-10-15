@@ -27,7 +27,7 @@
 #include <xrpl/shamap/SHAMapLeafNode.h>
 #include <xrpl/shamap/SHAMapNodeID.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** A leaf node for a state object. */
 class SHAMapAccountStateLeafNode final
@@ -88,6 +88,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

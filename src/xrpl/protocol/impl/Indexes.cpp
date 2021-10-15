@@ -24,7 +24,7 @@
 #include <algorithm>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 /** Type-specific prefix for calculating ledger indices.
 
@@ -327,4 +327,4 @@ payChan(AccountID const& src, AccountID const& dst, std::uint32_t seq) noexcept
 
 }  // namespace keylet
 
-}  // namespace ripple
+}  // namespace xrpl

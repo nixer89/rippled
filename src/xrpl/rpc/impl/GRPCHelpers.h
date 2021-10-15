@@ -33,7 +33,7 @@
 
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 void
@@ -85,6 +85,6 @@ convert(T& to, STAmount const& from)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

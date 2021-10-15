@@ -24,7 +24,7 @@
 #include <test/jtx/Account.h>
 #include <test/jtx/tags.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -38,6 +38,6 @@ regkey(Account const& account, Account const& signer);
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

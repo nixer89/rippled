@@ -23,7 +23,7 @@
 #include <test/csf/Scheduler.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class BasicNetwork_test : public beast::unit_test::suite
@@ -144,7 +144,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(BasicNetwork, test, ripple);
+BEAST_DEFINE_TESTSUITE(BasicNetwork, test, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

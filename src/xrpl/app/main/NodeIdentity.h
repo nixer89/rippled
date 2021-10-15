@@ -25,12 +25,12 @@
 #include <xrpl/protocol/SecretKey.h>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** The cryptographic credentials identifying this server instance. */
 std::pair<PublicKey, SecretKey>
 getNodeIdentity(Application& app);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

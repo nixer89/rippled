@@ -21,7 +21,7 @@
 
 #include <exception>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct DetectCrash_test : public beast::unit_test::suite
@@ -44,4 +44,4 @@ struct DetectCrash_test : public beast::unit_test::suite
 BEAST_DEFINE_TESTSUITE_MANUAL(DetectCrash, unit_test, beast);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

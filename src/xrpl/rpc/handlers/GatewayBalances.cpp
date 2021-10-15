@@ -28,7 +28,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Query:
 // 1) Specify ledger to query.
@@ -230,4 +230,4 @@ doGatewayBalances(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

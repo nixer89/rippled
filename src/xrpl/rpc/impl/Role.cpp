@@ -24,7 +24,7 @@
 #include <boost/utility/string_view.hpp>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 passwordUnrequiredOrSentCorrect(Port const& port, Json::Value const& params)
@@ -167,4 +167,4 @@ forwardedFor(http_request_type const& request)
     return {};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

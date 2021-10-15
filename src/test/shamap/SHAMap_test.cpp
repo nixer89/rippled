@@ -26,7 +26,7 @@
 #include <test/shamap/common.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 namespace tests {
 
 #ifndef __INTELLISENSE__
@@ -398,7 +398,7 @@ class SHAMapPathProof_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(SHAMap, ripple_app, ripple);
-BEAST_DEFINE_TESTSUITE(SHAMapPathProof, ripple_app, ripple);
+BEAST_DEFINE_TESTSUITE(SHAMap, ripple_app, xrpl);
+BEAST_DEFINE_TESTSUITE(SHAMapPathProof, ripple_app, xrpl);
 }  // namespace tests
-}  // namespace ripple
+}  // namespace xrpl

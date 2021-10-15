@@ -29,7 +29,7 @@
 #include <wincrypt.h>
 #endif
 
-namespace ripple {
+namespace xrpl {
 
 void
 registerSSLCerts(
@@ -105,7 +105,7 @@ registerSSLCerts(
 #endif
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 // There is a very unpleasant interaction between <wincrypt> and
 // openssl x509 types (namely the former has macros that stomp

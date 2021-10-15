@@ -27,7 +27,7 @@
 #include <memory>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Like std::vector<char> but better.
     Meets the requirements of BufferFactory.
@@ -233,6 +233,6 @@ operator!=(Buffer const& lhs, Buffer const& rhs) noexcept
     return !(lhs == rhs);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

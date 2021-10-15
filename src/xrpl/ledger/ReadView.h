@@ -38,7 +38,7 @@
 #include <optional>
 #include <unordered_set>
 
-namespace ripple {
+namespace xrpl {
 
 /** Reflects the fee settings for a particular ledger.
 
@@ -423,7 +423,7 @@ getCloseAgree(LedgerInfo const& info)
 void
 addRaw(LedgerInfo const&, Serializer&, bool includeHash = false);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #include <xrpl/ledger/detail/ReadViewFwdRange.ipp>
 

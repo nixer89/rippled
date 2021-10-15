@@ -28,7 +28,7 @@
 #include <mutex>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 // Used by Pathfinder
 class RippleLineCache
@@ -48,7 +48,7 @@ public:
 private:
     std::mutex mLock;
 
-    ripple::hardened_hash<> hasher_;
+    xrpl::hardened_hash<> hasher_;
     std::shared_ptr<ReadView const> mLedger;
 
     struct AccountKey
@@ -94,6 +94,6 @@ private:
         lines_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

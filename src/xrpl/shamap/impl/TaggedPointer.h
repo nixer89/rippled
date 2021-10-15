@@ -25,7 +25,7 @@
 #include <cstdint>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 /** TaggedPointer is a combination of a pointer and a mask stored in the
     lowest two bits.
@@ -217,6 +217,6 @@ public:
     getChildIndex(std::uint16_t isBranch, int i) const;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

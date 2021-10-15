@@ -23,7 +23,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** Versioning information for this build. */
 // VFALCO The namespace is deprecated
@@ -98,6 +98,6 @@ isNewerVersion(std::uint64_t version);
 
 }  // namespace BuildInfo
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

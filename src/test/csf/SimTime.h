@@ -23,7 +23,7 @@
 #include <xrpl/beast/clock/manual_clock.h>
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace csf {
 
@@ -37,6 +37,6 @@ using SimTime = typename SimClock::time_point;
 
 }  // namespace csf
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -26,7 +26,7 @@
 #include <boost/beast/http/message.hpp>
 #include <soci/sqlite3/soci-sqlite3.h>
 
-namespace ripple {
+namespace xrpl {
 
 // DatabaseBody needs to meet requirements
 // from asio which is why some conventions
@@ -172,7 +172,7 @@ public:
     finish(boost::system::error_code& ec);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #include <xrpl/net/impl/DatabaseBody.ipp>
 

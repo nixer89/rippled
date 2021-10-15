@@ -54,7 +54,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -70,7 +70,7 @@ inline FeatureBitset
 supported_amendments()
 {
     static const FeatureBitset ids = [] {
-        auto const& sa = ripple::detail::supportedAmendments();
+        auto const& sa = xrpl::detail::supportedAmendments();
         std::vector<uint256> feats;
         feats.reserve(sa.size());
         for (auto const& [s, vote] : sa)
@@ -702,6 +702,6 @@ Env::rpc(std::string const& cmd, Args&&... args)
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

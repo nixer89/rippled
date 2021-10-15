@@ -27,7 +27,7 @@
 #include <algorithm>
 #include <regex>
 
-namespace ripple {
+namespace xrpl {
 
 struct json_value_test : beast::unit_test::suite
 {
@@ -1394,6 +1394,6 @@ struct json_value_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(json_value, json, ripple);
+BEAST_DEFINE_TESTSUITE(json_value, json, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

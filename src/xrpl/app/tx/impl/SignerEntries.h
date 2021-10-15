@@ -27,7 +27,7 @@
 #include <xrpl/protocol/TER.h>            // temMALFORMED
 #include <xrpl/protocol/UintTypes.h>      // AccountID
 
-namespace ripple {
+namespace xrpl {
 
 // Forward declarations
 class STObject;
@@ -70,6 +70,6 @@ public:
         std::string const& annotation);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED

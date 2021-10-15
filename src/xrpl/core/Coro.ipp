@@ -22,7 +22,7 @@
 
 #include <xrpl/basics/ByteUtilities.h>
 
-namespace ripple {
+namespace xrpl {
 
 template <class F>
 JobQueue::Coro::Coro(
@@ -146,6 +146,6 @@ JobQueue::Coro::join()
     cv_.wait(lk, [this]() { return running_ == false; });
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

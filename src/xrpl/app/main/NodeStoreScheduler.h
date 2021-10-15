@@ -24,7 +24,7 @@
 #include <xrpl/nodestore/Scheduler.h>
 #include <atomic>
 
-namespace ripple {
+namespace xrpl {
 
 /** A NodeStore::Scheduler which uses the JobQueue. */
 class NodeStoreScheduler : public NodeStore::Scheduler
@@ -43,6 +43,6 @@ private:
     JobQueue& jobQueue_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

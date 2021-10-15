@@ -27,7 +27,7 @@
 #include <string>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 /** A clock based on system_clock and adjusted for SNTP. */
 class SNTPClock : public beast::abstract_clock<std::chrono::system_clock>
@@ -42,6 +42,6 @@ public:
 
 extern std::unique_ptr<SNTPClock> make_SNTPClock(beast::Journal);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

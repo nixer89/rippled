@@ -33,7 +33,7 @@
 #include <xrpl/protocol/STAccount.h>
 #include <xrpl/protocol/UintTypes.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Performs early sanity checks on the txid */
 NotTEC
@@ -903,4 +903,4 @@ Transactor::operator()()
     return {result, applied};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

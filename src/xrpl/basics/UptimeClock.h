@@ -25,7 +25,7 @@
 #include <ratio>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 /** Tracks program uptime to seconds precision.
 
@@ -64,6 +64,6 @@ private:
     start_clock();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

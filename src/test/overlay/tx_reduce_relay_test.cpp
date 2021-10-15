@@ -23,7 +23,7 @@
 #include <xrpl/peerfinder/impl/SlotImp.h>
 #include <test/jtx/Env.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 
@@ -270,6 +270,6 @@ private:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(tx_reduce_relay, ripple_data, ripple);
+BEAST_DEFINE_TESTSUITE(tx_reduce_relay, ripple_data, xrpl);
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

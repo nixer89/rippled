@@ -25,7 +25,7 @@
 #include <algorithm>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct Directory_test : public beast::unit_test::suite
@@ -406,7 +406,7 @@ struct Directory_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(Directory, ledger, ripple, 1);
+BEAST_DEFINE_TESTSUITE_PRIO(Directory, ledger, xrpl, 1);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

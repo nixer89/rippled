@@ -25,7 +25,7 @@
 #include <test/nodestore/TestBase.h>
 #include <test/unit_test/SuiteJournal.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace NodeStore {
 
@@ -117,7 +117,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Backend, ripple_core, ripple);
+BEAST_DEFINE_TESTSUITE(Backend, ripple_core, xrpl);
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

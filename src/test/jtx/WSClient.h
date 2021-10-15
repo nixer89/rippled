@@ -27,7 +27,7 @@
 #include <memory>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class WSClient : public AbstractClient
@@ -55,6 +55,6 @@ makeWSClient(
     std::unordered_map<std::string, std::string> const& headers = {});
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

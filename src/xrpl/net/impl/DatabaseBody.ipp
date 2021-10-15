@@ -19,7 +19,7 @@
 
 #include <xrpl/app/rdb/RelationalDBInterface_global.h>
 
-namespace ripple {
+namespace xrpl {
 
 inline void
 DatabaseBody::value_type::close()
@@ -228,4 +228,4 @@ DatabaseBody::reader::finish(boost::system::error_code& ec)
     fout.close();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

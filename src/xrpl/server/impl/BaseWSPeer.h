@@ -32,7 +32,7 @@
 #include <cassert>
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents an active WebSocket connection. */
 template <class Handler, class Impl>
@@ -507,10 +507,10 @@ BaseWSPeer<Handler, Impl>::fail(error_code ec, String const& what)
     {
         ec_ = ec;
         JLOG(this->j_.trace()) << what << ": " << ec.message();
-        ripple::get_lowest_layer(impl().ws_).socket().close(ec);
+        xrpl::get_lowest_layer(impl().ws_).socket().close(ec);
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -24,7 +24,7 @@
 #include <xrpl/protocol/STBitString.h>
 #include <xrpl/protocol/STInteger.h>
 
-namespace ripple {
+namespace xrpl {
 
 class STVector256 : public STBase
 {
@@ -200,6 +200,6 @@ private:
     std::vector<uint256> mValue;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

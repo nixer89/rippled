@@ -50,7 +50,7 @@
 #include <test/jtx/trust.h>
 #include <test/jtx/utility.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -469,4 +469,4 @@ Env::enableFeature(uint256 const feature)
 }  // namespace jtx
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

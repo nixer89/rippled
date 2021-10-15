@@ -34,7 +34,7 @@
 #include <boost/range/adaptor/transformed.hpp>
 #include <soci/sqlite3/soci-sqlite3.h>
 
-namespace ripple {
+namespace xrpl {
 
 /**
  * @brief to_string Returns name of table by table ID.
@@ -1436,4 +1436,4 @@ dbHasSpace(soci::session& session, Config const& config, beast::Journal j)
     return true;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -32,7 +32,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 /** A peer's signed, proposed position for use in RCLConsensus.
 
@@ -155,6 +155,6 @@ proposalUniqueId(
     Slice const& publicKey,
     Slice const& signature);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

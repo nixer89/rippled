@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct SetAuth_test : public beast::unit_test::suite
@@ -78,7 +78,7 @@ struct SetAuth_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(SetAuth, test, ripple);
+BEAST_DEFINE_TESTSUITE(SetAuth, test, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

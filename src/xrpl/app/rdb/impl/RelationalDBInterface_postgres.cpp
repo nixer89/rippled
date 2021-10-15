@@ -22,7 +22,7 @@
 #include <xrpl/json/json_reader.h>
 #include <boost/format.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 using TxnsData = RelationalDBInterface::AccountTxs;
 using TxnsDataBinary = RelationalDBInterface::MetaTxsList;
@@ -939,4 +939,4 @@ getTxHistory(
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

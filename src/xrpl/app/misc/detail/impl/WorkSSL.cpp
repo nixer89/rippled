@@ -19,7 +19,7 @@
 
 #include <xrpl/app/misc/detail/WorkSSL.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 WorkSSL::WorkSSL(
@@ -66,4 +66,4 @@ WorkSSL::onHandshake(error_code const& ec)
 
 }  // namespace detail
 
-}  // namespace ripple
+}  // namespace xrpl

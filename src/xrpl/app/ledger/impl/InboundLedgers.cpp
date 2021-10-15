@@ -31,7 +31,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 class InboundLedgersImp : public InboundLedgers
 {
@@ -425,4 +425,4 @@ make_InboundLedgers(
         app, clock, collector, make_PeerSetBuilder(app));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

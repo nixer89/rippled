@@ -29,7 +29,7 @@
 
 #include <boost/algorithm/string.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /** RPC command that downloads and import shard archives.
     {
@@ -173,4 +173,4 @@ doDownloadShard(RPC::JsonContext& context)
     return RPC::makeObjectValue(s + " " + preShards);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

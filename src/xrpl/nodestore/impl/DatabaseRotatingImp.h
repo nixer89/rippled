@@ -22,7 +22,7 @@
 
 #include <xrpl/nodestore/DatabaseRotating.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class DatabaseRotatingImp : public DatabaseRotating
@@ -95,6 +95,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

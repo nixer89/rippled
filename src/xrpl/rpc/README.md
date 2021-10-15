@@ -14,7 +14,7 @@ their own.
 
 ## The classes.
 
-Suspension with continuation uses four `std::function`s in the `ripple::RPC`
+Suspension with continuation uses four `std::function`s in the `xrpl::RPC`
 namespace:
 
     using Callback = std::function <void ()>;

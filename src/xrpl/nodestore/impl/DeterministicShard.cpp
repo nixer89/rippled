@@ -29,7 +29,7 @@
 #include <nudb/nudb.hpp>
 #include <openssl/ripemd.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 DeterministicShard::DeterministicShard(
@@ -213,4 +213,4 @@ DeterministicShard::store(std::shared_ptr<NodeObject> const& nodeObject)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

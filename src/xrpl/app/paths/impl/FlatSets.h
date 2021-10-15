@@ -22,7 +22,7 @@
 
 #include <boost/container/flat_set.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /** Given two flat sets dst and src, compute dst = dst union src
 
@@ -44,6 +44,6 @@ SetUnion(
         boost::container::ordered_unique_range_t{}, src.begin(), src.end());
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -23,7 +23,7 @@
 #include <xrpl/protocol/Indexes.h>
 #include <xrpl/protocol/STObject.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Invariants_test;
 
@@ -119,6 +119,6 @@ private:
 
 using SLE = STLedgerEntry;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

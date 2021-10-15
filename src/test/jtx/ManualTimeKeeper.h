@@ -23,7 +23,7 @@
 #include <xrpl/core/TimeKeeper.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class ManualTimeKeeper : public TimeKeeper
@@ -63,6 +63,6 @@ private:
 };
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -22,7 +22,7 @@
 #include <array>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 namespace tests {
 
@@ -70,8 +70,8 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(varint, NodeStore, ripple);
+BEAST_DEFINE_TESTSUITE(varint, NodeStore, xrpl);
 
 }  // namespace tests
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

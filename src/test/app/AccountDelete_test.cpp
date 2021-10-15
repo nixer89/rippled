@@ -21,7 +21,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class AccountDelete_test : public beast::unit_test::suite
@@ -924,7 +924,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(AccountDelete, app, ripple, 2);
+BEAST_DEFINE_TESTSUITE_PRIO(AccountDelete, app, xrpl, 2);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

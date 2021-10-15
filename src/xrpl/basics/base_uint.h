@@ -37,7 +37,7 @@
 #include <functional>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -652,12 +652,12 @@ static_assert(sizeof(uint160) == 160 / 8, "There should be no padding bytes");
 static_assert(sizeof(uint256) == 256 / 8, "There should be no padding bytes");
 #endif
 
-}  // namespace ripple
+}  // namespace xrpl
 
 namespace beast {
 
 template <std::size_t Bits, class Tag>
-struct is_uniquely_represented<ripple::base_uint<Bits, Tag>>
+struct is_uniquely_represented<xrpl::base_uint<Bits, Tag>>
     : public std::true_type
 {
     explicit is_uniquely_represented() = default;

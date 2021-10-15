@@ -28,7 +28,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 /** The amendment table stores the list of enabled and potential amendments.
     Individuals amendments are voted on by validators during the consensus
@@ -187,6 +187,6 @@ make_AmendmentTable(
     Section const& vetoed,
     beast::Journal journal);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

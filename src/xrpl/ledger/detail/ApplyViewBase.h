@@ -26,7 +26,7 @@
 #include <xrpl/ledger/ReadView.h>
 #include <xrpl/ledger/detail/ApplyStateTable.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 class ApplyViewBase : public ApplyView, public RawView
@@ -126,6 +126,6 @@ protected:
 };
 
 }  // namespace detail
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

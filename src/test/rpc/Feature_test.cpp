@@ -22,7 +22,7 @@
 #include <xrpl/protocol/jss.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Feature_test : public beast::unit_test::suite
 {
@@ -32,11 +32,11 @@ class Feature_test : public beast::unit_test::suite
         testcase("internals");
 
         std::map<std::string, DefaultVote> const& supported =
-            ripple::detail::supportedAmendments();
+            xrpl::detail::supportedAmendments();
         BEAST_EXPECT(
             supported.size() ==
-            ripple::detail::numDownVotedAmendments() +
-                ripple::detail::numUpVotedAmendments());
+            xrpl::detail::numDownVotedAmendments() +
+                xrpl::detail::numUpVotedAmendments());
         std::size_t up = 0, down = 0;
         for (std::pair<std::string const, DefaultVote> const& amendment :
              supported)
@@ -49,8 +49,8 @@ class Feature_test : public beast::unit_test::suite
                     ++up;
             }
         }
-        BEAST_EXPECT(down == ripple::detail::numDownVotedAmendments());
-        BEAST_EXPECT(up == ripple::detail::numUpVotedAmendments());
+        BEAST_EXPECT(down == xrpl::detail::numDownVotedAmendments());
+        BEAST_EXPECT(up == xrpl::detail::numUpVotedAmendments());
     }
 
     void
@@ -61,7 +61,7 @@ class Feature_test : public beast::unit_test::suite
         // Test all the supported features. In a perfect world, this would test
         // FeatureCollections::featureNames, but that's private. Leave it that
         // way.
-        auto const supported = ripple::detail::supportedAmendments();
+        auto const supported = xrpl::detail::supportedAmendments();
 
         for (auto const& [feature, vote] : supported)
         {
@@ -106,7 +106,7 @@ class Feature_test : public beast::unit_test::suite
         Env env{*this};
 
         std::map<std::string, DefaultVote> const& votes =
-            ripple::detail::supportedAmendments();
+            xrpl::detail::supportedAmendments();
 
         auto jrr = env.rpc("feature")[jss::result];
         if (!BEAST_EXPECT(jrr.isMember(jss::features)))
@@ -201,7 +201,7 @@ class Feature_test : public beast::unit_test::suite
             *this, FeatureBitset(featureDepositAuth, featureDepositPreauth)};
 
         std::map<std::string, DefaultVote> const& votes =
-            ripple::detail::supportedAmendments();
+            xrpl::detail::supportedAmendments();
 
         auto jrr = env.rpc("feature")[jss::result];
         if (!BEAST_EXPECT(jrr.isMember(jss::features)))
@@ -283,7 +283,7 @@ class Feature_test : public beast::unit_test::suite
         // to avoid maintenance as more amendments are added in the future.
         BEAST_EXPECT(majorities.size() >= 5);
         std::map<std::string, DefaultVote> const& votes =
-            ripple::detail::supportedAmendments();
+            xrpl::detail::supportedAmendments();
 
         jrr = env.rpc("feature")[jss::result];
         if (!BEAST_EXPECT(jrr.isMember(jss::features)))
@@ -379,6 +379,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Feature, rpc, ripple);
+BEAST_DEFINE_TESTSUITE(Feature, rpc, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

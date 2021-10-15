@@ -30,7 +30,7 @@
 #include <optional>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 static uint8_t SNTPQueryData[48] = {
     0x1B, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -488,4 +488,4 @@ make_SNTPClock(beast::Journal j)
     return std::make_unique<SNTPClientImp>(j);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

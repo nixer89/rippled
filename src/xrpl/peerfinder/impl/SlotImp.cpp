@@ -21,7 +21,7 @@
 #include <xrpl/peerfinder/impl/SlotImp.h>
 #include <xrpl/peerfinder/impl/Tuning.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 SlotImp::SlotImp(
@@ -135,4 +135,4 @@ SlotImp::recent_t::expire()
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

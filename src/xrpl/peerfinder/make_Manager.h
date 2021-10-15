@@ -24,7 +24,7 @@
 #include <boost/asio/io_service.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Create a new Manager. */
@@ -37,6 +37,6 @@ make_Manager(
     beast::insight::Collector::ptr const& collector);
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

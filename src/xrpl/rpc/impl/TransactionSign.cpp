@@ -42,7 +42,7 @@
 #include <algorithm>
 #include <iterator>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 namespace detail {
 
@@ -537,7 +537,7 @@ transactionPreProcessImpl(
         Serializer s =
             buildMultiSigningData(*stpTrans, signingArgs.getSigner());
 
-        auto multisig = ripple::sign(pk, sk, s.slice());
+        auto multisig = xrpl::sign(pk, sk, s.slice());
 
         signingArgs.moveMultiSignature(std::move(multisig));
     }
@@ -1227,4 +1227,4 @@ transactionSubmitMultiSigned(
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

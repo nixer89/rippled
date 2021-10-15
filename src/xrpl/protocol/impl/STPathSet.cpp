@@ -24,7 +24,7 @@
 #include <xrpl/protocol/STPathSet.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 std::size_t
 STPathElement::get_hash(STPathElement const& element)
@@ -215,4 +215,4 @@ STPathSet::add(Serializer& s) const
     s.add8(STPathElement::typeNone);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

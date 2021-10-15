@@ -22,7 +22,7 @@
 
 #include <xrpl/nodestore/Scheduler.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** Simple NodeStore Scheduler that just peforms the tasks synchronously. */
@@ -40,6 +40,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

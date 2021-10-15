@@ -28,7 +28,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 struct LedgerFill
 {
@@ -86,6 +86,6 @@ serializeHex(STObject const& o)
 {
     return strHex(serializeBlob(o));
 }
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

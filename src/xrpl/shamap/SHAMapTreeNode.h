@@ -32,7 +32,7 @@
 #include <mutex>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 // These are wire-protocol identifiers used during serialization to encode the
 // type of a node. They should not be arbitrarily be changed.
@@ -269,6 +269,6 @@ private:
     makeTransactionWithMeta(Slice data, SHAMapHash const& hash, bool hashValid);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

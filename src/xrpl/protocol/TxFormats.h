@@ -22,7 +22,7 @@
 
 #include <xrpl/protocol/KnownFormats.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** Transaction type identifiers.
 
@@ -159,6 +159,6 @@ public:
     getInstance();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

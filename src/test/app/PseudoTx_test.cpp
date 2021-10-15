@@ -21,7 +21,7 @@
 #include <test/jtx.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct PseudoTx_test : public beast::unit_test::suite
@@ -80,7 +80,7 @@ struct PseudoTx_test : public beast::unit_test::suite
             env.app().openLedger().modify(
                 [&](OpenView& view, beast::Journal j) {
                     auto const result =
-                        ripple::apply(env.app(), view, stx, tapNONE, j);
+                        xrpl::apply(env.app(), view, stx, tapNONE, j);
                     BEAST_EXPECT(!result.second && result.first == temINVALID);
                     return result.second;
                 });
@@ -106,7 +106,7 @@ struct PseudoTx_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(PseudoTx, app, ripple);
+BEAST_DEFINE_TESTSUITE(PseudoTx, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

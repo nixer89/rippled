@@ -22,7 +22,7 @@
 #include <type_traits>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -232,4 +232,4 @@ transCode(std::string const& token)
     return TER::fromInt(r->second);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

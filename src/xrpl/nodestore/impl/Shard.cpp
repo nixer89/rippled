@@ -31,7 +31,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 uint256 const Shard::finalKey{0};
@@ -1255,4 +1255,4 @@ Shard::doCallForSQL(
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

@@ -26,7 +26,7 @@
 #include <chrono>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class CanonicalTXSet;
@@ -78,5 +78,5 @@ buildLedger(
     Application& app,
     beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

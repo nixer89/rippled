@@ -32,7 +32,7 @@
 #include <iterator>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 LocalValue<bool> stAmountCanonicalizeSwitchover(true);
 
@@ -1373,4 +1373,4 @@ divRound(
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

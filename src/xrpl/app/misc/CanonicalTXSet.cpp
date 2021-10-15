@@ -19,7 +19,7 @@
 
 #include <xrpl/app/misc/CanonicalTXSet.h>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 operator<(CanonicalTXSet::Key const& lhs, CanonicalTXSet::Key const& rhs)
@@ -86,4 +86,4 @@ CanonicalTXSet::popAcctTransaction(std::shared_ptr<STTx const> const& tx)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -23,7 +23,7 @@
 #include <archive.h>
 #include <archive_entry.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 extractTarLz4(
@@ -111,4 +111,4 @@ extractTarLz4(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

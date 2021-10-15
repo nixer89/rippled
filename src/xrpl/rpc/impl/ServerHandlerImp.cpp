@@ -50,7 +50,7 @@
 #include <mutex>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 
 static bool
 isStatusRequest(http_request_type const& request)
@@ -1192,4 +1192,4 @@ make_ServerHandler(
         app, io_service, jobQueue, networkOPs, resourceManager, cm);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

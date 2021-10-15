@@ -22,7 +22,7 @@
 #include <array>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct Slice_test : beast::unit_test::suite
@@ -109,7 +109,7 @@ struct Slice_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Slice, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(Slice, ripple_basics, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

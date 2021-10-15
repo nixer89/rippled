@@ -25,7 +25,7 @@
 #include <xrpl/shamap/SHAMapTxLeafNode.h>
 #include <xrpl/shamap/SHAMapTxPlusMetaLeafNode.h>
 
-namespace ripple {
+namespace xrpl {
 
 [[nodiscard]] std::shared_ptr<SHAMapLeafNode>
 makeTypedLeaf(
@@ -1129,4 +1129,4 @@ SHAMap::invariants() const
     node->invariants(true);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

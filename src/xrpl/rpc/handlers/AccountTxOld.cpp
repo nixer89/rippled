@@ -32,7 +32,7 @@
 #include <xrpl/rpc/Role.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   account: account,
@@ -252,4 +252,4 @@ doAccountTxOld(RPC::JsonContext& context)
 #endif
 }
 
-}  // namespace ripple
+}  // namespace xrpl

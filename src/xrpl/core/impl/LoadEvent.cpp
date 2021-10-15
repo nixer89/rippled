@@ -22,7 +22,7 @@
 #include <cassert>
 #include <iomanip>
 
-namespace ripple {
+namespace xrpl {
 
 LoadEvent::LoadEvent(
     LoadMonitor& monitor,
@@ -94,4 +94,4 @@ LoadEvent::stop()
     monitor_.addLoadSample(*this);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

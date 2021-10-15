@@ -23,7 +23,7 @@
 #include <limits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 std::pair<bool, std::uint64_t>
 mulDiv(std::uint64_t value, std::uint64_t mul, std::uint64_t div)
@@ -43,4 +43,4 @@ mulDiv(std::uint64_t value, std::uint64_t mul, std::uint64_t div)
     return {true, static_cast<std::uint64_t>(result)};
 }
 
-}  // namespace ripple
+}  // namespace xrpl

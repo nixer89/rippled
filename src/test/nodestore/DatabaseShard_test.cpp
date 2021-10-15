@@ -42,7 +42,7 @@
 #include <numeric>
 #include <openssl/ripemd.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** std::uniform_int_distribution is platform dependent.
@@ -552,7 +552,7 @@ class DatabaseShard_test : public TestBase
 
         RangeSet<std::uint32_t> rs;
         BEAST_EXPECT(from_string(rs, set));
-        return ripple::to_string(rs);
+        return xrpl::to_string(rs);
     }
 
     std::unique_ptr<Config>
@@ -1828,7 +1828,7 @@ class DatabaseShard_test : public TestBase
         }
 
         // Create additional ledgers to test a pathway in
-        // 'ripple::saveLedgerMeta' wherein fetching the
+        // 'xrpl::saveLedgerMeta' wherein fetching the
         // accepted ledger fails
         data = TestData(seedValue * 2, 4, 1);
         if (!BEAST_EXPECT(data.makeLedgers(env, shardCount)))
@@ -1868,7 +1868,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL(DatabaseShard, NodeStore, ripple);
+BEAST_DEFINE_TESTSUITE_MANUAL(DatabaseShard, NodeStore, xrpl);
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

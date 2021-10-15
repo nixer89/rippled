@@ -25,7 +25,7 @@
 #include <xrpl/server/impl/JSONRPCUtil.h>
 #include <boost/algorithm/string.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 std::string
 getHTTPHeaderTimestamp()
@@ -141,4 +141,4 @@ HTTPReply(
     output("\r\n");
 }
 
-}  // namespace ripple
+}  // namespace xrpl

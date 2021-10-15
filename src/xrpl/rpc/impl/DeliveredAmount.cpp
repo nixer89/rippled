@@ -30,7 +30,7 @@
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <boost/algorithm/string/case_conv.hpp>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 /*
@@ -248,4 +248,4 @@ insertDeliveredAmount(
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl

@@ -29,7 +29,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 #include <xrpl/rpc/impl/Tuning.h>
-namespace ripple {
+namespace xrpl {
 
 void
 addChannel(Json::Value& jsonLines, SLE const& line)
@@ -187,4 +187,4 @@ doAccountChannels(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

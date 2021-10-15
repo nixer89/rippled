@@ -160,17 +160,17 @@ else
     # ORDER matters here...sorted in approximately
     # descending execution time (longest running tests at top)
     declare -a manual_tests=(
-        'ripple.ripple_data.reduce_relay_simulate'
-        'ripple.tx.Offer_manual'
-        'ripple.tx.CrossingLimits'
-        'ripple.tx.PlumpBook'
-        'ripple.app.Flow_manual'
-        'ripple.tx.OversizeMeta'
-        'ripple.consensus.DistributedValidators'
-        'ripple.app.NoRippleCheckLimits'
-        'ripple.ripple_data.compression'
-        'ripple.NodeStore.Timing'
-        'ripple.consensus.ByzantineFailureSim'
+        'xrpl.ripple_data.reduce_relay_simulate'
+        'xrpl.tx.Offer_manual'
+        'xrpl.tx.CrossingLimits'
+        'xrpl.tx.PlumpBook'
+        'xrpl.app.Flow_manual'
+        'xrpl.tx.OversizeMeta'
+        'xrpl.consensus.DistributedValidators'
+        'xrpl.app.NoRippleCheckLimits'
+        'xrpl.ripple_data.compression'
+        'xrpl.NodeStore.Timing'
+        'xrpl.consensus.ByzantineFailureSim'
         'beast.chrono.abstract_clock'
         'beast.unit_test.print'
     )
@@ -178,8 +178,8 @@ else
         # these two tests cause travis CI to run out of memory.
         # TODO: investigate possible workarounds.
         manual_tests=(
-            'ripple.consensus.ScaleFreeSim'
-            'ripple.tx.FindOversizeCross'
+            'xrpl.consensus.ScaleFreeSim'
+            'xrpl.tx.FindOversizeCross'
             "${manual_tests[@]}"
         )
     fi
@@ -253,7 +253,7 @@ if [[ ${look_core} == true ]]; then
                 -ex "set height 0" \
                 -ex "set logging file ${gdb_output}" \
                 -ex "set logging on" \
-                -ex "print 'ripple::BuildInfo::versionString'" \
+                -ex "print 'xrpl::BuildInfo::versionString'" \
                 -ex "thread apply all backtrace full" \
                 -ex "info inferiors" \
                 -ex quit \

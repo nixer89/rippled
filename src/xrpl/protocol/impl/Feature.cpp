@@ -29,10 +29,10 @@
 #include <boost/multi_index_container.hpp>
 #include <cstring>
 
-namespace ripple {
+namespace xrpl {
 
 inline std::size_t
-hash_value(ripple::uint256 const& feature)
+hash_value(xrpl::uint256 const& feature)
 {
     std::size_t seed = 0;
     using namespace boost;
@@ -201,7 +201,7 @@ public:
 
 FeatureCollections::FeatureCollections()
 {
-    features.reserve(ripple::detail::numFeatures);
+    features.reserve(xrpl::detail::numFeatures);
 }
 
 std::optional<uint256>
@@ -476,4 +476,4 @@ uint256 const
 [[maybe_unused]] static const bool readOnlySet =
     featureCollections.registrationIsDone();
 
-}  // namespace ripple
+}  // namespace xrpl

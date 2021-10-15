@@ -25,7 +25,7 @@
 #include <sstream>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 namespace openssl {
 namespace detail {
 
@@ -419,4 +419,4 @@ make_SSLContextAuthed(
     return context;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

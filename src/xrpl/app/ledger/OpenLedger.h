@@ -31,7 +31,7 @@
 #include <cassert>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 // How many total extra passes we make
 // We must ensure we make at least one non-retriable pass
@@ -293,6 +293,6 @@ debugTostr(SHAMap const& set);
 std::string
 debugTostr(std::shared_ptr<ReadView const> const& view);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

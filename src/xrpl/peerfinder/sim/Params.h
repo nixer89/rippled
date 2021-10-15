@@ -20,7 +20,7 @@
 #ifndef RIPPLE_PEERFINDER_SIM_PARAMS_H_INCLUDED
 #define RIPPLE_PEERFINDER_SIM_PARAMS_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 namespace Sim {
 
@@ -40,6 +40,6 @@ struct Params
 
 }  // namespace Sim
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

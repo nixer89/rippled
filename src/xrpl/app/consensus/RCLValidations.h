@@ -27,7 +27,7 @@
 #include <xrpl/protocol/STValidation.h>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 
@@ -40,8 +40,8 @@ class RCLValidation
     std::shared_ptr<STValidation> val_;
 
 public:
-    using NodeKey = ripple::PublicKey;
-    using NodeID = ripple::NodeID;
+    using NodeKey = xrpl::PublicKey;
+    using NodeID = xrpl::NodeID;
 
     /** Constructor
 
@@ -250,6 +250,6 @@ handleNewValidation(
     std::shared_ptr<STValidation> const& val,
     std::string const& source);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -26,7 +26,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 struct AmountSpec
 {
@@ -211,6 +211,6 @@ toAmountSpec(EitherAmount const& ea, std::optional<Currency> const& c)
     return r;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -34,7 +34,7 @@
 #include <iomanip>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 class Serializer
 {
@@ -427,6 +427,6 @@ SerialIter::getBitString()
     return base_uint<Bits, Tag>::fromVoid(x);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

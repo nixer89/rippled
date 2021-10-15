@@ -23,7 +23,7 @@
 #include <xrpl/protocol/tokens.h>
 #include <cstring>
 
-namespace ripple {
+namespace xrpl {
 
 std::string
 toBase58(AccountID const& v)
@@ -63,7 +63,7 @@ parseBase58(std::string const& s)
 
         The short answer is that we kept Bitcoin's behavior.
         The longer answer was that:
-            1) Using a single hash could leave ripple
+            1) Using a single hash could leave xrpl
                vulnerable to length extension attacks.
             2) Only RIPEMD160 is generally considered safe at 160 bits.
 
@@ -148,7 +148,7 @@ AccountIDCache::toBase58(AccountID const& id) const
     }
     else
     {
-        result = ripple::toBase58(id);
+        result = xrpl::toBase58(id);
     }
     if (m1_.size() >= capacity_)
     {
@@ -160,4 +160,4 @@ AccountIDCache::toBase58(AccountID const& id) const
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

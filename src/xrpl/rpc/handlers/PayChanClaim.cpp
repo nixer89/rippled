@@ -32,7 +32,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   secret_key: <signing_secret_key>
@@ -146,4 +146,4 @@ doChannelVerify(RPC::JsonContext& context)
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

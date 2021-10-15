@@ -23,7 +23,7 @@
 #include <xrpl/app/ledger/AcceptedLedgerTx.h>
 #include <xrpl/protocol/AccountID.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** A ledger that has become irrevocable.
 
@@ -80,6 +80,6 @@ private:
     map_t mMap;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

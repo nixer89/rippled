@@ -21,7 +21,7 @@
 #include <xrpl/nodestore/impl/DatabaseRotatingImp.h>
 #include <xrpl/protocol/HashPrefix.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 DatabaseRotatingImp::DatabaseRotatingImp(
@@ -210,4 +210,4 @@ DatabaseRotatingImp::for_each(
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

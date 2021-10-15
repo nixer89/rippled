@@ -27,7 +27,7 @@
 #include <xrpl/shamap/TreeNodeCache.h>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 class Family
 {
@@ -85,6 +85,6 @@ public:
     reset() = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

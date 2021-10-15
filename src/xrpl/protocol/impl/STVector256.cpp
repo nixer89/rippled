@@ -22,7 +22,7 @@
 #include <xrpl/protocol/STVector256.h>
 #include <xrpl/protocol/jss.h>
 
-namespace ripple {
+namespace xrpl {
 
 STVector256::STVector256(SerialIter& sit, SField const& name) : STBase(name)
 {
@@ -66,4 +66,4 @@ Json::Value STVector256::getJson(JsonOptions) const
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

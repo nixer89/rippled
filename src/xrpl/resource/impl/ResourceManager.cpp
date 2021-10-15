@@ -30,7 +30,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 class ManagerImp : public Manager
@@ -180,4 +180,4 @@ make_Manager(
 }
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl

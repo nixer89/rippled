@@ -26,7 +26,7 @@
 
 #include <xrpl/protocol/UintTypes.h>
 
-namespace ripple {
+namespace xrpl {
 
 /** A currency issued by an account.
     @see Currency, AccountID, Issue, Book
@@ -108,6 +108,6 @@ noIssue()
     return issue;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

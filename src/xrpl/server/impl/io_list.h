@@ -29,7 +29,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 /** Manages a set of objects performing asynchronous I/O. */
 class io_list final
@@ -262,6 +262,6 @@ io_list::join()
     cv_.wait(lock, [&] { return closed_ && n_ == 0; });
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

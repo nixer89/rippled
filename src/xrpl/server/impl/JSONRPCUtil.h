@@ -23,7 +23,7 @@
 #include <xrpl/json/Output.h>
 #include <xrpl/json/json_value.h>
 
-namespace ripple {
+namespace xrpl {
 
 void
 HTTPReply(
@@ -32,6 +32,6 @@ HTTPReply(
     Json::Output const&,
     beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

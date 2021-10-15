@@ -27,7 +27,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/impl/Handler.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   ip: <string>,
@@ -68,4 +68,4 @@ doConnect(RPC::JsonContext& context)
     return RPC::makeObjectValue("connecting");
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -22,7 +22,7 @@
 
 #include <functional>
 
-namespace ripple {
+namespace xrpl {
 
 #ifdef _MSC_VER
 
@@ -71,6 +71,6 @@ using equal_to = std::equal_to<T>;
 
 #endif
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

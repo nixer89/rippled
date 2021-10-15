@@ -22,7 +22,7 @@
 #include <xrpl/peerfinder/impl/Tuning.h>
 #include <xrpl/peerfinder/impl/iosformat.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 Bootcache::Bootcache(Store& store, clock_type& clock, beast::Journal journal)
@@ -284,4 +284,4 @@ Bootcache::flagForUpdate()
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <cstdint>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 // Various protocol and system specific constant globals.
 
@@ -33,7 +33,7 @@ namespace ripple {
 static inline std::string const&
 systemName()
 {
-    static std::string const name = "ripple";
+    static std::string const name = "xrpl";
     return name;
 }
 
@@ -75,7 +75,7 @@ constexpr std::ratio<80, 100> postFixAmendmentMajorityCalcThreshold;
 /** The minimum amount of time an amendment must hold a majority */
 constexpr std::chrono::seconds const defaultAmendmentMajorityTime = weeks{2};
 
-}  // namespace ripple
+}  // namespace xrpl
 
 /** Default peer port (IANA registered) */
 inline std::uint16_t constexpr DEFAULT_PEER_PORT{2459};

@@ -23,7 +23,7 @@
 #include <condition_variable>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 template <class Mutex, class CondVar>
 class basic_semaphore
@@ -78,6 +78,6 @@ public:
 
 using semaphore = basic_semaphore<std::mutex, std::condition_variable>;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

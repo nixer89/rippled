@@ -36,7 +36,7 @@
 #include <mutex>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 inline bool
 operator<(Port const& lhs, Port const& rhs)
@@ -196,6 +196,6 @@ private:
     statusResponse(http_request_type const& request) const;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -31,7 +31,7 @@
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 
 // {
 //   transaction: <hex>
@@ -481,4 +481,4 @@ doTxGrpc(RPC::GRPCContext<org::xrpl::rpc::v1::GetTransactionRequest>& context)
     return populateProtoResponse(res, args, context);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

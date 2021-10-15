@@ -53,7 +53,7 @@
 
 using namespace std::chrono_literals;
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 /** The threshold above which we treat a peer connection as high latency */
@@ -1452,7 +1452,7 @@ PeerImp::onMessage(std::shared_ptr<protocol::TMPeerShardInfoV2> const& m)
     JLOG(p_journal_.trace())
         << "Consumed TMPeerShardInfoV2 originating from public key "
         << toBase58(TokenType::NodePublic, publicKey) << " finalized shards["
-        << ripple::to_string(shardInfo.finalized()) << "] incomplete shards["
+        << xrpl::to_string(shardInfo.finalized()) << "] incomplete shards["
         << (shardInfo.incomplete().empty() ? "empty"
                                            : shardInfo.incompleteToString())
         << "]";
@@ -3683,4 +3683,4 @@ PeerImp::Metrics::total_bytes() const
     return totalBytes_;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

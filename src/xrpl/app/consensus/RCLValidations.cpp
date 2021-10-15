@@ -34,7 +34,7 @@
 #include <mutex>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 RCLValidatedLedger::RCLValidatedLedger(MakeGenesis)
     : ledgerID_{0}, ledgerSeq_{0}, j_{beast::Journal::getNullSink()}
@@ -216,4 +216,4 @@ handleNewValidation(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

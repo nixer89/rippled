@@ -20,7 +20,7 @@
 #include <xrpl/protocol/Quality.h>
 #include <xrpl/protocol/Rate.h>
 
-namespace ripple {
+namespace xrpl {
 
 Rate const parityRate(QUALITY_ONE);
 
@@ -110,4 +110,4 @@ divideRound(
     return divRound(amount, detail::as_amount(rate), issue, roundUp);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

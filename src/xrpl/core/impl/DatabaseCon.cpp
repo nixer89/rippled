@@ -28,7 +28,7 @@
 #include <memory>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 class CheckpointersCollection
 {
@@ -252,4 +252,4 @@ DatabaseCon::setupCheckpointing(JobQueue* q, Logs& l)
     checkpointer_ = checkpointers.create(session_, *q, l);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

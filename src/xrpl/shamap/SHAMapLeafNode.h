@@ -27,7 +27,7 @@
 #include <cstdint>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 class SHAMapLeafNode : public SHAMapTreeNode
 {
@@ -77,6 +77,6 @@ public:
     getString(SHAMapNodeID const&) const final override;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

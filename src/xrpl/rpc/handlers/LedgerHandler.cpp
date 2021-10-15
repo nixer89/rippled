@@ -30,7 +30,7 @@
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 #include <xrpl/rpc/impl/RPCHelpers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 LedgerHandler::LedgerHandler(JsonContext& context) : context_(context)
@@ -221,4 +221,4 @@ doLedgerGrpc(RPC::GRPCContext<org::xrpl::rpc::v1::GetLedgerRequest>& context)
 
     return {response, status};
 }
-}  // namespace ripple
+}  // namespace xrpl

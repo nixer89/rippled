@@ -29,7 +29,7 @@
 #include <mutex>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 namespace test {
 class LedgerReplayClient;
@@ -139,6 +139,6 @@ private:
     friend class test::LedgerReplayClient;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

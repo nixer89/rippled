@@ -19,7 +19,7 @@
 
 #include <xrpl/resource/Fees.h>
 
-namespace ripple {
+namespace xrpl {
 namespace Resource {
 
 Charge const feeInvalidRequest(100, "malformed request");
@@ -42,4 +42,4 @@ Charge const feeWarning(2000, "received warning");
 Charge const feeDrop(3000, "dropped");
 
 }  // namespace Resource
-}  // namespace ripple
+}  // namespace xrpl

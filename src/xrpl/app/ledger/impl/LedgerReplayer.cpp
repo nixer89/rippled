@@ -22,7 +22,7 @@
 #include <xrpl/app/ledger/impl/SkipListAcquire.h>
 #include <xrpl/core/JobQueue.h>
 
-namespace ripple {
+namespace xrpl {
 
 LedgerReplayer::LedgerReplayer(
     Application& app,
@@ -277,4 +277,4 @@ LedgerReplayer::stop()
     JLOG(j_.info()) << "Stopped";
 }
 
-}  // namespace ripple
+}  // namespace xrpl

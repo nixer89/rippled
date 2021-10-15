@@ -30,7 +30,7 @@
 
 #include <boost/container/flat_set.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TIn, class TOut>
 class TOfferStreamBase
@@ -193,6 +193,6 @@ public:
         return permToRemove_;
     }
 };
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

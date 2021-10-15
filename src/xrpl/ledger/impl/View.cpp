@@ -32,7 +32,7 @@
 #include <cassert>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -1485,4 +1485,4 @@ transferXRP(
     return tesSUCCESS;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -27,7 +27,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/protocol/Indexes.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Change : public Transactor
 {
@@ -66,6 +66,6 @@ private:
     applyUNLModify();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

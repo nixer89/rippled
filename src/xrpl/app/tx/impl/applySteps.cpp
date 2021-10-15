@@ -36,7 +36,7 @@
 #include <xrpl/app/tx/impl/SetSignerList.h>
 #include <xrpl/app/tx/impl/SetTrust.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Templates so preflight does the right thing with T::ConsequencesFactory.
 //
@@ -522,4 +522,4 @@ doApply(PreclaimResult const& preclaimResult, Application& app, OpenView& view)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

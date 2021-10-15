@@ -49,7 +49,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 
 static void
 noticeReceiver(void* arg, PGresult const* res)
@@ -1415,5 +1415,5 @@ initSchema(std::shared_ptr<PgPool> const& pool)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

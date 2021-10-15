@@ -23,7 +23,7 @@
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 // Helper class to track the expected number `delivered_amount` results.
@@ -334,7 +334,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(DeliveredAmount, app, ripple);
+BEAST_DEFINE_TESTSUITE(DeliveredAmount, app, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

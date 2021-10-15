@@ -22,7 +22,7 @@
 
 #include <numeric>
 
-namespace ripple {
+namespace xrpl {
 
 namespace metrics {
 
@@ -148,4 +148,4 @@ TxMetrics::json() const
 
 }  // namespace metrics
 
-}  // namespace ripple
+}  // namespace xrpl

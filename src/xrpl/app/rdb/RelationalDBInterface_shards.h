@@ -26,7 +26,7 @@
 #include <xrpl/protocol/XrplLedgerHash.h>
 #include <boost/filesystem.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 struct DatabasePair
 {
@@ -252,6 +252,6 @@ deleteFromArchiveDB(DatabaseCon& db, std::uint32_t shardIndex);
 void
 dropArchiveDB(DatabaseCon& db);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -21,7 +21,7 @@
 #include <xrpl/basics/Log.h>
 #include <xrpl/protocol/Feature.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 bool
@@ -383,4 +383,4 @@ template class TOfferStreamBase<STAmount, STAmount>;
 template class TOfferStreamBase<IOUAmount, IOUAmount>;
 template class TOfferStreamBase<XRPAmount, IOUAmount>;
 template class TOfferStreamBase<IOUAmount, XRPAmount>;
-}  // namespace ripple
+}  // namespace xrpl

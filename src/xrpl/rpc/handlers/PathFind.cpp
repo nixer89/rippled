@@ -27,7 +27,7 @@
 #include <xrpl/resource/Fees.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doPathFind(RPC::JsonContext& context)
@@ -80,4 +80,4 @@ doPathFind(RPC::JsonContext& context)
     return rpcError(rpcINVALID_PARAMS);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

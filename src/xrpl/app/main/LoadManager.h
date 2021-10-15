@@ -27,7 +27,7 @@
 #include <mutex>
 #include <thread>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 
@@ -113,6 +113,6 @@ private:
 std::unique_ptr<LoadManager>
 make_LoadManager(Application& app, beast::Journal journal);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

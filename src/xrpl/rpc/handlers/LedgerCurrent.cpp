@@ -24,7 +24,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doLedgerCurrent(RPC::JsonContext& context)
@@ -35,4 +35,4 @@ doLedgerCurrent(RPC::JsonContext& context)
     return jvResult;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

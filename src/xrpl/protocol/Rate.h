@@ -26,7 +26,7 @@
 #include <cstdint>
 #include <ostream>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents a transfer rate
 
@@ -93,6 +93,6 @@ divideRound(
 /** A transfer rate signifying a 1:1 exchange */
 extern Rate const parityRate;
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

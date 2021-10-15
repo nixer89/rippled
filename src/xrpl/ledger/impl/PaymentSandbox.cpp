@@ -26,7 +26,7 @@
 
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 
 namespace detail {
 
@@ -393,4 +393,4 @@ PaymentSandbox::xrpDestroyed() const
     return items_.dropsDestroyed();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -24,7 +24,7 @@
 #include <xrpl/basics/chrono.h>
 #include <xrpl/nodestore/Database.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 class DatabaseNodeImp : public Database
@@ -156,6 +156,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

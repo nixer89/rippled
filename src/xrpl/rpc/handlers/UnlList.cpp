@@ -24,7 +24,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doUnlList(RPC::JsonContext& context)
@@ -47,4 +47,4 @@ doUnlList(RPC::JsonContext& context)
     return obj;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -44,8 +44,8 @@ listed later.
 | 15           | test/rpc test/app
 
 (Note that `test` levelization is *much* less important and *much* less
-strictly enforced than `ripple` levelization, other than the requirement
-that `test` code should *never* be included in `ripple` code.)
+strictly enforced than `xrpl` levelization, other than the requirement
+that `test` code should *never* be included in `xrpl` code.)
 
 ## Validation
 

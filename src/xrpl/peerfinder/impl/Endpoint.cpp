@@ -19,7 +19,7 @@
 
 #include <xrpl/peerfinder/PeerfinderManager.h>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 Endpoint::Endpoint() : hops(0)
@@ -38,4 +38,4 @@ operator<(Endpoint const& lhs, Endpoint const& rhs)
 }
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl

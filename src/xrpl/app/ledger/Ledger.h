@@ -33,7 +33,7 @@
 #include <xrpl/shamap/SHAMap.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 class Application;
 class Job;
@@ -494,6 +494,6 @@ deserializeTxPlusMeta(SHAMapItem const& item);
 uint256
 calculateLedgerHash(LedgerInfo const& info);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

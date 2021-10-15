@@ -27,7 +27,7 @@
 
 #include <cmath>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Manages the count of available connections for the various slots. */
@@ -332,6 +332,6 @@ private:
 };
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

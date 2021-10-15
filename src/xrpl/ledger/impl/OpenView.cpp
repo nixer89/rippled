@@ -20,7 +20,7 @@
 #include <xrpl/basics/contract.h>
 #include <xrpl/ledger/OpenView.h>
 
-namespace ripple {
+namespace xrpl {
 
 open_ledger_t const open_ledger{};
 
@@ -271,4 +271,4 @@ OpenView::rawTxInsert(
         LogicError("rawTxInsert: duplicate TX id" + to_string(key));
 }
 
-}  // namespace ripple
+}  // namespace xrpl

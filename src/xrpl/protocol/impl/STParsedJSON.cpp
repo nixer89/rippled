@@ -40,7 +40,7 @@
 #include <charconv>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 namespace STParsedJSONDetail {
 template <typename U, typename S>
@@ -986,4 +986,4 @@ STParsedJSONArray::STParsedJSONArray(
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl

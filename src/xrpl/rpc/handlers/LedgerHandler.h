@@ -35,7 +35,7 @@ namespace Json {
 class Object;
 }
 
-namespace ripple {
+namespace xrpl {
 namespace RPC {
 
 struct JsonContext;
@@ -114,6 +114,6 @@ LedgerHandler::writeResult(Object& value)
 }
 
 }  // namespace RPC
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

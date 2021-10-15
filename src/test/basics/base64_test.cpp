@@ -29,7 +29,7 @@
 #include <xrpl/basics/base64.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 
 class base64_test : public beast::unit_test::suite
 {
@@ -77,6 +77,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(base64, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(base64, ripple_basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

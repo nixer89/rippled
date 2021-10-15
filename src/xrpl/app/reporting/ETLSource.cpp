@@ -23,7 +23,7 @@
 #include <xrpl/json/json_reader.h>
 #include <xrpl/json/json_writer.h>
 
-namespace ripple {
+namespace xrpl {
 
 // Create ETL source without grpc endpoint
 // Fetch ledger and load initial ledger will fail for this source
@@ -968,4 +968,4 @@ ETLLoadBalancer::stop()
         source->stop();
 }
 
-}  // namespace ripple
+}  // namespace xrpl

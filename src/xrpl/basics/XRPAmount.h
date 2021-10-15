@@ -33,7 +33,7 @@
 #include <string>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 namespace feeunit {
 
@@ -297,6 +297,6 @@ mulRatio(
     return XRPAmount(r.convert_to<XRPAmount::value_type>());
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_BASICS_XRPAMOUNT_H_INCLUDED

@@ -23,7 +23,7 @@
 #include <functional>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -34,6 +34,6 @@ using requires_t = std::vector<require_t>;
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

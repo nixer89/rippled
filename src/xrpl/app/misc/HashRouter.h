@@ -28,7 +28,7 @@
 
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 // TODO convert these macros to int constants or an enum
 #define SF_BAD 0x02  // Temporarily bad
@@ -260,6 +260,6 @@ private:
     std::uint32_t const recoverLimit_;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

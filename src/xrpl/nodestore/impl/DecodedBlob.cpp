@@ -22,7 +22,7 @@
 #include <algorithm>
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 DecodedBlob::DecodedBlob(void const* key, void const* value, int valueBytes)
@@ -89,4 +89,4 @@ DecodedBlob::createObject()
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

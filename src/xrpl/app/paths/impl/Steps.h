@@ -29,7 +29,7 @@
 #include <boost/container/flat_set.hpp>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 class PaymentSandbox;
 class ReadView;
 class ApplyView;
@@ -558,7 +558,7 @@ bool
 xrpEndpointStepEqual(Step const& step, AccountID const& acc);
 
 bool
-bookStepEqual(Step const& step, ripple::Book const& book);
+bookStepEqual(Step const& step, xrpl::Book const& book);
 }  // namespace test
 
 std::pair<TER, std::unique_ptr<Step>>
@@ -585,6 +585,6 @@ bool
 isDirectXrpToXrp(Strand const& strand);
 /// @endcond
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

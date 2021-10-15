@@ -41,7 +41,7 @@
 
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 class Peer;
 class Transaction;
@@ -442,6 +442,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

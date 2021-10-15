@@ -38,7 +38,7 @@
 #include <mutex>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 std::mutex SHAMapInnerNode::childLock;
 
@@ -429,4 +429,4 @@ SHAMapInnerNode::invariants(bool is_root) const
     assert((count == 0) ? hash_.isZero() : hash_.isNonZero());
 }
 
-}  // namespace ripple
+}  // namespace xrpl

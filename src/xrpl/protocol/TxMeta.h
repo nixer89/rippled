@@ -27,7 +27,7 @@
 #include <boost/container/flat_set.hpp>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 class TxMeta
 {
@@ -137,6 +137,6 @@ private:
     STArray mNodes;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

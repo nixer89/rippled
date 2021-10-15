@@ -25,7 +25,7 @@
 #include <xrpl/protocol/jss.h>
 #include <xrpl/rpc/Context.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 doFetchInfo(RPC::JsonContext& context)
@@ -47,4 +47,4 @@ doFetchInfo(RPC::JsonContext& context)
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

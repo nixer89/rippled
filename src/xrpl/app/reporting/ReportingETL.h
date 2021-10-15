@@ -48,7 +48,7 @@
 #include <queue>
 
 #include <chrono>
-namespace ripple {
+namespace xrpl {
 
 using AccountTransactionsData = RelationalDBInterface::AccountTransactionsData;
 
@@ -363,5 +363,5 @@ private:
     doWork();
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

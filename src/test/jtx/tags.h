@@ -20,7 +20,7 @@
 #ifndef RIPPLE_TEST_JTX_TAGS_H_INCLUDED
 #define RIPPLE_TEST_JTX_TAGS_H_INCLUDED
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 namespace jtx {
@@ -52,6 +52,6 @@ static disabled_t const disabled;
 }  // namespace jtx
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -24,14 +24,14 @@
 #include <xrpl/protocol/STBase.h>
 #include <string>
 
-namespace ripple {
+namespace xrpl {
 
 class STAccount final : public STBase
 {
 private:
     // The original implementation of STAccount kept the value in an STBlob.
     // But an STAccount is always 160 bits, so we can store it with less
-    // overhead in a ripple::uint160.  However, so the serialized format of the
+    // overhead in a xrpl::uint160.  However, so the serialized format of the
     // STAccount stays unchanged, we serialize and deserialize like an STBlob.
     AccountID value_;
     bool default_;
@@ -113,6 +113,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

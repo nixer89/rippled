@@ -29,7 +29,7 @@
 #include <memory>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** A collection of historical shards
@@ -277,6 +277,6 @@ make_ShardStore(
     beast::Journal j);
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

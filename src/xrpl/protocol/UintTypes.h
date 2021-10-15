@@ -25,7 +25,7 @@
 #include <xrpl/beast/utility/Zero.h>
 #include <xrpl/protocol/AccountID.h>
 
-namespace ripple {
+namespace xrpl {
 namespace detail {
 
 class CurrencyTag
@@ -107,24 +107,24 @@ operator<<(std::ostream& os, Currency const& x)
     return os;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 namespace std {
 
 template <>
-struct hash<ripple::Currency> : ripple::Currency::hasher
+struct hash<xrpl::Currency> : xrpl::Currency::hasher
 {
     explicit hash() = default;
 };
 
 template <>
-struct hash<ripple::NodeID> : ripple::NodeID::hasher
+struct hash<xrpl::NodeID> : xrpl::NodeID::hasher
 {
     explicit hash() = default;
 };
 
 template <>
-struct hash<ripple::Directory> : ripple::Directory::hasher
+struct hash<xrpl::Directory> : xrpl::Directory::hasher
 {
     explicit hash() = default;
 };

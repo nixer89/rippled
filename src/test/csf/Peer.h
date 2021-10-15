@@ -34,7 +34,7 @@
 #include <test/csf/events.h>
 #include <test/csf/ledgers.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace csf {
 
@@ -977,5 +977,5 @@ struct Peer
 
 }  // namespace csf
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl
 #endif

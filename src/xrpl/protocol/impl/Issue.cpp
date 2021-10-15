@@ -19,7 +19,7 @@
 
 #include <xrpl/protocol/Issue.h>
 
-namespace ripple {
+namespace xrpl {
 
 bool
 isConsistent(Issue const& ac)
@@ -99,4 +99,4 @@ operator<=(Issue const& lhs, Issue const& rhs)
     return !(rhs < lhs);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

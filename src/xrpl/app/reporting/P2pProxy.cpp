@@ -22,7 +22,7 @@
 #include <xrpl/json/json_reader.h>
 #include <xrpl/json/json_writer.h>
 
-namespace ripple {
+namespace xrpl {
 
 Json::Value
 forwardToP2p(RPC::JsonContext& context)
@@ -81,4 +81,4 @@ shouldForwardToP2p(RPC::JsonContext& context)
     return false;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

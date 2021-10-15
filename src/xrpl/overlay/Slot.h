@@ -38,7 +38,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-namespace ripple {
+namespace xrpl {
 
 namespace reduce_relay {
 
@@ -405,7 +405,7 @@ Slot<clock_type>::getSquelchDuration(std::size_t npeers)
         JLOG(journal_.warn())
             << "getSquelchDuration: unexpected squelch duration " << npeers;
     }
-    return seconds{ripple::rand_int(MIN_UNSQUELCH_EXPIRE / 1s, m / 1s)};
+    return seconds{xrpl::rand_int(MIN_UNSQUELCH_EXPIRE / 1s, m / 1s)};
 }
 
 template <typename clock_type>
@@ -755,6 +755,6 @@ Slots<clock_type>::deleteIdlePeers()
 
 }  // namespace reduce_relay
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_OVERLAY_SLOT_H_INCLUDED

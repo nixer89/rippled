@@ -22,7 +22,7 @@
 #include <boost/regex.hpp>
 #include <algorithm>
 
-namespace ripple {
+namespace xrpl {
 
 Section::Section(std::string const& name) : name_(name)
 {
@@ -193,4 +193,4 @@ operator<<(std::ostream& ss, BasicConfig const& c)
     return ss;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

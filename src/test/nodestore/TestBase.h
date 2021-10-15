@@ -31,7 +31,7 @@
 #include <boost/algorithm/string.hpp>
 #include <iomanip>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** Binary function that satisfies the strict-weak-ordering requirement.
@@ -226,6 +226,6 @@ public:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

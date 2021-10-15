@@ -25,7 +25,7 @@
 
 #include <xrpl/beast/net/IPEndpoint.h>
 
-namespace ripple {
+namespace xrpl {
 
 class Resolver
 {
@@ -66,6 +66,6 @@ public:
     /** @} */
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

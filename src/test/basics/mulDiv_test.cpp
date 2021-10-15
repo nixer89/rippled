@@ -20,7 +20,7 @@
 #include <xrpl/basics/mulDiv.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct mulDiv_test : beast::unit_test::suite
@@ -56,7 +56,7 @@ struct mulDiv_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(mulDiv, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(mulDiv, ripple_basics, xrpl);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

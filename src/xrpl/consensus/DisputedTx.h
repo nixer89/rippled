@@ -30,7 +30,7 @@
 #include <boost/container/flat_map.hpp>
 #include <memory>
 
-namespace ripple {
+namespace xrpl {
 
 /** A transaction discovered to be in dispute during consensus.
 
@@ -275,6 +275,6 @@ DisputedTx<Tx_t, NodeID_t>::getJson() const
     return ret;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

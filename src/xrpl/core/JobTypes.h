@@ -27,7 +27,7 @@
 #include <type_traits>
 #include <unordered_map>
 
-namespace ripple {
+namespace xrpl {
 
 class JobTypes
 {
@@ -188,6 +188,6 @@ private:
     Map m_map;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

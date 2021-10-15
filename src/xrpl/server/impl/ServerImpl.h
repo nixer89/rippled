@@ -31,7 +31,7 @@
 #include <mutex>
 #include <optional>
 
-namespace ripple {
+namespace xrpl {
 
 using Endpoints = std::vector<boost::asio::ip::tcp::endpoint>;
 
@@ -195,6 +195,6 @@ ServerImpl<Handler>::closed()
 {
     return ios_.closed();
 }
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

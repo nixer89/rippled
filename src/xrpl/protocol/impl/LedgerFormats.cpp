@@ -24,7 +24,7 @@
 #include <array>
 #include <utility>
 
-namespace ripple {
+namespace xrpl {
 
 LedgerFormats::LedgerFormats()
 {
@@ -243,4 +243,4 @@ LedgerFormats::getInstance()
     return instance;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

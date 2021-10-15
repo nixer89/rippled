@@ -28,7 +28,7 @@
 #include <chrono>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 namespace metrics {
 
@@ -136,6 +136,6 @@ struct TxMetrics
 
 }  // namespace metrics
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

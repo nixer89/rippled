@@ -26,7 +26,7 @@
 #include <xrpl/beast/insight/Insight.h>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 /** Maintains a cache of keys with no associated data.
 
@@ -323,6 +323,6 @@ private:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

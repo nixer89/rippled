@@ -22,7 +22,7 @@
 
 #include <array>
 
-namespace ripple {
+namespace xrpl {
 namespace PeerFinder {
 
 /** Heuristically tuned constants. */
@@ -148,6 +148,6 @@ static std::chrono::seconds const recentAttemptDuration(60);
 /** @} */
 
 }  // namespace PeerFinder
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

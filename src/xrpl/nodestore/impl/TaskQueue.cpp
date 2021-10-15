@@ -21,7 +21,7 @@
 
 #include <cassert>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 TaskQueue::TaskQueue() : workers_(*this, nullptr, "Shard store taskQueue", 1)
@@ -73,4 +73,4 @@ TaskQueue::processTask(int instance)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

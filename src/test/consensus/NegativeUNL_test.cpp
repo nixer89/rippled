@@ -28,7 +28,7 @@
 #include <xrpl/rpc/impl/GRPCHelpers.h>
 #include <test/jtx.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 /*
@@ -1915,7 +1915,7 @@ class NegativeUNLgRPC_test : public beast::unit_test::suite
                 return false;
 
             org::xrpl::rpc::v1::NegativeUNL to;
-            ripple::RPC::convert(to, *negUnlObject);
+            xrpl::RPC::convert(to, *negUnlObject);
             if (!to.has_flags() ||
                 to.flags().value() != negUnlObject->getFlags())
                 return false;
@@ -1991,22 +1991,22 @@ class NegativeUNLgRPC_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(NegativeUNL, ledger, ripple);
-BEAST_DEFINE_TESTSUITE(NegativeUNLNoAmendment, ledger, ripple);
+BEAST_DEFINE_TESTSUITE(NegativeUNL, ledger, xrpl);
+BEAST_DEFINE_TESTSUITE(NegativeUNLNoAmendment, ledger, xrpl);
 
-BEAST_DEFINE_TESTSUITE(NegativeUNLVoteInternal, consensus, ripple);
-BEAST_DEFINE_TESTSUITE_MANUAL(NegativeUNLVoteScoreTable, consensus, ripple);
-BEAST_DEFINE_TESTSUITE_PRIO(NegativeUNLVoteGoodScore, consensus, ripple, 1);
-BEAST_DEFINE_TESTSUITE(NegativeUNLVoteOffline, consensus, ripple);
-BEAST_DEFINE_TESTSUITE(NegativeUNLVoteMaxListed, consensus, ripple);
+BEAST_DEFINE_TESTSUITE(NegativeUNLVoteInternal, consensus, xrpl);
+BEAST_DEFINE_TESTSUITE_MANUAL(NegativeUNLVoteScoreTable, consensus, xrpl);
+BEAST_DEFINE_TESTSUITE_PRIO(NegativeUNLVoteGoodScore, consensus, xrpl, 1);
+BEAST_DEFINE_TESTSUITE(NegativeUNLVoteOffline, consensus, xrpl);
+BEAST_DEFINE_TESTSUITE(NegativeUNLVoteMaxListed, consensus, xrpl);
 BEAST_DEFINE_TESTSUITE_PRIO(
     NegativeUNLVoteRetiredValidator,
     consensus,
-    ripple,
+    xrpl,
     1);
-BEAST_DEFINE_TESTSUITE(NegativeUNLVoteNewValidator, consensus, ripple);
-BEAST_DEFINE_TESTSUITE(NegativeUNLVoteFilterValidations, consensus, ripple);
-BEAST_DEFINE_TESTSUITE(NegativeUNLgRPC, ledger, ripple);
+BEAST_DEFINE_TESTSUITE(NegativeUNLVoteNewValidator, consensus, xrpl);
+BEAST_DEFINE_TESTSUITE(NegativeUNLVoteFilterValidations, consensus, xrpl);
+BEAST_DEFINE_TESTSUITE(NegativeUNLgRPC, ledger, xrpl);
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -2113,4 +2113,4 @@ createTx(bool disabling, LedgerIndex seq, PublicKey const& txKey)
 }
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

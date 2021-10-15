@@ -22,7 +22,7 @@
 
 #include <xrpl/nodestore/NodeObject.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 /** Parsed key/value blob into NodeObject components.
@@ -62,6 +62,6 @@ private:
 };
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -21,7 +21,7 @@
 #include <xrpl/nodestore/impl/DatabaseNodeImp.h>
 #include <xrpl/protocol/HashPrefix.h>
 
-namespace ripple {
+namespace xrpl {
 namespace NodeStore {
 
 void
@@ -165,4 +165,4 @@ DatabaseNodeImp::fetchBatch(std::vector<uint256> const& hashes)
 }
 
 }  // namespace NodeStore
-}  // namespace ripple
+}  // namespace xrpl

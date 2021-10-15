@@ -25,7 +25,7 @@
 #include <xrpl/rpc/Context.h>
 #include <xrpl/rpc/DeliveredAmount.h>
 
-namespace ripple {
+namespace xrpl {
 
 namespace {
 
@@ -295,4 +295,4 @@ getJson(LedgerFill const& fill)
     return json;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

@@ -29,7 +29,7 @@
 #include <cstdint>
 #include <ostream>
 
-namespace ripple {
+namespace xrpl {
 
 /** Represents a pair of input and output currencies.
 
@@ -311,6 +311,6 @@ public:
 Quality
 composed_quality(Quality const& lhs, Quality const& rhs);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

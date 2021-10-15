@@ -26,7 +26,7 @@
 #include <boost/asio/streambuf.hpp>
 #include <chrono>
 
-namespace ripple {
+namespace xrpl {
 
 /** Provides an asynchronous HTTP client implementation with optional SSL.
  */
@@ -85,6 +85,6 @@ public:
         beast::Journal& j);
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -31,7 +31,7 @@
 #include <test/jtx.h>
 #include <test/jtx/PathSet.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 struct RippleCalcTestParams
@@ -549,7 +549,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_PRIO(TheoreticalQuality, app, ripple, 3);
+BEAST_DEFINE_TESTSUITE_PRIO(TheoreticalQuality, app, xrpl, 3);
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

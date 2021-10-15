@@ -20,7 +20,7 @@
 #include <xrpl/basics/RangeSet.h>
 #include <xrpl/beast/unit_test.h>
 
-namespace ripple {
+namespace xrpl {
 class RangeSet_test : public beast::unit_test::suite
 {
 public:
@@ -139,6 +139,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RangeSet, ripple_basics, ripple);
+BEAST_DEFINE_TESTSUITE(RangeSet, ripple_basics, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

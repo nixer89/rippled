@@ -28,7 +28,7 @@
 #include <xrpl/peerfinder/impl/Store.h>
 #include <boost/filesystem.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 /* Need to change TableTypeCount if TableType is modified. */
 enum class TableType { Ledgers, Transactions, AccountTransactions };
@@ -483,6 +483,6 @@ getTransaction(
 bool
 dbHasSpace(soci::session& session, Config const& config, beast::Journal j);
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

@@ -30,7 +30,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 DatabasePair
 makeMetaDBs(
@@ -265,7 +265,7 @@ updateLedgerDBs(
                                 [&](AccountID const& accountID) {
                                     return boost::str(
                                         boost::format(s) %
-                                        ripple::toBase58(accountID));
+                                        xrpl::toBase58(accountID));
                                 }),
                         ",");
                     sql += ';';
@@ -493,4 +493,4 @@ dropArchiveDB(DatabaseCon& db)
     db.getSession() << "DROP TABLE State;";
 }
 
-}  // namespace ripple
+}  // namespace xrpl

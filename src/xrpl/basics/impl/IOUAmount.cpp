@@ -25,7 +25,7 @@
 #include <numeric>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 
 /* The range for the mantissa when normalized */
 static std::int64_t const minMantissa = 1000000000000000ull;
@@ -380,4 +380,4 @@ mulRatio(
     return result;
 }
 
-}  // namespace ripple
+}  // namespace xrpl

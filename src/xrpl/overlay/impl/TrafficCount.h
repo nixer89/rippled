@@ -27,7 +27,7 @@
 #include <atomic>
 #include <cstdint>
 
-namespace ripple {
+namespace xrpl {
 
 class TrafficCount
 {
@@ -252,5 +252,5 @@ protected:
     }};
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 #endif

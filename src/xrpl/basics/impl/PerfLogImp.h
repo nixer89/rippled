@@ -38,7 +38,7 @@
 #include <utility>
 #include <vector>
 
-namespace ripple {
+namespace xrpl {
 namespace perf {
 
 /** A box coupling data with a mutex for locking access to it. */
@@ -125,7 +125,7 @@ class PerfLogImp : public PerfLog
     Setup const setup_;
     beast::Journal const j_;
     std::function<void()> const signalStop_;
-    Counters counters_{ripple::RPC::getHandlerNames(), JobTypes::instance()};
+    Counters counters_{xrpl::RPC::getHandlerNames(), JobTypes::instance()};
     std::ofstream logFile_;
     std::thread thread_;
     std::mutex mutex_;
@@ -206,6 +206,6 @@ public:
 };
 
 }  // namespace perf
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif  // RIPPLE_BASICS_PERFLOGIMP_H

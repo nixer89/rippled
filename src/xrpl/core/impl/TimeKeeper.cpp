@@ -23,7 +23,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 class TimeKeeperImpl : public TimeKeeper
 {
@@ -121,4 +121,4 @@ make_TimeKeeper(beast::Journal j)
     return std::make_unique<TimeKeeperImpl>(j);
 }
 
-}  // namespace ripple
+}  // namespace xrpl

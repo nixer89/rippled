@@ -31,7 +31,7 @@
 #include <boost/optional.hpp>
 #include <boost/variant.hpp>
 
-namespace ripple {
+namespace xrpl {
 
 struct LedgerHashPair
 {
@@ -262,6 +262,6 @@ rangeCheckedCast(C c)
     return static_cast<T>(c);
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

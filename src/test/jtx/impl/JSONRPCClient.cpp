@@ -29,7 +29,7 @@
 #include <string>
 #include <test/jtx/JSONRPCClient.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 
 class JSONRPCClient : public AbstractClient
@@ -158,4 +158,4 @@ makeJSONRPCClient(Config const& cfg, unsigned rpc_version)
 }
 
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -25,7 +25,7 @@
 #include <xrpl/basics/Slice.h>
 #include <xrpl/basics/base_uint.h>
 
-namespace ripple {
+namespace xrpl {
 
 // an item stored in a SHAMap
 class SHAMapItem : public CountedObject<SHAMapItem>
@@ -66,6 +66,6 @@ public:
     }
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

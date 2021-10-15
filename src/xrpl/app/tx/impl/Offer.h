@@ -28,7 +28,7 @@
 #include <ostream>
 #include <stdexcept>
 
-namespace ripple {
+namespace xrpl {
 
 template <class TIn, class TOut>
 class TOfferBase
@@ -244,6 +244,6 @@ operator<<(std::ostream& os, TOffer<TIn, TOut> const& offer)
     return os << offer.id();
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

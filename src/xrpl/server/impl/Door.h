@@ -40,7 +40,7 @@
 #include <memory>
 #include <mutex>
 
-namespace ripple {
+namespace xrpl {
 
 /** A listening socket. */
 template <class Handler>
@@ -407,6 +407,6 @@ Door<Handler>::do_accept(boost::asio::yield_context do_yield)
     }
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

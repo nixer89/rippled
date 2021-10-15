@@ -25,7 +25,7 @@
 #include <test/jtx/multisign.h>
 #include <test/jtx/utility.h>
 
-namespace ripple {
+namespace xrpl {
 namespace test {
 namespace jtx {
 
@@ -98,7 +98,7 @@ msig::operator()(Env& env, JTx& jt) const
             jo[jss::SigningPubKey] = strHex(e.sig.pk().slice());
 
             Serializer ss{buildMultiSigningData(*st, e.acct.id())};
-            auto const sig = ripple::sign(
+            auto const sig = xrpl::sign(
                 *publicKeyType(e.sig.pk().slice()), e.sig.sk(), ss.slice());
             jo[sfTxnSignature.getJsonName()] =
                 strHex(Slice{sig.data(), sig.size()});
@@ -108,4 +108,4 @@ msig::operator()(Env& env, JTx& jt) const
 
 }  // namespace jtx
 }  // namespace test
-}  // namespace ripple
+}  // namespace xrpl

@@ -23,7 +23,7 @@
 #include <string>
 #include <type_traits>
 
-namespace ripple {
+namespace xrpl {
 
 /** to_string() generalizes std::to_string to handle bools, chars, and strings.
 
@@ -62,6 +62,6 @@ to_string(char const* s)
     return s;
 }
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif

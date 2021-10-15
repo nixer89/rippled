@@ -20,7 +20,7 @@
 #include <xrpl/beast/unit_test.h>
 #include <xrpl/overlay/impl/ProtocolVersion.h>
 
-namespace ripple {
+namespace xrpl {
 
 class ProtocolVersion_test : public beast::unit_test::suite
 {
@@ -96,6 +96,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(ProtocolVersion, overlay, ripple);
+BEAST_DEFINE_TESTSUITE(ProtocolVersion, overlay, xrpl);
 
-}  // namespace ripple
+}  // namespace xrpl

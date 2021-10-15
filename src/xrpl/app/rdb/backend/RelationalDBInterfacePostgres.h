@@ -22,7 +22,7 @@
 
 #include <xrpl/app/rdb/RelationalDBInterface.h>
 
-namespace ripple {
+namespace xrpl {
 
 class RelationalDBInterfacePostgres : public RelationalDBInterface
 {
@@ -118,6 +118,6 @@ public:
     isCaughtUp(std::string& reason) = 0;
 };
 
-}  // namespace ripple
+}  // namespace xrpl
 
 #endif
