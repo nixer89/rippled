@@ -53,7 +53,7 @@ getFullVersionString();
     X: 16 bits identifying the particular implementation
     Y: 48 bits of data specific to the implementation
 
-    The xrpld-specific format (implementation ID is: 0x18 0x3B) is:
+    The reference implementation specific format (implementation ID is: 0x18 0x3B) is:
 
     00011000-00111011-MMMMMMMM-mmmmmmmm-pppppppp-TTNNNNNN-00000000-00000000
 
