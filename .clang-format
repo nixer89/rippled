@@ -47,7 +47,7 @@ ForEachMacros:   [ Q_FOREACH,  BOOST_FOREACH ]
 IncludeCategories:
   - Regex:           '^<(BeastConfig)'
     Priority:        0
-  - Regex:           '^<(ripple)/'
+  - Regex:           '^<(xrpl)/'
     Priority:        2
   - Regex:           '^<(boost)/'
     Priority:        3
