@@ -72,6 +72,6 @@ else()
 endif()
 
 add_dependencies (snappy_lib snappy)
-target_link_libraries (ripple_libs INTERFACE snappy_lib)
+target_link_libraries (xrpl_libs INTERFACE snappy_lib)
 exclude_if_included (snappy)
 exclude_if_included (snappy_lib)

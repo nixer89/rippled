@@ -72,7 +72,7 @@ else()
     print_ep_logs (lz4)
   endif ()
   add_dependencies (lz4_lib lz4)
-  target_link_libraries (ripple_libs INTERFACE lz4_lib)
+  target_link_libraries (xrpl_libs INTERFACE lz4_lib)
   exclude_if_included (lz4)
 endif()
 

@@ -52,7 +52,7 @@ else ()
       if (grpc_INCLUDE_DIRS)
         set_target_properties ("gRPC::${libname_}" PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${grpc_INCLUDE_DIRS})
       endif ()
-      target_link_libraries (ripple_libs INTERFACE "gRPC::${libname_}")
+      target_link_libraries (xrpl_libs INTERFACE "gRPC::${libname_}")
       exclude_if_included ("gRPC::${libname_}")
     endmacro ()
 
@@ -286,7 +286,7 @@ else ()
         INTERFACE_INCLUDE_DIRECTORIES
           ${grpc_source_dir}/include)
       add_dependencies ("gRPC::${libname_}" grpc_src)
-      target_link_libraries (ripple_libs INTERFACE "gRPC::${libname_}")
+      target_link_libraries (xrpl_libs INTERFACE "gRPC::${libname_}")
       exclude_if_included ("gRPC::${libname_}")
     endmacro ()
 
@@ -359,6 +359,6 @@ target_compile_options (grpc_pbufs
       --system-header-prefix="google/protobuf"
       -Wno-deprecated-dynamic-exception-spec
     >)
-add_library (Ripple::grpc_pbufs ALIAS grpc_pbufs)
-target_link_libraries (ripple_libs INTERFACE Ripple::grpc_pbufs)
+add_library (Xrpl::grpc_pbufs ALIAS grpc_pbufs)
+target_link_libraries (xrpl_libs INTERFACE Xrpl::grpc_pbufs)
 exclude_if_included (grpc_pbufs)

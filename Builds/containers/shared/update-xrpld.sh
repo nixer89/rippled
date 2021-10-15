@@ -8,7 +8,7 @@ if [[ $(id -u) -ne 0 ]] ; then
    exit 1
 fi
 
-LOCKDIR=/tmp/rippleupdate.lock
+LOCKDIR=/tmp/xrplupdate.lock
 UPDATELOG=/var/log/xrpld/update.log
 
 function cleanup {
@@ -31,20 +31,20 @@ if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]] ; then
   apt-get update -qq
 
   # The next line is an "awk"ward way to check if the package needs to be updated.
-  RIPPLE=$(apt-get install -s --only-upgrade xrpld | awk '/^Inst/ { print $2 }')
-  test "$RIPPLE" == "xrpld" && can_update=true
+  XRPL=$(apt-get install -s --only-upgrade xrpld | awk '/^Inst/ { print $2 }')
+  test "$XRPL" == "xrpld" && can_update=true
 
   function apply_update {
     apt-get install xrpld -qq
   }
 elif [[ "$ID" == "fedora" || "$ID" == "centos" || "$ID" == "rhel" || "$ID" == "scientific" ]] ; then
-  RIPPLE_REPO=${RIPPLE_REPO-stable}
-  yum --disablerepo=* --enablerepo=ripple-$RIPPLE_REPO clean expire-cache
+  XRPL_REPO=${XRPL_REPO-stable}
+  yum --disablerepo=* --enablerepo=xrpl-$XRPL_REPO clean expire-cache
 
-  yum check-update -q --enablerepo=ripple-$RIPPLE_REPO xrpld || can_update=true
+  yum check-update -q --enablerepo=xrpl-$XRPL_REPO xrpld || can_update=true
 
   function apply_update {
-    yum update -y --enablerepo=ripple-$RIPPLE_REPO xrpld
+    yum update -y --enablerepo=xrpl-$XRPL_REPO xrpld
   }
 else
   echo "unrecognized distro!"

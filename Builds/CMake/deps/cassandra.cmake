@@ -152,13 +152,13 @@ if(reporting)
         endif()
 
         file(TO_CMAKE_PATH "${cassandra_src_SOURCE_DIR}" cassandra_src_SOURCE_DIR)
-        target_link_libraries(ripple_libs INTERFACE cassandra)
+        target_link_libraries(xrpl_libs INTERFACE cassandra)
     else()
         message("Found system installed cassandra cpp driver")
 
         find_path(cassandra_includes NAMES cassandra.h REQUIRED)
-        target_link_libraries (ripple_libs INTERFACE ${cassandra})
-        target_include_directories(ripple_libs INTERFACE ${cassandra_includes})
+        target_link_libraries (xrpl_libs INTERFACE ${cassandra})
+        target_include_directories(xrpl_libs INTERFACE ${cassandra_includes})
     endif()
 
     exclude_if_included (cassandra)

@@ -116,7 +116,7 @@ target_sources (xrpl_core PRIVATE
   src/xrpl/crypto/impl/csprng.cpp
   src/xrpl/crypto/impl/secure_erase.cpp)
 
-add_library (Ripple::xrpl_core ALIAS xrpl_core)
+add_library (Xrpl::xrpl_core ALIAS xrpl_core)
 target_include_directories (xrpl_core
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
@@ -137,12 +137,12 @@ target_compile_options (xrpl_core
 target_link_libraries (xrpl_core
   PUBLIC
     OpenSSL::Crypto
-    Ripple::boost
-    Ripple::syslibs
+    Xrpl::boost
+    Xrpl::syslibs
     NIH::secp256k1
     NIH::ed25519-donna
     date::date
-    Ripple::opts)
+    Xrpl::opts)
 #[=================================[
    main/core headers installation
 #]=================================]
@@ -967,10 +967,10 @@ target_sources (xrpld PRIVATE
   #]===============================]
   src/test/unit_test/multi_runner.cpp)
 target_link_libraries (xrpld
-  Ripple::boost
-  Ripple::opts
-  Ripple::libs
-  Ripple::xrpl_core
+  Xrpl::boost
+  Xrpl::opts
+  Xrpl::libs
+  Xrpl::xrpl_core
   )
 exclude_if_included (xrpld)
 # define a macro for tests that might need to

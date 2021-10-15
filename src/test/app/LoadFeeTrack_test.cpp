@@ -89,6 +89,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(LoadFeeTrack, ripple_core, xrpl);
+BEAST_DEFINE_TESTSUITE(LoadFeeTrack, xrpl_core, xrpl);
 
 }  // namespace xrpl

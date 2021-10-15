@@ -109,7 +109,7 @@ struct Slice_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Slice, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(Slice, xrpl_basics, xrpl);
 
 }  // namespace test
 }  // namespace xrpl

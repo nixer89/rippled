@@ -5,7 +5,7 @@
 The moment-to-moment health of the XRP Ledger network depends on the health and
 connectivity of a small number of computers (nodes). The most important nodes
 are validators, specifically ones listed on the unique node list
-([UNL](#Question-What-are-UNLs)). Ripple publishes a recommended UNL that most
+([UNL](#Question-What-are-UNLs)). The XRP Ledger Foundation publishes a recommended UNL that most
 network nodes use to determine which peers in the network are trusted. Although
 most validators use the same list, they are not required to. The XRP Ledger
 network progresses to the next ledger when enough validators reach agreement
@@ -24,7 +24,7 @@ Power outages, network connectivity issues, and hardware failures are just a few
 scenarios where a validator would appear "offline". Given that most of these
 events are temporary, it would make sense to temporarily remove that validator
 from the UNL. But the UNL is updated infrequently and not every node uses the
-same UNL. So instead of removing the unreliable validator from the Ripple
+same UNL. So instead of removing the unreliable validator from the XRP Ledger Foundation
 recommended UNL, we can create a second negative UNL which is stored directly on
 the ledger (so the entire network has the same view). This will help the network
 see which validators are **currently** unreliable, and adjust their quorum

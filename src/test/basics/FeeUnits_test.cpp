@@ -353,7 +353,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(feeunits, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(feeunits, xrpl_basics, xrpl);
 
 }  // namespace test
 }  // namespace xrpl

@@ -212,6 +212,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(JsonWriter, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(JsonWriter, xrpl_basics, xrpl);
 
 }  // namespace Json

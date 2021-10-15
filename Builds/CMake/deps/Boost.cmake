@@ -57,16 +57,16 @@ find_package (Boost 1.70 REQUIRED
     system
     thread)
 
-add_library (ripple_boost INTERFACE)
-add_library (Ripple::boost ALIAS ripple_boost)
+add_library (xrpl_boost INTERFACE)
+add_library (Xrpl::boost ALIAS xrpl_boost)
 if (is_xcode)
-  target_include_directories (ripple_boost BEFORE INTERFACE ${Boost_INCLUDE_DIRS})
-  target_compile_options (ripple_boost INTERFACE --system-header-prefix="boost/")
+  target_include_directories (xrpl_boost BEFORE INTERFACE ${Boost_INCLUDE_DIRS})
+  target_compile_options (xrpl_boost INTERFACE --system-header-prefix="boost/")
 else ()
-  target_include_directories (ripple_boost SYSTEM BEFORE INTERFACE ${Boost_INCLUDE_DIRS})
+  target_include_directories (xrpl_boost SYSTEM BEFORE INTERFACE ${Boost_INCLUDE_DIRS})
 endif()
 
-target_link_libraries (ripple_boost
+target_link_libraries (xrpl_boost
   INTERFACE
     Boost::boost
     Boost::chrono
@@ -79,7 +79,7 @@ target_link_libraries (ripple_boost
     Boost::system
     Boost::thread)
 if (Boost_COMPILER)
-  target_link_libraries (ripple_boost INTERFACE Boost::disable_autolinking)
+  target_link_libraries (xrpl_boost INTERFACE Boost::disable_autolinking)
 endif ()
 if (san AND is_clang)
   # TODO: gcc does not support -fsanitize-blacklist...can we do something else 

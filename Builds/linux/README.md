@@ -199,7 +199,7 @@ With either option below, you will have access to a library from the
 xrpld project that you can link to in your own project's CMakeLists.txt, e.g.:
 
 ```
-target_link_libraries (my-signing-app Ripple::xrpl_core)
+target_link_libraries (my-signing-app Xrpl::xrpl_core)
 ```
 
 ##### Option 1: git submodules + add_subdirectory
@@ -229,7 +229,7 @@ To make use of the installed files, add the following to your CMakeLists.txt fil
 
 ```
 set (CMAKE_MODULE_PATH /opt/local/lib/cmake/xrpl ${CMAKE_MODULE_PATH})
-find_package(Ripple REQUIRED)
+find_package(Xrpl REQUIRED)
 ```
 
 change the `/opt/local` module path above to match your chosen installation prefix.

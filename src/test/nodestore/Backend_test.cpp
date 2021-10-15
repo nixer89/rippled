@@ -107,7 +107,7 @@ public:
 
         testBackend("nudb", seedValue);
 
-#if RIPPLE_ROCKSDB_AVAILABLE
+#if XRPL_ROCKSDB_AVAILABLE
         testBackend("rocksdb", seedValue);
 #endif
 
@@ -117,7 +117,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Backend, ripple_core, xrpl);
+BEAST_DEFINE_TESTSUITE(Backend, xrpl_core, xrpl);
 
 }  // namespace NodeStore
 }  // namespace xrpl

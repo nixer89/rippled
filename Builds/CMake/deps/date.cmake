@@ -42,7 +42,7 @@ if (NOT TARGET date::date)
         ${hh_date_src_SOURCE_DIR}/include/date/date.h
       DESTINATION include/date)
     install (TARGETS date_interface
-      EXPORT RippleExports
+      EXPORT XrplExports
       INCLUDES DESTINATION include)
   endif ()
 endif ()

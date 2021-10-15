@@ -43,5 +43,5 @@ if (is_root_project) # NuDB not needed in the case of xrpl_core inclusion build
       Boost::thread
       Boost::system)
   add_library (NIH::nudb ALIAS nudb)
-  target_link_libraries (ripple_libs INTERFACE NIH::nudb)
+  target_link_libraries (xrpl_libs INTERFACE NIH::nudb)
 endif ()

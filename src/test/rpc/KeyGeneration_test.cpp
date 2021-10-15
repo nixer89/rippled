@@ -869,7 +869,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(WalletPropose, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(WalletPropose, xrpl_basics, xrpl);
 
 }  // namespace RPC
 }  // namespace xrpl

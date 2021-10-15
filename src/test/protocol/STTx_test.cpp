@@ -1815,7 +1815,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(STTx, ripple_app, xrpl);
-BEAST_DEFINE_TESTSUITE(InnerObjectFormatsSerializer, ripple_app, xrpl);
+BEAST_DEFINE_TESTSUITE(STTx, xrpl_app, xrpl);
+BEAST_DEFINE_TESTSUITE(InnerObjectFormatsSerializer, xrpl_app, xrpl);
 
 }  // namespace xrpl

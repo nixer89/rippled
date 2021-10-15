@@ -7,10 +7,10 @@ install (
     ed25519-donna
     common
     opts
-    ripple_syslibs
-    ripple_boost
+    xrpl_syslibs
+    xrpl_boost
     xrpl_core
-  EXPORT RippleExports
+  EXPORT XrplExports
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
@@ -20,16 +20,16 @@ if(${INSTALL_SECP256K1})
 install (
   TARGETS
     secp256k1
-  EXPORT RippleExports
+  EXPORT XrplExports
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
   INCLUDES DESTINATION include)
 endif()
 
-install (EXPORT RippleExports
-  FILE RippleTargets.cmake
-  NAMESPACE Ripple::
+install (EXPORT XrplExports
+  FILE XrplTargets.cmake
+  NAMESPACE Xrpl::
   DESTINATION lib/cmake/xrpl)
 include (CMakePackageConfigHelpers)
 write_basic_package_version_file (

@@ -118,7 +118,7 @@ private:
     Derived classes have their instances counted automatically. This is used
     for reporting purposes.
 
-    @ingroup ripple_basics
+    @ingroup xrpl_basics
 */
 template <class Object>
 class CountedObject

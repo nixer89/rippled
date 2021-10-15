@@ -3,7 +3,7 @@
 #]===================================================================]
 
 add_library (opts INTERFACE)
-add_library (Ripple::opts ALIAS opts)
+add_library (Xrpl::opts ALIAS opts)
 target_compile_definitions (opts
   INTERFACE
     BOOST_ASIO_DISABLE_HANDLER_TYPE_REQUIREMENTS
@@ -18,7 +18,7 @@ target_compile_definitions (opts
     >
     $<$<BOOL:${beast_no_unit_test_inline}>:BEAST_NO_UNIT_TEST_INLINE=1>
     $<$<BOOL:${beast_disable_autolink}>:BEAST_DONT_AUTOLINK_TO_WIN32_LIBRARIES=1>
-    $<$<BOOL:${single_io_service_thread}>:RIPPLE_SINGLE_IO_SERVICE_THREAD=1>)
+    $<$<BOOL:${single_io_service_thread}>:XRPL_SINGLE_IO_SERVICE_THREAD=1>)
 target_compile_options (opts
   INTERFACE
     $<$<AND:$<BOOL:${is_gcc}>,$<COMPILE_LANGUAGE:CXX>>:-Wsuggest-override>
@@ -68,9 +68,9 @@ endif ()
    xrpld transitive library deps via an interface library
 #]===================================================================]
 
-add_library (ripple_syslibs INTERFACE)
-add_library (Ripple::syslibs ALIAS ripple_syslibs)
-target_link_libraries (ripple_syslibs
+add_library (xrpl_syslibs INTERFACE)
+add_library (Xrpl::syslibs ALIAS xrpl_syslibs)
+target_link_libraries (xrpl_syslibs
   INTERFACE
     $<$<BOOL:${MSVC}>:
       legacy_stdio_definitions.lib
@@ -95,9 +95,9 @@ target_link_libraries (ripple_syslibs
 if (NOT MSVC)
   set (THREADS_PREFER_PTHREAD_FLAG ON)
   find_package (Threads)
-  target_link_libraries (ripple_syslibs INTERFACE Threads::Threads)
+  target_link_libraries (xrpl_syslibs INTERFACE Threads::Threads)
 endif ()
 
-add_library (ripple_libs INTERFACE)
-add_library (Ripple::libs ALIAS ripple_libs)
-target_link_libraries (ripple_libs INTERFACE Ripple::syslibs)
+add_library (xrpl_libs INTERFACE)
+add_library (Xrpl::libs ALIAS xrpl_libs)
+target_link_libraries (xrpl_libs INTERFACE Xrpl::syslibs)

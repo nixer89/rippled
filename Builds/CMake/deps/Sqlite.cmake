@@ -88,6 +88,6 @@ else()
 endif()
 
 target_link_libraries (sqlite INTERFACE $<$<NOT:$<BOOL:${MSVC}>>:dl>)
-target_link_libraries (ripple_libs INTERFACE sqlite)
+target_link_libraries (xrpl_libs INTERFACE sqlite)
 exclude_if_included (sqlite)
 set(sqlite_BINARY_DIR ${BINARY_DIR})

@@ -138,6 +138,6 @@ target_compile_options (pbufs
       --system-header-prefix="google/protobuf"
       -Wno-deprecated-dynamic-exception-spec
     >)
-add_library (Ripple::pbufs ALIAS pbufs)
-target_link_libraries (ripple_libs INTERFACE Ripple::pbufs)
+add_library (Xrpl::pbufs ALIAS pbufs)
+target_link_libraries (xrpl_libs INTERFACE Xrpl::pbufs)
 exclude_if_included (pbufs)

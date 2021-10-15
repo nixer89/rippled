@@ -201,6 +201,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(InnerObjectFormatsParsedJSON, ripple_app, xrpl);
+BEAST_DEFINE_TESTSUITE(InnerObjectFormatsParsedJSON, xrpl_app, xrpl);
 
 }  // namespace xrpl

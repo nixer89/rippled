@@ -77,6 +77,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(base64, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(base64, xrpl_basics, xrpl);
 
 }  // namespace xrpl

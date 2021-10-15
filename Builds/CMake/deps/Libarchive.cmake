@@ -158,6 +158,6 @@ endif()
 
 add_dependencies (archive_lib libarchive)
 target_link_libraries (archive_lib INTERFACE lz4_lib)
-target_link_libraries (ripple_libs INTERFACE archive_lib)
+target_link_libraries (xrpl_libs INTERFACE archive_lib)
 exclude_if_included (libarchive)
 exclude_if_included (archive_lib)

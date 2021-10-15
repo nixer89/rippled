@@ -206,7 +206,7 @@ struct Expected_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Expected, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(Expected, xrpl_basics, xrpl);
 
 }  // namespace test
 }  // namespace xrpl

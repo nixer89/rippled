@@ -4,7 +4,7 @@
 
 add_library (rocksdb_lib UNKNOWN IMPORTED GLOBAL)
 set_target_properties (rocksdb_lib
-  PROPERTIES INTERFACE_COMPILE_DEFINITIONS RIPPLE_ROCKSDB_AVAILABLE=1)
+  PROPERTIES INTERFACE_COMPILE_DEFINITIONS XRPL_ROCKSDB_AVAILABLE=1)
 
 option (local_rocksdb "use local build of rocksdb." OFF)
 if (NOT local_rocksdb)
@@ -27,7 +27,7 @@ if (NOT local_rocksdb)
     if (_rockslib_i)
       set_target_properties (rocksdb_lib PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${_rockslib_i})
     endif ()
-    target_link_libraries (ripple_libs INTERFACE RocksDB::rocksdb)
+    target_link_libraries (xrpl_libs INTERFACE RocksDB::rocksdb)
   else ()
     # using a find module with rocksdb is difficult because
     # you have no idea how it was configured (transitive dependencies).
@@ -170,4 +170,4 @@ target_link_libraries (rocksdb_lib
     lz4_lib
     $<$<BOOL:${MSVC}>:rpcrt4>)
 exclude_if_included (rocksdb_lib)
-target_link_libraries (ripple_libs INTERFACE rocksdb_lib)
+target_link_libraries (xrpl_libs INTERFACE rocksdb_lib)

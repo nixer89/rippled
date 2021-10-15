@@ -19,7 +19,7 @@
 
 #include <xrpl/unity/rocksdb.h>
 
-#if RIPPLE_ROCKSDB_AVAILABLE
+#if XRPL_ROCKSDB_AVAILABLE
 
 #include <xrpl/basics/ByteUtilities.h>
 #include <xrpl/basics/contract.h>

@@ -281,7 +281,7 @@ struct Buffer_test : beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Buffer, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(Buffer, xrpl_basics, xrpl);
 
 }  // namespace test
 }  // namespace xrpl

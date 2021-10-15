@@ -398,7 +398,7 @@ class SHAMapPathProof_test : public beast::unit_test::suite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(SHAMap, ripple_app, xrpl);
-BEAST_DEFINE_TESTSUITE(SHAMapPathProof, ripple_app, xrpl);
+BEAST_DEFINE_TESTSUITE(SHAMap, xrpl_app, xrpl);
+BEAST_DEFINE_TESTSUITE(SHAMapPathProof, xrpl_app, xrpl);
 }  // namespace tests
 }  // namespace xrpl

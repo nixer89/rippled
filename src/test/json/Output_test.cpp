@@ -60,6 +60,6 @@ struct Output_test : xrpl::test::TestOutputSuite
     }
 };
 
-BEAST_DEFINE_TESTSUITE(Output, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(Output, xrpl_basics, xrpl);
 
 }  // namespace Json

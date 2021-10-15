@@ -45,7 +45,7 @@ else()
         -Wno-unused-function
       >
       $<$<BOOL:${is_gcc}>:-Wno-nonnull-compare>)
-  target_link_libraries (ripple_libs INTERFACE NIH::secp256k1)
+  target_link_libraries (xrpl_libs INTERFACE NIH::secp256k1)
 #[===========================[
      headers installation
 #]===========================]

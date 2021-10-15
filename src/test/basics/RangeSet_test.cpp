@@ -139,6 +139,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(RangeSet, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(RangeSet, xrpl_basics, xrpl);
 
 }  // namespace xrpl

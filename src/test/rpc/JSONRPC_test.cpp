@@ -2519,7 +2519,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(JSONRPC, ripple_app, xrpl);
+BEAST_DEFINE_TESTSUITE(JSONRPC, xrpl_app, xrpl);
 
 }  // namespace RPC
 }  // namespace xrpl

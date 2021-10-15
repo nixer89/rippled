@@ -315,6 +315,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(StringUtilities, ripple_basics, xrpl);
+BEAST_DEFINE_TESTSUITE(StringUtilities, xrpl_basics, xrpl);
 
 }  // namespace xrpl

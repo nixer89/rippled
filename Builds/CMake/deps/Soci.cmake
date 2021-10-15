@@ -149,7 +149,7 @@ else()
       INTERFACE_INCLUDE_DIRECTORIES
         "${SOURCE_DIR}/include;${BINARY_DIR}/include")
     add_dependencies ("soci_${_comp}" soci) # something has to depend on the ExternalProject to trigger it
-    target_link_libraries (ripple_libs INTERFACE "soci_${_comp}")
+    target_link_libraries (xrpl_libs INTERFACE "soci_${_comp}")
     if (NOT _comp STREQUAL "core")
       target_link_libraries ("soci_${_comp}" INTERFACE soci_core)
     endif ()
