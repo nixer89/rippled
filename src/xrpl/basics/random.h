@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_RANDOM_H_INCLUDED
-#define RIPPLE_BASICS_RANDOM_H_INCLUDED
+#ifndef XRPL_BASICS_RANDOM_H_INCLUDED
+#define XRPL_BASICS_RANDOM_H_INCLUDED
 
 #include <xrpl/beast/xor_shift_engine.h>
 #include <cassert>
@@ -207,4 +207,4 @@ rand_bool()
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_BASICS_RANDOM_H_INCLUDED
+#endif  // XRPL_BASICS_RANDOM_H_INCLUDED

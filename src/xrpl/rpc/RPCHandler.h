@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_RPCHANDLER_H_INCLUDED
-#define RIPPLE_RPC_RPCHANDLER_H_INCLUDED
+#ifndef XRPL_RPC_RPCHANDLER_H_INCLUDED
+#define XRPL_RPC_RPCHANDLER_H_INCLUDED
 
 #include <xrpl/core/Config.h>
 #include <xrpl/net/InfoSub.h>

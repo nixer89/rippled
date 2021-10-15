@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_CLUSTER_H_INCLUDED
-#define RIPPLE_OVERLAY_CLUSTER_H_INCLUDED
+#ifndef XRPL_OVERLAY_CLUSTER_H_INCLUDED
+#define XRPL_OVERLAY_CLUSTER_H_INCLUDED
 
 #include <xrpl/app/main/Application.h>
 #include <xrpl/basics/BasicConfig.h>

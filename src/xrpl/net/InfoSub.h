@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NET_INFOSUB_H_INCLUDED
-#define RIPPLE_NET_INFOSUB_H_INCLUDED
+#ifndef XRPL_NET_INFOSUB_H_INCLUDED
+#define XRPL_NET_INFOSUB_H_INCLUDED
 
 #include <xrpl/app/misc/Manifest.h>
 #include <xrpl/basics/CountedObject.h>

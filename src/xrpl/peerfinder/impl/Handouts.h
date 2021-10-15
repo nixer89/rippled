@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PEERFINDER_HANDOUTS_H_INCLUDED
-#define RIPPLE_PEERFINDER_HANDOUTS_H_INCLUDED
+#ifndef XRPL_PEERFINDER_HANDOUTS_H_INCLUDED
+#define XRPL_PEERFINDER_HANDOUTS_H_INCLUDED
 
 #include <xrpl/beast/container/aged_set.h>
 #include <xrpl/peerfinder/impl/SlotImp.h>

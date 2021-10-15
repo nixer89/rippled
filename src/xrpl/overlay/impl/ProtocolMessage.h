@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_PROTOCOLMESSAGE_H_INCLUDED
-#define RIPPLE_OVERLAY_PROTOCOLMESSAGE_H_INCLUDED
+#ifndef XRPL_OVERLAY_PROTOCOLMESSAGE_H_INCLUDED
+#define XRPL_OVERLAY_PROTOCOLMESSAGE_H_INCLUDED
 
 #include <xrpl/basics/ByteUtilities.h>
 #include <xrpl/overlay/Compression.h>

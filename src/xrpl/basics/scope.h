@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 /*
     This file is part of xrpld: https://github.com/xrplf/xrpld
-    Copyright (c) 2021 Ripple Inc.
+    Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above
@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_SCOPE_H_INCLUDED
-#define RIPPLE_BASICS_SCOPE_H_INCLUDED
+#ifndef XRPL_BASICS_SCOPE_H_INCLUDED
+#define XRPL_BASICS_SCOPE_H_INCLUDED
 
 #include <exception>
 #include <type_traits>

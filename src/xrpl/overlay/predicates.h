@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_PREDICATES_H_INCLUDED
-#define RIPPLE_OVERLAY_PREDICATES_H_INCLUDED
+#ifndef XRPL_OVERLAY_PREDICATES_H_INCLUDED
+#define XRPL_OVERLAY_PREDICATES_H_INCLUDED
 
 #include <xrpl/overlay/Message.h>
 #include <xrpl/overlay/Peer.h>

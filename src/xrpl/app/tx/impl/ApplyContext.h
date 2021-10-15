@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_TX_APPLYCONTEXT_H_INCLUDED
-#define RIPPLE_TX_APPLYCONTEXT_H_INCLUDED
+#ifndef XRPL_TX_APPLYCONTEXT_H_INCLUDED
+#define XRPL_TX_APPLYCONTEXT_H_INCLUDED
 
 #include <xrpl/app/main/Application.h>
 #include <xrpl/basics/XRPAmount.h>

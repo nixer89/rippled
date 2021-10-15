@@ -18,8 +18,8 @@
 //==============================================================================
 
 #ifdef XRPLD_REPORTING
-#ifndef RIPPLE_CORE_PG_H_INCLUDED
-#define RIPPLE_CORE_PG_H_INCLUDED
+#ifndef XRPL_CORE_PG_H_INCLUDED
+#define XRPL_CORE_PG_H_INCLUDED
 
 #include <xrpl/basics/BasicConfig.h>
 #include <xrpl/basics/Log.h>
@@ -516,5 +516,5 @@ initSchema(std::shared_ptr<PgPool> const& pool);
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_CORE_PG_H_INCLUDED
+#endif  // XRPL_CORE_PG_H_INCLUDED
 #endif  // XRPLD_REPORTING

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_LEDGER_CACHEDSLES_H_INCLUDED
-#define RIPPLE_LEDGER_CACHEDSLES_H_INCLUDED
+#ifndef XRPL_LEDGER_CACHEDSLES_H_INCLUDED
+#define XRPL_LEDGER_CACHEDSLES_H_INCLUDED
 
 #include <xrpl/basics/chrono.h>
 #include <xrpl/beast/container/aged_unordered_map.h>

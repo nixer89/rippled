@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_APP_PATHS_IMPL_PAYSTEPS_H_INCLUDED
-#define RIPPLE_APP_PATHS_IMPL_PAYSTEPS_H_INCLUDED
+#ifndef XRPL_APP_PATHS_IMPL_PAYSTEPS_H_INCLUDED
+#define XRPL_APP_PATHS_IMPL_PAYSTEPS_H_INCLUDED
 
 #include <xrpl/app/paths/impl/AmountSpec.h>
 #include <xrpl/basics/Log.h>

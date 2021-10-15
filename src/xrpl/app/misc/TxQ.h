@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_TXQ_H_INCLUDED
-#define RIPPLE_TXQ_H_INCLUDED
+#ifndef XRPL_TXQ_H_INCLUDED
+#define XRPL_TXQ_H_INCLUDED
 
 #include <xrpl/app/tx/applySteps.h>
 #include <xrpl/ledger/ApplyView.h>

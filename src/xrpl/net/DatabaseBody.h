@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NET_DATABASEBODY_H
-#define RIPPLE_NET_DATABASEBODY_H
+#ifndef XRPL_NET_DATABASEBODY_H
+#define XRPL_NET_DATABASEBODY_H
 
 #include <xrpl/core/DatabaseCon.h>
 #include <boost/asio/io_service.hpp>
@@ -176,4 +176,4 @@ public:
 
 #include <xrpl/net/impl/DatabaseBody.ipp>
 
-#endif  // RIPPLE_NET_DATABASEBODY_H
+#endif  // XRPL_NET_DATABASEBODY_H

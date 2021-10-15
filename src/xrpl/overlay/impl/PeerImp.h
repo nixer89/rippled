@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_PEERIMP_H_INCLUDED
-#define RIPPLE_OVERLAY_PEERIMP_H_INCLUDED
+#ifndef XRPL_OVERLAY_PEERIMP_H_INCLUDED
+#define XRPL_OVERLAY_PEERIMP_H_INCLUDED
 
 #include <xrpl/app/consensus/RCLCxPeerPos.h>
 #include <xrpl/app/ledger/impl/LedgerReplayMsgHandler.h>

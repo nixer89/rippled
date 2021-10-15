@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NODESTORE_DATABASESHARD_H_INCLUDED
-#define RIPPLE_NODESTORE_DATABASESHARD_H_INCLUDED
+#ifndef XRPL_NODESTORE_DATABASESHARD_H_INCLUDED
+#define XRPL_NODESTORE_DATABASESHARD_H_INCLUDED
 
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/core/SociDB.h>

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NET_HTTPSTREAM_H_INCLUDED
-#define RIPPLE_NET_HTTPSTREAM_H_INCLUDED
+#ifndef XRPL_NET_HTTPSTREAM_H_INCLUDED
+#define XRPL_NET_HTTPSTREAM_H_INCLUDED
 
 #include <xrpl/core/Config.h>
 #include <xrpl/net/HTTPClientSSLContext.h>
@@ -162,4 +162,4 @@ private:
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_NET_HTTPSTREAM_H
+#endif  // XRPL_NET_HTTPSTREAM_H

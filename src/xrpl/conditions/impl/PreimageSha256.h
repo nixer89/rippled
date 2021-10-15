@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CONDITIONS_PREIMAGE_SHA256_H
-#define RIPPLE_CONDITIONS_PREIMAGE_SHA256_H
+#ifndef XRPL_CONDITIONS_PREIMAGE_SHA256_H
+#define XRPL_CONDITIONS_PREIMAGE_SHA256_H
 
 #include <xrpl/basics/Buffer.h>
 #include <xrpl/basics/Slice.h>

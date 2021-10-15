@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_WSINFOSUB_H
-#define RIPPLE_RPC_WSINFOSUB_H
+#ifndef XRPL_RPC_WSINFOSUB_H
+#define XRPL_RPC_WSINFOSUB_H
 
 #include <xrpl/beast/net/IPAddressConversion.h>
 #include <xrpl/json/json_writer.h>

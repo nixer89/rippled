@@ -16,8 +16,8 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#ifndef RIPPLE_TEST_CSF_PEERGROUP_H_INCLUDED
-#define RIPPLE_TEST_CSF_PEERGROUP_H_INCLUDED
+#ifndef XRPL_TEST_CSF_PEERGROUP_H_INCLUDED
+#define XRPL_TEST_CSF_PEERGROUP_H_INCLUDED
 
 #include <algorithm>
 #include <test/csf/Peer.h>

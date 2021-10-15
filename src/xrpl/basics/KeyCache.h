@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_KEYCACHE_H_INCLUDED
-#define RIPPLE_BASICS_KEYCACHE_H_INCLUDED
+#ifndef XRPL_BASICS_KEYCACHE_H_INCLUDED
+#define XRPL_BASICS_KEYCACHE_H_INCLUDED
 
 #include <xrpl/basics/UnorderedContainers.h>
 #include <xrpl/basics/hardened_hash.h>

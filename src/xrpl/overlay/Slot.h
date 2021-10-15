@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_SLOT_H_INCLUDED
-#define RIPPLE_OVERLAY_SLOT_H_INCLUDED
+#ifndef XRPL_OVERLAY_SLOT_H_INCLUDED
+#define XRPL_OVERLAY_SLOT_H_INCLUDED
 
 #include <xrpl/basics/Log.h>
 #include <xrpl/basics/chrono.h>
@@ -757,4 +757,4 @@ Slots<clock_type>::deleteIdlePeers()
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_OVERLAY_SLOT_H_INCLUDED
+#endif  // XRPL_OVERLAY_SLOT_H_INCLUDED

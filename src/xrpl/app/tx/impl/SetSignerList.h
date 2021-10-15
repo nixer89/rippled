@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_TX_SETSIGNERLIST_H_INCLUDED
-#define RIPPLE_TX_SETSIGNERLIST_H_INCLUDED
+#ifndef XRPL_TX_SETSIGNERLIST_H_INCLUDED
+#define XRPL_TX_SETSIGNERLIST_H_INCLUDED
 
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/tx/impl/SignerEntries.h>

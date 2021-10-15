@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PEERFINDER_LIVECACHE_H_INCLUDED
-#define RIPPLE_PEERFINDER_LIVECACHE_H_INCLUDED
+#ifndef XRPL_PEERFINDER_LIVECACHE_H_INCLUDED
+#define XRPL_PEERFINDER_LIVECACHE_H_INCLUDED
 
 #include <xrpl/basics/Log.h>
 #include <xrpl/basics/random.h>

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PEERFINDER_SIM_PREDICATES_H_INCLUDED
-#define RIPPLE_PEERFINDER_SIM_PREDICATES_H_INCLUDED
+#ifndef XRPL_PEERFINDER_SIM_PREDICATES_H_INCLUDED
+#define XRPL_PEERFINDER_SIM_PREDICATES_H_INCLUDED
 
 namespace xrpl {
 namespace PeerFinder {

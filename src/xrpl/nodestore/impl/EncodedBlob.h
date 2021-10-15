@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NODESTORE_ENCODEDBLOB_H_INCLUDED
-#define RIPPLE_NODESTORE_ENCODEDBLOB_H_INCLUDED
+#ifndef XRPL_NODESTORE_ENCODEDBLOB_H_INCLUDED
+#define XRPL_NODESTORE_ENCODEDBLOB_H_INCLUDED
 
 #include <xrpl/basics/Buffer.h>
 #include <xrpl/nodestore/NodeObject.h>

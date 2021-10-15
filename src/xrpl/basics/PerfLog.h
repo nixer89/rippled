@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_PERFLOG_H
-#define RIPPLE_BASICS_PERFLOG_H
+#ifndef XRPL_BASICS_PERFLOG_H
+#define XRPL_BASICS_PERFLOG_H
 
 #include <xrpl/core/Config.h>
 #include <xrpl/core/JobTypes.h>
@@ -180,4 +180,4 @@ make_PerfLog(
 }  // namespace perf
 }  // namespace xrpl
 
-#endif  // RIPPLE_BASICS_PERFLOG_H
+#endif  // XRPL_BASICS_PERFLOG_H

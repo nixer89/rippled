@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CORE_JOBQUEUE_H_INCLUDED
-#define RIPPLE_CORE_JOBQUEUE_H_INCLUDED
+#ifndef XRPL_CORE_JOBQUEUE_H_INCLUDED
+#define XRPL_CORE_JOBQUEUE_H_INCLUDED
 
 #include <xrpl/basics/LocalValue.h>
 #include <xrpl/core/ClosureCounter.h>

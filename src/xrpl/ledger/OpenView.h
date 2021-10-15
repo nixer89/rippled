@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_LEDGER_OPENVIEW_H_INCLUDED
-#define RIPPLE_LEDGER_OPENVIEW_H_INCLUDED
+#ifndef XRPL_LEDGER_OPENVIEW_H_INCLUDED
+#define XRPL_LEDGER_OPENVIEW_H_INCLUDED
 
 #include <xrpl/basics/XRPAmount.h>
 #include <xrpl/ledger/RawView.h>

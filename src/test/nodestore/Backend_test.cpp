@@ -111,7 +111,7 @@ public:
         testBackend("rocksdb", seedValue);
 #endif
 
-#ifdef RIPPLE_ENABLE_SQLITE_BACKEND_TESTS
+#ifdef XRPL_ENABLE_SQLITE_BACKEND_TESTS
         testBackend("sqlite", seedValue);
 #endif
     }

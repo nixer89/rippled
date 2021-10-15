@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_XRPAMOUNT_H_INCLUDED
-#define RIPPLE_BASICS_XRPAMOUNT_H_INCLUDED
+#ifndef XRPL_BASICS_XRPAMOUNT_H_INCLUDED
+#define XRPL_BASICS_XRPAMOUNT_H_INCLUDED
 
 #include <xrpl/basics/contract.h>
 #include <xrpl/basics/safe_cast.h>
@@ -299,4 +299,4 @@ mulRatio(
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_BASICS_XRPAMOUNT_H_INCLUDED
+#endif  // XRPL_BASICS_XRPAMOUNT_H_INCLUDED

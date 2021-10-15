@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PROTOCOL_BOOK_H_INCLUDED
-#define RIPPLE_PROTOCOL_BOOK_H_INCLUDED
+#ifndef XRPL_PROTOCOL_BOOK_H_INCLUDED
+#define XRPL_PROTOCOL_BOOK_H_INCLUDED
 
 #include <xrpl/protocol/Issue.h>
 #include <boost/utility/base_from_member.hpp>

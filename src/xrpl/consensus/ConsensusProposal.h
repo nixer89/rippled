@@ -16,8 +16,8 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#ifndef RIPPLE_CONSENSUS_ConsensusProposal_H_INCLUDED
-#define RIPPLE_CONSENSUS_ConsensusProposal_H_INCLUDED
+#ifndef XRPL_CONSENSUS_ConsensusProposal_H_INCLUDED
+#define XRPL_CONSENSUS_ConsensusProposal_H_INCLUDED
 
 #include <xrpl/basics/chrono.h>
 #include <xrpl/json/json_value.h>

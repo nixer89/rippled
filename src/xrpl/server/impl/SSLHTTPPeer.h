@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_SERVER_SSLHTTPPEER_H_INCLUDED
-#define RIPPLE_SERVER_SSLHTTPPEER_H_INCLUDED
+#ifndef XRPL_SERVER_SSLHTTPPEER_H_INCLUDED
+#define XRPL_SERVER_SSLHTTPPEER_H_INCLUDED
 
 #include <xrpl/server/impl/BaseHTTPPeer.h>
 #include <xrpl/server/impl/SSLWSPeer.h>

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_APP_MISC_NETWORKOPS_H_INCLUDED
-#define RIPPLE_APP_MISC_NETWORKOPS_H_INCLUDED
+#ifndef XRPL_APP_MISC_NETWORKOPS_H_INCLUDED
+#define XRPL_APP_MISC_NETWORKOPS_H_INCLUDED
 
 #include <xrpl/app/consensus/RCLCxPeerPos.h>
 #include <xrpl/app/ledger/Ledger.h>

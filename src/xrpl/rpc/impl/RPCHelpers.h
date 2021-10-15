@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_RPCHELPERS_H_INCLUDED
-#define RIPPLE_RPC_RPCHELPERS_H_INCLUDED
+#ifndef XRPL_RPC_RPCHELPERS_H_INCLUDED
+#define XRPL_RPC_RPCHELPERS_H_INCLUDED
 
 #include <xrpl/beast/core/SemanticVersion.h>
 #include <xrpl/protocol/TxMeta.h>

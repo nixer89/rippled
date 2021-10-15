@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NODESTORE_DATABASESHARDIMP_H_INCLUDED
-#define RIPPLE_NODESTORE_DATABASESHARDIMP_H_INCLUDED
+#ifndef XRPL_NODESTORE_DATABASESHARDIMP_H_INCLUDED
+#define XRPL_NODESTORE_DATABASESHARDIMP_H_INCLUDED
 
 #include <xrpl/nodestore/DatabaseShard.h>
 #include <xrpl/nodestore/impl/Shard.h>

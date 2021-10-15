@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CORE_RELATIONALDBINTERFACE_SHARDS_H_INCLUDED
-#define RIPPLE_CORE_RELATIONALDBINTERFACE_SHARDS_H_INCLUDED
+#ifndef XRPL_CORE_RELATIONALDBINTERFACE_SHARDS_H_INCLUDED
+#define XRPL_CORE_RELATIONALDBINTERFACE_SHARDS_H_INCLUDED
 
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/rdb/RelationalDBInterface.h>

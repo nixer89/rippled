@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CONSENSUS_CONSENSUS_TYPES_H_INCLUDED
-#define RIPPLE_CONSENSUS_CONSENSUS_TYPES_H_INCLUDED
+#ifndef XRPL_CONSENSUS_CONSENSUS_TYPES_H_INCLUDED
+#define XRPL_CONSENSUS_CONSENSUS_TYPES_H_INCLUDED
 
 #include <xrpl/basics/chrono.h>
 #include <xrpl/consensus/ConsensusProposal.h>

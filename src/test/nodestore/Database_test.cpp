@@ -678,7 +678,7 @@ public:
             testImport("rocksdb", "rocksdb", seedValue);
 #endif
 
-#if RIPPLE_ENABLE_SQLITE_BACKEND_TESTS
+#if XRPL_ENABLE_SQLITE_BACKEND_TESTS
             testImport("sqlite", "sqlite", seedValue);
 #endif
         }

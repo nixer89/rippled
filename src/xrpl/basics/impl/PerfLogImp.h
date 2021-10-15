@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_BASICS_PERFLOGIMP_H
-#define RIPPLE_BASICS_PERFLOGIMP_H
+#ifndef XRPL_BASICS_PERFLOGIMP_H
+#define XRPL_BASICS_PERFLOGIMP_H
 
 #include <xrpl/basics/PerfLog.h>
 #include <xrpl/basics/chrono.h>
@@ -208,4 +208,4 @@ public:
 }  // namespace perf
 }  // namespace xrpl
 
-#endif  // RIPPLE_BASICS_PERFLOGIMP_H
+#endif  // XRPL_BASICS_PERFLOGIMP_H

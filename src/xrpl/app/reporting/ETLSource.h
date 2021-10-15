@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_APP_REPORTING_ETLSOURCE_H_INCLUDED
-#define RIPPLE_APP_REPORTING_ETLSOURCE_H_INCLUDED
+#ifndef XRPL_APP_REPORTING_ETLSOURCE_H_INCLUDED
+#define XRPL_APP_REPORTING_ETLSOURCE_H_INCLUDED
 #include <xrpl/app/main/Application.h>
 #include <xrpl/app/reporting/ETLHelpers.h>
 #include <xrpl/protocol/STLedgerEntry.h>

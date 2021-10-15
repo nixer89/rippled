@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PEERFINDER_SLOTIMP_H_INCLUDED
-#define RIPPLE_PEERFINDER_SLOTIMP_H_INCLUDED
+#ifndef XRPL_PEERFINDER_SLOTIMP_H_INCLUDED
+#define XRPL_PEERFINDER_SLOTIMP_H_INCLUDED
 
 #include <xrpl/beast/container/aged_container_utility.h>
 #include <xrpl/beast/container/aged_unordered_map.h>

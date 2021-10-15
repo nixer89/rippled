@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_GRPCHELPERS_H_INCLUDED
-#define RIPPLE_RPC_GRPCHELPERS_H_INCLUDED
+#ifndef XRPL_RPC_GRPCHELPERS_H_INCLUDED
+#define XRPL_RPC_GRPCHELPERS_H_INCLUDED
 
 #include "org/xrpl/rpc/v1/get_account_info.pb.h"
 #include "org/xrpl/rpc/v1/ledger_objects.pb.h"

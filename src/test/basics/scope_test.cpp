@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 /*
     This file is part of xrpld: https://github0.com/xrpl/xrpld
-    Copyright (c) 2021 Ripple Inc.
+    Copyright (c) 2021 XRP Ledger Foundation
 
     Permission to use, copy, modify, and/or distribute this software for any
     purpose  with  or without fee is hereby granted, provided that the above

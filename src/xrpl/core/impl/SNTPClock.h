@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NET_SNTPCLOCK_H_INCLUDED
-#define RIPPLE_NET_SNTPCLOCK_H_INCLUDED
+#ifndef XRPL_NET_SNTPCLOCK_H_INCLUDED
+#define XRPL_NET_SNTPCLOCK_H_INCLUDED
 
 #include <xrpl/beast/clock/abstract_clock.h>
 #include <xrpl/beast/utility/Journal.h>

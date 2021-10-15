@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_TX_CHANGE_H_INCLUDED
-#define RIPPLE_TX_CHANGE_H_INCLUDED
+#ifndef XRPL_TX_CHANGE_H_INCLUDED
+#define XRPL_TX_CHANGE_H_INCLUDED
 
 #include <xrpl/app/main/Application.h>
 #include <xrpl/app/misc/AmendmentTable.h>

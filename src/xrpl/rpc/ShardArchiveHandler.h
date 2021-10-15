@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_SHARDARCHIVEHANDLER_H_INCLUDED
-#define RIPPLE_RPC_SHARDARCHIVEHANDLER_H_INCLUDED
+#ifndef XRPL_RPC_SHARDARCHIVEHANDLER_H_INCLUDED
+#define XRPL_RPC_SHARDARCHIVEHANDLER_H_INCLUDED
 
 #include <xrpl/app/main/Application.h>
 #include <xrpl/basics/BasicConfig.h>

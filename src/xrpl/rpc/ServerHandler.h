@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_SERVERHANDLER_H_INCLUDED
-#define RIPPLE_RPC_SERVERHANDLER_H_INCLUDED
+#ifndef XRPL_RPC_SERVERHANDLER_H_INCLUDED
+#define XRPL_RPC_SERVERHANDLER_H_INCLUDED
 
 #include <xrpl/basics/BasicConfig.h>
 #include <xrpl/beast/utility/Journal.h>

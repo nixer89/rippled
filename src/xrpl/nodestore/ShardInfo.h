@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NODESTORE_SHARDINFO_H_INCLUDED
-#define RIPPLE_NODESTORE_SHARDINFO_H_INCLUDED
+#ifndef XRPL_NODESTORE_SHARDINFO_H_INCLUDED
+#define XRPL_NODESTORE_SHARDINFO_H_INCLUDED
 
 #include <xrpl/basics/RangeSet.h>
 #include <xrpl/nodestore/Types.h>

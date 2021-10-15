@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_HANDLERS_LEDGER_H_INCLUDED
-#define RIPPLE_RPC_HANDLERS_LEDGER_H_INCLUDED
+#ifndef XRPL_RPC_HANDLERS_LEDGER_H_INCLUDED
+#define XRPL_RPC_HANDLERS_LEDGER_H_INCLUDED
 
 #include <xrpl/app/ledger/LedgerMaster.h>
 #include <xrpl/app/ledger/LedgerToJson.h>

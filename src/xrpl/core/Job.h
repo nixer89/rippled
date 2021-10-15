@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CORE_JOB_H_INCLUDED
-#define RIPPLE_CORE_JOB_H_INCLUDED
+#ifndef XRPL_CORE_JOB_H_INCLUDED
+#define XRPL_CORE_JOB_H_INCLUDED
 
 #include <xrpl/core/ClosureCounter.h>
 #include <xrpl/core/LoadMonitor.h>

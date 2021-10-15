@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED
-#define RIPPLE_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED
+#ifndef XRPL_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED
+#define XRPL_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED
 
 #include <xrpl/app/main/Application.h>
 #include <functional>
@@ -81,4 +81,4 @@ private:
 }  // namespace RPC
 }  // namespace xrpl
 
-#endif  // RIPPLE_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED
+#endif  // XRPL_RPC_SHARDVERIFICATIONSCHEDULER_H_INCLUDED

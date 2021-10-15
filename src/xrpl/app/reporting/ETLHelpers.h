@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_APP_REPORTING_ETLHELPERS_H_INCLUDED
-#define RIPPLE_APP_REPORTING_ETLHELPERS_H_INCLUDED
+#ifndef XRPL_APP_REPORTING_ETLHELPERS_H_INCLUDED
+#define XRPL_APP_REPORTING_ETLHELPERS_H_INCLUDED
 #include <xrpl/app/main/Application.h>
 #include <xrpl/ledger/ReadView.h>
 #include <condition_variable>

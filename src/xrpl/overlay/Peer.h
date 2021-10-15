@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_OVERLAY_PEER_H_INCLUDED
-#define RIPPLE_OVERLAY_PEER_H_INCLUDED
+#ifndef XRPL_OVERLAY_PEER_H_INCLUDED
+#define XRPL_OVERLAY_PEER_H_INCLUDED
 
 #include <xrpl/basics/base_uint.h>
 #include <xrpl/beast/net/IPEndpoint.h>

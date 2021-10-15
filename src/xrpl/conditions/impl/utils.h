@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_CONDITIONS_UTILS_H
-#define RIPPLE_CONDITIONS_UTILS_H
+#ifndef XRPL_CONDITIONS_UTILS_H
+#define XRPL_CONDITIONS_UTILS_H
 
 #include <xrpl/basics/strHex.h>
 #include <xrpl/conditions/impl/error.h>

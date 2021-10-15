@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_UNITY_ROCKSDB_H_INCLUDED
-#define RIPPLE_UNITY_ROCKSDB_H_INCLUDED
+#ifndef XRPL_UNITY_ROCKSDB_H_INCLUDED
+#define XRPL_UNITY_ROCKSDB_H_INCLUDED
 
 #if XRPL_ROCKSDB_AVAILABLE
 //#include <rocksdb2/port/port_posix.h>

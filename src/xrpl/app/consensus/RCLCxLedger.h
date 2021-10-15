@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_APP_CONSENSUS_RCLCXLEDGER_H_INCLUDED
-#define RIPPLE_APP_CONSENSUS_RCLCXLEDGER_H_INCLUDED
+#ifndef XRPL_APP_CONSENSUS_RCLCXLEDGER_H_INCLUDED
+#define XRPL_APP_CONSENSUS_RCLCXLEDGER_H_INCLUDED
 
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/ledger/LedgerToJson.h>

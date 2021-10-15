@@ -16,8 +16,8 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#ifndef RIPPLE_TEST_CSF_PROPOSAL_H_INCLUDED
-#define RIPPLE_TEST_CSF_PROPOSAL_H_INCLUDED
+#ifndef XRPL_TEST_CSF_PROPOSAL_H_INCLUDED
+#define XRPL_TEST_CSF_PROPOSAL_H_INCLUDED
 
 #include <xrpl/consensus/ConsensusProposal.h>
 #include <test/csf/Tx.h>

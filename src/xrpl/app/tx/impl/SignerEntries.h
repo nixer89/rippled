@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED
-#define RIPPLE_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED
+#ifndef XRPL_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED
+#define XRPL_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED
 
 #include <xrpl/app/tx/impl/Transactor.h>  // NotTEC
 #include <xrpl/basics/Expected.h>         //
@@ -72,4 +72,4 @@ public:
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED
+#endif  // XRPL_TX_IMPL_SIGNER_ENTRIES_H_INCLUDED

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_PEERFINDER_BOOTCACHE_H_INCLUDED
-#define RIPPLE_PEERFINDER_BOOTCACHE_H_INCLUDED
+#ifndef XRPL_PEERFINDER_BOOTCACHE_H_INCLUDED
+#define XRPL_PEERFINDER_BOOTCACHE_H_INCLUDED
 
 #include <xrpl/basics/comparators.h>
 #include <xrpl/beast/utility/Journal.h>

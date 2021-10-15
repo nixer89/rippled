@@ -16,8 +16,8 @@
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#ifndef RIPPLE_TEST_TRUSTED_PUBLISHER_SERVER_H_INCLUDED
-#define RIPPLE_TEST_TRUSTED_PUBLISHER_SERVER_H_INCLUDED
+#ifndef XRPL_TEST_TRUSTED_PUBLISHER_SERVER_H_INCLUDED
+#define XRPL_TEST_TRUSTED_PUBLISHER_SERVER_H_INCLUDED
 
 #include <xrpl/basics/base64.h>
 #include <xrpl/basics/random.h>

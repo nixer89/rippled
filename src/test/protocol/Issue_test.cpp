@@ -32,11 +32,11 @@
 #define STL_SET_HAS_EMPLACE 0
 #endif
 
-#ifndef RIPPLE_ASSETS_ENABLE_STD_HASH
+#ifndef XRPL_ASSETS_ENABLE_STD_HASH
 #if BEAST_MAC || BEAST_IOS
-#define RIPPLE_ASSETS_ENABLE_STD_HASH 0
+#define XRPL_ASSETS_ENABLE_STD_HASH 0
 #else
-#define RIPPLE_ASSETS_ENABLE_STD_HASH 1
+#define XRPL_ASSETS_ENABLE_STD_HASH 1
 #endif
 #endif
 
@@ -247,7 +247,7 @@ public:
         testcase("std::set <Issue>");
         testIssueSet<std::set<Issue>>();
 
-#if RIPPLE_ASSETS_ENABLE_STD_HASH
+#if XRPL_ASSETS_ENABLE_STD_HASH
         testcase("std::unordered_set <Issue>");
         testIssueSet<std::unordered_set<Issue>>();
 
@@ -271,7 +271,7 @@ public:
         testcase("std::map <Issue, int>");
         testIssueMap<std::map<Issue, int>>();
 
-#if RIPPLE_ASSETS_ENABLE_STD_HASH
+#if XRPL_ASSETS_ENABLE_STD_HASH
         testcase("std::unordered_map <Issue, int>");
         testIssueMap<std::unordered_map<Issue, int>>();
 
@@ -484,7 +484,7 @@ public:
         testcase("std::set <Book>");
         testBookSet<std::set<Book>>();
 
-#if RIPPLE_ASSETS_ENABLE_STD_HASH
+#if XRPL_ASSETS_ENABLE_STD_HASH
         testcase("std::unordered_set <Book>");
         testBookSet<std::unordered_set<Book>>();
 
@@ -508,7 +508,7 @@ public:
         testcase("std::map <Book, int>");
         testBookMap<std::map<Book, int>>();
 
-#if RIPPLE_ASSETS_ENABLE_STD_HASH
+#if XRPL_ASSETS_ENABLE_STD_HASH
         testcase("std::unordered_map <Book, int>");
         testBookMap<std::unordered_map<Book, int>>();
 

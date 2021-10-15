@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#ifndef RIPPLE_NET_DATABASEDOWNLOADER_H
-#define RIPPLE_NET_DATABASEDOWNLOADER_H
+#ifndef XRPL_NET_DATABASEDOWNLOADER_H
+#define XRPL_NET_DATABASEDOWNLOADER_H
 
 #include <xrpl/net/DatabaseBody.h>
 #include <xrpl/net/HTTPDownloader.h>
@@ -73,4 +73,4 @@ make_DatabaseDownloader(
 
 }  // namespace xrpl
 
-#endif  // RIPPLE_NET_DATABASEDOWNLOADER_H
+#endif  // XRPL_NET_DATABASEDOWNLOADER_H
