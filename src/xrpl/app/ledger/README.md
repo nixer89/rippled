@@ -222,7 +222,7 @@ conclusion about which last closed ledger is authoritative.
 
 ## Consensus ##
 
-A distributed agreement protocol. Ripple uses the consensus process to solve
+A distributed agreement protocol. The XRP Ledger uses the consensus process to solve
 the problem of double-spending.
 
 ## Validation ##
@@ -401,7 +401,7 @@ are occupied by the exchange rate.
 
 ## Overview ##
 
-The Ripple server permits clients to subscribe to a continuous stream of
+The XRP Ledger server permits clients to subscribe to a continuous stream of
 fully-validated ledgers. The publication code maintains this stream.
 
 The server attempts to maintain this continuous stream unless it falls

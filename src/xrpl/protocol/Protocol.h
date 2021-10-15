@@ -28,7 +28,7 @@ namespace xrpl {
 
 /** Protocol specific constants, types, and data.
 
-    This information is, implicitly, part of the Ripple
+    This information is, implicitly, part of the XRPL
     protocol.
 
     @note Changing these values without adding code to the

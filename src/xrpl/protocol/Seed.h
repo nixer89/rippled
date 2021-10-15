@@ -99,7 +99,7 @@ randomSeed();
 
 /** Generate a seed deterministically.
 
-    The algorithm is specific to Ripple:
+    The algorithm is specific to XRPL:
 
         The seed is calculated as the first 128 bits
         of the SHA512-Half of the string text excluding
