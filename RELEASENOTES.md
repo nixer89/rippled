@@ -892,7 +892,7 @@ XRP Payment Channels permit scalable, intermittent, off-ledger settlement of ILP
 
 The initial concept behind payment channels was discussed as early as 2011 and the first implementation was done by Mike Hearn in bitcoinj. Recent work being done by Lightning Network has showcased examples of the many use cases for payment channels. The introduction of XRP Payment Channels allows for a more efficient integration between RCL and ILP to further support enterprise use cases for high volume payments.
 
-Added `getInfoRippled.sh` support script to gather health check for xrpld servers [RIPD-1284]
+Added `getInfoXrpldd.sh` support script to gather health check for xrpld servers [RIPD-1284]
 
 The `account_info` command can now return information about queued transactions - [RIPD-1205]
 

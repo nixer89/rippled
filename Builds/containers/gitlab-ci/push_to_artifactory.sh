@@ -12,7 +12,7 @@ TOPDIR=$(pwd)
 
 cd $TOPDIR
 cd build/dpkg/packages
-CURLARGS="-sk -X${action} -urippled:${ARTIFACTORY_DEPLOY_KEY_XRPLD}"
+CURLARGS="-sk -X${action} -uxrpld:${ARTIFACTORY_DEPLOY_KEY_XRPLD}"
 XRPLD_PKG=$(ls xrpld_*.deb)
 XRPLD_DEV_PKG=$(ls xrpld-dev_*.deb)
 XRPLD_DBG_PKG=$(ls xrpld-dbgsym_*.deb)

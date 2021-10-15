@@ -108,7 +108,7 @@ The `NodeStore.Timing` test is used to execute a set of read/write workloads to
 compare current available nodestore backends. It can be executed with:
 
 ```
-$rippled --unittest=NodeStoreTiming
+$xrpld --unittest=NodeStoreTiming
 ```
 
 It is also possible to use alternate DB config params by passing config strings

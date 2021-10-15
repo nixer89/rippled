@@ -1112,7 +1112,7 @@ LedgerMaster::checkAccept(std::shared_ptr<Ledger const> const& ledger)
             auto const vals = app_.getValidations().getTrustedForLedger(
                 ledger->info().parentHash);
             std::size_t higherVersionCount = 0;
-            std::size_t rippledCount = 0;
+            std::size_t xrpldCount = 0;
             for (auto const& v : vals)
             {
                 if (v->isFieldPresent(sfServerVersion))
@@ -1120,15 +1120,15 @@ LedgerMaster::checkAccept(std::shared_ptr<Ledger const> const& ledger)
                     auto version = v->getFieldU64(sfServerVersion);
                     higherVersionCount +=
                         BuildInfo::isNewerVersion(version) ? 1 : 0;
-                    rippledCount +=
-                        BuildInfo::isRippledVersion(version) ? 1 : 0;
+                    xrpldCount +=
+                        BuildInfo::isXrpldVersion(version) ? 1 : 0;
                 }
             }
             // We report only if (1) we have accumulated validation messages
             // from 90% validators from the UNL, (2) 60% of validators
             // running the xrpld implementation have higher version numbers,
             // and (3) the calculation won't cause divide-by-zero.
-            if (higherVersionCount > 0 && rippledCount > 0)
+            if (higherVersionCount > 0 && xrpldCount > 0)
             {
                 constexpr std::size_t reportingPercent = 90;
                 constexpr std::size_t cutoffPercent = 60;
@@ -1137,7 +1137,7 @@ LedgerMaster::checkAccept(std::shared_ptr<Ledger const> const& ledger)
                 needPrint = unlSize > 0 &&
                     calculatePercent(vals.size(), unlSize) >=
                         reportingPercent &&
-                    calculatePercent(higherVersionCount, rippledCount) >=
+                    calculatePercent(higherVersionCount, xrpldCount) >=
                         cutoffPercent;
             }
         }

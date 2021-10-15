@@ -24,7 +24,7 @@ while getopts ":e:c:" opt; do
     esac
 done
 
-tmp_loc=$(mktemp -d --tmpdir ripple_info.XXXXX)
+tmp_loc=$(mktemp -d --tmpdir xrpl_info.XXXXX)
 chmod 751 ${tmp_loc}
 awk_prog=${tmp_loc}/cfg.awk
 summary_out=${tmp_loc}/xrpld_info.md

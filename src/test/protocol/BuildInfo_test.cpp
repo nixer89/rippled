@@ -79,13 +79,13 @@ public:
     }
 
     void
-    testIsRippledVersion()
+    testIsXrpldVersion()
     {
-        testcase("IsRippledVersion");
+        testcase("IsXrpldVersion");
         auto vFF = 0xFFFF'FFFF'FFFF'FFFFLLU;
-        BEAST_EXPECT(!BuildInfo::isRippledVersion(vFF));
-        auto vRippled = 0x183B'0000'0000'0000LLU;
-        BEAST_EXPECT(BuildInfo::isRippledVersion(vRippled));
+        BEAST_EXPECT(!BuildInfo::isXrpldVersion(vFF));
+        auto vXrpld = 0x183B'0000'0000'0000LLU;
+        BEAST_EXPECT(BuildInfo::isXrpldVersion(vXrpld));
     }
 
     void
@@ -109,7 +109,7 @@ public:
     run() override
     {
         testEncodeSoftwareVersion();
-        testIsRippledVersion();
+        testIsXrpldVersion();
         testIsNewerVersion();
     }
 };

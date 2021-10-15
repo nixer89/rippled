@@ -74,7 +74,7 @@ private:
     // name of state database
     std::string const dbName_ = "state";
     // prefix of on-disk nodestore backend instances
-    std::string const dbPrefix_ = "rippledb";
+    std::string const dbPrefix_ = "xrpldb";
     // check health/stop status as records are copied
     std::uint64_t const checkHealthInterval_ = 1000;
     // minimum # of ledgers to maintain for health of network

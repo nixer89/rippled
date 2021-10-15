@@ -1,8 +1,8 @@
 #!/usr/bin/node
 //
-// This program allows IE 9 ripple-clients to make websocket connections to
+// This program allows IE 9 xrpl-clients to make websocket connections to
 // xrpld using flash.  As IE 9 does not have websocket support, this required
-// if you wish to support IE 9 ripple-clients.
+// if you wish to support IE 9 xrpl-clients.
 //
 // http://www.lightsphere.com/dev/articles/flash_socket_policy.html
 //

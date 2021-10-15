@@ -124,7 +124,7 @@ backend=sqlite
 /**
    Write a xrpld config file and remove when done.
  */
-class RippledCfgGuard : public xrpl::test::detail::FileDirGuard
+class XrpldCfgGuard : public xrpl::test::detail::FileDirGuard
 {
 private:
     path dataDir_;
@@ -134,7 +134,7 @@ private:
     Config config_;
 
 public:
-    RippledCfgGuard(
+    XrpldCfgGuard(
         beast::unit_test::suite& test,
         path subDir,
         path const& dbPath,
@@ -183,7 +183,7 @@ public:
         return fileExists();
     }
 
-    ~RippledCfgGuard()
+    ~XrpldCfgGuard()
     {
         try
         {
@@ -197,7 +197,7 @@ public:
         catch (std::exception& e)
         {
             // if we throw here, just let it die.
-            test_.log << "Error in ~RippledCfgGuard: " << e.what() << std::endl;
+            test_.log << "Error in ~XrpldCfgGuard: " << e.what() << std::endl;
         };
     }
 };
@@ -341,7 +341,7 @@ port_wss_admin
             xrpl::test::detail::DirGuard const g0(*this, "test_db");
             path const dataDirRel("test_data_dir");
             path const dataDirAbs(cwd / g0.subdir() / dataDirRel);
-            detail::RippledCfgGuard const g(
+            detail::XrpldCfgGuard const g(
                 *this, g0.subdir(), dataDirAbs, "", false);
             auto const& c(g.config());
             BEAST_EXPECT(g.dataDirExists());
@@ -351,7 +351,7 @@ port_wss_admin
         {
             // read from file relative path
             std::string const dbPath("my_db");
-            detail::RippledCfgGuard const g(*this, "test_db", dbPath, "");
+            detail::XrpldCfgGuard const g(*this, "test_db", dbPath, "");
             auto const& c(g.config());
             std::string const nativeDbPath = absolute(path(dbPath)).string();
             BEAST_EXPECT(g.dataDirExists());
@@ -360,7 +360,7 @@ port_wss_admin
         }
         {
             // read from file no path
-            detail::RippledCfgGuard const g(*this, "test_db", "", "");
+            detail::XrpldCfgGuard const g(*this, "test_db", "", "");
             auto const& c(g.config());
             std::string const nativeDbPath =
                 absolute(g.subdir() / path(Config::databaseDirName)).string();
@@ -547,7 +547,7 @@ trustthesevalidators.gov
             std::string const valFileName = "validators.txt";
             detail::ValidatorsTxtGuard const vtg(
                 *this, "test_cfg", valFileName);
-            detail::RippledCfgGuard const rcg(
+            detail::XrpldCfgGuard const rcg(
                 *this, vtg.subdir(), "", valFileName, false);
             BEAST_EXPECT(vtg.validatorsFileExists());
             BEAST_EXPECT(rcg.configFileExists());
@@ -565,7 +565,7 @@ trustthesevalidators.gov
             detail::ValidatorsTxtGuard const vtg(
                 *this, "test_cfg", "validators.txt");
             auto const valFilePath = ".." / vtg.subdir() / "validators.txt";
-            detail::RippledCfgGuard const rcg(
+            detail::XrpldCfgGuard const rcg(
                 *this, vtg.subdir(), "", valFilePath, false);
             BEAST_EXPECT(vtg.validatorsFileExists());
             BEAST_EXPECT(rcg.configFileExists());
@@ -581,7 +581,7 @@ trustthesevalidators.gov
             // load from validators file in default location
             detail::ValidatorsTxtGuard const vtg(
                 *this, "test_cfg", "validators.txt");
-            detail::RippledCfgGuard const rcg(
+            detail::XrpldCfgGuard const rcg(
                 *this, vtg.subdir(), "", "", false);
             BEAST_EXPECT(vtg.validatorsFileExists());
             BEAST_EXPECT(rcg.configFileExists());
@@ -602,7 +602,7 @@ trustthesevalidators.gov
             detail::ValidatorsTxtGuard const vtgDefault(
                 *this, vtg.subdir(), "validators.txt", false);
             BEAST_EXPECT(vtgDefault.validatorsFileExists());
-            detail::RippledCfgGuard const rcg(
+            detail::XrpldCfgGuard const rcg(
                 *this, vtg.subdir(), "", vtg.validatorsFile(), false);
             BEAST_EXPECT(rcg.configFileExists());
             auto const& c(rcg.config());
@@ -682,9 +682,9 @@ trustthesevalidators.gov
     void
     testSetup(bool explicitPath)
     {
-        detail::RippledCfgGuard const cfg(
+        detail::XrpldCfgGuard const cfg(
             *this, "testSetup", explicitPath ? "test_db" : "", "");
-        /* RippledCfgGuard has a Config object that gets loaded on
+        /* XrpldCfgGuard has a Config object that gets loaded on
             construction, but Config::setup is not reentrant, so we
             need a fresh config for every test case, so ignore it.
         */
@@ -801,7 +801,7 @@ trustthesevalidators.gov
     void
     testPort()
     {
-        detail::RippledCfgGuard const cfg(*this, "testPort", "", "");
+        detail::XrpldCfgGuard const cfg(*this, "testPort", "", "");
         auto const& conf = cfg.config();
         if (!BEAST_EXPECT(conf.exists("port_rpc")))
             return;

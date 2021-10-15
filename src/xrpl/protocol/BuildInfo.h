@@ -81,7 +81,7 @@ getEncodedVersion();
     @return true if the version is a xrpld software version, false otherwise
 */
 bool
-isRippledVersion(std::uint64_t version);
+isXrpldVersion(std::uint64_t version);
 
 /** Check if the version is newer than the local node's xrpld software
     version.
