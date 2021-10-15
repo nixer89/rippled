@@ -534,7 +534,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL(compression, ripple_data, xrpl);
+BEAST_DEFINE_TESTSUITE_MANUAL(compression, xrpl_data, xrpl);
 
 }  // namespace test
 }  // namespace xrpl

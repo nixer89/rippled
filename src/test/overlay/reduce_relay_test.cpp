@@ -1592,8 +1592,8 @@ class reduce_relay_simulate_test : public reduce_relay_test
     }
 };
 
-BEAST_DEFINE_TESTSUITE(reduce_relay, ripple_data, xrpl);
-BEAST_DEFINE_TESTSUITE_MANUAL(reduce_relay_simulate, ripple_data, xrpl);
+BEAST_DEFINE_TESTSUITE(reduce_relay, xrpl_data, xrpl);
+BEAST_DEFINE_TESTSUITE_MANUAL(reduce_relay_simulate, xrpl_data, xrpl);
 
 }  // namespace test
 

@@ -126,7 +126,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(DNS, ripple_data, xrpl, 20);
+BEAST_DEFINE_TESTSUITE_MANUAL_PRIO(DNS, xrpl_data, xrpl, 20);
 
 }  // namespace test
 }  // namespace xrpl

@@ -160,7 +160,7 @@ else
     # ORDER matters here...sorted in approximately
     # descending execution time (longest running tests at top)
     declare -a manual_tests=(
-        'xrpl.ripple_data.reduce_relay_simulate'
+        'xrpl.xrpl_data.reduce_relay_simulate'
         'xrpl.tx.Offer_manual'
         'xrpl.tx.CrossingLimits'
         'xrpl.tx.PlumpBook'
@@ -168,7 +168,7 @@ else
         'xrpl.tx.OversizeMeta'
         'xrpl.consensus.DistributedValidators'
         'xrpl.app.NoRippleCheckLimits'
-        'xrpl.ripple_data.compression'
+        'xrpl.xrpl_data.compression'
         'xrpl.NodeStore.Timing'
         'xrpl.consensus.ByzantineFailureSim'
         'beast.chrono.abstract_clock'

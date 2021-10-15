@@ -58,7 +58,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(handshake, ripple_data, xrpl);
+BEAST_DEFINE_TESTSUITE(handshake, xrpl_data, xrpl);
 
 }  // namespace test
 }  // namespace xrpl
