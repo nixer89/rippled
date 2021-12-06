@@ -1,0 +1,9 @@
+diff a/Builds/CMake/XrpldCore.cmake b/Builds/CMake/XrpldCore.cmake	(rejected hunks)
+@@ -397,7 +397,6 @@
+   src/xrpl/app/paths/PathRequest.cpp
+   src/xrpl/app/paths/PathRequests.cpp
+   src/xrpl/app/paths/Pathfinder.cpp
+-  src/xrpl/app/paths/RippleLineCache.cpp
+   src/xrpl/app/paths/xrplCalc.cpp
+   src/xrpl/app/paths/xrplLineCache.cpp
+   src/xrpl/app/paths/xrplState.cpp

@@ -23,6 +23,7 @@
 #include <xrpl/app/ledger/Ledger.h>
 #include <xrpl/app/rdb/RelationalDBInterface.h>
 #include <xrpl/basics/BasicConfig.h>
+#include <xrpl/basics/KeyCache.h>
 #include <xrpl/basics/MathUtilities.h>
 #include <xrpl/basics/RangeSet.h>
 #include <xrpl/core/DatabaseCon.h>
@@ -39,7 +40,7 @@ namespace xrpl {
 namespace NodeStore {
 
 using PCache = TaggedCache<uint256, NodeObject>;
-using NCache = KeyCache<uint256>;
+using NCache = KeyCache;
 class DatabaseShard;
 
 /* A range of historical ledgers backed by a node store.

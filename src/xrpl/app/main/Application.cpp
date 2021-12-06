@@ -79,12 +79,14 @@
 
 #include <date/date.h>
 
+#include <chrono>
 #include <condition_variable>
 #include <cstring>
 #include <iostream>
 #include <limits>
 #include <mutex>
 #include <optional>
+#include <sstream>
 #include <utility>
 #include <variant>
 
@@ -283,6 +285,29 @@ public:
               logs_->journal("Collector")))
 
         , m_jobQueue(std::make_unique<JobQueue>(
+              [](std::unique_ptr<Config> const& config) {
+                  if (config->standalone() && !config->reporting() &&
+                      !config->FORCE_MULTI_THREAD)
+                      return 1;
+
+                  if (config->WORKERS)
+                      return config->WORKERS;
+
+                  auto count =
+                      static_cast<int>(std::thread::hardware_concurrency());
+
+                  // Be more aggressive about the number of threads to use
+                  // for the job queue if the server is configured as "large"
+                  // or "huge" if there are enough cores.
+                  if (config->NODE_SIZE >= 4 && count >= 16)
+                      count = 6 + std::min(count, 8);
+                  else if (config->NODE_SIZE >= 3 && count >= 8)
+                      count = 4 + std::min(count, 6);
+                  else
+                      count = 2 + std::min(count, 4);
+
+                  return count;
+              }(config_),
               m_collectorManager->group("jobq"),
               logs_->journal("JobQueue"),
               *logs_,
@@ -304,7 +329,13 @@ public:
               stopwatch(),
               logs_->journal("TaggedCache"))
 
-        , cachedSLEs_(std::chrono::minutes(1), stopwatch())
+        , cachedSLEs_(
+              "Cached SLEs",
+              0,
+              std::chrono::minutes(1),
+              stopwatch(),
+              logs_->journal("CachedSLEs"))
+
         , validatorKeys_(*config_, m_journal)
 
         , m_resourceManager(Resource::make_Manager(
@@ -1065,7 +1096,8 @@ public:
         {
             using namespace std::chrono;
             sweepTimer_.expires_from_now(
-                seconds{config_->getValueFor(SizedItem::sweepInterval)});
+                seconds{config_->SWEEP_INTERVAL.value_or(
+                    config_->getValueFor(SizedItem::sweepInterval))});
             sweepTimer_.async_wait(std::move(*optionalCountedHandler));
         }
     }
@@ -1121,11 +1153,11 @@ public:
             shardStore_->sweep();
         getLedgerMaster().sweep();
         getTempNodeCache().sweep();
-        getValidations().expire();
+        getValidations().expire(m_journal);
         getInboundLedgers().sweep();
         getLedgerReplayer().sweep();
         m_acceptedLedgerCache.sweep();
-        cachedSLEs_.expire();
+        cachedSLEs_.sweep();
 
 #ifdef XRPLD_REPORTING
         if (auto pg = dynamic_cast<RelationalDBInterfacePostgres*>(
@@ -1220,9 +1252,6 @@ ApplicationImp::setup()
 
     // Optionally turn off logging to console.
     logs_->silent(config_->silent());
-
-    m_jobQueue->setThreadCount(
-        config_->WORKERS, config_->standalone() && !config_->reporting());
 
     if (!config_->standalone())
         timeKeeper_->run(config_->SNTP_SERVERS);

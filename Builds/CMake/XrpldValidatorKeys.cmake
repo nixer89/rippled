@@ -10,7 +10,7 @@ if (validator_keys AND CMAKE_VERSION VERSION_GREATER_EQUAL 3.11)
 
   FetchContent_Declare (
     validator_keys_src
-    GIT_REPOSITORY https://github.com/ripple/validator-keys-tool.git
+    GIT_REPOSITORY https://github.com/xrpl/validator-keys-tool.git
     GIT_TAG        "${current_branch}"
   )
   FetchContent_GetProperties (validator_keys_src)

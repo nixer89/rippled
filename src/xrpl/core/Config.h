@@ -160,7 +160,18 @@ public:
     std::size_t PEERS_OUT_MAX = 0;
     std::size_t PEERS_IN_MAX = 0;
 
-    // Path searching
+    // Path searching: these were reasonable default values at some point but
+    //                 further research is needed to decide if they still are
+    //                 and whether all of them are needed.
+    //
+    //                 The performance and resource consumption of a server can
+    //                 be dramatically impacted by changing these configuration
+    //                 options; higher values result in exponentially higher
+    //                 resource usage.
+    //
+    //                 Servers operating as validators disable path finding by
+    //                 default by setting the `PATH_SEARCH_MAX` option to 0
+    //                 unless it is explicitly set in the configuration file.
     int PATH_SEARCH_OLD = 7;
     int PATH_SEARCH = 7;
     int PATH_SEARCH_FAST = 2;
@@ -202,7 +213,13 @@ public:
     std::chrono::seconds AMENDMENT_MAJORITY_TIME = defaultAmendmentMajorityTime;
 
     // Thread pool configuration
-    std::size_t WORKERS = 0;
+    int WORKERS = 0;
+    // Can only be set in code, specifically unit tests
+    bool FORCE_MULTI_THREAD = false;
+
+    // Normally the sweep timer is automatically deduced based on the node
+    // size, but we allow admins to explicitly set it in the config.
+    std::optional<int> SWEEP_INTERVAL;
 
     // Reduce-relay - these parameters are experimental.
     // Enable reduce-relay features

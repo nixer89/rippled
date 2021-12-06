@@ -60,7 +60,7 @@ While we commit to responding with 24 hours of your initial report with our tria
 
 ## Bug Bounty Program
 
-[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`xrpld`](https://github.com/xrplf/xrpld) (and other related projects, like [`ripple-lib`](https://github.com/ripple/ripple-lib)).
+[Ripple](https://ripple.com) is generously sponsoring a bug bounty program for vulnerabilities in [`xrpld`](https://github.com/xrplf/xrpld) (and other related projects, like [`ripple-lib`](https://github.com/xrpl/ripple-lib)).
 
 This program allows us to recognize and reward individuals or groups that identify and report bugs. In summary, order to qualify for a bounty, the bug must be:
 

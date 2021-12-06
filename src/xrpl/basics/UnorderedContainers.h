@@ -21,6 +21,7 @@
 #define XRPL_BASICS_UNORDEREDCONTAINERS_H_INCLUDED
 
 #include <xrpl/basics/hardened_hash.h>
+#include <xrpl/basics/partitioned_unordered_map.h>
 #include <xrpl/beast/hash/hash_append.h>
 #include <xrpl/beast/hash/uhash.h>
 #include <xrpl/beast/hash/xxhasher.h>
@@ -85,6 +86,15 @@ template <
     class Pred = std::equal_to<Key>,
     class Allocator = std::allocator<std::pair<Key const, Value>>>
 using hardened_hash_map = std::unordered_map<Key, Value, Hash, Pred, Allocator>;
+
+template <
+    class Key,
+    class Value,
+    class Hash = hardened_hash<strong_hash>,
+    class Pred = std::equal_to<Key>,
+    class Allocator = std::allocator<std::pair<Key const, Value>>>
+using hardened_partitioned_hash_map =
+    partitioned_unordered_map<Key, Value, Hash, Pred, Allocator>;
 
 template <
     class Key,

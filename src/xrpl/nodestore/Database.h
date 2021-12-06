@@ -20,7 +20,6 @@
 #ifndef XRPL_NODESTORE_DATABASE_H_INCLUDED
 #define XRPL_NODESTORE_DATABASE_H_INCLUDED
 
-#include <xrpl/basics/KeyCache.h>
 #include <xrpl/basics/TaggedCache.h>
 #include <xrpl/nodestore/Backend.h>
 #include <xrpl/nodestore/NodeObject.h>

@@ -21,6 +21,7 @@
 #include <xrpl/basics/chrono.h>
 #include <xrpl/beast/clock/manual_clock.h>
 #include <xrpl/beast/unit_test.h>
+#include <xrpl/protocol/Protocol.h>
 #include <test/unit_test/SuiteJournal.h>
 
 namespace xrpl {
@@ -48,7 +49,7 @@ public:
         TestStopwatch clock;
         clock.set(0);
 
-        using Key = int;
+        using Key = LedgerIndex;
         using Value = std::string;
         using Cache = TaggedCache<Key, Value>;
 
