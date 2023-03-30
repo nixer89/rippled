@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hashprefix_25718',['HashPrefix',['../namespaceripple.html#ad5143ceada01141772ae4aab984f94bd',1,'ripple']]],
-  ['health_25719',['Health',['../classripple_1_1SHAMapStoreImp.html#ada256179ba2ac337d7f4bb6c70d8fe8e',1,'ripple::SHAMapStoreImp']]]
+  ['hashprefix_26242',['HashPrefix',['../namespaceripple.html#ad5143ceada01141772ae4aab984f94bd',1,'ripple']]],
+  ['healthresult_26243',['HealthResult',['../classripple_1_1SHAMapStoreImp.html#aaef701af5fbfe0fe8d445eddc7ccf7c8',1,'ripple::SHAMapStoreImp']]]
 ];
