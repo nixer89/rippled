@@ -77,7 +77,7 @@ $(function() {
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classripple_1_1test_1_1tx__reduce__relay__test_1_1PeerTest-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ripple::test::tx_reduce_relay_test::PeerTest Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ripple::test::tx_reduce_relay_test::PeerTest Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8acefb03a28d2d12b5d56f59a3b77905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1test_1_1tx__reduce__relay__test_1_1PeerTest.html#a8acefb03a28d2d12b5d56f59a3b77905">send</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; <a class="el" href="classripple_1_1Message.html">Message</a> &gt; const &amp;) override</td></tr>
 <tr class="separator:a8acefb03a28d2d12b5d56f59a3b77905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f00f294be4b8bcc2e63eafa2d6c0593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1test_1_1tx__reduce__relay__test_1_1PeerTest.html#a9f00f294be4b8bcc2e63eafa2d6c0593">addTxQueue</a> (const <a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> &amp;hash) override</td></tr>
-<tr class="memdesc:a9f00f294be4b8bcc2e63eafa2d6c0593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregate transaction's hash.  <a href="classripple_1_1test_1_1tx__reduce__relay__test_1_1PeerTest.html#a9f00f294be4b8bcc2e63eafa2d6c0593">More...</a><br /></td></tr>
+<tr class="memdesc:a9f00f294be4b8bcc2e63eafa2d6c0593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add transaction's hash to the transactions' hashes queue.  <a href="classripple_1_1test_1_1tx__reduce__relay__test_1_1PeerTest.html#a9f00f294be4b8bcc2e63eafa2d6c0593">More...</a><br /></td></tr>
 <tr class="separator:a9f00f294be4b8bcc2e63eafa2d6c0593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac00b6f245e02216f917e15a8daf5e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbeast_1_1Journal.html">beast::Journal</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a1ac00b6f245e02216f917e15a8daf5e0">pjournal</a> () const</td></tr>
 <tr class="separator:a1ac00b6f245e02216f917e15a8daf5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,15 +186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac680e8b2826200be0de66f39e6350f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#ac680e8b2826200be0de66f39e6350f32">sendTxQueue</a> () override</td></tr>
 <tr class="memdesc:ac680e8b2826200be0de66f39e6350f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send aggregated transactions' hashes.  <a href="classripple_1_1PeerImp.html#ac680e8b2826200be0de66f39e6350f32">More...</a><br /></td></tr>
 <tr class="separator:ac680e8b2826200be0de66f39e6350f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8d1bd90dc46d3420d19fba02bd51144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#ad8d1bd90dc46d3420d19fba02bd51144">addTxQueue</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash) override</td></tr>
-<tr class="memdesc:ad8d1bd90dc46d3420d19fba02bd51144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add transaction's hash to the transactions' hashes queue.  <a href="classripple_1_1PeerImp.html#ad8d1bd90dc46d3420d19fba02bd51144">More...</a><br /></td></tr>
-<tr class="separator:ad8d1bd90dc46d3420d19fba02bd51144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce6e26cf39a5063c809b175fdaedc1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a0ce6e26cf39a5063c809b175fdaedc1c">removeTxQueue</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash) override</td></tr>
 <tr class="memdesc:a0ce6e26cf39a5063c809b175fdaedc1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove transaction's hash from the transactions' hashes queue.  <a href="classripple_1_1PeerImp.html#a0ce6e26cf39a5063c809b175fdaedc1c">More...</a><br /></td></tr>
 <tr class="separator:a0ce6e26cf39a5063c809b175fdaedc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4df87634b8bfedbdb69edcd11fee6a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1Peer.html#ac4df87634b8bfedbdb69edcd11fee6a1">removeTxQueue</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;)=0</td></tr>
-<tr class="memdesc:ac4df87634b8bfedbdb69edcd11fee6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove hash from the transactions' hashes queue.  <a href="classripple_1_1Peer.html#ac4df87634b8bfedbdb69edcd11fee6a1">More...</a><br /></td></tr>
-<tr class="separator:ac4df87634b8bfedbdb69edcd11fee6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d17c2612f844166afa4f8a15986161"><td class="memTemplParams" colspan="2">template&lt;class FwdIt , class  = typename std::enable_if_t&lt;std::is_same&lt;            typename std::iterator_traits&lt;FwdIt&gt;::value_type,            PeerFinder::Endpoint&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:a26d17c2612f844166afa4f8a15986161"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a26d17c2612f844166afa4f8a15986161">sendEndpoints</a> (FwdIt first, FwdIt last)</td></tr>
 <tr class="memdesc:a26d17c2612f844166afa4f8a15986161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a set of <a class="el" href="namespaceripple_1_1PeerFinder.html">PeerFinder</a> endpoints as a protocol message.  <a href="classripple_1_1PeerImp.html#a26d17c2612f844166afa4f8a15986161">More...</a><br /></td></tr>
@@ -236,14 +230,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a11d853c3a1a3a21d76f61ecff58c461b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08aa2f230196348cdeb3f5eccf97fd86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a08aa2f230196348cdeb3f5eccf97fd86">hasLedger</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash, <a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> <a class="el" href="structripple_1_1test_1_1jtx_1_1seq.html">seq</a>) const override</td></tr>
 <tr class="separator:a08aa2f230196348cdeb3f5eccf97fd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a855aa29a52d98979b211ff765dbc542a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1Peer.html#a855aa29a52d98979b211ff765dbc542a">hasLedger</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash, <a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> <a class="el" href="structripple_1_1test_1_1jtx_1_1seq.html">seq</a>) const =0</td></tr>
-<tr class="separator:a855aa29a52d98979b211ff765dbc542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad1d4fd948d26f3880b5b392bc6be5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#afad1d4fd948d26f3880b5b392bc6be5e">ledgerRange</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> &amp;minSeq, <a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> &amp;maxSeq) const override</td></tr>
 <tr class="separator:afad1d4fd948d26f3880b5b392bc6be5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a457d11b1db6ab6e7d0b138d59f6fcc3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a457d11b1db6ab6e7d0b138d59f6fcc3d">hasTxSet</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash) const override</td></tr>
 <tr class="separator:a457d11b1db6ab6e7d0b138d59f6fcc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc8cbc6f94f2122808ed21ac217f18fa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1Peer.html#adc8cbc6f94f2122808ed21ac217f18fa">hasTxSet</a> (<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;hash) const =0</td></tr>
-<tr class="separator:adc8cbc6f94f2122808ed21ac217f18fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1217d9e4b7b2a8014b21b8791f4389f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#af1217d9e4b7b2a8014b21b8791f4389f">cycleStatus</a> () override</td></tr>
 <tr class="separator:af1217d9e4b7b2a8014b21b8791f4389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455a78c4770f677bb7d47ecf397538d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1PeerImp.html#a455a78c4770f677bb7d47ecf397538d3">hasRange</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> uMin, <a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a> uMax) override</td></tr>
@@ -1000,7 +990,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a9f00f294be4b8bcc2e63eafa2d6c0593"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f00f294be4b8bcc2e63eafa2d6c0593">&#9670;&nbsp;</a></span>addTxQueue() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f00f294be4b8bcc2e63eafa2d6c0593">&#9670;&nbsp;</a></span>addTxQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1012,7 +1002,7 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void ripple::test::tx_reduce_relay_test::PeerTest::addTxQueue </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>hash</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1023,9 +1013,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Aggregate transaction's hash. </p>
+<p>Add transaction's hash to the transactions' hashes queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hash</td><td>transaction's hash </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classripple_1_1Peer.html#a910dd384abd01647432192b7e05b3748">ripple::Peer</a>.</p>
+<p>Reimplemented from <a class="el" href="classripple_1_1PeerImp.html#ad8d1bd90dc46d3420d19fba02bd51144">ripple::PeerImp</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="tx__reduce__relay__test_8cpp_source.html#l00130">130</a> of file <a class="el" href="tx__reduce__relay__test_8cpp_source.html">tx_reduce_relay_test.cpp</a>.</p>
 
@@ -1137,7 +1133,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classripple_1_1OverlayImpl_1_1Child.html#ac4493bf690681e0f2aa3b597235f0361">ripple::OverlayImpl::Child</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00215">215</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00218">218</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1168,48 +1164,12 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a9cec6a68be4e99382787eec3571a36b4">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00295">295</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad8d1bd90dc46d3420d19fba02bd51144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8d1bd90dc46d3420d19fba02bd51144">&#9670;&nbsp;</a></span>addTxQueue() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ripple::PeerImp::addTxQueue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;&#160;</td>
-          <td class="paramname"><em>hash</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add transaction's hash to the transactions' hashes queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hash</td><td>transaction's hash </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00314">314</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00298">298</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a0ce6e26cf39a5063c809b175fdaedc1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ce6e26cf39a5063c809b175fdaedc1c">&#9670;&nbsp;</a></span>removeTxQueue() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce6e26cf39a5063c809b175fdaedc1c">&#9670;&nbsp;</a></span>removeTxQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1227,7 +1187,7 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1240,37 +1200,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00331">331</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p>Implements <a class="el" href="classripple_1_1Peer.html#ac4df87634b8bfedbdb69edcd11fee6a1">ripple::Peer</a>.</p>
 
-</div>
-</div>
-<a id="ac4df87634b8bfedbdb69edcd11fee6a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4df87634b8bfedbdb69edcd11fee6a1">&#9670;&nbsp;</a></span>removeTxQueue() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ripple::Peer::removeTxQueue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Remove hash from the transactions' hashes queue. </p>
-
-<p>Implemented in <a class="el" href="classripple_1_1test_1_1TestPeer.html#a391311e2939da285e6502c94d9f1c01a">ripple::test::TestPeer</a>, and <a class="el" href="classripple_1_1test_1_1PeerPartial.html#abbd18f7342c0b7daa8364492fe41c65a">ripple::test::PeerPartial</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00334">334</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1305,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a6fb081a4c8492b9891bff272041541ab">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00343">343</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00346">346</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1363,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Returns <code>true</code> if this connection will publicly share its IP address. </p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00357">357</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00360">360</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1462,7 +1394,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a8a547a67289ee47e4998117c1ea38fe9">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00366">366</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00369">369</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1498,7 +1430,7 @@ template&lt;class FwdIt , class &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02192">2192</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02202">2202</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1536,7 +1468,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02211">2211</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02221">2221</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +1526,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Return the version of rippled that the peer is running, if reported. </p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00372">372</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00375">375</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1650,7 +1582,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a3a7b97f3e4307066f4e0a6abc9f9be35">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00380">380</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00383">383</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1612,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a1781d176803366238413407a0815124a">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00498">498</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00501">501</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1784,7 +1716,7 @@ template&lt;class FwdIt , class &gt; </div>
 </div>
 </div>
 <a id="a08aa2f230196348cdeb3f5eccf97fd86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08aa2f230196348cdeb3f5eccf97fd86">&#9670;&nbsp;</a></span>hasLedger() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a08aa2f230196348cdeb3f5eccf97fd86">&#9670;&nbsp;</a></span>hasLedger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1812,50 +1744,14 @@ template&lt;class FwdIt , class &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00515">515</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p>Implements <a class="el" href="classripple_1_1Peer.html#a855aa29a52d98979b211ff765dbc542a">ripple::Peer</a>.</p>
 
-</div>
-</div>
-<a id="a855aa29a52d98979b211ff765dbc542a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a855aa29a52d98979b211ff765dbc542a">&#9670;&nbsp;</a></span>hasLedger() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool ripple::Peer::hasLedger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;&#160;</td>
-          <td class="paramname"><em>hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="elRef" href="http://en.cppreference.com/w/cpp/types/integer.html">std::uint32_t</a>&#160;</td>
-          <td class="paramname"><em>seq</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classripple_1_1test_1_1TestPeer.html#a021a8599de198786f1dc71901cdf1e1f">ripple::test::TestPeer</a>, and <a class="el" href="classripple_1_1test_1_1PeerPartial.html#af0bcc80ae7641f46179ed5a1c782dc0b">ripple::test::PeerPartial</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00518">518</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1895,12 +1791,12 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#ac03dabc3ec86db62e3d1ea827ab0d0fa">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00541">541</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00544">544</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a457d11b1db6ab6e7d0b138d59f6fcc3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a457d11b1db6ab6e7d0b138d59f6fcc3d">&#9670;&nbsp;</a></span>hasTxSet() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a457d11b1db6ab6e7d0b138d59f6fcc3d">&#9670;&nbsp;</a></span>hasTxSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1918,40 +1814,14 @@ template&lt;class FwdIt , class &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00550">550</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p>Implements <a class="el" href="classripple_1_1Peer.html#adc8cbc6f94f2122808ed21ac217f18fa">ripple::Peer</a>.</p>
 
-</div>
-</div>
-<a id="adc8cbc6f94f2122808ed21ac217f18fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc8cbc6f94f2122808ed21ac217f18fa">&#9670;&nbsp;</a></span>hasTxSet() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool ripple::Peer::hasTxSet </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;&#160;</td>
-          <td class="paramname"><em>hash</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classripple_1_1test_1_1TestPeer.html#aa6226f36aadeba23415ab0acc8be6670">ripple::test::TestPeer</a>, and <a class="el" href="classripple_1_1test_1_1PeerPartial.html#accad7bf1cde28944c6d284159f9ebeee">ripple::test::PeerPartial</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00553">553</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -1980,7 +1850,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a580e873a73a8000e6bdba97a2a37b9e0">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00558">558</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00561">561</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2020,7 +1890,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a95b02bf56c4332da48e7e0bc503a0d43">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00568">568</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00571">571</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2050,7 +1920,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a25952c97b91516972a84da5dac619f96">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03616">3616</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03633">3633</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2079,7 +1949,7 @@ template&lt;class FwdIt , class &gt; </div>
 
 <p>Implements <a class="el" href="classripple_1_1Peer.html#a03de12036ac5466b0b01a26e2ef0e729">ripple::Peer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03654">3654</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03671">3671</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2107,7 +1977,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00600">600</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00603">603</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2145,7 +2015,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00619">619</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00622">622</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2172,7 +2042,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00632">632</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00635">635</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2257,7 +2127,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00578">578</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00581">581</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2284,7 +2154,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00639">639</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00642">642</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2181,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00655">655</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00658">658</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2338,7 +2208,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00673">673</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00676">676</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2366,7 +2236,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00682">682</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00685">685</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2394,7 +2264,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00690">690</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00693">693</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2422,7 +2292,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00751">751</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00754">754</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2449,7 +2319,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00767">767</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00770">770</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2476,7 +2346,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00833">833</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00836">836</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2503,7 +2373,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00840">840</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00843">843</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2530,7 +2400,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00850">850</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00853">853</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2568,7 +2438,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00893">893</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00896">896</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2606,7 +2476,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00949">949</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l00952">952</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2653,7 +2523,7 @@ template&lt;class FwdIt , class &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01522">1522</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01525">1525</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2689,7 +2559,7 @@ template&lt;class FwdIt , class &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02814">2814</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02824">2824</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2716,7 +2586,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03661">3661</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03678">3678</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2744,7 +2614,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01003">1003</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01006">1006</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2800,7 +2670,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01009">1009</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01012">1012</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2838,7 +2708,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01043">1043</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01046">1046</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2866,7 +2736,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01052">1052</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01055">1055</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2894,7 +2764,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01072">1072</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01075">1075</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2922,7 +2792,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01109">1109</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01112">1112</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2950,7 +2820,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01181">1181</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01184">1184</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -2978,7 +2848,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01187">1187</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01190">1190</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3006,7 +2876,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01193">1193</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01196">1196</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3034,7 +2904,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01263">1263</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01266">1266</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3062,7 +2932,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01469">1469</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01472">1472</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3090,7 +2960,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01516">1516</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01519">1519</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3118,7 +2988,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01619">1619</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01623">1623</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3146,7 +3016,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01813">1813</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01817">1817</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3174,7 +3044,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01912">1912</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01916">1916</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3202,7 +3072,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02017">2017</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02027">2027</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3230,7 +3100,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02233">2233</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02243">2243</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3258,7 +3128,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02455">2455</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02465">2465</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3286,7 +3156,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02483">2483</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02493">2493</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3314,7 +3184,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02522">2522</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02532">2532</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3342,7 +3212,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02633">2633</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02643">2643</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3370,7 +3240,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02795">2795</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02805">2805</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3398,7 +3268,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02864">2864</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02874">2874</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3426,7 +3296,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02887">2887</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02897">2897</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3454,7 +3324,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01715">1715</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01719">1719</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3482,7 +3352,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01749">1749</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01753">1753</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3510,7 +3380,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01764">1764</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01768">1768</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3538,7 +3408,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01798">1798</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l01802">1802</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3576,7 +3446,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02943">2943</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02953">2953</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3604,7 +3474,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02959">2959</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02969">2969</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3654,7 +3524,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02259">2259</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02269">2269</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3690,7 +3560,7 @@ template&lt;class FwdIt , class &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l02993">2993</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03003">3003</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3734,7 +3604,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03048">3048</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03058">3058</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3778,7 +3648,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03122">3122</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03138">3138</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3822,7 +3692,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03164">3164</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03180">3180</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3860,7 +3730,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03258">3258</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03275">3275</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3888,7 +3758,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03298">3298</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03315">3315</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3916,7 +3786,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03409">3409</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03426">3426</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
@@ -3944,7 +3814,7 @@ template&lt;class FwdIt , class &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03444">3444</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PeerImp_8cpp_source.html#l03461">3461</a> of file <a class="el" href="PeerImp_8cpp_source.html">PeerImp.cpp</a>.</p>
 
 </div>
 </div>
