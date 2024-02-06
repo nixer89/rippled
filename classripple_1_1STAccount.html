@@ -70,6 +70,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classripple_1_1STAccount-members.html">List of all members</a>  </div>
@@ -82,8 +83,9 @@ Inheritance diagram for ripple::STAccount:</div>
 <div class="dyncontent">
 <div class="center"><img src="classripple_1_1STAccount__inherit__graph.png" border="0" usemap="#ripple_1_1STAccount_inherit__map" alt="Inheritance graph"/></div>
 <map name="ripple_1_1STAccount_inherit__map" id="ripple_1_1STAccount_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,140,107"/>
-<area shape="rect" href="classripple_1_1STBase.html" title="A type which can be exported to a well known binary format." alt="" coords="15,5,130,32"/>
+<area shape="rect" title=" " alt="" coords="77,95,211,121"/>
+<area shape="rect" href="classripple_1_1STBase.html" title="A type which can be exported to a well known binary format." alt="" coords="5,13,120,39"/>
+<area shape="rect" href="classripple_1_1CountedObject.html" title=" " alt="" coords="144,5,307,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -91,16 +93,17 @@ Collaboration diagram for ripple::STAccount:</div>
 <div class="dyncontent">
 <div class="center"><img src="classripple_1_1STAccount__coll__graph.png" border="0" usemap="#ripple_1_1STAccount_coll__map" alt="Collaboration graph"/></div>
 <map name="ripple_1_1STAccount_coll__map" id="ripple_1_1STAccount_coll__map">
-<area shape="rect" title=" " alt="" coords="901,76,1036,103"/>
+<area shape="rect" title=" " alt="" coords="901,129,1036,156"/>
 <area shape="rect" href="classripple_1_1STBase.html" title="A type which can be exported to a well known binary format." alt="" coords="645,5,759,32"/>
-<area shape="rect" href="classripple_1_1SField.html" title="Identifies fields." alt="" coords="289,47,394,73"/>
-<area shape="rect" href="http://en.cppreference.com/w/cpp/container/map.html" title=" " alt="" coords="624,59,780,101"/>
-<area shape="rect" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class." alt="" coords="28,16,115,43"/>
-<area shape="rect" href="classJson_1_1StaticString.html" title="Lightweight wrapper to tag static string." alt="" coords="5,67,137,93"/>
-<area shape="rect" href="classripple_1_1base__uint.html" title=" " alt="" coords="599,130,805,171"/>
-<area shape="rect" href="http://en.cppreference.com/w/cpp/container/array.html" title=" " alt="" coords="257,130,425,171"/>
-<area shape="rect" href="http://en.cppreference.com/w/cpp/types/integer.html" title=" " alt="" coords="20,137,123,164"/>
-<area shape="rect" href="http://en.cppreference.com/w/cpp/types/size_t.html" title=" " alt="" coords="297,197,385,224"/>
+<area shape="rect" href="classripple_1_1SField.html" title="Identifies fields." alt="" coords="289,51,394,77"/>
+<area shape="rect" href="http://en.cppreference.com/w/cpp/container/map.html" title=" " alt="" coords="624,57,780,98"/>
+<area shape="rect" href="http://en.cppreference.com/w/cpp/string/basic_string.html" title="STL class." alt="" coords="28,35,115,61"/>
+<area shape="rect" href="classJson_1_1StaticString.html" title="Lightweight wrapper to tag static string." alt="" coords="5,85,137,112"/>
+<area shape="rect" href="classripple_1_1CountedObject.html" title=" " alt="" coords="621,122,783,163"/>
+<area shape="rect" href="classripple_1_1base__uint.html" title=" " alt="" coords="599,187,805,229"/>
+<area shape="rect" href="http://en.cppreference.com/w/cpp/container/array.html" title=" " alt="" coords="257,150,425,191"/>
+<area shape="rect" href="http://en.cppreference.com/w/cpp/types/integer.html" title=" " alt="" coords="20,157,123,184"/>
+<area shape="rect" href="http://en.cppreference.com/w/cpp/types/size_t.html" title=" " alt="" coords="297,217,385,244"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -131,10 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a29679f615e5e87a1d8ad36433e54f224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74afdb795ee7865dd21285933450738"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#ac74afdb795ee7865dd21285933450738">isDefault</a> () const override</td></tr>
 <tr class="separator:ac74afdb795ee7865dd21285933450738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a574162119d98820c88d085f65c49b3e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classripple_1_1STAccount.html">STAccount</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a574162119d98820c88d085f65c49b3e1">operator=</a> (<a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> const &amp;<a class="el" href="classripple_1_1STAccount.html#a18a0662c97131c7284efc8a05bd8e6d5">value</a>)</td></tr>
+<tr class="memitem:a574162119d98820c88d085f65c49b3e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classripple_1_1STAccount.html">STAccount</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a574162119d98820c88d085f65c49b3e1">operator=</a> (<a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> const &amp;<a class="el" href="classripple_1_1STAccount.html#a249ecd064c52ca533000e417aeaf487d">value</a>)</td></tr>
 <tr class="separator:a574162119d98820c88d085f65c49b3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18a0662c97131c7284efc8a05bd8e6d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a18a0662c97131c7284efc8a05bd8e6d5">value</a> () const noexcept</td></tr>
-<tr class="separator:a18a0662c97131c7284efc8a05bd8e6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249ecd064c52ca533000e417aeaf487d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a249ecd064c52ca533000e417aeaf487d">value</a> () const noexcept</td></tr>
+<tr class="separator:a249ecd064c52ca533000e417aeaf487d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34ae6bfaf2a3546896f873eff21f1fbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a34ae6bfaf2a3546896f873eff21f1fbc">setValue</a> (<a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> const &amp;v)</td></tr>
 <tr class="separator:a34ae6bfaf2a3546896f873eff21f1fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae135ed870399690be58580bf3f6a43e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STBase.html#ae135ed870399690be58580bf3f6a43e1">operator==</a> (const <a class="el" href="classripple_1_1STBase.html">STBase</a> &amp;t) const</td></tr>
@@ -149,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9b14e04b97e4eefb3ea37135ed52accf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d35807022215e4c00cb974b6f36216"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STBase.html#ac8d35807022215e4c00cb974b6f36216">getFullText</a> () const</td></tr>
 <tr class="separator:ac8d35807022215e4c00cb974b6f36216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1dfd1c754eaf5eded23242b59a0cdb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classJson_1_1Value.html">Json::Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STBase.html#af1dfd1c754eaf5eded23242b59a0cdb5">getJson</a> (<a class="el" href="namespaceripple.html#a169967ff418b80729654b6d45ade8711">JsonOptions</a>) const</td></tr>
+<tr class="memitem:af1dfd1c754eaf5eded23242b59a0cdb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classJson_1_1Value.html">Json::Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STBase.html#af1dfd1c754eaf5eded23242b59a0cdb5">getJson</a> (<a class="el" href="structripple_1_1JsonOptions.html">JsonOptions</a>) const</td></tr>
 <tr class="separator:af1dfd1c754eaf5eded23242b59a0cdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ee4998ae80eb722fc77151a1a1cb0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STBase.html#a07ee4998ae80eb722fc77151a1a1cb0c">setFName</a> (<a class="el" href="classripple_1_1SField.html">SField</a> const &amp;n)</td></tr>
 <tr class="memdesc:a07ee4998ae80eb722fc77151a1a1cb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classripple_1_1STBase.html" title="A type which can be exported to a well known binary format.">STBase</a> is a field.  <a href="classripple_1_1STBase.html#a07ee4998ae80eb722fc77151a1a1cb0c">More...</a><br /></td></tr>
@@ -172,6 +175,11 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a8700bb917bb10bb2179aee1e79a23b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classripple_1_1STBase.html">STBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#a8700bb917bb10bb2179aee1e79a23b1b">move</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> n, void *buf) override</td></tr>
 <tr class="separator:a8700bb917bb10bb2179aee1e79a23b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:acde6c67ea432f6bb32d2ecb5db786ce8"><td class="memItemLeft" align="right" valign="top">static auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1CountedObject.html#acde6c67ea432f6bb32d2ecb5db786ce8">getCounter</a> () noexcept</td></tr>
+<tr class="separator:acde6c67ea432f6bb32d2ecb5db786ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:acb8ef45428c24081e10fde6c4d215ee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1STAccount.html#acb8ef45428c24081e10fde6c4d215ee9">value_</a></td></tr>
@@ -188,7 +196,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00029">29</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00031">31</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0fbc0c1575a92c6ec7fd8abe1a46706e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fbc0c1575a92c6ec7fd8abe1a46706e">&#9670;&nbsp;</a></span>value_type</h2>
@@ -202,7 +210,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00040">40</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00042">42</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -500,12 +508,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00083">83</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00085">85</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
-<a id="a18a0662c97131c7284efc8a05bd8e6d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18a0662c97131c7284efc8a05bd8e6d5">&#9670;&nbsp;</a></span>value()</h2>
+<a id="a249ecd064c52ca533000e417aeaf487d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249ecd064c52ca533000e417aeaf487d">&#9670;&nbsp;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -514,7 +522,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> ripple::STAccount::value </td>
+          <td class="memname"><a class="el" href="namespaceripple.html#a00ae0d729cb3e35b6bcac9a27ebb5284">AccountID</a> const  &amp; ripple::STAccount::value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -527,7 +535,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00090">90</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00092">92</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +555,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00096">96</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00098">98</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -709,7 +717,7 @@ template&lt;class D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00145">145</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00200">200</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
 
 </div>
 </div>
@@ -735,7 +743,7 @@ template&lt;class D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00155">155</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00210">210</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
 
 </div>
 </div>
@@ -780,7 +788,7 @@ template&lt;class D &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classJson_1_1Value.html">Json::Value</a> ripple::STBase::getJson </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceripple.html#a169967ff418b80729654b6d45ade8711">JsonOptions</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structripple_1_1JsonOptions.html">JsonOptions</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
@@ -792,7 +800,7 @@ template&lt;class D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classripple_1_1STAmount.html#a02bef3696a9cb07b72e5ec750e7ea456">ripple::STAmount</a>, <a class="el" href="classripple_1_1STPathSet.html#a98d06aae5b406ad1633092c13af49408">ripple::STPathSet</a>, <a class="el" href="classripple_1_1STIssue.html#a70741f92ab7f71f6c227dbaed47087c3">ripple::STIssue</a>, <a class="el" href="classripple_1_1STVector256.html#a478b879cc607d0d1ac931f10b8cd96e8">ripple::STVector256</a>, <a class="el" href="classripple_1_1STObject.html#acc2ceb95cdb8fc8b2520aeceabf17553">ripple::STObject</a>, <a class="el" href="classripple_1_1STTx.html#a489c8110e24455a2e7dac783f4760cc2">ripple::STTx</a>, <a class="el" href="classripple_1_1STLedgerEntry.html#a9302de6f8a80801399254527caf91fe2">ripple::STLedgerEntry</a>, and <a class="el" href="classripple_1_1STArray.html#abace0153bbea0217867bde2a591ebe28">ripple::STArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classripple_1_1STAmount.html#a02bef3696a9cb07b72e5ec750e7ea456">ripple::STAmount</a>, <a class="el" href="classripple_1_1STPathSet.html#a98d06aae5b406ad1633092c13af49408">ripple::STPathSet</a>, <a class="el" href="classripple_1_1STXChainBridge.html#a73e46acf5801b27787cecc5234732077">ripple::STXChainBridge</a>, <a class="el" href="classripple_1_1STIssue.html#a70741f92ab7f71f6c227dbaed47087c3">ripple::STIssue</a>, <a class="el" href="classripple_1_1STVector256.html#a478b879cc607d0d1ac931f10b8cd96e8">ripple::STVector256</a>, <a class="el" href="classripple_1_1STObject.html#acc2ceb95cdb8fc8b2520aeceabf17553">ripple::STObject</a>, <a class="el" href="classripple_1_1STTx.html#a489c8110e24455a2e7dac783f4760cc2">ripple::STTx</a>, <a class="el" href="classripple_1_1STLedgerEntry.html#a9302de6f8a80801399254527caf91fe2">ripple::STLedgerEntry</a>, and <a class="el" href="classripple_1_1STArray.html#abace0153bbea0217867bde2a591ebe28">ripple::STArray</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="STBase_8cpp_source.html#l00099">99</a> of file <a class="el" href="STBase_8cpp_source.html">STBase.cpp</a>.</p>
 
@@ -926,7 +934,31 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00165">165</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00220">220</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
+
+</div>
+</div>
+<a id="acde6c67ea432f6bb32d2ecb5db786ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde6c67ea432f6bb32d2ecb5db786ce8">&#9670;&nbsp;</a></span>getCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto&amp; <a class="el" href="classripple_1_1CountedObject.html">ripple::CountedObject</a>&lt; <a class="el" href="classripple_1_1STAccount.html">STAccount</a>  &gt;::getCounter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CountedObject_8h_source.html#l00128">128</a> of file <a class="el" href="CountedObject_8h_source.html">CountedObject.h</a>.</p>
 
 </div>
 </div>
@@ -951,7 +983,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00079">79</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00081">81</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1008,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00036">36</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00038">38</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1032,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00037">37</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STAccount_8h_source.html#l00039">39</a> of file <a class="el" href="STAccount_8h_source.html">STAccount.h</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1056,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00068">68</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="STBase_8h_source.html#l00123">123</a> of file <a class="el" href="STBase_8h_source.html">STBase.h</a>.</p>
 
 </div>
 </div>
